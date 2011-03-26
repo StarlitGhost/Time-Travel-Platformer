@@ -1,2 +1,5 @@
 
 *.user
+bin/*
+build/*
+*.suo

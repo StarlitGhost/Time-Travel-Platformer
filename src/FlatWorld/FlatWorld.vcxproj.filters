@@ -202,10 +202,10 @@
       <Filter>Source Files\Game\Components</Filter>
     </ClCompile>
     <ClCompile Include="Game\Components\InputComponent.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game\Components</Filter>
     </ClCompile>
     <ClCompile Include="Game\Components\InputPlayerComponent.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -810,10 +810,10 @@
       <Filter>Header Files\Game\Components</Filter>
     </ClInclude>
     <ClInclude Include="Game\Components\InputComponent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Game\Components</Filter>
     </ClInclude>
     <ClInclude Include="Game\Components\InputPlayerComponent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Game\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
