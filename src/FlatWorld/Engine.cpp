@@ -2,12 +2,12 @@
 
 #include <SFML/Window.hpp>
 
-#include "Engine/Controls/SFMLKeyboardHandler.h"
-#include "Engine/Controls/SFMLMouseHandler.h"
-#include "Engine/Core/SFMLTimer.h"
-#include "Engine/Graphics/GameDisplay.h"
-#include "Engine/ScreenSystem/Screen.h"
-#include "Engine/ScreenSystem/ScreenManager.h"
+#include "Controls/SFMLKeyboardHandler.h"
+#include "Controls/SFMLMouseHandler.h"
+#include "Core/SFMLTimer.h"
+#include "Graphics/GameDisplay.h"
+#include "ScreenSystem/Screen.h"
+#include "ScreenSystem/ScreenManager.h"
 
 CEngine* CEngine::thisInstance = new CEngine();
 

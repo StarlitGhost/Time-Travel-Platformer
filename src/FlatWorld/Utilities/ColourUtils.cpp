@@ -2,7 +2,7 @@
 
 #include <math.h>
 
-#include "Engine/Graphics/Colour.h"
+#include "Graphics/Colour.h"
 
 Colour ColourUtils::Lerp(const Colour& startColour, const Colour& endColour, const float& interpolationPoint)
 {

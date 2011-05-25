@@ -1,7 +1,7 @@
 #include "GameObject.h"
 
 // Engine Headers
-#include "Engine/ComponentSystem/GameComponent.h"
+#include "ComponentSystem/GameComponent.h"
 
 GameObject::GameObject(const GOIdType& id)
 {

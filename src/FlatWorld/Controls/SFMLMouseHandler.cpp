@@ -4,8 +4,8 @@
 
 #include <SFML/Window/Event.hpp>
 
-#include "Engine/Graphics/GameDisplay.h"
-#include "Engine/Maths/Vector2f.h"
+#include "Graphics/GameDisplay.h"
+#include "Maths/Vector2f.h"
 
 
 bool SFMLMouseHandler::buttons[sf::Mouse::ButtonCount] = {false};

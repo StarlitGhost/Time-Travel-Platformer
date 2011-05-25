@@ -4,9 +4,9 @@
 #include <SFML/Window/OpenGL.hpp>
 
 // Engine Headers
-#include "Engine/Graphics/Colour.h"
-#include "Engine/Maths/Vector2f.h"
-#include "Engine/Utilities/ColourUtils.h"
+#include "Graphics/Colour.h"
+#include "Maths/Vector2f.h"
+#include "Utilities/ColourUtils.h"
 
 Particle::Particle(void)
 {
@@ -36,34 +36,34 @@ void Particle::Init(float fadeRate, Vector2f position, Vector2f velocity, Colour
 
 void Particle::Update(const float& dt)
 {
-    if (active)
-    {
-        life -= fadeRate * dt;
-        if (life <= 0.f)
-        {
-            active = false;
-            return;
-        }
-        else
-        {
-            position += velocity * dt;
+	if (active)
+	{
+		life -= fadeRate * dt;
+		if (life <= 0.f)
+		{
+			active = false;
+			return;
+		}
+		else
+		{
+			position += velocity * dt;
 			colour = ColourUtils::HSVLerp(colourStart, colourEnd, 1.f - life);
-        }
-    }
+		}
+	}
 }
 
 void Particle::Draw(void) const
 {
-    if (active)
-    {
-        glBegin(GL_QUADS);
+	if (active)
+	{
+		glBegin(GL_QUADS);
 			colour.Apply();
-            glVertex2f(position.X(), position.Y() + 1.f);
-            glVertex2f(position.X() - 1.f, position.Y());
-            glVertex2f(position.X(), position.Y() - 1.f);
-            glVertex2f(position.X() + 1.f, position.Y());
-        glEnd();
-    }
+			glVertex2f(position.X(), position.Y() + 1.f);
+			glVertex2f(position.X() - 1.f, position.Y());
+			glVertex2f(position.X(), position.Y() - 1.f);
+			glVertex2f(position.X() + 1.f, position.Y());
+		glEnd();
+	}
 }
 
 void Particle::ReInit(float fadeRate, Vector2f position, Vector2f velocity)
@@ -78,9 +78,9 @@ void Particle::ReInit(float fadeRate, Vector2f position, Vector2f velocity)
 
 bool Particle::Active(void) const
 {
-    return active;
+	return active;
 }
 void Particle::Active(const bool& active)
 {
-    this->active = active;
+	this->active = active;
 }

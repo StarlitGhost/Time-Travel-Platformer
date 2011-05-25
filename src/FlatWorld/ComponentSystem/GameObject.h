@@ -6,7 +6,7 @@
 #include <vector>
 
 // Engine Headers
-#include "Engine/ComponentSystem/GameComponent.h"
+#include "ComponentSystem/GameComponent.h"
 
 // Typedefs
 typedef std::string GOIdType;
