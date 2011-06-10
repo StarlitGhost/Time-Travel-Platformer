@@ -8,6 +8,8 @@
 #include "Maths/Vector2f.h"
 #include "Utilities/ColourUtils.h"
 
+using namespace FlatWorld;
+
 Particle::Particle(void)
 {
 

@@ -9,6 +9,8 @@
 #include "ScreenSystem/Screen.h"
 #include "ScreenSystem/ScreenManager.h"
 
+using namespace FlatWorld;
+
 CEngine* CEngine::thisInstance = new CEngine();
 
 CEngine::CEngine(void)

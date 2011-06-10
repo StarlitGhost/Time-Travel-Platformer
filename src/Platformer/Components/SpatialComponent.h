@@ -1,32 +1,32 @@
 #pragma once
 
 // Engine Headers
-#include "Engine/ComponentSystem/GameComponent.h"
-#include "Engine/Maths/Vector2f.h"
+#include "Flatworld/ComponentSystem/GameComponent.h"
+#include "Flatworld/Maths/Vector2f.h"
 
-class SpatialComponent : public GameComponent
+class SpatialComponent : public FlatWorld::GameComponent
 {
 	// GameComponent Interface
 public:
-	virtual const GCIdType FamilyId() const { return GCIdType("SpatialComponent"); };
-	virtual const GCIdType ComponentId() const { return GCIdType("SpatialComponent"); };
+	virtual const FlatWorld::GCIdType FamilyId() const { return FlatWorld::GCIdType("SpatialComponent"); };
+	virtual const FlatWorld::GCIdType ComponentId() const { return FlatWorld::GCIdType("SpatialComponent"); };
 
 	// SpatialComponent Interface
 public:
-	SpatialComponent(const Vector2f& position, const float rotation, const Vector2f& scale);
+	SpatialComponent(const FlatWorld::Vector2f& position, const float rotation, const FlatWorld::Vector2f& scale);
 
-	virtual void SetPosition(const Vector2f& position) { _position = position; };
-	virtual const Vector2f& GetPosition() const { return _position; };
+	virtual void SetPosition(const FlatWorld::Vector2f& position) { _position = position; };
+	virtual const FlatWorld::Vector2f& GetPosition() const { return _position; };
 
 	virtual void SetRotation(const float& rotation) { _rotation = rotation; };
 	virtual const float& GetRotation() const { return _rotation; };
 
-	virtual void SetScale(const Vector2f& scale) { _scale = scale; };
-	virtual const Vector2f& GetScale() const { return _scale; };
+	virtual void SetScale(const FlatWorld::Vector2f& scale) { _scale = scale; };
+	virtual const FlatWorld::Vector2f& GetScale() const { return _scale; };
 
 private:
-	Vector2f _position;
+	FlatWorld::Vector2f _position;
 	float _rotation;
-	Vector2f _scale;
+	FlatWorld::Vector2f _scale;
 
 };

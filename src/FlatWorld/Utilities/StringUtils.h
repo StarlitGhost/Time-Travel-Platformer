@@ -4,13 +4,16 @@
 #include <iostream>
 #include <sstream>
 
-class StringUtils
+namespace FlatWorld
 {
-public:
-	template<typename T> static inline std::string to_string(const T& v)
+	class StringUtils
 	{
-		std::ostringstream stream;
-		stream << v;
-		return stream.str();
+	public:
+		template<typename T> static inline std::string to_string(const T& v)
+		{
+			std::ostringstream stream;
+			stream << v;
+			return stream.str();
+		};
 	};
-};
+}

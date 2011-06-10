@@ -4,6 +4,8 @@
 
 #include "Graphics/Colour.h"
 
+using namespace FlatWorld;
+
 Colour ColourUtils::Lerp(const Colour& startColour, const Colour& endColour, const float& interpolationPoint)
 {
 	return Colour(

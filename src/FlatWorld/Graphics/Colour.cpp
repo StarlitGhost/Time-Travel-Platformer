@@ -4,6 +4,8 @@
 
 #include <SFML/Window/OpenGL.hpp>
 
+using namespace FlatWorld;
+
 Colour::Colour(void)
 {
 	RBGA(1.0f, 1.0f, 1.0f, 1.0f);

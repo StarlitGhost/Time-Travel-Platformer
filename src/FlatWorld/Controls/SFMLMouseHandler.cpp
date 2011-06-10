@@ -7,6 +7,7 @@
 #include "Graphics/GameDisplay.h"
 #include "Maths/Vector2f.h"
 
+using namespace FlatWorld;
 
 bool SFMLMouseHandler::buttons[sf::Mouse::ButtonCount] = {false};
 bool SFMLMouseHandler::oldButtons[sf::Mouse::ButtonCount] = {false};

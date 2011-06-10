@@ -2,6 +2,8 @@
 
 #include <math.h>
 
+using namespace FlatWorld;
+
 Vector2f::Vector2f(void)
 {
     vec[0] = 0;

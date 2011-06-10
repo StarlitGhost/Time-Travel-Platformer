@@ -2,6 +2,8 @@
 
 #include <SFML/Window.hpp>
 
+using namespace FlatWorld;
+
 CSFMLTimer::CSFMLTimer(void)
 {
 }

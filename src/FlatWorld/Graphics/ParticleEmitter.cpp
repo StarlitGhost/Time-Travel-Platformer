@@ -5,6 +5,8 @@
 #include "Graphics/Particle.h"
 #include "Maths/Vector2f.h"
 
+using namespace FlatWorld;
+
 ParticleEmitter::ParticleEmitter()
 {
 	//ctor

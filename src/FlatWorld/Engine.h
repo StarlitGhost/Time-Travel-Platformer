@@ -1,32 +1,46 @@
 #pragma once
 
+#ifdef _WIN32
+	#ifdef FWAPI_EXPORT_SYMBOLS
+		#define FWAPI __declspec( dllexport )
+	#else
+		#define FWAPI __declspec( dllimport )
+	#endif
+#else
+	#define FWAPI
+#endif
+
 // Forward Declarations
 namespace sf{class Window;}
-class CScreen;
-class CScreenManager;
-class CSFMLTimer;
 
-class CEngine
+namespace FlatWorld
 {
-public:
-	~CEngine(void);
+	class CScreen;
+	class CScreenManager;
+	class CSFMLTimer;
 
-	static CEngine* GetInstance();
+	class FWAPI CEngine
+	{
+	public:
+		~CEngine(void);
 
-	void Init(sf::Window& GameWindow, CScreen* initialScreen);
+		static CEngine* GetInstance();
 
-	void Update();
-	void Display();
+		void Init(sf::Window& GameWindow, CScreen* initialScreen);
 
-	CSFMLTimer* Timer() const {return timer;};
+		void Update();
+		void Display();
 
-	void HandleEvents();
+		CSFMLTimer* Timer() const { return timer; };
 
-private:
-	static CEngine* thisInstance;
-	CScreenManager* screenManager;
-	CSFMLTimer* timer;
-	sf::Window* gameWindow;
+		void HandleEvents();
 
-	CEngine(void);
-};
+	private:
+		static CEngine* thisInstance;
+		CScreenManager* screenManager;
+		CSFMLTimer* timer;
+		sf::Window* gameWindow;
+
+		CEngine(void);
+	};
+}

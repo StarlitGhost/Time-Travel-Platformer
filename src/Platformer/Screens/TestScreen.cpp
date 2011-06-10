@@ -16,29 +16,31 @@
 #include <FTGL/ftgl.h>
 
 // Engine Headers
-#include "Engine/Engine.h"
+#include "FlatWorld/Engine.h"
 
-#include "Engine/ComponentSystem/GameObject.h"
-#include "Engine/ComponentSystem/GameComponent.h"
+#include "FlatWorld/ComponentSystem/GameObject.h"
+#include "FlatWorld/ComponentSystem/GameComponent.h"
 
-#include "Engine/Controls/SFMLKeyboardHandler.h"
-#include "Engine/Controls/SFMLMouseHandler.h"
+#include "FlatWorld/Controls/SFMLKeyboardHandler.h"
+#include "FlatWorld/Controls/SFMLMouseHandler.h"
 
-#include "Engine/Core/SFMLTimer.h"
+#include "FlatWorld/Core/SFMLTimer.h"
 
-#include "Engine/Graphics/Colour.h"
-#include "Engine/Graphics/GameDisplay.h"
-#include "Engine/Graphics/ParticleEmitter.h"
+#include "FlatWorld/Graphics/Colour.h"
+#include "FlatWorld/Graphics/GameDisplay.h"
+#include "FlatWorld/Graphics/ParticleEmitter.h"
 
-#include "Engine/Maths/Vector2f.h"
+#include "FlatWorld/Maths/Vector2f.h"
 
-#include "Engine/Utilities/ColourUtils.h"
-#include "Engine/Utilities/StringUtils.h"
+#include "FlatWorld/Utilities/ColourUtils.h"
+#include "FlatWorld/Utilities/StringUtils.h"
 
 // Game Headers
-#include "Game/Components/SpatialComponent.h"
-#include "Game/Components/VisualRectangleComponent.h"
-#include "Game/Components/InputPlayerComponent.h"
+#include "Components/SpatialComponent.h"
+#include "Components/VisualRectangleComponent.h"
+#include "Components/InputPlayerComponent.h"
+
+using namespace FlatWorld;
 
 TestScreen::TestScreen(void)
 {

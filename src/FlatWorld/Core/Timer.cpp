@@ -1,5 +1,7 @@
 #include "Timer.h"
 
+using namespace FlatWorld;
+
 CTimer::CTimer(void)
 {
 	Init(30.f);

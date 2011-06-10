@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Engine/ComponentSystem/GameComponent.h"
+#include "Flatworld/ComponentSystem/GameComponent.h"
 
-class InputComponent : public GameComponent
+class InputComponent : public FlatWorld::GameComponent
 {
 	// GameComponent Interface
 public:
-	virtual const GCIdType FamilyId() const { return GCIdType("InputComponent"); };
+	virtual const FlatWorld::GCIdType FamilyId() const { return FlatWorld::GCIdType("InputComponent"); };
 
 	// InputComponent Interface
 public:

@@ -3,28 +3,31 @@
 // Forward Declarations
 namespace sf{class Window;}
 
-class CSFMLTimer
+namespace FlatWorld
 {
-public:
-	CSFMLTimer(void);
-	CSFMLTimer(const float& timeCount, sf::Window& GameWindow);
-	~CSFMLTimer(void);
+	class CSFMLTimer
+	{
+	public:
+		CSFMLTimer(void);
+		CSFMLTimer(const float& timeCount, sf::Window& GameWindow);
+		~CSFMLTimer(void);
 	
-	void Init(const float& timeCount, sf::Window& GameWindow);
+		void Init(const float& timeCount, sf::Window& GameWindow);
 
-	void Update();
+		void Update();
 
-	bool Ready();
+		bool Ready();
 
-	float DT() const {return dt * timeScale;};
+		float DT() const {return dt * timeScale;};
 
-	float TimeScale() const {return timeScale;};
-	void TimeScale(const float& timeScale) {timeScale >= 0.f ? this->timeScale = timeScale : this->timeScale = 0.f;};
+		float TimeScale() const {return timeScale;};
+		void TimeScale(const float& timeScale) {timeScale >= 0.f ? this->timeScale = timeScale : this->timeScale = 0.f;};
 
-private:
-	float dt;
-	float timeScale;
-	float totalDt, intervalDt;
-	sf::Window* GameWindow;
+	private:
+		float dt;
+		float timeScale;
+		float totalDt, intervalDt;
+		sf::Window* GameWindow;
 
-};
+	};
+}

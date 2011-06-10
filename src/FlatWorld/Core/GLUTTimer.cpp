@@ -3,6 +3,8 @@
 #define FREEGLUT_STATIC
 #include <GL/freeglut.h>
 
+using namespace FlatWorld;
+
 CGLUTTimer::CGLUTTimer(void)
 {
 }

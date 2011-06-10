@@ -10,6 +10,8 @@
 #include <SFML/Window/OpenGL.hpp>
 #include <GL/glext.h>
 
+using namespace FlatWorld;
+
 /*
  * Validates the (compiled) shader supplied to it
  * Outputs any errors to the standard error buffer

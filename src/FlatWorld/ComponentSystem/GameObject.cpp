@@ -3,6 +3,8 @@
 // Engine Headers
 #include "ComponentSystem/GameComponent.h"
 
+using namespace FlatWorld;
+
 GameObject::GameObject(const GOIdType& id)
 {
 	SetId(id);

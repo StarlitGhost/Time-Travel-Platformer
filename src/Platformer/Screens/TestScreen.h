@@ -1,17 +1,20 @@
 #pragma once
-#include "Engine/ScreenSystem/Screen.h"
+#include "Flatworld/ScreenSystem/Screen.h"
 
 #include <string>
 
 #define FTGL_LIBRARY_STATIC
 #include <FTGL/ftgl.h>
 
-#include "Engine/Maths/Vector2f.h"
+#include "Flatworld/Maths/Vector2f.h"
 
-class GameObject;
-class ParticleEmitter;
+namespace FlatWorld
+{
+	class GameObject;
+	class ParticleEmitter;
+}
 
-class TestScreen : public CScreen
+class TestScreen : public FlatWorld::CScreen
 {
 public:
 	TestScreen(void);
@@ -23,13 +26,13 @@ public:
 	void Unload();
 
 private:
-	Vector2f line1Start, line1End;
-	Vector2f line2Start, line2End;
+	FlatWorld::Vector2f line1Start, line1End;
+	FlatWorld::Vector2f line2Start, line2End;
 	FTTextureFont* font;
 	std::string testInfo, testData;
-	Vector2f circleCenter;
+	FlatWorld::Vector2f circleCenter;
 	float circleMod;
-	ParticleEmitter* particleEmitter;
+	FlatWorld::ParticleEmitter* particleEmitter;
 
-	GameObject* gameObject;
+	FlatWorld::GameObject* gameObject;
 };

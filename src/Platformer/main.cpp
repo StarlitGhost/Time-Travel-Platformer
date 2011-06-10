@@ -1,8 +1,10 @@
 #include <SFML/Window.hpp>
 
-#include "Engine/Engine.h"
+#include "FlatWorld/Engine.h"
 
-#include "Game/Screens/TestScreen.h"
+#include "Platformer/Screens/TestScreen.h"
+
+using namespace FlatWorld;
 
 CEngine* engine;
 

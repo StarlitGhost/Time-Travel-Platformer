@@ -75,54 +75,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Engine\Engine.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Controls\SFMLKeyboardHandler.cpp">
-      <Filter>Source Files\Engine\Controls</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Controls\SFMLMouseHandler.cpp">
-      <Filter>Source Files\Engine\Controls</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Core\SFMLTimer.cpp">
-      <Filter>Source Files\Engine\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Graphics\Colour.cpp">
-      <Filter>Source Files\Engine\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Graphics\GameDisplay.cpp">
-      <Filter>Source Files\Engine\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Graphics\Particle.cpp">
-      <Filter>Source Files\Engine\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Graphics\ParticleEmitter.cpp">
-      <Filter>Source Files\Engine\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Graphics\Shader.cpp">
-      <Filter>Source Files\Engine\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Maths\Vector2f.cpp">
-      <Filter>Source Files\Engine\Maths</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\ScreenSystem\Screen.cpp">
-      <Filter>Source Files\Engine\ScreenSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\ScreenSystem\ScreenManager.cpp">
-      <Filter>Source Files\Engine\ScreenSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Utilities\ColourUtils.cpp">
-      <Filter>Source Files\Engine\Utilities</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Utilities\StringUtils.cpp">
-      <Filter>Source Files\Engine\Utilities</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\ComponentSystem\GameComponent.cpp">
-      <Filter>Source Files\Engine\ComponentSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\ComponentSystem\GameObject.cpp">
-      <Filter>Source Files\Engine\ComponentSystem</Filter>
-    </ClCompile>
     <ClCompile Include="ComponentSystem\GameComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -179,54 +131,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine\Engine.h">
-      <Filter>Header Files\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Controls\SFMLKeyboardHandler.h">
-      <Filter>Header Files\Engine\Controls</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Controls\SFMLMouseHandler.h">
-      <Filter>Header Files\Engine\Controls</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Core\SFMLTimer.h">
-      <Filter>Header Files\Engine\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Graphics\Colour.h">
-      <Filter>Header Files\Engine\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Graphics\GameDisplay.h">
-      <Filter>Header Files\Engine\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Graphics\Particle.h">
-      <Filter>Header Files\Engine\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Graphics\ParticleEmitter.h">
-      <Filter>Header Files\Engine\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Graphics\Shader.h">
-      <Filter>Header Files\Engine\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Maths\Vector2f.h">
-      <Filter>Header Files\Engine\Maths</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\ScreenSystem\Screen.h">
-      <Filter>Header Files\Engine\ScreenSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\ScreenSystem\ScreenManager.h">
-      <Filter>Header Files\Engine\ScreenSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Utilities\ColourUtils.h">
-      <Filter>Header Files\Engine\Utilities</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Utilities\StringUtils.h">
-      <Filter>Header Files\Engine\Utilities</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\ComponentSystem\GameComponent.h">
-      <Filter>Header Files\Engine\ComponentSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\ComponentSystem\GameObject.h">
-      <Filter>Header Files\Engine\ComponentSystem</Filter>
-    </ClInclude>
     <ClInclude Include="Game\Screens\TestScreen.h">
       <Filter>Header Files\Game\Screens</Filter>
     </ClInclude>

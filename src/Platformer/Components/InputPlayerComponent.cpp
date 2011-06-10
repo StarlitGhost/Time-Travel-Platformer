@@ -2,12 +2,14 @@
 
 #include <SFML/Window.hpp>
 
-#include "Engine/ComponentSystem/GameObject.h"
+#include "Flatworld/ComponentSystem/GameObject.h"
 
-#include "Engine/Controls/SFMLKeyboardHandler.h"
-#include "Engine/Controls/SFMLMouseHandler.h"
+#include "Flatworld/Controls/SFMLKeyboardHandler.h"
+#include "Flatworld/Controls/SFMLMouseHandler.h"
 
-#include "Game/Components/SpatialComponent.h"
+#include "Components/SpatialComponent.h"
+
+using namespace FlatWorld;
 
 void InputPlayerComponent::Update(float dt)
 {

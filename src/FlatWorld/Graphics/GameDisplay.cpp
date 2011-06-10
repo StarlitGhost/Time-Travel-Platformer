@@ -2,6 +2,8 @@
 
 #include <SFML/Window/OpenGL.hpp>
 
+using namespace FlatWorld;
+
 int GameDisplay::width = 0;
 int GameDisplay::height = 0;
 

@@ -4,6 +4,8 @@
 
 #include "Screen.h"
 
+using namespace FlatWorld;
+
 CScreenManager* CScreenManager::thisInstance = new CScreenManager();
 
 CScreenManager::CScreenManager(void)
