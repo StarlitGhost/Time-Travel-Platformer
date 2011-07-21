@@ -2,7 +2,9 @@
 
 #include <math.h>
 
-#include "Engine/Graphics/Colour.h"
+#include "Graphics/Colour.h"
+
+using namespace FlatWorld;
 
 Colour ColourUtils::Lerp(const Colour& startColour, const Colour& endColour, const float& interpolationPoint)
 {

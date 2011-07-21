@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Game/Components/InputComponent.h"
+#include "Platformer/Components/InputComponent.h"
 
 class SpatialComponent;
 
@@ -8,7 +8,7 @@ class InputPlayerComponent : public InputComponent
 {
 	// GameComponent Interface
 public:
-	virtual const GCIdType ComponentId() const { return GCIdType("InputPlayerComponent"); };
+	virtual const FlatWorld::GCIdType ComponentId() const { return FlatWorld::GCIdType("InputPlayerComponent"); };
 
 	// InputComponent Interface
 public:

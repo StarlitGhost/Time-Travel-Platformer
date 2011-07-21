@@ -2,23 +2,26 @@
 
 #include <vector>
 
-// Forward Declarations
-class Particle;
-
-class ParticleEmitter
+namespace FlatWorld
 {
-public:
-    ParticleEmitter();
-    ~ParticleEmitter();
+	// Forward Declarations
+	class Particle;
 
-    void Update(const float& dt);
-    void Draw(void) const;
+	class ParticleEmitter
+	{
+	public:
+		ParticleEmitter();
+		~ParticleEmitter();
 
-    void Reset(void);
-    void Emit(const int& numParticles);
+		void Update(const float& dt);
+		void Draw(void) const;
 
-	int Count() const;
-protected:
-    std::vector<Particle*> activeParticles;
-    std::vector<Particle*> inactiveParticles;
-};
+		void Reset(void);
+		void Emit(const int& numParticles);
+
+		int Count() const;
+	protected:
+		std::vector<Particle*> activeParticles;
+		std::vector<Particle*> inactiveParticles;
+	};
+}

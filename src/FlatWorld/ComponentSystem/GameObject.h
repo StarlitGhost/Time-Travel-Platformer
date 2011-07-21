@@ -6,33 +6,36 @@
 #include <vector>
 
 // Engine Headers
-#include "Engine/ComponentSystem/GameComponent.h"
+#include "ComponentSystem/GameComponent.h"
 
-// Typedefs
-typedef std::string GOIdType;
-
-class GameObject
+namespace FlatWorld
 {
-public:
-	GameObject(const GOIdType& id);
-	~GameObject(void);
+	// Typedefs
+	typedef std::string GOIdType;
 
-	void Update(float dt);
+	class GameObject
+	{
+	public:
+		GameObject(const GOIdType& id);
+		~GameObject(void);
 
-	const GOIdType& GetId() const { return _id; };
-	void SetId(const GOIdType& id) { _id = id; };
+		void Update(float dt);
 
-	GameComponent* GetComponent(const GCIdType& familyId);
+		const GOIdType& GetId() const { return _id; };
+		void SetId(const GOIdType& id) { _id = id; };
 
-	void AddComponent(GameComponent* component);
-	void RemoveComponent(const GCIdType& familyId);
+		GameComponent* GetComponent(const GCIdType& familyId);
 
-	void ClearComponents();
+		void AddComponent(GameComponent* component);
+		void RemoveComponent(const GCIdType& familyId);
 
-private:
-	std::string _id;
+		void ClearComponents();
 
-	typedef std::map<GCIdType, GameComponent*> ComponentMap;
-	ComponentMap _components;
+	private:
+		std::string _id;
 
-};
+		typedef std::map<GCIdType, GameComponent*> ComponentMap;
+		ComponentMap _components;
+
+	};
+}

@@ -16,29 +16,30 @@
 #include <FTGL/ftgl.h>
 
 // Engine Headers
-#include "Engine/Engine.h"
+#include "FlatWorld/Engine.h"
 
-#include "Engine/ComponentSystem/GameObject.h"
-#include "Engine/ComponentSystem/GameComponent.h"
+#include "FlatWorld/ComponentSystem/GameObject.h"
+#include "FlatWorld/ComponentSystem/GameComponent.h"
 
-#include "Engine/Controls/SFMLKeyboardHandler.h"
-#include "Engine/Controls/SFMLMouseHandler.h"
+#include "FlatWorld/Controls/SFMLKeyboardHandler.h"
+#include "FlatWorld/Controls/SFMLMouseHandler.h"
 
-#include "Engine/Core/SFMLTimer.h"
+#include "FlatWorld/Graphics/Colour.h"
+#include "FlatWorld/Graphics/IGameWindow.h"
+#include "FlatWorld/Graphics/ParticleEmitter.h"
 
-#include "Engine/Graphics/Colour.h"
-#include "Engine/Graphics/GameDisplay.h"
-#include "Engine/Graphics/ParticleEmitter.h"
+#include "FlatWorld/Maths/Vector2f.h"
 
-#include "Engine/Maths/Vector2f.h"
-
-#include "Engine/Utilities/ColourUtils.h"
-#include "Engine/Utilities/StringUtils.h"
+#include "FlatWorld/Utilities/ColourUtils.h"
+#include "FlatWorld/Utilities/StringUtils.h"
+#include "FlatWorld/Utilities/Timer.h"
 
 // Game Headers
-#include "Game/Components/SpatialComponent.h"
-#include "Game/Components/VisualRectangleComponent.h"
-#include "Game/Components/InputPlayerComponent.h"
+#include "Components/SpatialComponent.h"
+#include "Components/VisualRectangleComponent.h"
+#include "Components/InputPlayerComponent.h"
+
+using namespace FlatWorld;
 
 TestScreen::TestScreen(void)
 {
@@ -50,7 +51,7 @@ TestScreen::~TestScreen(void)
 
 void TestScreen::Update(float dt)
 {
-	CSFMLTimer* timer = CEngine::GetInstance()->Timer();
+	Timer* timer = engine->GetTimer();
 	if (SFMLKeyboardHandler::Pressed(sf::Key::Escape))
 	{
 		exit(0);
@@ -109,7 +110,7 @@ void TestScreen::Draw()
 {
 	glColor4f(1.f,1.f,1.f,1.f);
 	glPushMatrix();
-	glTranslatef(10.f,(float)GameDisplay::Height() - 10.f,0.f);
+	glTranslatef(10.f,(float)engine->GetGameWindow()->Height() - 10.f,0.f);
 	font->Render(testData.c_str());
 	glTranslatef(0.f,-15.f,0.f);
 	font->Render(testInfo.c_str());
@@ -166,6 +167,8 @@ void TestScreen::Draw()
 
 void TestScreen::Load()
 {
+	engine = CEngine::GetInstance();
+
 	font = new FTTextureFont("C:\\Windows\\Fonts\\tahoma.ttf");
 	font->FaceSize(12);
 	line1Start = Vector2f(320,240);

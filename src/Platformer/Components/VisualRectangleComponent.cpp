@@ -4,12 +4,14 @@
 #include <SFML/Window.hpp>
 
 
-#include "Engine/ComponentSystem/GameObject.h"
+#include "FlatWorld/ComponentSystem/GameObject.h"
 
-#include "Engine/Maths/Vector2f.h"
+#include "FlatWorld/Maths/Vector2f.h"
 
 
-#include "Game/Components/SpatialComponent.h"
+#include "Components/SpatialComponent.h"
+
+using namespace FlatWorld;
 
 void VisualRectangleComponent::Draw() const
 {

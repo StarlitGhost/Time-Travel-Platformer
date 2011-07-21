@@ -1,12 +1,16 @@
-#include <SFML/Window.hpp>
+#include "FlatWorld/Engine.h"
+#include "FlatWorld/Graphics/IGameWindow.h"
+#include "FlatWorld/Graphics/SFMLGameWindow.h"
 
-#include "Engine/Engine.h"
+#include "Platformer/Screens/TestScreen.h"
 
-#include "Game/Screens/TestScreen.h"
+#include "sfml/Window/OpenGL.hpp"
+
+using namespace FlatWorld;
 
 CEngine* engine;
 
-void Init(sf::Window& GameWindow)
+void Init(IGameWindow* GameWindow)
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClearDepth(1.0f);
@@ -18,7 +22,7 @@ void Init(sf::Window& GameWindow)
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluOrtho2D(0, GameWindow.GetWidth(), 0, GameWindow.GetHeight());
+	gluOrtho2D(0, GameWindow->Width(), 0, GameWindow->Height());
 	glMatrixMode(GL_MODELVIEW);
 
 	engine = CEngine::GetInstance();
@@ -32,30 +36,23 @@ void Update()
 
 void Display()
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // Basic Transparency
-	glLoadIdentity();
-
 	engine->Display();
 }
 
 int main(int argc, char **argv)
 {
-	sf::Window GameWindow(sf::VideoMode(800, 600, 32), "Game Name Here");
+	//sf::Window GameWindow(sf::VideoMode(800, 600, 32), "Game Name Here");
+
+	IGameWindow* GameWindow = new SFMLGameWindow(800, 600, "Game Name Here");
 
 	//FreeConsole();
 
 	Init(GameWindow);
 
-	while (GameWindow.IsOpened())
+	while (GameWindow->IsOpen())
 	{
-		engine->HandleEvents();
-		
 		Update();
 		Display();
-
-		GameWindow.Display();
 	}
 
 	return 0;

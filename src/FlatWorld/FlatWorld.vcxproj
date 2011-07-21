@@ -16,13 +16,13 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -38,9 +38,9 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\$(ProjectName)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)build\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)build\$(ProjectName)\</IntDir>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
@@ -51,12 +51,13 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)src/FlatWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)src\FlatWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>FWAPI_EXPORT_SYMBOLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalOptions>/NODEFAULTLIB:LIBCMT %(AdditionalOptions)</AdditionalOptions>
@@ -65,16 +66,24 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib</AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)src/FlatWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)src\FlatWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>FWAPI_EXPORT_SYMBOLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalOptions>/NODEFAULTLIB:LIBCMT %(AdditionalOptions)</AdditionalOptions>
@@ -82,68 +91,41 @@
       <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib</AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ComponentSystem\GameComponent.cpp" />
     <ClCompile Include="ComponentSystem\GameObject.cpp" />
     <ClCompile Include="Controls\SFMLKeyboardHandler.cpp" />
     <ClCompile Include="Controls\SFMLMouseHandler.cpp" />
-    <ClCompile Include="Core\GLUTTimer.cpp" />
-    <ClCompile Include="Core\SFMLTimer.cpp" />
-    <ClCompile Include="Core\Timer.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Graphics\IGameWindow.cpp" />
     <ClCompile Include="Graphics\Colour.cpp" />
-    <ClCompile Include="Graphics\GameDisplay.cpp" />
+    <ClCompile Include="Graphics\SFMLGameWindow.cpp" />
     <ClCompile Include="Graphics\Particle.cpp" />
     <ClCompile Include="Graphics\ParticleEmitter.cpp" />
     <ClCompile Include="Graphics\Shader.cpp" />
-    <ClCompile Include="Engine\Engine.cpp" />
-    <ClCompile Include="Engine\Controls\SFMLKeyboardHandler.cpp" />
-    <ClCompile Include="Engine\Controls\SFMLMouseHandler.cpp" />
-    <ClCompile Include="Engine\Core\SFMLTimer.cpp" />
-    <ClCompile Include="Engine\Graphics\Colour.cpp" />
-    <ClCompile Include="Engine\Graphics\GameDisplay.cpp" />
-    <ClCompile Include="Engine\Graphics\Particle.cpp" />
-    <ClCompile Include="Engine\Graphics\ParticleEmitter.cpp" />
-    <ClCompile Include="Engine\Graphics\Shader.cpp" />
-    <ClCompile Include="Engine\Maths\Vector2f.cpp" />
-    <ClCompile Include="Engine\ScreenSystem\Screen.cpp" />
-    <ClCompile Include="Engine\ScreenSystem\ScreenManager.cpp" />
-    <ClCompile Include="Engine\Utilities\ColourUtils.cpp" />
-    <ClCompile Include="Engine\Utilities\StringUtils.cpp" />
-    <ClCompile Include="Engine\ComponentSystem\GameComponent.cpp" />
-    <ClCompile Include="Engine\ComponentSystem\GameObject.cpp" />
     <ClCompile Include="Maths\Vector2f.cpp" />
     <ClCompile Include="ScreenSystem\Screen.cpp" />
     <ClCompile Include="ScreenSystem\ScreenManager.cpp" />
     <ClCompile Include="Utilities\ColourUtils.cpp" />
     <ClCompile Include="Utilities\StringUtils.cpp" />
+    <ClCompile Include="Utilities\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ComponentSystem\GameComponent.h" />
     <ClInclude Include="ComponentSystem\GameObject.h" />
     <ClInclude Include="Controls\SFMLKeyboardHandler.h" />
     <ClInclude Include="Controls\SFMLMouseHandler.h" />
-    <ClInclude Include="Core\GLUTTimer.h" />
-    <ClInclude Include="Core\SFMLTimer.h" />
-    <ClInclude Include="Core\Timer.h" />
     <ClInclude Include="Engine.h" />
-    <ClInclude Include="Engine\Engine.h" />
-    <ClInclude Include="Engine\Controls\SFMLKeyboardHandler.h" />
-    <ClInclude Include="Engine\Controls\SFMLMouseHandler.h" />
-    <ClInclude Include="Engine\Core\SFMLTimer.h" />
-    <ClInclude Include="Engine\Graphics\Colour.h" />
-    <ClInclude Include="Engine\Graphics\GameDisplay.h" />
-    <ClInclude Include="Engine\Graphics\Particle.h" />
-    <ClInclude Include="Engine\Graphics\ParticleEmitter.h" />
-    <ClInclude Include="Engine\Graphics\Shader.h" />
-    <ClInclude Include="Engine\Maths\Vector2f.h" />
-    <ClInclude Include="Engine\ScreenSystem\Screen.h" />
-    <ClInclude Include="Engine\ScreenSystem\ScreenManager.h" />
-    <ClInclude Include="Engine\Utilities\ColourUtils.h" />
-    <ClInclude Include="Engine\Utilities\StringUtils.h" />
-    <ClInclude Include="Engine\ComponentSystem\GameComponent.h" />
-    <ClInclude Include="Engine\ComponentSystem\GameObject.h" />
+    <ClInclude Include="FlatWorld.h" />
+    <ClInclude Include="Graphics\IGameWindow.h" />
     <ClInclude Include="Game\Screens\TestScreen.h" />
     <ClInclude Include="Game\Components\SpatialComponent.h" />
     <ClInclude Include="Game\Components\VisualComponent.h" />
@@ -151,7 +133,7 @@
     <ClInclude Include="Game\Components\InputComponent.h" />
     <ClInclude Include="Game\Components\InputPlayerComponent.h" />
     <ClInclude Include="Graphics\Colour.h" />
-    <ClInclude Include="Graphics\GameDisplay.h" />
+    <ClInclude Include="Graphics\SFMLGameWindow.h" />
     <ClInclude Include="Graphics\Particle.h" />
     <ClInclude Include="Graphics\ParticleEmitter.h" />
     <ClInclude Include="Graphics\Shader.h" />
@@ -159,7 +141,10 @@
     <ClInclude Include="ScreenSystem\Screen.h" />
     <ClInclude Include="ScreenSystem\ScreenManager.h" />
     <ClInclude Include="Utilities\ColourUtils.h" />
+    <ClInclude Include="Utilities\MathsUtilities.h" />
+    <ClInclude Include="Utilities\StringUtilites.h" />
     <ClInclude Include="Utilities\StringUtils.h" />
+    <ClInclude Include="Utilities\Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

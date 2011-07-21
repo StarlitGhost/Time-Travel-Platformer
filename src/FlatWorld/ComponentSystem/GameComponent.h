@@ -3,28 +3,31 @@
 // Standard Headers
 #include <string>
 
-// Forward Declarations
-class GameObject;
-
-// Typedefs
-typedef std::string GCIdType;
-
-class GameComponent
+namespace FlatWorld
 {
-	// GameComponent Interface
-public:
-	GameComponent() : _owner(NULL) {};
-	virtual ~GameComponent() = 0 {};
+	// Forward Declarations
+	class GameObject;
 
-	virtual void Update(float dt) {};
+	// Typedefs
+	typedef std::string GCIdType;
 
-	virtual const GCIdType ComponentId() const = 0;
-	virtual const GCIdType FamilyId() const = 0;
+	class GameComponent
+	{
+		// GameComponent Interface
+	public:
+		GameComponent() : _owner(NULL) {};
+		virtual ~GameComponent() = 0 {};
 
-	void SetOwner(GameObject* owner) { _owner = owner; };
-	GameObject* GetOwner() const { return _owner; };
+		virtual void Update(float dt) {};
 
-private:
-	GameObject* _owner;
+		virtual const GCIdType ComponentId() const = 0;
+		virtual const GCIdType FamilyId() const = 0;
 
-};
+		void SetOwner(GameObject* owner) { _owner = owner; };
+		GameObject* GetOwner() const { return _owner; };
+
+	private:
+		GameObject* _owner;
+
+	};
+}

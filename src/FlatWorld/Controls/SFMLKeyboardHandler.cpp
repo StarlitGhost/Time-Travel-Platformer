@@ -2,13 +2,10 @@
 
 #include <SFML/Window.hpp>
 
+using namespace FlatWorld;
+
 bool SFMLKeyboardHandler::keys[sf::Key::Count] = {false};
 bool SFMLKeyboardHandler::oldKeys[sf::Key::Count] = {false};
-
-void SFMLKeyboardHandler::Init(sf::Window& gameWindow)
-{
-	gameWindow.EnableKeyRepeat(false);
-}
 
 void SFMLKeyboardHandler::Update()
 {

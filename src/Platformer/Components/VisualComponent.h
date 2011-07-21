@@ -1,13 +1,13 @@
 #pragma once
 
 // Engine Headers
-#include "Engine/ComponentSystem/GameComponent.h"
+#include "Flatworld/ComponentSystem/GameComponent.h"
 
-class VisualComponent : public GameComponent
+class VisualComponent : public FlatWorld::GameComponent
 {
 	// GameComponent Interface
 public:
-	virtual const GCIdType FamilyId() const { return GCIdType("VisualComponent"); };
+	virtual const FlatWorld::GCIdType FamilyId() const { return FlatWorld::GCIdType("VisualComponent"); };
 
 	// VisualComponent Interface
 public:

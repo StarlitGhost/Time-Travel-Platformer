@@ -2,14 +2,16 @@
 
 #include <SFML/Window.hpp>
 
-#include "Engine/Controls/SFMLKeyboardHandler.h"
-#include "Engine/Controls/SFMLMouseHandler.h"
-#include "Engine/Core/SFMLTimer.h"
-#include "Engine/Graphics/GameDisplay.h"
-#include "Engine/ScreenSystem/Screen.h"
-#include "Engine/ScreenSystem/ScreenManager.h"
+#include "Controls/SFMLKeyboardHandler.h"
+#include "Controls/SFMLMouseHandler.h"
+#include "Graphics/IGameWindow.h"
+#include "ScreenSystem/Screen.h"
+#include "ScreenSystem/ScreenManager.h"
+#include "Utilities/Timer.h"
 
-CEngine* CEngine::thisInstance = new CEngine();
+using namespace FlatWorld;
+
+CEngine* CEngine::_thisInstance = new CEngine();
 
 CEngine::CEngine(void)
 {
@@ -17,38 +19,38 @@ CEngine::CEngine(void)
 
 CEngine::~CEngine(void)
 {
-	screenManager->Unload();
+	_screenManager->Unload();
 }
 
-void CEngine::Init(sf::Window& gameWindow, CScreen* initialScreen)
+void CEngine::Init(IGameWindow* gameWindow, CScreen* initialScreen)
 {
-	this->gameWindow = &gameWindow;
-	GameDisplay::Resize(gameWindow.GetWidth(), gameWindow.GetHeight());
+	_gameWindow = gameWindow;
+	_gameWindow->Resize(_gameWindow->Width(), _gameWindow->Height());
 
-	timer = new CSFMLTimer(60.f, gameWindow);
+	_timer = new Timer(60.f);
 
-	screenManager = CScreenManager::GetInstance();
-	screenManager->PushScreen(initialScreen);
+	_screenManager = CScreenManager::GetInstance();
+	_screenManager->PushScreen(initialScreen);
 
-	SFMLKeyboardHandler::Init(gameWindow);
 	SFMLMouseHandler::Invert(false, true);
-
 }
 
 CEngine* CEngine::GetInstance()
 {
-	if (thisInstance == 0)
+	if (_thisInstance == 0)
 	{
-		thisInstance = new CEngine();
+		_thisInstance = new CEngine();
 	}
-	return thisInstance;
+	return _thisInstance;
 }
 
 void CEngine::Update()
 {
-	timer->Update();
+	_gameWindow->HandleEvents();
 
-	screenManager->Update(timer->DT());
+	_timer->Update();
+
+	_screenManager->Update(_timer->DT());
 
 	SFMLKeyboardHandler::Update();
 	SFMLMouseHandler::Update();
@@ -56,29 +58,9 @@ void CEngine::Update()
 
 void CEngine::Display()
 {
-	screenManager->Draw();
-}
+	_gameWindow->StartDisplay();
 
-void CEngine::HandleEvents()
-{
-	sf::Event Event;
-	while (gameWindow->GetEvent(Event))
-	{
-		if ((Event.Type == sf::Event::Closed))
-		{
-			gameWindow->Close();
-		}
-		if (Event.Type == sf::Event::Resized)
-		{
-			GameDisplay::Resize(Event.Size.Width, Event.Size.Height);
-		}
-		if (Event.Type == sf::Event::KeyPressed || Event.Type == sf::Event::KeyReleased)
-		{
-			SFMLKeyboardHandler::HandleEvents(Event);
-		}
-		if (Event.Type == sf::Event::MouseMoved || Event.Type == sf::Event::MouseButtonPressed || Event.Type == sf::Event::MouseButtonReleased || Event.Type == sf::Event::MouseWheelMoved)
-		{
-			SFMLMouseHandler::HandleEvents(Event);
-		}
-	}
+	_screenManager->Draw();
+
+	_gameWindow->EndDisplay();
 }
