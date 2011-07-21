@@ -21,15 +21,15 @@ void InputPlayerComponent::Update(float dt)
 		if (SFMLKeyboardHandler::Held(sf::Key::A))
 		{
 			_spatialComponent->SetPosition(Vector2f(
-				_spatialComponent->GetPosition().X() - (50.f * dt),
-				_spatialComponent->GetPosition().Y()
+				_spatialComponent->GetPosition().x - (50.f * dt),
+				_spatialComponent->GetPosition().y
 				));
 		}
 		else if (SFMLKeyboardHandler::Held(sf::Key::D))
 		{
 			_spatialComponent->SetPosition(Vector2f(
-				_spatialComponent->GetPosition().X() + (50.f * dt),
-				_spatialComponent->GetPosition().Y()
+				_spatialComponent->GetPosition().x + (50.f * dt),
+				_spatialComponent->GetPosition().y
 				));
 		}
 	}

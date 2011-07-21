@@ -60,10 +60,10 @@ void Particle::Draw(void) const
 	{
 		glBegin(GL_QUADS);
 			colour.Apply();
-			glVertex2f(position.X(), position.Y() + 1.f);
-			glVertex2f(position.X() - 1.f, position.Y());
-			glVertex2f(position.X(), position.Y() - 1.f);
-			glVertex2f(position.X() + 1.f, position.Y());
+			glVertex2f(position.x, position.y + 1.f);
+			glVertex2f(position.x - 1.f, position.y);
+			glVertex2f(position.x, position.y - 1.f);
+			glVertex2f(position.x + 1.f, position.y);
 		glEnd();
 	}
 }

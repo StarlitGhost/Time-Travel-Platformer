@@ -80,10 +80,10 @@ void TestScreen::Update(float dt)
 
 	line2Start = SFMLMouseHandler::Position();
 
-	Vector2f line1 = (line1End - line1Start).normalize();
-	Vector2f line2 = (line2End - line2Start).normalize();
+	Vector2f line1 = (line1End - line1Start).Unit();
+	Vector2f line2 = (line2End - line2Start).Unit();
 
-	float line1dotline2 = line1.dot(line2);
+	float line1dotline2 = line1.Dot(line2);
 	float angle = acos(line1dotline2);
 	angle *= 180.f/3.14159265358979323846f;
 	angle = 180.f - angle;
@@ -118,15 +118,15 @@ void TestScreen::Draw()
 	glPopMatrix();
 
 	glBegin(GL_LINES);
-	glVertex2f(line1Start.X(),line1Start.Y());
-	glVertex2f(line1End.X(), line1End.Y());
+	glVertex2f(line1Start.x,line1Start.y);
+	glVertex2f(line1End.x, line1End.y);
 
-	glVertex2f(line2Start.X(),line2Start.Y());
-	glVertex2f(line2End.X(), line2End.Y());
+	glVertex2f(line2Start.x,line2Start.y);
+	glVertex2f(line2End.x, line2End.y);
 	glEnd();
 
 	glPushMatrix();
-	glTranslatef(circleCenter.X() + sin(circleMod) * 100.f, circleCenter.Y() + cos(circleMod) * 100.f, 0.f);
+	glTranslatef(circleCenter.x + sin(circleMod) * 100.f, circleCenter.y + cos(circleMod) * 100.f, 0.f);
 	glBegin(GL_LINES);
 	glVertex2f(-5.f, 0.f);
 	glVertex2f(+5.f, 0.f);

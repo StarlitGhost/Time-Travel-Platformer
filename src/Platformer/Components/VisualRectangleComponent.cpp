@@ -46,9 +46,9 @@ void VisualRectangleComponent::Draw() const
 			Vector2f position = spatialComponent->GetPosition();
 			Vector2f scale = spatialComponent->GetScale();
 
-			glTranslatef(position.X(), position.Y(), 0.f);
+			glTranslatef(position.x, position.y, 0.f);
 			glRotatef(spatialComponent->GetRotation(), 0.f, 0.f, 1.f);
-			glScalef(scale.X(), scale.Y(), 1.f);
+			glScalef(scale.x, scale.y, 1.f);
 		}
 		else
 		{
