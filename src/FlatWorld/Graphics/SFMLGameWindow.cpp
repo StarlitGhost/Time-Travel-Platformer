@@ -1,13 +1,13 @@
-#include "GameDisplay.h"
+#include "SFMLGameWindow.h"
 
 #include <SFML/Window/OpenGL.hpp>
 
 using namespace FlatWorld;
 
-int GameDisplay::width = 0;
-int GameDisplay::height = 0;
+int SFMLGameWindow::width = 0;
+int SFMLGameWindow::height = 0;
 
-void GameDisplay::Resize(unsigned int newWidth, unsigned int newHeight)
+void SFMLGameWindow::Resize(unsigned int newWidth, unsigned int newHeight)
 {
 	width = newWidth;
 	height = newHeight;

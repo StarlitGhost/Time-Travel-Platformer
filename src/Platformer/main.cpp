@@ -1,5 +1,3 @@
-#include <SFML/Window.hpp>
-
 #include "FlatWorld/Engine.h"
 
 #include "Platformer/Screens/TestScreen.h"
