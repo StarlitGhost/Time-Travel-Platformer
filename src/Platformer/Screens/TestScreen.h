@@ -10,6 +10,7 @@
 
 namespace FlatWorld
 {
+	class CEngine;
 	class GameObject;
 	class ParticleEmitter;
 }
@@ -26,6 +27,8 @@ public:
 	void Unload();
 
 private:
+	FlatWorld::CEngine* engine;
+
 	FlatWorld::Vector2f line1Start, line1End;
 	FlatWorld::Vector2f line2Start, line2End;
 	FTTextureFont* font;

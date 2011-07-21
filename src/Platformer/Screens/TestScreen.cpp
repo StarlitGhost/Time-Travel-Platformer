@@ -24,16 +24,15 @@
 #include "FlatWorld/Controls/SFMLKeyboardHandler.h"
 #include "FlatWorld/Controls/SFMLMouseHandler.h"
 
-#include "FlatWorld/Core/SFMLTimer.h"
-
 #include "FlatWorld/Graphics/Colour.h"
-#include "FlatWorld/Graphics/GameDisplay.h"
+#include "FlatWorld/Graphics/IGameWindow.h"
 #include "FlatWorld/Graphics/ParticleEmitter.h"
 
 #include "FlatWorld/Maths/Vector2f.h"
 
 #include "FlatWorld/Utilities/ColourUtils.h"
 #include "FlatWorld/Utilities/StringUtils.h"
+#include "FlatWorld/Utilities/Timer.h"
 
 // Game Headers
 #include "Components/SpatialComponent.h"
@@ -52,7 +51,7 @@ TestScreen::~TestScreen(void)
 
 void TestScreen::Update(float dt)
 {
-	CSFMLTimer* timer = CEngine::GetInstance()->Timer();
+	Timer* timer = engine->GetTimer();
 	if (SFMLKeyboardHandler::Pressed(sf::Key::Escape))
 	{
 		exit(0);
@@ -111,7 +110,7 @@ void TestScreen::Draw()
 {
 	glColor4f(1.f,1.f,1.f,1.f);
 	glPushMatrix();
-	glTranslatef(10.f,(float)GameDisplay::Height() - 10.f,0.f);
+	glTranslatef(10.f,(float)engine->GetGameWindow()->Height() - 10.f,0.f);
 	font->Render(testData.c_str());
 	glTranslatef(0.f,-15.f,0.f);
 	font->Render(testInfo.c_str());
@@ -168,6 +167,8 @@ void TestScreen::Draw()
 
 void TestScreen::Load()
 {
+	engine = CEngine::GetInstance();
+
 	font = new FTTextureFont("C:\\Windows\\Fonts\\tahoma.ttf");
 	font->FaceSize(12);
 	line1Start = Vector2f(320,240);

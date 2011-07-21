@@ -7,11 +7,14 @@ namespace FlatWorld
 	class IGameWindow
 	{
 	public:
+		virtual void StartDisplay() = 0;
+		virtual void EndDisplay() = 0;
 		virtual void Resize(int newWidth, int newHeight) = 0;
 
-		virtual int Width() = 0;
-		virtual int Height() = 0;
+		virtual void HandleEvents() = 0;
+
+		virtual int Width() const = 0;
+		virtual int Height() const = 0;
+		virtual bool IsOpen() const = 0;
 	};
 }
-
-extern "C" FWAPI FlatWorld::IGameWindow* APIENTRY GetGameWindow();

@@ -1,37 +1,34 @@
 #pragma once
 
-#include "FlatWorld.h"
-
-// Forward Declarations
-namespace sf{class Window;}
+//#include "FlatWorld.h"
 
 namespace FlatWorld
 {
 	class CScreen;
 	class CScreenManager;
-	class CSFMLTimer;
+	class Timer;
+	class IGameWindow;
 
-	class FWAPI CEngine
+	class CEngine
 	{
 	public:
 		~CEngine(void);
 
 		static CEngine* GetInstance();
 
-		void Init(sf::Window& GameWindow, CScreen* initialScreen);
+		void Init(IGameWindow* GameWindow, CScreen* initialScreen);
 
 		void Update();
 		void Display();
 
-		CSFMLTimer* Timer() const { return timer; };
-
-		void HandleEvents();
+		Timer* GetTimer() const { return _timer; }
+		IGameWindow* GetGameWindow() const { return _gameWindow; }
 
 	private:
-		static CEngine* thisInstance;
-		CScreenManager* screenManager;
-		CSFMLTimer* timer;
-		sf::Window* gameWindow;
+		static CEngine* _thisInstance;
+		CScreenManager* _screenManager;
+		Timer* _timer;
+		IGameWindow* _gameWindow;
 
 		CEngine(void);
 	};

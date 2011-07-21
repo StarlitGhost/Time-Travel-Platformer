@@ -9,6 +9,7 @@ namespace sf
 
 namespace FlatWorld
 {
+	class IGameWindow;
 	class Vector2f;
 
 	class SFMLMouseHandler
@@ -17,7 +18,7 @@ namespace FlatWorld
 		static void Invert(bool X, bool Y);
 
 		static void Update();
-		static void HandleEvents(const sf::Event& Event);
+		static void HandleEvents(const sf::Event& Event, const IGameWindow* gameWindow);
 
 		static bool Held(const sf::Mouse::Button& button);
 		static bool Pressed(const sf::Mouse::Button& button);

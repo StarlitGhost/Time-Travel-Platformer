@@ -7,11 +7,6 @@ using namespace FlatWorld;
 bool SFMLKeyboardHandler::keys[sf::Key::Count] = {false};
 bool SFMLKeyboardHandler::oldKeys[sf::Key::Count] = {false};
 
-void SFMLKeyboardHandler::Init(sf::Window& gameWindow)
-{
-	gameWindow.EnableKeyRepeat(false);
-}
-
 void SFMLKeyboardHandler::Update()
 {
 	for (int i = 0; i < sf::Key::Count; ++i)

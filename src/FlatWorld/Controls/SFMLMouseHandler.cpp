@@ -4,7 +4,7 @@
 
 #include <SFML/Window/Event.hpp>
 
-#include "Graphics/GameDisplay.h"
+#include "Graphics/IGameWindow.h"
 #include "Maths/Vector2f.h"
 
 using namespace FlatWorld;
@@ -33,13 +33,13 @@ void SFMLMouseHandler::Update()
 	wheelDelta = 0;
 }
 
-void SFMLMouseHandler::HandleEvents(const sf::Event& Event)
+void SFMLMouseHandler::HandleEvents(const sf::Event& Event, const IGameWindow* gameWindow)
 {
 	if (Event.Type == sf::Event::MouseMoved)
 	{
 		position = Vector2f(
-			invertX ? (float)(GameDisplay::Width() - Event.MouseMove.X) : (float)Event.MouseMove.X,
-			invertY ? (float)(GameDisplay::Height() - Event.MouseMove.Y) : (float)Event.MouseMove.Y
+			invertX ? (float)(gameWindow->Width() - Event.MouseMove.X) : (float)Event.MouseMove.X,
+			invertY ? (float)(gameWindow->Height() - Event.MouseMove.Y) : (float)Event.MouseMove.Y
 			);
 	}
 	else if (Event.Type == sf::Event::MouseButtonPressed)
