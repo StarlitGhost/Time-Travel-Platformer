@@ -30,6 +30,16 @@ void Vector2f::Assign(float x, float y)
 	this->y = y;
 }
 
+void Vector2f::Zero()
+{
+	Assign(0, 0);
+}
+
+void Vector2f::Negate()
+{
+	Assign(-x, -y);
+}
+
 float Vector2f::Dot(const Vector2f& v) const
 {
 	return (x * v.x) + (y * v.y);

@@ -80,7 +80,6 @@
     <ClCompile Include="Components\SpatialComponent.cpp" />
     <ClCompile Include="Components\VisualComponent.cpp" />
     <ClCompile Include="Components\VisualRectangleComponent.cpp" />
-    <ClCompile Include="GLmain.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Screens\TestScreen.cpp" />
   </ItemGroup>
@@ -90,7 +89,6 @@
     <ClInclude Include="Components\SpatialComponent.h" />
     <ClInclude Include="Components\VisualComponent.h" />
     <ClInclude Include="Components\VisualRectangleComponent.h" />
-    <ClInclude Include="GLmain.h" />
     <ClInclude Include="Screens\TestScreen.h" />
   </ItemGroup>
   <ItemGroup>

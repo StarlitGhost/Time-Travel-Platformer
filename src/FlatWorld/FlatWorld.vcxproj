@@ -111,11 +111,12 @@
     <ClCompile Include="Graphics\Particle.cpp" />
     <ClCompile Include="Graphics\ParticleEmitter.cpp" />
     <ClCompile Include="Graphics\Shader.cpp" />
+    <ClCompile Include="Audio\ISound.cpp" />
     <ClCompile Include="Maths\Vector2f.cpp" />
     <ClCompile Include="ScreenSystem\Screen.cpp" />
     <ClCompile Include="ScreenSystem\ScreenManager.cpp" />
-    <ClCompile Include="Utilities\ColourUtils.cpp" />
-    <ClCompile Include="Utilities\StringUtils.cpp" />
+    <ClCompile Include="Audio\SFMLSound.cpp" />
+    <ClCompile Include="Utilities\ColourUtilities.cpp" />
     <ClCompile Include="Utilities\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -137,13 +138,14 @@
     <ClInclude Include="Graphics\Particle.h" />
     <ClInclude Include="Graphics\ParticleEmitter.h" />
     <ClInclude Include="Graphics\Shader.h" />
+    <ClInclude Include="Audio\ISound.h" />
     <ClInclude Include="Maths\Vector2f.h" />
     <ClInclude Include="ScreenSystem\Screen.h" />
     <ClInclude Include="ScreenSystem\ScreenManager.h" />
-    <ClInclude Include="Utilities\ColourUtils.h" />
+    <ClInclude Include="Audio\SFMLSound.h" />
+    <ClInclude Include="Utilities\ColourUtilities.h" />
     <ClInclude Include="Utilities\MathsUtilities.h" />
     <ClInclude Include="Utilities\StringUtilites.h" />
-    <ClInclude Include="Utilities\StringUtils.h" />
     <ClInclude Include="Utilities\Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

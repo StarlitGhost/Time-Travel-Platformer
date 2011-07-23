@@ -27,6 +27,11 @@ namespace FlatWorld
 		// Returns an array representation of the vector
 		const float* xy() const { return &x; }
 
+		// Sets the vector to zero
+		void Zero();
+		// Negates the vector
+		void Negate();
+
 		// Returns the dot product of this and the specified vector
 		float Dot(const Vector2f& v) const;
 		// Returns the scalar Length of the vector (uses sqrt(), if possible it is better to use LengthSquared)

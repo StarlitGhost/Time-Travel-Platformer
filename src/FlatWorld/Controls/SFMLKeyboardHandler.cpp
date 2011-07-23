@@ -17,14 +17,7 @@ void SFMLKeyboardHandler::Update()
 
 void SFMLKeyboardHandler::HandleEvents(const sf::Event& Event)
 {
-	if (Event.Type == sf::Event::KeyPressed)
-	{
-		keys[Event.Key.Code] = true;
-	}
-	else
-	{
-		keys[Event.Key.Code] = false;
-	}
+	keys[Event.Key.Code] = (Event.Type == sf::Event::KeyPressed);
 }
 
 bool SFMLKeyboardHandler::Held(const sf::Key::Code& keyCode)

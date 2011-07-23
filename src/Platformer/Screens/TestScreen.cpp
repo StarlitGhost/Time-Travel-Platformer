@@ -30,8 +30,8 @@
 
 #include "FlatWorld/Maths/Vector2f.h"
 
-#include "FlatWorld/Utilities/ColourUtils.h"
-#include "FlatWorld/Utilities/StringUtils.h"
+#include "FlatWorld/Utilities/ColourUtilities.h"
+#include "FlatWorld/Utilities/StringUtilites.h"
 #include "FlatWorld/Utilities/Timer.h"
 
 // Game Headers
@@ -74,6 +74,7 @@ void TestScreen::Update(float dt)
 	}
 	if (SFMLKeyboardHandler::Pressed(sf::Key::X))
 	{
+		gameObject->AddComponent(new VisualRectangleComponent());
 	}
 
 	circleMod < M_PI * 2.f ? circleMod += 5.f * dt : circleMod -= (float)M_PI * 2.f;
@@ -92,18 +93,18 @@ void TestScreen::Update(float dt)
 
 	Colour colour = Colour(.25f, .5f, 1.f, 1.f);
 	float H, S, V;
-	ColourUtils::RGB2HSV(colour, H, S, V);
-	colour = ColourUtils::HSV2RGB(H, S, V);
+	ColourUtilities::RGB2HSV(colour, H, S, V);
+	colour = ColourUtilities::HSV2RGB(H, S, V);
 
 	gameObject->Update(dt);
 	
-	testData = "TS: " + StringUtils::to_string(timer->TimeScale()) +
-		" | UPS: " + StringUtils::to_string((int)(1.f/dt)) +
-		" | DP: " + StringUtils::to_string(line1dotline2) +
-		" | Angle: " + StringUtils::to_string(angle) +
-		" | Particles: " + StringUtils::to_string(particleEmitter->Count()) +
-		" | H: " + StringUtils::to_string(H) + " S: " + StringUtils::to_string(S) + " V: " + StringUtils::to_string(V) +
-		" | R: " + StringUtils::to_string(colour.R()) + " G: " + StringUtils::to_string(colour.G()) + " B: " + StringUtils::to_string(colour.B());
+	testData = "TS: " + ToString(timer->TimeScale()) +
+		" | UPS: " + ToString((int)(1.f/dt)) +
+		" | DP: " + ToString(line1dotline2) +
+		" | Angle: " + ToString(angle) +
+		" | Particles: " + ToString(particleEmitter->Count()) +
+		" | H: " + ToString(H) + " S: " + ToString(S) + " V: " + ToString(V) +
+		" | R: " + ToString(colour.R()) + " G: " + ToString(colour.G()) + " B: " + ToString(colour.B());
 }
 
 void TestScreen::Draw()
@@ -150,9 +151,9 @@ void TestScreen::Draw()
 	Colour test = Colour(.7f, 1.f, .7f, 1.f);
 	glColor4fv(test.RGBA());
 	glVertex2f(0.f,100.f);
-	glColor4fv(ColourUtils::Invert(test).RGBA());
+	glColor4fv(ColourUtilities::Invert(test).RGBA());
 	glVertex2f(100.f,100.f);
-	glColor4fv(ColourUtils::Negative(test).RGBA());
+	glColor4fv(ColourUtilities::Negative(test).RGBA());
 	glVertex2f(50.f,150.f);
 	glEnd();
 	glPopMatrix();

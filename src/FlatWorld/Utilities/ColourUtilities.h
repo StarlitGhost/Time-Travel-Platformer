@@ -7,7 +7,7 @@ namespace FlatWorld
 
 	/****************************************************************************
 	* 																			*
-	* ColourUtils																*
+	* ColourUtilities																*
 	* 																			*
 	* A utility class which holds functions that can be performed upon or with	*
 	* colours.																	*
@@ -15,7 +15,7 @@ namespace FlatWorld
 	* Written by Matthew Cox, 2010												*
 	* 																			*
 	****************************************************************************/
-	class ColourUtils
+	class ColourUtilities
 	{
 	public:
 		// RGB-based Functions

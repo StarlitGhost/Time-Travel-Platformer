@@ -1,4 +1,4 @@
-#include "ColourUtils.h"
+#include "ColourUtilities.h"
 
 #include <math.h>
 
@@ -6,7 +6,7 @@
 
 using namespace FlatWorld;
 
-Colour ColourUtils::Lerp(const Colour& startColour, const Colour& endColour, const float& interpolationPoint)
+Colour ColourUtilities::Lerp(const Colour& startColour, const Colour& endColour, const float& interpolationPoint)
 {
 	return Colour(
 		startColour.R() + ((endColour.R() - startColour.R()) * interpolationPoint),
@@ -16,12 +16,12 @@ Colour ColourUtils::Lerp(const Colour& startColour, const Colour& endColour, con
 		);
 }
 
-Colour ColourUtils::Negative(const Colour& colour, const bool& negativeAlpha)
+Colour ColourUtilities::Negative(const Colour& colour, const bool& negativeAlpha)
 {
 	return Colour(1.f - colour.R(), 1.f - colour.G(), 1.f - colour.B(), negativeAlpha ? 1.f - colour.A() : colour.A());
 }
 
-Colour ColourUtils::Invert(const Colour& colour)
+Colour ColourUtilities::Invert(const Colour& colour)
 {
 	float H, S, V;
 	RGB2HSV(colour, H, S, V);
@@ -33,7 +33,7 @@ Colour ColourUtils::Invert(const Colour& colour)
 	return HSV2RGB(H, S, V, colour.A());
 }
 
-Colour ColourUtils::HSVLerp(const Colour& startColour, const Colour& endColour, const float& interpolationPoint)
+Colour ColourUtilities::HSVLerp(const Colour& startColour, const Colour& endColour, const float& interpolationPoint)
 {
 	float H1, S1, V1, H2, S2, V2, H, S, V, A;
 	RGB2HSV(startColour, H1, S1, V1);
@@ -47,7 +47,7 @@ Colour ColourUtils::HSVLerp(const Colour& startColour, const Colour& endColour, 
 	return HSV2RGB(H, S, V, A);
 }
 
-Colour ColourUtils::ForeColour(const Colour& backColour)
+Colour ColourUtilities::ForeColour(const Colour& backColour)
 {
 	float Y, U, V;
 	RGB2YUV(backColour, Y, U, V);
@@ -61,7 +61,7 @@ Colour ColourUtils::ForeColour(const Colour& backColour)
 	}
 }
 
-void ColourUtils::RGB2HSV(const Colour& colour, float& outH, float& outS, float& outV)
+void ColourUtilities::RGB2HSV(const Colour& colour, float& outH, float& outS, float& outV)
 {
 	float maxC = colour.R();
 	if (colour.G() > maxC) maxC = colour.G();
@@ -109,7 +109,7 @@ void ColourUtils::RGB2HSV(const Colour& colour, float& outH, float& outS, float&
 	}
 }
 
-Colour ColourUtils::HSV2RGB(const float& H, const float& S, const float& V, const float& A)
+Colour ColourUtilities::HSV2RGB(const float& H, const float& S, const float& V, const float& A)
 {
 	if (V == 0.f) // Black
 	{
@@ -158,24 +158,24 @@ Colour ColourUtils::HSV2RGB(const float& H, const float& S, const float& V, cons
 }
 
 // Possible implementations here: http://www.geekymonkey.com/Programming/CSharp/RGB2HSL_HSL2RGB.htm
-//void ColourUtils::RGB2HSL(const Colour& colour, float& outH, float& outS, float& outL)
+//void ColourUtilities::RGB2HSL(const Colour& colour, float& outH, float& outS, float& outL)
 //{
 //	
 //}
 //
-//Colour ColourUtils::HSL2RGB(const float& H, const float& S, const float& L, const float& A /*= 1.f*/)
+//Colour ColourUtilities::HSL2RGB(const float& H, const float& S, const float& L, const float& A /*= 1.f*/)
 //{
 //	
 //}
 
-void ColourUtils::RGB2YUV(const Colour& colour, float& outY, float& outU, float& outV)
+void ColourUtilities::RGB2YUV(const Colour& colour, float& outY, float& outU, float& outV)
 {
 	outY = (0.299f * colour.R()) + (0.587f * colour.G()) + (0.114f * colour.B());
 	outU = (colour.B() - outY) * 0.565f;
 	outV = (colour.R() - outY) * 0.713f;
 }
 
-Colour ColourUtils::YUV2RGB(const float& Y, const float& U, const float& V, const float& A)
+Colour ColourUtilities::YUV2RGB(const float& Y, const float& U, const float& V, const float& A)
 {
 	return Colour(
 		Y + (1.403f * V),					// R

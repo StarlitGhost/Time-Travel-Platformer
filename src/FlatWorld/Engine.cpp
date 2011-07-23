@@ -1,7 +1,5 @@
 #include "Engine.h"
 
-#include <SFML/Window.hpp>
-
 #include "Controls/SFMLKeyboardHandler.h"
 #include "Controls/SFMLMouseHandler.h"
 #include "Graphics/IGameWindow.h"

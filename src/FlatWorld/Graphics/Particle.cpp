@@ -6,7 +6,7 @@
 // Engine Headers
 #include "Graphics/Colour.h"
 #include "Maths/Vector2f.h"
-#include "Utilities/ColourUtils.h"
+#include "Utilities/ColourUtilities.h"
 
 using namespace FlatWorld;
 
@@ -49,7 +49,7 @@ void Particle::Update(const float& dt)
 		else
 		{
 			position += velocity * dt;
-			colour = ColourUtils::HSVLerp(colourStart, colourEnd, 1.f - life);
+			colour = ColourUtilities::HSVLerp(colourStart, colourEnd, 1.f - life);
 		}
 	}
 }
