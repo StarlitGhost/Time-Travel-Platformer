@@ -116,6 +116,7 @@
     <ClCompile Include="ScreenSystem\Screen.cpp" />
     <ClCompile Include="ScreenSystem\ScreenManager.cpp" />
     <ClCompile Include="Audio\SFMLSound.cpp" />
+    <ClCompile Include="Maths\Transform.cpp" />
     <ClCompile Include="Utilities\ColourUtilities.cpp" />
     <ClCompile Include="Utilities\Timer.cpp" />
   </ItemGroup>
@@ -143,6 +144,7 @@
     <ClInclude Include="ScreenSystem\Screen.h" />
     <ClInclude Include="ScreenSystem\ScreenManager.h" />
     <ClInclude Include="Audio\SFMLSound.h" />
+    <ClInclude Include="Maths\Transform.h" />
     <ClInclude Include="Utilities\ColourUtilities.h" />
     <ClInclude Include="Utilities\MathsUtilities.h" />
     <ClInclude Include="Utilities\StringUtilites.h" />
