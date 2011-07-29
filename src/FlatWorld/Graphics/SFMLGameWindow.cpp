@@ -10,6 +10,7 @@ using namespace FlatWorld;
 SFMLGameWindow::SFMLGameWindow(int width, int height, std::string title)
 {
 	_window = new sf::Window(sf::VideoMode(width, height, 32), title);
+	Resize(width, height);
 	_window->EnableKeyRepeat(false);
 }
 

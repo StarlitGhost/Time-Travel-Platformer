@@ -1,8 +1,15 @@
 #pragma once
 
-class Transform
+#include "Maths/Vector2f.h"
+
+namespace FlatWorld
 {
-public:
+	class Transform
+	{
+	public:
+		Vector2f Position;
+		Vector2f Scale;
+		float Angle;
 
-
-};
+	};
+}

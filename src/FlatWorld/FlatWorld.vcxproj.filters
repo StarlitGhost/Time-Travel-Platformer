@@ -75,9 +75,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ComponentSystem\GameComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ComponentSystem\GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -132,6 +129,12 @@
     <ClCompile Include="Maths\Transform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ComponentSystem\GOComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentSystem\GOCTemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\Screens\TestScreen.h">
@@ -151,9 +154,6 @@
     </ClInclude>
     <ClInclude Include="Game\Components\InputPlayerComponent.h">
       <Filter>Header Files\Game\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="ComponentSystem\GameComponent.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ComponentSystem\GameObject.h">
       <Filter>Header Files</Filter>
@@ -216,6 +216,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Maths\Transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentSystem\GOComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentSystem\GOCTemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentSystem\typedefs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

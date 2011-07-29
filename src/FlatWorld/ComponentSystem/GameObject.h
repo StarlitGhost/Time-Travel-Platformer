@@ -6,13 +6,12 @@
 #include <vector>
 
 // Engine Headers
-#include "ComponentSystem/GameComponent.h"
+#include "GOComponent.h"
+#include "typedefs.h"
+#include "Maths/Transform.h"
 
 namespace FlatWorld
 {
-	// Typedefs
-	typedef std::string GOIdType;
-
 	class GameObject
 	{
 	public:
@@ -21,20 +20,25 @@ namespace FlatWorld
 
 		void Update(float dt);
 
-		const GOIdType& GetId() const { return _id; };
-		void SetId(const GOIdType& id) { _id = id; };
+		const Transform& GetTransform() const { return _transform; }
+		void SetTransform(const Transform& transform) { _transform = transform; }
 
-		GameComponent* GetComponent(const GCIdType& familyId);
+		const GOIdType& GetId() const { return _id; }
+		void SetId(const GOIdType& id) { _id = id; }
 
-		void AddComponent(GameComponent* component);
-		void RemoveComponent(const GCIdType& familyId);
+		GOComponent* GetComponent(const GOCIdType& familyId);
+
+		void AddComponent(GOComponent* component);
+		void RemoveComponent(const GOCIdType& familyId);
 
 		void ClearComponents();
 
 	private:
-		std::string _id;
+		Transform _transform;
 
-		typedef std::map<GCIdType, GameComponent*> ComponentMap;
+		GOIdType _id;
+
+		typedef std::map<GOCIdType, GOComponent*> ComponentMap;
 		ComponentMap _components;
 
 	};

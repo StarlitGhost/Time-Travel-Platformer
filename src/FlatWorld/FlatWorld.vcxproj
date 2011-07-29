@@ -68,7 +68,7 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib</AdditionalDependencies>
+      <AdditionalDependencies>glu32.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib</AdditionalDependencies>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
@@ -93,18 +93,19 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib</AdditionalDependencies>
+      <AdditionalDependencies>glu32.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib</AdditionalDependencies>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ComponentSystem\GameComponent.cpp" />
+    <ClCompile Include="ComponentSystem\GOComponent.cpp" />
     <ClCompile Include="ComponentSystem\GameObject.cpp" />
     <ClCompile Include="Controls\SFMLKeyboardHandler.cpp" />
     <ClCompile Include="Controls\SFMLMouseHandler.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="ComponentSystem\GOCTemplate.cpp" />
     <ClCompile Include="Graphics\IGameWindow.cpp" />
     <ClCompile Include="Graphics\Colour.cpp" />
     <ClCompile Include="Graphics\SFMLGameWindow.cpp" />
@@ -121,12 +122,14 @@
     <ClCompile Include="Utilities\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ComponentSystem\GameComponent.h" />
+    <ClInclude Include="ComponentSystem\GOComponent.h" />
     <ClInclude Include="ComponentSystem\GameObject.h" />
+    <ClInclude Include="ComponentSystem\typedefs.h" />
     <ClInclude Include="Controls\SFMLKeyboardHandler.h" />
     <ClInclude Include="Controls\SFMLMouseHandler.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="FlatWorld.h" />
+    <ClInclude Include="ComponentSystem\GOCTemplate.h" />
     <ClInclude Include="Graphics\IGameWindow.h" />
     <ClInclude Include="Game\Screens\TestScreen.h" />
     <ClInclude Include="Game\Components\SpatialComponent.h" />

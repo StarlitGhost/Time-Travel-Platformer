@@ -8,7 +8,7 @@ class InputPlayerComponent : public InputComponent
 {
 	// GameComponent Interface
 public:
-	virtual const FlatWorld::GCIdType ComponentId() const { return FlatWorld::GCIdType("InputPlayerComponent"); };
+	virtual const FlatWorld::GOCIdType ComponentId() const { return FlatWorld::GOCIdType("InputPlayerComponent"); };
 
 	// InputComponent Interface
 public:

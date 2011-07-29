@@ -17,13 +17,7 @@ void Init(IGameWindow* GameWindow)
 
 	glEnable(GL_LINE_SMOOTH);
 	glEnable(GL_CULL_FACE);
-
 	glEnable(GL_TEXTURE_2D);
-
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluOrtho2D(0, GameWindow->Width(), 0, GameWindow->Height());
-	glMatrixMode(GL_MODELVIEW);
 
 	engine = CEngine::GetInstance();
 	engine->Init(GameWindow, new TestScreen());

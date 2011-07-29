@@ -1,7 +1,7 @@
 #include "GameObject.h"
 
 // Engine Headers
-#include "ComponentSystem/GameComponent.h"
+#include "ComponentSystem/GOComponent.h"
 
 using namespace FlatWorld;
 
@@ -20,11 +20,14 @@ void GameObject::Update(float dt)
 	ComponentMap::iterator component = _components.begin();
 	for (; component != _components.end(); ++component)
 	{
-		component->second->Update(dt);
+		if (component->second)
+			component->second->Update(dt);
+		else
+			component->second->GetOwner();
 	}
 }
 
-GameComponent* GameObject::GetComponent(const GCIdType& familyId)
+GOComponent* GameObject::GetComponent(const GOCIdType& familyId)
 {
 	if (_components[familyId])
 	{
@@ -36,7 +39,7 @@ GameComponent* GameObject::GetComponent(const GCIdType& familyId)
 	}
 }
 
-void GameObject::AddComponent(GameComponent* component)
+void GameObject::AddComponent(GOComponent* component)
 {
 	if (_components[component->FamilyId()])
 	{
@@ -46,7 +49,7 @@ void GameObject::AddComponent(GameComponent* component)
 	_components[component->FamilyId()] = component;
 }
 
-void GameObject::RemoveComponent(const GCIdType& familyId)
+void GameObject::RemoveComponent(const GOCIdType& familyId)
 {
 	if (_components[familyId])
 	{

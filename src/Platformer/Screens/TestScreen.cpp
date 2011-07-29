@@ -19,7 +19,7 @@
 #include "FlatWorld/Engine.h"
 
 #include "FlatWorld/ComponentSystem/GameObject.h"
-#include "FlatWorld/ComponentSystem/GameComponent.h"
+#include "FlatWorld/ComponentSystem/GOComponent.h"
 
 #include "FlatWorld/Controls/SFMLKeyboardHandler.h"
 #include "FlatWorld/Controls/SFMLMouseHandler.h"
@@ -35,9 +35,8 @@
 #include "FlatWorld/Utilities/Timer.h"
 
 // Game Headers
-#include "Components/SpatialComponent.h"
-#include "Components/VisualRectangleComponent.h"
-#include "Components/InputPlayerComponent.h"
+#include "Components/gocVisualRectangle.h"
+#include "Components/gocInputPlayer.h"
 
 using namespace FlatWorld;
 
@@ -70,11 +69,11 @@ void TestScreen::Update(float dt)
 	}
 	if (SFMLKeyboardHandler::Pressed(sf::Key::Z))
 	{
-		gameObject->RemoveComponent(GCIdType("VisualComponent"));
+		gameObject->RemoveComponent(GOCIdType("gocVisual"));
 	}
 	if (SFMLKeyboardHandler::Pressed(sf::Key::X))
 	{
-		gameObject->AddComponent(new VisualRectangleComponent());
+		gameObject->AddComponent(new gocVisualRectangle());
 	}
 
 	circleMod < M_PI * 2.f ? circleMod += 5.f * dt : circleMod -= (float)M_PI * 2.f;
@@ -158,7 +157,7 @@ void TestScreen::Draw()
 	glEnd();
 	glPopMatrix();
 
-	GameComponent* gameComponent = gameObject->GetComponent(GCIdType("VisualComponent"));
+	GOComponent* gameComponent = gameObject->GetComponent(GOCIdType("VisualComponent"));
 	VisualComponent* visualComponent = static_cast<VisualComponent*>(gameComponent);
 	if (visualComponent)
 	{
@@ -183,11 +182,14 @@ void TestScreen::Load()
 	particleEmitter = new ParticleEmitter();
 
 	gameObject = new GameObject(GOIdType("Object"));
-	GameComponent* spatialComponent = new SpatialComponent(Vector2f(128, 128), 30, Vector2f(128, 64));
-	gameObject->AddComponent(spatialComponent);
-	GameComponent* visualComponent = new VisualRectangleComponent();
+	Transform xform;
+	xform.Position = Vector2f(128, 128);
+	xform.Angle = 32;
+	xform.Scale = Vector2f(128, 64);
+	gameObject->SetTransform(xform);
+	GOComponent* visualComponent = new gocVisualRectangle();
 	gameObject->AddComponent(visualComponent);
-	GameComponent* inputComponent = new InputPlayerComponent();
+	GOComponent* inputComponent = new InputPlayerComponent();
 	gameObject->AddComponent(inputComponent);
 }
 
