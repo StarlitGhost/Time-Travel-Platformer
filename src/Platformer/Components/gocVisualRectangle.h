@@ -1,14 +1,14 @@
 #pragma once
 
-#include "Platformer/Components/VisualComponent.h"
+#include "Components/gocVisual.h"
 
-class gocVisualRectangle : public VisualComponent
+class gocVisualRectangle : public gocVisual
 {
-	// GameComponent Interface
+	// GOComponent Interface
 public:
 	virtual const FlatWorld::GOCIdType ComponentId() const { return FlatWorld::GOCIdType("gocVisualRectangle"); };
 
-	// VisualComponent Interface
+	// gocVisual Interface
 public:
 	virtual void Draw() const;
 

@@ -1,20 +1,18 @@
 #pragma once
 
-#include "Platformer/Components/InputComponent.h"
+#include "Components/gocInput.h"
 
-class SpatialComponent;
-
-class InputPlayerComponent : public InputComponent
+class gocInputPlayer : public gocInput
 {
-	// GameComponent Interface
+	// GOComponent Interface
 public:
-	virtual const FlatWorld::GOCIdType ComponentId() const { return FlatWorld::GOCIdType("InputPlayerComponent"); };
+	virtual const FlatWorld::GOCIdType ComponentId() const { return FlatWorld::GOCIdType("gocInputPlayer"); };
 
-	// InputComponent Interface
+	// gocInput Interface
 public:
 	virtual void Update(float dt);
 
-	// InputPlayerComponent Interface
+	// gocInputPlayer Interface
 public:
 
 private:

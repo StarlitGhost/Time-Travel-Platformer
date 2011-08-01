@@ -157,11 +157,11 @@ void TestScreen::Draw()
 	glEnd();
 	glPopMatrix();
 
-	GOComponent* gameComponent = gameObject->GetComponent(GOCIdType("VisualComponent"));
-	VisualComponent* visualComponent = static_cast<VisualComponent*>(gameComponent);
-	if (visualComponent)
+	GOComponent* component = gameObject->GetComponent(GOCIdType("gocVisual"));
+	gocVisual* vc = static_cast<gocVisual*>(component);
+	if (vc)
 	{
-		visualComponent->Draw();
+		vc->Draw();
 	}
 }
 
@@ -187,10 +187,10 @@ void TestScreen::Load()
 	xform.Angle = 32;
 	xform.Scale = Vector2f(128, 64);
 	gameObject->SetTransform(xform);
-	GOComponent* visualComponent = new gocVisualRectangle();
-	gameObject->AddComponent(visualComponent);
-	GOComponent* inputComponent = new InputPlayerComponent();
-	gameObject->AddComponent(inputComponent);
+	GOComponent* vc = new gocVisualRectangle();
+	gameObject->AddComponent(vc);
+	GOComponent* ic = new gocInputPlayer();
+	gameObject->AddComponent(ic);
 }
 
 void TestScreen::Unload()

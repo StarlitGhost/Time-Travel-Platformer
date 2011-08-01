@@ -9,7 +9,7 @@
 
 using namespace FlatWorld;
 
-void InputPlayerComponent::Update(float dt)
+void gocInputPlayer::Update(float dt)
 {
 	if (SFMLKeyboardHandler::Held(sf::Key::A))
 	{
