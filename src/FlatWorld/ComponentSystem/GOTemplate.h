@@ -1,8 +1,8 @@
 #pragma once
 
-#include <list>
+#include <vector>
 
-#include "typedefs.h"
+#include "ComponentSystem/typedefs.h"
 
 namespace FlatWorld
 {
@@ -11,8 +11,9 @@ namespace FlatWorld
 	class GOTemplate
 	{
 	public:
-		typedef std::list<const GOCTemplate*> GOCTListType;
+		typedef std::vector<GOCTemplate*> GOCTListType;
 
+		GOTemplate(const std::string& name);
 		~GOTemplate();
 
 		void Clear();
@@ -22,11 +23,10 @@ namespace FlatWorld
 
 		GOCTListType& Components() { return _components; }
 
-		void AddGOCTemplate(const GOCTemplate* gocTemplate);
+		void AddGOCTemplate(GOCTemplate* gocTemplate);
 		GOCTemplate* GetGOCTemplate(const GOCIdType& id) const;
 
 	protected:
-		GOTemplate(const std::string& name);
 		std::string _name;
 		GOCTListType _components;
 

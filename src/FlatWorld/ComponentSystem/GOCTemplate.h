@@ -1,7 +1,7 @@
 #pragma once
 
-#include "GOComponent.h"
-#include "typedefs.h"
+#include "ComponentSystem/GOComponent.h"
+#include "ComponentSystem/typedefs.h"
 
 namespace FlatWorld
 {

@@ -107,6 +107,7 @@
     <ClCompile Include="Controls\SFMLMouseHandler.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="ComponentSystem\GOTemplate.cpp" />
+    <ClCompile Include="ComponentSystem\GOTManager.cpp" />
     <ClCompile Include="Graphics\Colour.cpp" />
     <ClCompile Include="Graphics\SFMLGameWindow.cpp" />
     <ClCompile Include="Graphics\Particle.cpp" />
@@ -128,6 +129,7 @@
     <ClInclude Include="FlatWorld.h" />
     <ClInclude Include="ComponentSystem\GOCTemplate.h" />
     <ClInclude Include="ComponentSystem\GOTemplate.h" />
+    <ClInclude Include="ComponentSystem\GOTManager.h" />
     <ClInclude Include="Graphics\IGameWindow.h" />
     <ClInclude Include="Game\Screens\TestScreen.h" />
     <ClInclude Include="Game\Components\SpatialComponent.h" />

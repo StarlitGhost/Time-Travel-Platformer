@@ -6,8 +6,8 @@
 #include <vector>
 
 // Engine Headers
-#include "GOComponent.h"
-#include "typedefs.h"
+#include "ComponentSystem/GOComponent.h"
+#include "ComponentSystem/typedefs.h"
 #include "Maths/Transform.h"
 
 namespace FlatWorld
@@ -26,9 +26,16 @@ namespace FlatWorld
 		const GOIdType& GetId() const { return _id; }
 		void SetId(const GOIdType& id) { _id = id; }
 
-		GOComponent* GetComponent(const GOCIdType& familyId);
+		template <typename T>
+		T* GetComponent(const GOCIdType& familyId)
+		{
+			if (_components.find(familyId) == _components.end())
+				return NULL;
 
-		void AddComponent(GOComponent* component);
+			return static_cast<T*>(_components[familyId]);
+		}
+
+		GOComponent* AddComponent(GOComponent* component);
 		void RemoveComponent(const GOCIdType& familyId);
 
 		void ClearComponents();

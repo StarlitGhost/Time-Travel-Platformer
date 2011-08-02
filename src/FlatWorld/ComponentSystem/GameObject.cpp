@@ -27,26 +27,17 @@ void GameObject::Update(float dt)
 	}
 }
 
-GOComponent* GameObject::GetComponent(const GOCIdType& familyId)
+GOComponent* GameObject::AddComponent(GOComponent* component)
 {
-	if (_components[familyId])
-	{
-		return _components[familyId];
-	}
-	else
-	{
-		return NULL;
-	}
-}
-
-void GameObject::AddComponent(GOComponent* component)
-{
+	GOComponent* oldComponent = NULL;
 	if (_components[component->FamilyId()])
 	{
-		delete _components[component->FamilyId()];
+		oldComponent = _components[component->FamilyId()];
+		oldComponent->SetOwner(NULL);
 	}
 	component->SetOwner(this);
 	_components[component->FamilyId()] = component;
+	return oldComponent;
 }
 
 void GameObject::RemoveComponent(const GOCIdType& familyId)

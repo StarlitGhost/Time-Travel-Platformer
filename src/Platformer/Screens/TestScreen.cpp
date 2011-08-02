@@ -157,8 +157,7 @@ void TestScreen::Draw()
 	glEnd();
 	glPopMatrix();
 
-	GOComponent* component = gameObject->GetComponent(GOCIdType("gocVisual"));
-	gocVisual* vc = static_cast<gocVisual*>(component);
+	gocVisual* vc = gameObject->GetComponent<gocVisual>(GOCIdType("gocVisual"));
 	if (vc)
 	{
 		vc->Draw();
