@@ -6,8 +6,8 @@ class gctHealth : public FlatWorld::GOCTemplate
 {
 	// GOCTemplate Interface
 public:
-	virtual const FlatWorld::GOCIdType& ComponentId() { return FlatWorld::GOCIdType("gocHealth"); }
-	virtual const FlatWorld::GOCIdType& FamilyId() { return FlatWorld::GOCIdType("gocHealth"); }
+	virtual const FlatWorld::GOCIdType ComponentId() const { return FlatWorld::GOCIdType("gocHealth"); }
+	virtual const FlatWorld::GOCIdType FamilyId() const { return FlatWorld::GOCIdType("gocHealth"); }
 
 	virtual FlatWorld::GOComponent* MakeComponent();
 

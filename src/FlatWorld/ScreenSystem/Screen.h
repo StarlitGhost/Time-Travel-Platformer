@@ -15,11 +15,6 @@ namespace FlatWorld
 	class CScreen
 	{
 	public:
-		// Constructor. It is available as well as 'Load' for some reason that I probably knew a while ago, but have now forgotten. Anyway, don't put anything in Screen constructors! >:3
-		CScreen(void);
-		// Destructor
-		virtual ~CScreen(void);
-
 		// Tells the objects managed by the Screen to update
 		virtual void Update(float dt) = 0;
 		// Tells the objects managed by the Screen to draw themselves

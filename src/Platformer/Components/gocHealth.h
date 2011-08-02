@@ -1,13 +1,15 @@
 #pragma once
 
 #include "Flatworld/ComponentSystem/GOComponent.h"
-#include "gctHealth.h"
+
+class gctHealth;
 
 class gocHealth : public FlatWorld::GOComponent
 {
 	// GOComponent Interface
 public:
-	virtual const FlatWorld::GOCIdType FamilyId() const { return FlatWorld::GOCIdType("gocHealth"); };
+	virtual const FlatWorld::GOCIdType ComponentId() const { return FlatWorld::GOCIdType("gocHealth"); }
+	virtual const FlatWorld::GOCIdType FamilyId() const { return FlatWorld::GOCIdType("gocHealth"); }
 
 	// gocHealth Interface
 public:
@@ -15,8 +17,8 @@ public:
 
 	gocHealth(gctHealth* gct);
 
-	HealthValueType GetInitialHealth() const { return _gctHealth->GetInitialHealth(); }
-	void SetInitialHealth(const HealthValueType health) { _gctHealth->SetInitialHealth(health); }
+	HealthValueType GetInitialHealth() const;
+	void SetInitialHealth(const HealthValueType health);
 
 	HealthValueType GetHealth() const { return _health; }
 	void SetHealth(const HealthValueType health) { _health = health; }

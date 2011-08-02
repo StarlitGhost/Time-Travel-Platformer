@@ -24,13 +24,7 @@
     <ClCompile Include="Components\gocHealth.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Components\gocInput.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Components\gocInputPlayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Components\gocVisual.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Components\gocVisualRectangle.cpp">
