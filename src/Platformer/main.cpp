@@ -16,7 +16,7 @@ void Init(IGameWindow* GameWindow)
 	glClearDepth(1.0f);
 
 	glEnable(GL_LINE_SMOOTH);
-	glEnable(GL_CULL_FACE);
+	//glEnable(GL_CULL_FACE);
 	glEnable(GL_TEXTURE_2D);
 
 	engine = CEngine::GetInstance();

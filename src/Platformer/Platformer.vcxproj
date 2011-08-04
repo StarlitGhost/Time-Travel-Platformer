@@ -54,7 +54,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/NODEFAULTLIB:LIBCMT %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>freetype2312.lib;ftgl_static.lib;glu32.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gwen_static.lib;GWEN-Renderer-SFML.lib;freetype2312.lib;ftgl_static.lib;glu32.lib;sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -71,7 +71,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/NODEFAULTLIB:LIBCMT %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>freetype2312.lib;ftgl_static.lib;glu32.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gwen_static.lib;GWEN-Renderer-SFML.lib;freetype2312.lib;ftgl_static.lib;glu32.lib;sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

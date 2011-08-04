@@ -2,7 +2,12 @@
 
 #include "IGameWindow.h"
 
-#include <SFML/Window.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+
+#include <Gwen/Renderers/SFML.h>
+#include <Gwen/Skins/Simple.h>
+#include <Gwen/Skins/TexturedBase.h>
+#include <Gwen/Input/SFML.h>
 
 namespace FlatWorld
 {
@@ -13,7 +18,7 @@ namespace FlatWorld
 		~SFMLGameWindow();
 
 		void StartDisplay();
-		void EndDisplay() { _window->Display(); }
+		void EndDisplay();
 		void Resize(int newWidth, int newHeight);
 
 		void HandleEvents();
@@ -23,6 +28,10 @@ namespace FlatWorld
 		bool IsOpen() const { return _window->IsOpened(); }
 
 	private:
-		sf::Window* _window;
+		sf::RenderWindow* _window;
+		Gwen::Renderer::SFML* _gwenRenderer;
+		Gwen::Skin::Simple _gwenSkin;
+		Gwen::Controls::Canvas* _gwenCanvas;
+		Gwen::Input::SFML* _gwenInput;
 	};
 }
