@@ -1,7 +1,7 @@
 
 *.user
 bin/*
-build/*
+debug/*
 *.suo
 *.docstates
 *.ipch
