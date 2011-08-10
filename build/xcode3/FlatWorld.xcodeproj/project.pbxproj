@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A2C48AF577D05FF7B0C3316 /* SFMLSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11C45F6C11F63BB131557D01 /* SFMLSound.cpp */; };
+		61780E7C5A950AF940AB39BC /* GOTManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56E45D28406A2E6163283B76 /* GOTManager.cpp */; };
+		54105E5A02291A75383D7525 /* GOTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50DE4B0D25596D18166D4ADF /* GOTemplate.cpp */; };
+		226249922CAE68C33E0A50B7 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E101EFB43F368A529F5049F /* GameObject.cpp */; };
+		300D686727F25CBB512B65FD /* SFMLKeyboardHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 677A5D60346B2B6E46055E60 /* SFMLKeyboardHandler.cpp */; };
+		54C2198A283A2CAF4B8E778A /* SFMLMouseHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A4F4540FB0BF839D52B83 /* SFMLMouseHandler.cpp */; };
+		62DA18B21DDD57C161EA04BC /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54EA0E8403587CDD6B3F5483 /* Engine.cpp */; };
+		211937447D86487C14A76844 /* Colour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D787556291340021B3F76 /* Colour.cpp */; };
+		06D136B626555CFB49F62870 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77103CF77E140DFC77782DDF /* Particle.cpp */; };
+		4FE83645499000C42F1D69E4 /* ParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 023C6EFB5DF0175E5066715C /* ParticleEmitter.cpp */; };
+		218834680A11013D4E603D9E /* SFMLGameWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52C23AFB550B791817F71F01 /* SFMLGameWindow.cpp */; };
+		785B5F7708911F38045A3CBC /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44E637E433450E7738A86263 /* Shader.cpp */; };
+		388C07D61B15411E270F1F6F /* Vector2f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22E3010402F656290F7B3B9E /* Vector2f.cpp */; };
+		48903545688263A676640F92 /* ScreenManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09FB268F51300CF17CB960AB /* ScreenManager.cpp */; };
+		08995D2E00B759CA6A207D70 /* ColourUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 245E1448567B386D53325A27 /* ColourUtilities.cpp */; };
+		4FAC31BD736150630B885D81 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F0970B64301758529231633 /* Timer.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4CE73FD3245B0F964ABD7C8C /* ISound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ISound.h"; path = "ISound.h"; sourceTree = "<group>"; };
+		11C45F6C11F63BB131557D01 /* SFMLSound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLSound.cpp"; path = "SFMLSound.cpp"; sourceTree = "<group>"; };
+		2B531F1E2981322F5F2614A3 /* SFMLSound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLSound.h"; path = "SFMLSound.h"; sourceTree = "<group>"; };
+		270415EF1C3A4B5F258666F7 /* GOCTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOCTemplate.h"; path = "GOCTemplate.h"; sourceTree = "<group>"; };
+		47EC374A466459E272FC77BA /* GOComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOComponent.h"; path = "GOComponent.h"; sourceTree = "<group>"; };
+		56E45D28406A2E6163283B76 /* GOTManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "GOTManager.cpp"; path = "GOTManager.cpp"; sourceTree = "<group>"; };
+		1F9C280F4661747824090F69 /* GOTManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOTManager.h"; path = "GOTManager.h"; sourceTree = "<group>"; };
+		50DE4B0D25596D18166D4ADF /* GOTemplate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "GOTemplate.cpp"; path = "GOTemplate.cpp"; sourceTree = "<group>"; };
+		122F0F21524E52993D833576 /* GOTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOTemplate.h"; path = "GOTemplate.h"; sourceTree = "<group>"; };
+		0E101EFB43F368A529F5049F /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "GameObject.cpp"; path = "GameObject.cpp"; sourceTree = "<group>"; };
+		782D0EE91BC51D867C023232 /* GameObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GameObject.h"; path = "GameObject.h"; sourceTree = "<group>"; };
+		68665012108D6A8F6A8748CA /* typedefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "typedefs.h"; path = "typedefs.h"; sourceTree = "<group>"; };
+		677A5D60346B2B6E46055E60 /* SFMLKeyboardHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLKeyboardHandler.cpp"; path = "SFMLKeyboardHandler.cpp"; sourceTree = "<group>"; };
+		2D72495974E6493766DF70E8 /* SFMLKeyboardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLKeyboardHandler.h"; path = "SFMLKeyboardHandler.h"; sourceTree = "<group>"; };
+		7B6A4F4540FB0BF839D52B83 /* SFMLMouseHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLMouseHandler.cpp"; path = "SFMLMouseHandler.cpp"; sourceTree = "<group>"; };
+		421E330954EA76895E771AF0 /* SFMLMouseHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLMouseHandler.h"; path = "SFMLMouseHandler.h"; sourceTree = "<group>"; };
+		54EA0E8403587CDD6B3F5483 /* Engine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Engine.cpp"; path = "Engine.cpp"; sourceTree = "<group>"; };
+		48AA5D54540209A5694C0DD8 /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Engine.h"; path = "Engine.h"; sourceTree = "<group>"; };
+		35283E0F27635D636ABE72F2 /* FlatWorld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FlatWorld.h"; path = "FlatWorld.h"; sourceTree = "<group>"; };
+		54ED2CDD25FC29D723670473 /* FlatWorld.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text; name = "FlatWorld.vcxproj"; path = "FlatWorld.vcxproj"; sourceTree = "<group>"; };
+		44C7785112F8481F752F7E38 /* FlatWorld.vcxproj.filters */ = {isa = PBXFileReference; lastKnownFileType = text; name = "FlatWorld.vcxproj.filters"; path = "FlatWorld.vcxproj.filters"; sourceTree = "<group>"; };
+		3F3D787556291340021B3F76 /* Colour.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Colour.cpp"; path = "Colour.cpp"; sourceTree = "<group>"; };
+		3B6F69941522616B136C3889 /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Colour.h"; path = "Colour.h"; sourceTree = "<group>"; };
+		65DF583430DB78D82054260A /* IGameWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IGameWindow.h"; path = "IGameWindow.h"; sourceTree = "<group>"; };
+		77103CF77E140DFC77782DDF /* Particle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Particle.cpp"; path = "Particle.cpp"; sourceTree = "<group>"; };
+		1C716B0F5FB419F7338C745B /* Particle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Particle.h"; path = "Particle.h"; sourceTree = "<group>"; };
+		023C6EFB5DF0175E5066715C /* ParticleEmitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ParticleEmitter.cpp"; path = "ParticleEmitter.cpp"; sourceTree = "<group>"; };
+		26CE262E26DC24E2342A1E55 /* ParticleEmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ParticleEmitter.h"; path = "ParticleEmitter.h"; sourceTree = "<group>"; };
+		52C23AFB550B791817F71F01 /* SFMLGameWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLGameWindow.cpp"; path = "SFMLGameWindow.cpp"; sourceTree = "<group>"; };
+		7599509C2C99538967FB7CFF /* SFMLGameWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLGameWindow.h"; path = "SFMLGameWindow.h"; sourceTree = "<group>"; };
+		44E637E433450E7738A86263 /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Shader.cpp"; path = "Shader.cpp"; sourceTree = "<group>"; };
+		3D8D571C77B8129850350FAF /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Shader.h"; path = "Shader.h"; sourceTree = "<group>"; };
+		794A6894631525E33C1D4B11 /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Transform.h"; path = "Transform.h"; sourceTree = "<group>"; };
+		22E3010402F656290F7B3B9E /* Vector2f.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Vector2f.cpp"; path = "Vector2f.cpp"; sourceTree = "<group>"; };
+		7DDB649D768C7594773546C1 /* Vector2f.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Vector2f.h"; path = "Vector2f.h"; sourceTree = "<group>"; };
+		5BD45DC7140E3EEA03AB502C /* Screen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Screen.h"; path = "Screen.h"; sourceTree = "<group>"; };
+		09FB268F51300CF17CB960AB /* ScreenManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ScreenManager.cpp"; path = "ScreenManager.cpp"; sourceTree = "<group>"; };
+		0316743F742F79A269D36B65 /* ScreenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScreenManager.h"; path = "ScreenManager.h"; sourceTree = "<group>"; };
+		245E1448567B386D53325A27 /* ColourUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ColourUtilities.cpp"; path = "ColourUtilities.cpp"; sourceTree = "<group>"; };
+		3A7632B032B522F91656291A /* ColourUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ColourUtilities.h"; path = "ColourUtilities.h"; sourceTree = "<group>"; };
+		328B196D1D5A26BA130F072E /* MathsUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MathsUtilities.h"; path = "MathsUtilities.h"; sourceTree = "<group>"; };
+		121F5374764526564C582EB9 /* StringUtilites.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "StringUtilites.h"; path = "StringUtilites.h"; sourceTree = "<group>"; };
+		1F0970B64301758529231633 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Timer.cpp"; path = "Timer.cpp"; sourceTree = "<group>"; };
+		4DD345FE1032008968F72689 /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Timer.h"; path = "Timer.h"; sourceTree = "<group>"; };
+		58052A4159E64CD0517F605E /* libFlatWorld.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libFlatWorld.a"; path = "libFlatWorld.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D437D270FF12D767DB078E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14AE156929ED51E96B0A2E7B /* FlatWorld */ = {
+			isa = PBXGroup;
+			children = (
+				175A5A7C1BD2325C5B992554 /* src */,
+				29A31B833FF646FE423E5306 /* Products */,
+			);
+			name = "FlatWorld";
+			sourceTree = "<group>";
+		};
+		175A5A7C1BD2325C5B992554 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2411766A06DB40086B213533 /* FlatWorld */,
+			);
+			name = "src";
+			path = "../../src";
+			sourceTree = "<group>";
+		};
+		2411766A06DB40086B213533 /* FlatWorld */ = {
+			isa = PBXGroup;
+			children = (
+				2D7D403814973C63078B2B0A /* Audio */,
+				67630CA454DB7BFA49085C66 /* ComponentSystem */,
+				5FB57CB657EC32034F50156F /* Controls */,
+				54EA0E8403587CDD6B3F5483 /* Engine.cpp */,
+				48AA5D54540209A5694C0DD8 /* Engine.h */,
+				35283E0F27635D636ABE72F2 /* FlatWorld.h */,
+				54ED2CDD25FC29D723670473 /* FlatWorld.vcxproj */,
+				44C7785112F8481F752F7E38 /* FlatWorld.vcxproj.filters */,
+				1CA3580916EB3A802FCB78D5 /* Graphics */,
+				319A71BD44183BAC72FB1278 /* Maths */,
+				054328D0387F495B647D2B7A /* ScreenSystem */,
+				40646F17143678E3387378B3 /* Utilities */,
+			);
+			name = "FlatWorld";
+			path = "FlatWorld";
+			sourceTree = "<group>";
+		};
+		2D7D403814973C63078B2B0A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				4CE73FD3245B0F964ABD7C8C /* ISound.h */,
+				11C45F6C11F63BB131557D01 /* SFMLSound.cpp */,
+				2B531F1E2981322F5F2614A3 /* SFMLSound.h */,
+			);
+			name = "Audio";
+			path = "Audio";
+			sourceTree = "<group>";
+		};
+		67630CA454DB7BFA49085C66 /* ComponentSystem */ = {
+			isa = PBXGroup;
+			children = (
+				270415EF1C3A4B5F258666F7 /* GOCTemplate.h */,
+				47EC374A466459E272FC77BA /* GOComponent.h */,
+				56E45D28406A2E6163283B76 /* GOTManager.cpp */,
+				1F9C280F4661747824090F69 /* GOTManager.h */,
+				50DE4B0D25596D18166D4ADF /* GOTemplate.cpp */,
+				122F0F21524E52993D833576 /* GOTemplate.h */,
+				0E101EFB43F368A529F5049F /* GameObject.cpp */,
+				782D0EE91BC51D867C023232 /* GameObject.h */,
+				68665012108D6A8F6A8748CA /* typedefs.h */,
+			);
+			name = "ComponentSystem";
+			path = "ComponentSystem";
+			sourceTree = "<group>";
+		};
+		5FB57CB657EC32034F50156F /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				677A5D60346B2B6E46055E60 /* SFMLKeyboardHandler.cpp */,
+				2D72495974E6493766DF70E8 /* SFMLKeyboardHandler.h */,
+				7B6A4F4540FB0BF839D52B83 /* SFMLMouseHandler.cpp */,
+				421E330954EA76895E771AF0 /* SFMLMouseHandler.h */,
+			);
+			name = "Controls";
+			path = "Controls";
+			sourceTree = "<group>";
+		};
+		1CA3580916EB3A802FCB78D5 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				3F3D787556291340021B3F76 /* Colour.cpp */,
+				3B6F69941522616B136C3889 /* Colour.h */,
+				65DF583430DB78D82054260A /* IGameWindow.h */,
+				77103CF77E140DFC77782DDF /* Particle.cpp */,
+				1C716B0F5FB419F7338C745B /* Particle.h */,
+				023C6EFB5DF0175E5066715C /* ParticleEmitter.cpp */,
+				26CE262E26DC24E2342A1E55 /* ParticleEmitter.h */,
+				52C23AFB550B791817F71F01 /* SFMLGameWindow.cpp */,
+				7599509C2C99538967FB7CFF /* SFMLGameWindow.h */,
+				44E637E433450E7738A86263 /* Shader.cpp */,
+				3D8D571C77B8129850350FAF /* Shader.h */,
+			);
+			name = "Graphics";
+			path = "Graphics";
+			sourceTree = "<group>";
+		};
+		319A71BD44183BAC72FB1278 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				794A6894631525E33C1D4B11 /* Transform.h */,
+				22E3010402F656290F7B3B9E /* Vector2f.cpp */,
+				7DDB649D768C7594773546C1 /* Vector2f.h */,
+			);
+			name = "Maths";
+			path = "Maths";
+			sourceTree = "<group>";
+		};
+		054328D0387F495B647D2B7A /* ScreenSystem */ = {
+			isa = PBXGroup;
+			children = (
+				5BD45DC7140E3EEA03AB502C /* Screen.h */,
+				09FB268F51300CF17CB960AB /* ScreenManager.cpp */,
+				0316743F742F79A269D36B65 /* ScreenManager.h */,
+			);
+			name = "ScreenSystem";
+			path = "ScreenSystem";
+			sourceTree = "<group>";
+		};
+		40646F17143678E3387378B3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				245E1448567B386D53325A27 /* ColourUtilities.cpp */,
+				3A7632B032B522F91656291A /* ColourUtilities.h */,
+				328B196D1D5A26BA130F072E /* MathsUtilities.h */,
+				121F5374764526564C582EB9 /* StringUtilites.h */,
+				1F0970B64301758529231633 /* Timer.cpp */,
+				4DD345FE1032008968F72689 /* Timer.h */,
+			);
+			name = "Utilities";
+			path = "Utilities";
+			sourceTree = "<group>";
+		};
+		29A31B833FF646FE423E5306 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58052A4159E64CD0517F605E /* libFlatWorld.a */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		310B216F723C370F019E70F5 /* FlatWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E2C545E267B44717AB472D3 /* Build configuration list for PBXNativeTarget "FlatWorld" */;
+			buildPhases = (
+				732B19BD6389362C0F430CAD /* Resources */,
+				4C605EEF3E6A3FC12F5349F3 /* Sources */,
+				1D437D270FF12D767DB078E9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FlatWorld";
+			productName = "FlatWorld";
+			productReference = 58052A4159E64CD0517F605E /* libFlatWorld.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "FlatWorld" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 14AE156929ED51E96B0A2E7B /* FlatWorld */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				310B216F723C370F019E70F5 /* libFlatWorld.a */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		732B19BD6389362C0F430CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C605EEF3E6A3FC12F5349F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A2C48AF577D05FF7B0C3316 /* SFMLSound.cpp in Sources */,
+				61780E7C5A950AF940AB39BC /* GOTManager.cpp in Sources */,
+				54105E5A02291A75383D7525 /* GOTemplate.cpp in Sources */,
+				226249922CAE68C33E0A50B7 /* GameObject.cpp in Sources */,
+				300D686727F25CBB512B65FD /* SFMLKeyboardHandler.cpp in Sources */,
+				54C2198A283A2CAF4B8E778A /* SFMLMouseHandler.cpp in Sources */,
+				62DA18B21DDD57C161EA04BC /* Engine.cpp in Sources */,
+				211937447D86487C14A76844 /* Colour.cpp in Sources */,
+				06D136B626555CFB49F62870 /* Particle.cpp in Sources */,
+				4FE83645499000C42F1D69E4 /* ParticleEmitter.cpp in Sources */,
+				218834680A11013D4E603D9E /* SFMLGameWindow.cpp in Sources */,
+				785B5F7708911F38045A3CBC /* Shader.cpp in Sources */,
+				388C07D61B15411E270F1F6F /* Vector2f.cpp in Sources */,
+				48903545688263A676640F92 /* ScreenManager.cpp in Sources */,
+				08995D2E00B759CA6A207D70 /* ColourUtilities.cpp in Sources */,
+				4FAC31BD736150630B885D81 /* Timer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F716D571B02011C098171B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../debug;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "FlatWorld";
+			};
+			name = "Debug";
+		};
+		55165F630EE5475316731083 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../bin;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "FlatWorld";
+			};
+			name = "Release";
+		};
+		1AD161871BF674B72E576D75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../include",
+					"../../src/FlatWorld",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../lib",
+				);
+				OBJROOT = "../../obj/Debug/FlatWorld";
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SYMROOT = "../../debug";
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Debug";
+		};
+		3848795042AF0AEA5831022D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../include",
+					"../../src/FlatWorld",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../lib",
+				);
+				OBJROOT = "../../obj/Release/FlatWorld";
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SYMROOT = "../../bin";
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E2C545E267B44717AB472D3 /* Build configuration list for PBXNativeTarget "libFlatWorld.a" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F716D571B02011C098171B4 /* Debug */,
+				55165F630EE5475316731083 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug";
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "FlatWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD161871BF674B72E576D75 /* Debug */,
+				3848795042AF0AEA5831022D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug";
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

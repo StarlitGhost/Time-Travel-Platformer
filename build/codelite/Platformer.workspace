@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Workspace Name="Platformer" Database="./Platformer.tags">
+  <Project Name="FlatWorld" Path="FlatWorld.project" Active="Yes" />
+  <Project Name="Platformer" Path="Platformer.project" Active="No" />
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Project Name="FlatWorld" ConfigName="Debug"/>
+      <Project Name="Platformer" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="FlatWorld" ConfigName="Release"/>
+      <Project Name="Platformer" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

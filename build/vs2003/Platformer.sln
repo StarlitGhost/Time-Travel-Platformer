@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlatWorld", "FlatWorld.vcproj", "{937EEF0F-E3EE-460B-9311-544B11ECD2B8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platformer", "Platformer.vcproj", "{198F1F4A-B045-4D92-BB83-42D11E49EDA3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{937EEF0F-E3EE-460B-9311-544B11ECD2B8} = {937EEF0F-E3EE-460B-9311-544B11ECD2B8}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{937EEF0F-E3EE-460B-9311-544B11ECD2B8}.Debug.ActiveCfg = Debug|Win32
+		{937EEF0F-E3EE-460B-9311-544B11ECD2B8}.Debug.Build.0 = Debug|Win32
+		{937EEF0F-E3EE-460B-9311-544B11ECD2B8}.Release.ActiveCfg = Release|Win32
+		{937EEF0F-E3EE-460B-9311-544B11ECD2B8}.Release.Build.0 = Release|Win32
+		{198F1F4A-B045-4D92-BB83-42D11E49EDA3}.Debug.ActiveCfg = Debug|Win32
+		{198F1F4A-B045-4D92-BB83-42D11E49EDA3}.Debug.Build.0 = Debug|Win32
+		{198F1F4A-B045-4D92-BB83-42D11E49EDA3}.Release.ActiveCfg = Release|Win32
+		{198F1F4A-B045-4D92-BB83-42D11E49EDA3}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		328105EA08DA727D7F6B69F9 /* gctHealth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A213D0114F9692C3A1656A8 /* gctHealth.cpp */; };
+		28060BFF6D9801952B306CFF /* gocHealth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E320F1C0B581E8F16CD060E /* gocHealth.cpp */; };
+		01EE1D8D55100D473C1C6BDE /* gocInputPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 172A6C613F5B5B231F5B45F3 /* gocInputPlayer.cpp */; };
+		4F7554CA77BD0ED12FEE1719 /* gocVisualRectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C07106F07DE66083DA00B5C /* gocVisualRectangle.cpp */; };
+		61F16E6449CC1697183908F1 /* TestScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 531A0ACE67FF4AD8199F17EE /* TestScreen.cpp */; };
+		350D75011EC70AA23CBF5A1F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16DE6C20702F6FE935214978 /* main.cpp */; };
+		346D72AB04DC53357D4D419C /* libFlatWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC64DB45AB96AF53D9D0FDA /* libFlatWorld.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01BB55247F2D1628691A6D80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70825A9633184BEF36D66E98 /* FlatWorld.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58052A4159E64CD0517F605E;
+			remoteInfo = "libFlatWorld.a";
+		};
+		6CD3501729FF17DC5D8F2AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70825A9633184BEF36D66E98 /* FlatWorld.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 310B216F723C370F019E70F5;
+			remoteInfo = "libFlatWorld.a";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A213D0114F9692C3A1656A8 /* gctHealth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gctHealth.cpp"; path = "gctHealth.cpp"; sourceTree = "<group>"; };
+		68E455EE43F932F9069826CB /* gctHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gctHealth.h"; path = "gctHealth.h"; sourceTree = "<group>"; };
+		7E320F1C0B581E8F16CD060E /* gocHealth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocHealth.cpp"; path = "gocHealth.cpp"; sourceTree = "<group>"; };
+		38B475512A004DAD5E7E6417 /* gocHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocHealth.h"; path = "gocHealth.h"; sourceTree = "<group>"; };
+		245510FF6A012D30037D696D /* gocInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocInput.h"; path = "gocInput.h"; sourceTree = "<group>"; };
+		172A6C613F5B5B231F5B45F3 /* gocInputPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocInputPlayer.cpp"; path = "gocInputPlayer.cpp"; sourceTree = "<group>"; };
+		1356642377DE00EE65B8230E /* gocInputPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocInputPlayer.h"; path = "gocInputPlayer.h"; sourceTree = "<group>"; };
+		6DEE1E6C186017EF6C1976DE /* gocVisual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocVisual.h"; path = "gocVisual.h"; sourceTree = "<group>"; };
+		7C07106F07DE66083DA00B5C /* gocVisualRectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocVisualRectangle.cpp"; path = "gocVisualRectangle.cpp"; sourceTree = "<group>"; };
+		54C531DD34A629D53F2570C2 /* gocVisualRectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocVisualRectangle.h"; path = "gocVisualRectangle.h"; sourceTree = "<group>"; };
+		15B4527B54E50D92536A3A9E /* Platformer.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Platformer.vcxproj"; path = "Platformer.vcxproj"; sourceTree = "<group>"; };
+		30A04158590A490059484524 /* Platformer.vcxproj.filters */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Platformer.vcxproj.filters"; path = "Platformer.vcxproj.filters"; sourceTree = "<group>"; };
+		531A0ACE67FF4AD8199F17EE /* TestScreen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "TestScreen.cpp"; path = "TestScreen.cpp"; sourceTree = "<group>"; };
+		075A2DED5B6C5C3F3B7F2ED6 /* TestScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TestScreen.h"; path = "TestScreen.h"; sourceTree = "<group>"; };
+		16DE6C20702F6FE935214978 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "main.cpp"; path = "main.cpp"; sourceTree = "<group>"; };
+		62DD322C52A15EE03F7D09C4 /* Platformer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Platformer"; path = "Platformer"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70825A9633184BEF36D66E98 /* FlatWorld.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "FlatWorld.xcodeproj"; path = "FlatWorld.xcodeproj"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		249D5D8A1B2B7F56488058C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				346D72AB04DC53357D4D419C /* libFlatWorld.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BD332313FFC7981611F7666 /* Platformer */ = {
+			isa = PBXGroup;
+			children = (
+				568259FF4A1430AA62D14B39 /* src */,
+				1DD70FDA64ED05D65AB27E8D /* Products */,
+				1DC53CA46CF16791533C052A /* Projects */,
+			);
+			name = "Platformer";
+			sourceTree = "<group>";
+		};
+		568259FF4A1430AA62D14B39 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0883648D205D07B17AB60977 /* Platformer */,
+			);
+			name = "src";
+			path = "../../src";
+			sourceTree = "<group>";
+		};
+		0883648D205D07B17AB60977 /* Platformer */ = {
+			isa = PBXGroup;
+			children = (
+				7531678A598E1F307F66371E /* Components */,
+				15B4527B54E50D92536A3A9E /* Platformer.vcxproj */,
+				30A04158590A490059484524 /* Platformer.vcxproj.filters */,
+				3FDF554F559447BE3B581334 /* Screens */,
+				16DE6C20702F6FE935214978 /* main.cpp */,
+			);
+			name = "Platformer";
+			path = "Platformer";
+			sourceTree = "<group>";
+		};
+		7531678A598E1F307F66371E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4A213D0114F9692C3A1656A8 /* gctHealth.cpp */,
+				68E455EE43F932F9069826CB /* gctHealth.h */,
+				7E320F1C0B581E8F16CD060E /* gocHealth.cpp */,
+				38B475512A004DAD5E7E6417 /* gocHealth.h */,
+				245510FF6A012D30037D696D /* gocInput.h */,
+				172A6C613F5B5B231F5B45F3 /* gocInputPlayer.cpp */,
+				1356642377DE00EE65B8230E /* gocInputPlayer.h */,
+				6DEE1E6C186017EF6C1976DE /* gocVisual.h */,
+				7C07106F07DE66083DA00B5C /* gocVisualRectangle.cpp */,
+				54C531DD34A629D53F2570C2 /* gocVisualRectangle.h */,
+			);
+			name = "Components";
+			path = "Components";
+			sourceTree = "<group>";
+		};
+		3FDF554F559447BE3B581334 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				531A0ACE67FF4AD8199F17EE /* TestScreen.cpp */,
+				075A2DED5B6C5C3F3B7F2ED6 /* TestScreen.h */,
+			);
+			name = "Screens";
+			path = "Screens";
+			sourceTree = "<group>";
+		};
+		1DD70FDA64ED05D65AB27E8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62DD322C52A15EE03F7D09C4 /* Platformer */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		1DC53CA46CF16791533C052A /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				70825A9633184BEF36D66E98 /* FlatWorld.xcodeproj */,
+			);
+			name = "Projects";
+			sourceTree = "<group>";
+		};
+		78E053AE5A2808D2012457D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AC64DB45AB96AF53D9D0FDA /* libFlatWorld.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D3727C03D3A55A1048D4570 /* Platformer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D551B245176124320FB2C29 /* Build configuration list for PBXNativeTarget "Platformer" */;
+			buildPhases = (
+				10D03EC068CD7DC126523C0A /* Resources */,
+				02EC16D416A0360562C44D76 /* Sources */,
+				249D5D8A1B2B7F56488058C9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D9A5DDA1F0B7D1541AF4954 /* PBXTargetDependency */,
+			);
+			name = "Platformer";
+			productInstallPath = "$(HOME)/bin";
+			productName = "Platformer";
+			productReference = 62DD322C52A15EE03F7D09C4 /* Platformer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Platformer" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 4BD332313FFC7981611F7666 /* Platformer */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 78E053AE5A2808D2012457D8 /* Products */;
+					ProjectRef = 70825A9633184BEF36D66E98 /* FlatWorld.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3D3727C03D3A55A1048D4570 /* Platformer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7AC64DB45AB96AF53D9D0FDA /* libFlatWorld.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "../../debug/libFlatWorld.a";
+			remoteRef = 01BB55247F2D1628691A6D80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10D03EC068CD7DC126523C0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02EC16D416A0360562C44D76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				328105EA08DA727D7F6B69F9 /* gctHealth.cpp in Sources */,
+				28060BFF6D9801952B306CFF /* gocHealth.cpp in Sources */,
+				01EE1D8D55100D473C1C6BDE /* gocInputPlayer.cpp in Sources */,
+				4F7554CA77BD0ED12FEE1719 /* gocVisualRectangle.cpp in Sources */,
+				61F16E6449CC1697183908F1 /* TestScreen.cpp in Sources */,
+				350D75011EC70AA23CBF5A1F /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin PBXTargetDependency section */
+		3D9A5DDA1F0B7D1541AF4954 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libFlatWorld.a";
+			targetProxy = 6CD3501729FF17DC5D8F2AF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		53FF2754146C13F66E5256AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../debug;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "Platformer";
+			};
+			name = "Debug";
+		};
+		004B741B3F7B63D42A484EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../bin;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = "Platformer";
+			};
+			name = "Release";
+		};
+		66FD3C7E2B090D7800F025BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../include",
+					"../../src/Platformer",
+					"../../src",
+					"../../src/FlatWorld",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../lib",
+				);
+				OBJROOT = "../../obj/Debug/Platformer";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lgwen_static",
+					"-lGWEN-Renderer-SFML",
+					"-lfreetype",
+					"-lftgl",
+					"-lGLU",
+					"-lsfml-audio",
+					"-lsfml-graphics",
+					"-lsfml-network",
+					"-lsfml-system",
+					"-lsfml-window",
+				);
+				PREBINDING = NO;
+				SYMROOT = "../../debug";
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Debug";
+		};
+		708276A82DAD2EED366A5D01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../include",
+					"../../src/Platformer",
+					"../../src",
+					"../../src/FlatWorld",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../lib",
+				);
+				OBJROOT = "../../obj/Release/Platformer";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lgwen_static",
+					"-lGWEN-Renderer-SFML",
+					"-lfreetype",
+					"-lftgl",
+					"-lGLU",
+					"-lsfml-audio",
+					"-lsfml-graphics",
+					"-lsfml-network",
+					"-lsfml-system",
+					"-lsfml-window",
+				);
+				PREBINDING = NO;
+				SYMROOT = "../../bin";
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D551B245176124320FB2C29 /* Build configuration list for PBXNativeTarget "Platformer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53FF2754146C13F66E5256AB /* Debug */,
+				004B741B3F7B63D42A484EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug";
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Platformer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FD3C7E2B090D7800F025BD /* Debug */,
+				708276A82DAD2EED366A5D01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug";
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

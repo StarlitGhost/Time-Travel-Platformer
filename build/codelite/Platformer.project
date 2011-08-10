@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="Platformer">
+  <VirtualDirectory Name="src">
+    <VirtualDirectory Name="Platformer">
+      <VirtualDirectory Name="Components">
+        <File Name="../../src/Platformer/Components/gctHealth.cpp"/>
+        <File Name="../../src/Platformer/Components/gctHealth.h"/>
+        <File Name="../../src/Platformer/Components/gocHealth.cpp"/>
+        <File Name="../../src/Platformer/Components/gocHealth.h"/>
+        <File Name="../../src/Platformer/Components/gocInput.h"/>
+        <File Name="../../src/Platformer/Components/gocInputPlayer.cpp"/>
+        <File Name="../../src/Platformer/Components/gocInputPlayer.h"/>
+        <File Name="../../src/Platformer/Components/gocVisual.h"/>
+        <File Name="../../src/Platformer/Components/gocVisualRectangle.cpp"/>
+        <File Name="../../src/Platformer/Components/gocVisualRectangle.h"/>
+      </VirtualDirectory>
+      <File Name="../../src/Platformer/Platformer.vcxproj"/>
+      <File Name="../../src/Platformer/Platformer.vcxproj.filters"/>
+      <VirtualDirectory Name="Screens">
+        <File Name="../../src/Platformer/Screens/TestScreen.cpp"/>
+        <File Name="../../src/Platformer/Screens/TestScreen.h"/>
+      </VirtualDirectory>
+      <File Name="../../src/Platformer/main.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Settings Type="Executable">
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable">
+      <General OutputFile="../../debug/Platformer" IntermediateDirectory="../../obj/Debug/Platformer" Command="./Platformer" CommandArguments="" WorkingDirectory="../../debug" PauseExecWhenProcTerminates="yes"/>
+      <Compiler Required="yes" Options="-g;-Wall">
+        <IncludePath Value="../../include"/>
+        <IncludePath Value="../../src/Platformer"/>
+        <IncludePath Value="../../src"/>
+        <IncludePath Value="../../src/FlatWorld"/>
+        <Preprocessor Value="_DEBUG"/>
+      </Compiler>
+      <Linker Required="yes" Options="">
+        <LibraryPath Value="../../lib" />
+        <LibraryPath Value="../../debug" />
+        <Library Value="gwen_static" />
+        <Library Value="GWEN-Renderer-SFML" />
+        <Library Value="freetype" />
+        <Library Value="ftgl" />
+        <Library Value="GLU" />
+        <Library Value="FlatWorld" />
+        <Library Value="sfml-audio" />
+        <Library Value="sfml-graphics" />
+        <Library Value="sfml-network" />
+        <Library Value="sfml-system" />
+        <Library Value="sfml-window" />
+      </Linker>
+      <ResourceCompiler Required="no" Options=""/>
+      <CustomBuild Enabled="no">
+        <CleanCommand></CleanCommand>
+        <BuildCommand></BuildCommand>
+        <SingleFileCommand></SingleFileCommand>
+        <MakefileGenerationCommand></MakefileGenerationCommand>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory></WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild></CustomPostBuild>
+        <CustomPreBuild></CustomPreBuild>
+      </AdditionalRules>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable">
+      <General OutputFile="../../bin/Platformer" IntermediateDirectory="../../obj/Release/Platformer" Command="./Platformer" CommandArguments="" WorkingDirectory="../../bin" PauseExecWhenProcTerminates="yes"/>
+      <Compiler Required="yes" Options="-g;-Wall;-O2">
+        <IncludePath Value="../../include"/>
+        <IncludePath Value="../../src/Platformer"/>
+        <IncludePath Value="../../src"/>
+        <IncludePath Value="../../src/FlatWorld"/>
+        <Preprocessor Value="NDEBUG"/>
+      </Compiler>
+      <Linker Required="yes" Options="">
+        <LibraryPath Value="../../lib" />
+        <LibraryPath Value="../../bin" />
+        <Library Value="gwen_static" />
+        <Library Value="GWEN-Renderer-SFML" />
+        <Library Value="freetype" />
+        <Library Value="ftgl" />
+        <Library Value="GLU" />
+        <Library Value="FlatWorld" />
+        <Library Value="sfml-audio" />
+        <Library Value="sfml-graphics" />
+        <Library Value="sfml-network" />
+        <Library Value="sfml-system" />
+        <Library Value="sfml-window" />
+      </Linker>
+      <ResourceCompiler Required="no" Options=""/>
+      <CustomBuild Enabled="no">
+        <CleanCommand></CleanCommand>
+        <BuildCommand></BuildCommand>
+        <SingleFileCommand></SingleFileCommand>
+        <MakefileGenerationCommand></MakefileGenerationCommand>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory></WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild></CustomPostBuild>
+        <CustomPreBuild></CustomPreBuild>
+      </AdditionalRules>
+    </Configuration>
+  </Settings>
+  <Dependencies name="Debug">
+    <Project Name="FlatWorld"/>
+  </Dependencies>
+  <Dependencies name="Release">
+    <Project Name="FlatWorld"/>
+  </Dependencies>
+</CodeLite_Project>

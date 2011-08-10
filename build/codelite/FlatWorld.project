@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="FlatWorld">
+  <VirtualDirectory Name="src">
+    <VirtualDirectory Name="FlatWorld">
+      <VirtualDirectory Name="Audio">
+        <File Name="../../src/FlatWorld/Audio/ISound.h"/>
+        <File Name="../../src/FlatWorld/Audio/SFMLSound.cpp"/>
+        <File Name="../../src/FlatWorld/Audio/SFMLSound.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="ComponentSystem">
+        <File Name="../../src/FlatWorld/ComponentSystem/GOCTemplate.h"/>
+        <File Name="../../src/FlatWorld/ComponentSystem/GOComponent.h"/>
+        <File Name="../../src/FlatWorld/ComponentSystem/GOTManager.cpp"/>
+        <File Name="../../src/FlatWorld/ComponentSystem/GOTManager.h"/>
+        <File Name="../../src/FlatWorld/ComponentSystem/GOTemplate.cpp"/>
+        <File Name="../../src/FlatWorld/ComponentSystem/GOTemplate.h"/>
+        <File Name="../../src/FlatWorld/ComponentSystem/GameObject.cpp"/>
+        <File Name="../../src/FlatWorld/ComponentSystem/GameObject.h"/>
+        <File Name="../../src/FlatWorld/ComponentSystem/typedefs.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Controls">
+        <File Name="../../src/FlatWorld/Controls/SFMLKeyboardHandler.cpp"/>
+        <File Name="../../src/FlatWorld/Controls/SFMLKeyboardHandler.h"/>
+        <File Name="../../src/FlatWorld/Controls/SFMLMouseHandler.cpp"/>
+        <File Name="../../src/FlatWorld/Controls/SFMLMouseHandler.h"/>
+      </VirtualDirectory>
+      <File Name="../../src/FlatWorld/Engine.cpp"/>
+      <File Name="../../src/FlatWorld/Engine.h"/>
+      <File Name="../../src/FlatWorld/FlatWorld.h"/>
+      <File Name="../../src/FlatWorld/FlatWorld.vcxproj"/>
+      <File Name="../../src/FlatWorld/FlatWorld.vcxproj.filters"/>
+      <VirtualDirectory Name="Graphics">
+        <File Name="../../src/FlatWorld/Graphics/Colour.cpp"/>
+        <File Name="../../src/FlatWorld/Graphics/Colour.h"/>
+        <File Name="../../src/FlatWorld/Graphics/IGameWindow.h"/>
+        <File Name="../../src/FlatWorld/Graphics/Particle.cpp"/>
+        <File Name="../../src/FlatWorld/Graphics/Particle.h"/>
+        <File Name="../../src/FlatWorld/Graphics/ParticleEmitter.cpp"/>
+        <File Name="../../src/FlatWorld/Graphics/ParticleEmitter.h"/>
+        <File Name="../../src/FlatWorld/Graphics/SFMLGameWindow.cpp"/>
+        <File Name="../../src/FlatWorld/Graphics/SFMLGameWindow.h"/>
+        <File Name="../../src/FlatWorld/Graphics/Shader.cpp"/>
+        <File Name="../../src/FlatWorld/Graphics/Shader.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Maths">
+        <File Name="../../src/FlatWorld/Maths/Transform.h"/>
+        <File Name="../../src/FlatWorld/Maths/Vector2f.cpp"/>
+        <File Name="../../src/FlatWorld/Maths/Vector2f.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="ScreenSystem">
+        <File Name="../../src/FlatWorld/ScreenSystem/Screen.h"/>
+        <File Name="../../src/FlatWorld/ScreenSystem/ScreenManager.cpp"/>
+        <File Name="../../src/FlatWorld/ScreenSystem/ScreenManager.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Utilities">
+        <File Name="../../src/FlatWorld/Utilities/ColourUtilities.cpp"/>
+        <File Name="../../src/FlatWorld/Utilities/ColourUtilities.h"/>
+        <File Name="../../src/FlatWorld/Utilities/MathsUtilities.h"/>
+        <File Name="../../src/FlatWorld/Utilities/StringUtilites.h"/>
+        <File Name="../../src/FlatWorld/Utilities/Timer.cpp"/>
+        <File Name="../../src/FlatWorld/Utilities/Timer.h"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Settings Type="Static Library">
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Static Library">
+      <General OutputFile="../../debug/libFlatWorld.a" IntermediateDirectory="../../obj/Debug/FlatWorld" Command="./libFlatWorld.a" CommandArguments="" WorkingDirectory="../../debug" PauseExecWhenProcTerminates="yes"/>
+      <Compiler Required="yes" Options="-g;-Wall">
+        <IncludePath Value="../../include"/>
+        <IncludePath Value="../../src/FlatWorld"/>
+        <Preprocessor Value="_DEBUG"/>
+      </Compiler>
+      <Linker Required="yes" Options="">
+        <LibraryPath Value="../../lib" />
+      </Linker>
+      <ResourceCompiler Required="no" Options=""/>
+      <CustomBuild Enabled="no">
+        <CleanCommand></CleanCommand>
+        <BuildCommand></BuildCommand>
+        <SingleFileCommand></SingleFileCommand>
+        <MakefileGenerationCommand></MakefileGenerationCommand>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory></WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild></CustomPostBuild>
+        <CustomPreBuild></CustomPreBuild>
+      </AdditionalRules>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Static Library">
+      <General OutputFile="../../bin/libFlatWorld.a" IntermediateDirectory="../../obj/Release/FlatWorld" Command="./libFlatWorld.a" CommandArguments="" WorkingDirectory="../../bin" PauseExecWhenProcTerminates="yes"/>
+      <Compiler Required="yes" Options="-g;-Wall;-O2">
+        <IncludePath Value="../../include"/>
+        <IncludePath Value="../../src/FlatWorld"/>
+        <Preprocessor Value="NDEBUG"/>
+      </Compiler>
+      <Linker Required="yes" Options="">
+        <LibraryPath Value="../../lib" />
+      </Linker>
+      <ResourceCompiler Required="no" Options=""/>
+      <CustomBuild Enabled="no">
+        <CleanCommand></CleanCommand>
+        <BuildCommand></BuildCommand>
+        <SingleFileCommand></SingleFileCommand>
+        <MakefileGenerationCommand></MakefileGenerationCommand>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory></WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild></CustomPostBuild>
+        <CustomPreBuild></CustomPreBuild>
+      </AdditionalRules>
+    </Configuration>
+  </Settings>
+  <Dependencies name="Debug">
+  </Dependencies>
+  <Dependencies name="Release">
+  </Dependencies>
+</CodeLite_Project>
