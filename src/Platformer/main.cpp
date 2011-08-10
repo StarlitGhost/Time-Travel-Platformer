@@ -4,7 +4,7 @@
 
 #include "Platformer/Screens/TestScreen.h"
 
-#include "sfml/Window/OpenGL.hpp"
+#include <SFML/Window/OpenGL.hpp>
 
 using namespace FlatWorld;
 
@@ -12,6 +12,8 @@ CEngine* engine;
 
 void Init(IGameWindow* GameWindow)
 {
+    std::cout << "Init Start" << std::endl;
+
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClearDepth(1.0f);
 
@@ -35,7 +37,7 @@ void Display()
 
 int main(int argc, char **argv)
 {
-	//sf::Window GameWindow(sf::VideoMode(800, 600, 32), "Game Name Here");
+    std::cout << "Main Start" << std::endl;
 
 	IGameWindow* GameWindow = new SFMLGameWindow(800, 600, "Game Name Here");
 

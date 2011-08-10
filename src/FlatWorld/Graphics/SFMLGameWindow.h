@@ -4,10 +4,10 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
-#include <Gwen/Renderers/SFML.h>
+/*#include <Gwen/Renderers/SFML.h>
 #include <Gwen/Skins/Simple.h>
 #include <Gwen/Skins/TexturedBase.h>
-#include <Gwen/Input/SFML.h>
+#include <Gwen/Input/SFML.h>*/
 
 namespace FlatWorld
 {
@@ -29,9 +29,9 @@ namespace FlatWorld
 
 	private:
 		sf::RenderWindow* _window;
-		Gwen::Renderer::SFML* _gwenRenderer;
+		/*Gwen::Renderer::SFML* _gwenRenderer;
 		Gwen::Skin::Simple _gwenSkin;
 		Gwen::Controls::Canvas* _gwenCanvas;
-		Gwen::Input::SFML* _gwenInput;
+		Gwen::Input::SFML* _gwenInput;*/
 	};
 }

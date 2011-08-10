@@ -1,5 +1,7 @@
 #include "ParticleEmitter.h"
 
+#include <cstdlib>
+
 // Engine Headers
 #include "Graphics/Colour.h"
 #include "Graphics/Particle.h"

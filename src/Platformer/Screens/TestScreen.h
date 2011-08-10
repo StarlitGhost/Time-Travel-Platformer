@@ -1,12 +1,13 @@
 #pragma once
-#include "Flatworld/ScreenSystem/Screen.h"
+
+#include "FlatWorld/ScreenSystem/Screen.h"
 
 #include <string>
 
 #define FTGL_LIBRARY_STATIC
 #include <FTGL/ftgl.h>
 
-#include "Flatworld/Maths/Vector2f.h"
+#include "FlatWorld/Maths/Vector2f.h"
 
 namespace FlatWorld
 {

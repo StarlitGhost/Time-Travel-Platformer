@@ -5,6 +5,8 @@
 #include <string>
 #include <sstream>
 
+#include <string.h>
+
 #define GLEW_STATIC
 #include <GL/glew.h>
 #include <SFML/Window/OpenGL.hpp>

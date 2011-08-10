@@ -2,10 +2,10 @@
 
 #include <SFML/Window.hpp>
 
-#include "Flatworld/ComponentSystem/GameObject.h"
+#include "FlatWorld/ComponentSystem/GameObject.h"
 
-#include "Flatworld/Controls/SFMLKeyboardHandler.h"
-#include "Flatworld/Controls/SFMLMouseHandler.h"
+#include "FlatWorld/Controls/SFMLKeyboardHandler.h"
+#include "FlatWorld/Controls/SFMLMouseHandler.h"
 
 using namespace FlatWorld;
 

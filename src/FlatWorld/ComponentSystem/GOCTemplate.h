@@ -9,7 +9,7 @@ namespace FlatWorld
 	{
 	public:
 		GOCTemplate() {}
-		virtual ~GOCTemplate() = 0;
+		virtual ~GOCTemplate() {}
 
 		virtual const GOCIdType ComponentId() const = 0;
 		virtual const GOCIdType FamilyId() const = 0;

@@ -1,7 +1,7 @@
 #pragma once
 
 // Engine Headers
-#include "Flatworld/ComponentSystem/GOComponent.h"
+#include "FlatWorld/ComponentSystem/GOComponent.h"
 
 class gocVisual : public FlatWorld::GOComponent
 {

@@ -1,88 +1,64 @@
 #include "Timer.h"
 
+#include <math.h>
+
+#include "Utilities/MathsUtilities.h"
+
 using namespace FlatWorld;
 
-Timer::Timer(void)
+Timer::Timer()
 {
-	Init(30.f);
+    Init(30.f);
 }
 
-Timer::Timer(float timeCount)
+Timer::Timer(float readyPerSecond)
 {
-	Init(timeCount);
+    Init(readyPerSecond);
 }
 
-void Timer::Init(float timeCount)
+void Timer::Init(float readyPerSecond)
 {
-	//****************** INITIALISATIONS **************************
-	// Awesome accurate timings are available from the CPU
-	if (QueryPerformanceFrequency((LARGE_INTEGER *) &_perfFrequ))
-	{
-		_perfCount = true;
-		_timeCount = (DWORD)(_perfFrequ / timeCount);
-		QueryPerformanceCounter((LARGE_INTEGER *) &_currentTime);
-		_timeScale = 1.0 / _perfFrequ;
-	}
-	else // Can't be awesomely accurate :(
-	{
-		_currentTime = timeGetTime();//Set the initial time
-		_timeScale = 0.001;//millisecond time scale
-		_timeCount = 33;//number of milliseconds between frames
-	}
-	_readyTime = _currentTime + _timeCount;//set time update interval
-	//*************************************************************
+    _dt = 1.f / 60.f;
+    _timeScale = 1.f;
 
-	_dt = 1;
-	_funScale = 1.f;
-}
+    if (MathsUtilities::equal(readyPerSecond, 0.f))
+        readyPerSecond = 30.f;
+    _interval = 1.f / fabs(readyPerSecond);
 
-Timer::~Timer(void)
-{
+    _clock.Reset();
 }
 
 void Timer::Update()
 {
-	LONGLONG tempTime;
-	if (_perfCount)
-	{
-		QueryPerformanceCounter((LARGE_INTEGER *) &tempTime);
-	}
-	else
-	{
-		tempTime = timeGetTime();
-	}
-	_dt = (tempTime - _currentTime) * (LONGLONG)_funScale;
-	_currentTime += _dt;
+    _dt = _clock.GetElapsedTime() * _timeScale;
+    _clock.Reset();
 }
 
 bool Timer::Ready()
 {
-	if (_currentTime > _readyTime)
-	{
-		return true;
-	}
-	return false;
+    if (_clock.GetElapsedTime() > _interval)
+    {
+        return true;
+    }
+    return false;
 }
 
 bool Timer::ReadyAndReinit()
 {
-	if (Ready()) {
-		_readyTime = _currentTime + _timeCount; //Reset the timer
-		return true;
-	}
-	return false;
+    if (Ready())
+    {
+        _clock.Reset();
+        return true;
+    }
+    return false;
 }
 
 float Timer::DT()
 {
-	return (float)(_dt * _timeScale);
+    return _dt * _timeScale;
 }
 
 void Timer::TimeScale(float timeScale)
 {
-	if (timeScale < 0)
-	{
-		timeScale *= -1.f;
-	}
-	_funScale = timeScale;
+    _timeScale = fabs(timeScale);
 }

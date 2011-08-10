@@ -1,11 +1,13 @@
 #pragma once
 
+#include <SFML/Window.hpp>
+
 // Forward Declarations
-namespace sf
-{
-	class Event;
-	namespace Key{enum Code;}
-}
+//namespace sf
+//{
+//	class Event;
+//	namespace Key{enum Code;}
+//}
 
 namespace FlatWorld
 {

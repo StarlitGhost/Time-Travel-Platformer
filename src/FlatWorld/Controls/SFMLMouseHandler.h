@@ -1,11 +1,13 @@
 #pragma once
 
+#include <SFML/Window.hpp>
+
 // Forward Declarations
-namespace sf
-{
-	class Event;
-	namespace Mouse{enum Button;}
-}
+//namespace sf
+//{
+//	class Event;
+//	namespace Mouse{enum Button;}
+//}
 
 namespace FlatWorld
 {

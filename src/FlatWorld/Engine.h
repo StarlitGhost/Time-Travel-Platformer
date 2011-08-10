@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 //#include "FlatWorld.h"
 
 namespace FlatWorld

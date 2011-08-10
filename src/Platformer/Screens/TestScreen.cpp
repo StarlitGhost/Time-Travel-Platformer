@@ -96,7 +96,7 @@ void TestScreen::Update(float dt)
 	colour = ColourUtilities::HSV2RGB(H, S, V);
 
 	gameObject->Update(dt);
-	
+
 	testData = "TS: " + ToString(timer->TimeScale()) +
 		" | UPS: " + ToString((int)(1.f/dt)) +
 		" | DP: " + ToString(line1dotline2) +
@@ -168,7 +168,11 @@ void TestScreen::Load()
 {
 	engine = CEngine::GetInstance();
 
-	font = new FTTextureFont("C:\\Windows\\Fonts\\tahoma.ttf");
+    #ifdef _WIN32
+        font = new FTTextureFont("C:\\Windows\\Fonts\\tahoma.ttf");
+	#else
+        font = new FTTextureFont("/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf");
+	#endif
 	font->FaceSize(12);
 	line1Start = Vector2f(320,240);
 	line1End = Vector2f(320,400);

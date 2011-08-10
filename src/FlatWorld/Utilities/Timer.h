@@ -1,40 +1,33 @@
 #pragma once
 
-#define _WINSOCKAPI_
-#include <windows.h>
+#include <SFML/System.hpp>
 
 namespace FlatWorld
 {
 	class Timer
 	{
-	public:
-		Timer(void);
-		Timer(float timeCount);
-		~Timer(void);
+    public:
+        Timer();
+        Timer(float readyPerSecond);
+        ~Timer();
 
-		void Update();
-		bool Ready();
-		bool ReadyAndReinit();
-		float DT();
+        void Init(float readyPerSecond);
 
-		void TimeScale(float timeScale);
-		float TimeScale() { return _funScale; }
+        void Update();
+        bool Ready();
+        bool ReadyAndReinit();
+        float DT();
 
-	private:
-		void Init(float timeCount);
+        void TimeScale(float timeScale);
+        float TimeScale() { return _timeScale; }
 
-		//************ Timing variables ************
-		LONGLONG _currentTime;//Current time
-		LONGLONG _readyTime;//Time of the next update
-		LONGLONG _dt;//Time of last update
-		double _timeScale;
-		DWORD _timeCount;
-		BOOL _perfCount;
-		LONGLONG _perfFrequ;
-		//******** end of timing variables *********
+    private:
+	    sf::Clock _clock;
 
-		//************* Fun variables **************
-		float _funScale;
-		//******** end of fun variables ************
+	    float _dt;
+	    float _interval;
+
+	    float _timeScale;
+
 	};
 }

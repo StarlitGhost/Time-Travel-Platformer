@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Flatworld/ComponentSystem/GOComponent.h"
+#include "FlatWorld/ComponentSystem/GOComponent.h"
 
 class gctHealth;
 
