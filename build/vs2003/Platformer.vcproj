@@ -40,7 +40,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib freetype.lib ftgl.lib GLU.lib ..\..\debug\FlatWorld.lib sfml-audio.lib sfml-graphics.lib sfml-network.lib sfml-system.lib sfml-window.lib"
+				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib ..\..\debug\FlatWorld.lib freetype.lib ftgl.lib GLU.lib sfml-audio.lib sfml-graphics.lib sfml-network.lib sfml-system.lib sfml-window.lib"
 				OutputFile="$(OutDir)\Platformer.exe"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="..\..\lib"
@@ -110,7 +110,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib freetype.lib ftgl.lib GLU.lib ..\..\bin\FlatWorld.lib sfml-audio.lib sfml-graphics.lib sfml-network.lib sfml-system.lib sfml-window.lib"
+				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib ..\..\bin\FlatWorld.lib freetype.lib ftgl.lib GLU.lib sfml-audio.lib sfml-graphics.lib sfml-network.lib sfml-system.lib sfml-window.lib"
 				OutputFile="$(OutDir)\Platformer.exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="..\..\lib"
@@ -212,14 +212,6 @@
 						>
 					</File>
 				</Filter>
-				<File
-					RelativePath="..\..\src\Platformer\Platformer.vcxproj"
-					>
-				</File>
-				<File
-					RelativePath="..\..\src\Platformer\Platformer.vcxproj.filters"
-					>
-				</File>
 				<Filter
 					Name="Screens"
 					Filter=""

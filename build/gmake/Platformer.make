@@ -22,7 +22,7 @@ endif
 ifeq ($(config),debug)
   OBJDIR     = ../../obj/Debug/Platformer
   TARGETDIR  = ../../debug
-  TARGET     = $(TARGETDIR)/Platformer
+  TARGET     = $(TARGETDIR)/Platformer.exe
   DEFINES   += -D_DEBUG
   INCLUDES  += -I../../include -I../../src/Platformer -I../../src -I../../src/FlatWorld
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
@@ -44,7 +44,7 @@ endif
 ifeq ($(config),release)
   OBJDIR     = ../../obj/Release/Platformer
   TARGETDIR  = ../../bin
-  TARGET     = $(TARGETDIR)/Platformer
+  TARGET     = $(TARGETDIR)/Platformer.exe
   DEFINES   += -DNDEBUG
   INCLUDES  += -I../../include -I../../src/Platformer -I../../src -I../../src/FlatWorld
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
@@ -65,10 +65,10 @@ endif
 
 OBJECTS := \
 	$(OBJDIR)/main.o \
-	$(OBJDIR)/gocHealth.o \
-	$(OBJDIR)/gocVisualRectangle.o \
-	$(OBJDIR)/gocInputPlayer.o \
 	$(OBJDIR)/gctHealth.o \
+	$(OBJDIR)/gocHealth.o \
+	$(OBJDIR)/gocInputPlayer.o \
+	$(OBJDIR)/gocVisualRectangle.o \
 	$(OBJDIR)/TestScreen.o \
 
 RESOURCES := \
@@ -133,16 +133,16 @@ endif
 $(OBJDIR)/main.o: ../../src/Platformer/main.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/gocHealth.o: ../../src/Platformer/Components/gocHealth.cpp
+$(OBJDIR)/gctHealth.o: ../../src/Platformer/Components/gctHealth.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/gocVisualRectangle.o: ../../src/Platformer/Components/gocVisualRectangle.cpp
+$(OBJDIR)/gocHealth.o: ../../src/Platformer/Components/gocHealth.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/gocInputPlayer.o: ../../src/Platformer/Components/gocInputPlayer.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/gctHealth.o: ../../src/Platformer/Components/gctHealth.cpp
+$(OBJDIR)/gocVisualRectangle.o: ../../src/Platformer/Components/gocVisualRectangle.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/TestScreen.o: ../../src/Platformer/Screens/TestScreen.cpp

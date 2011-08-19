@@ -109,53 +109,45 @@
   <ItemGroup>
     <ClInclude Include="..\..\src\FlatWorld\Engine.h" />
     <ClInclude Include="..\..\src\FlatWorld\FlatWorld.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Audio\ISound.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Audio\SFMLSound.h" />
     <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\GameObject.h" />
-    <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\typedefs.h" />
     <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\GOComponent.h" />
     <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\GOCTemplate.h" />
     <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\GOTemplate.h" />
     <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\GOTManager.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Utilities\Timer.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Utilities\ColourUtilities.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Utilities\StringUtilites.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Utilities\MathsUtilities.h" />
+    <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\typedefs.h" />
     <ClInclude Include="..\..\src\FlatWorld\Controls\SFMLKeyboardHandler.h" />
     <ClInclude Include="..\..\src\FlatWorld\Controls\SFMLMouseHandler.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Graphics\Colour.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Graphics\IGameWindow.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Graphics\Particle.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Graphics\ParticleEmitter.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Graphics\SFMLGameWindow.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Graphics\Shader.h" />
     <ClInclude Include="..\..\src\FlatWorld\Maths\Transform.h" />
     <ClInclude Include="..\..\src\FlatWorld\Maths\Vector2f.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\ParticleEmitter.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\Particle.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\Shader.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\IGameWindow.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\SFMLGameWindow.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\Colour.h" />
-    <ClInclude Include="..\..\src\FlatWorld\ScreenSystem\ScreenManager.h" />
     <ClInclude Include="..\..\src\FlatWorld\ScreenSystem\Screen.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Audio\SFMLSound.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Audio\ISound.h" />
+    <ClInclude Include="..\..\src\FlatWorld\ScreenSystem\ScreenManager.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Utilities\ColourUtilities.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Utilities\MathsUtilities.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Utilities\StringUtilites.h" />
+    <ClInclude Include="..\..\src\FlatWorld\Utilities\Timer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\FlatWorld\Engine.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\ComponentSystem\GameObject.cpp">
+    <ClCompile Include="..\..\src\FlatWorld\Audio\SFMLSound.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\ComponentSystem\GOTManager.cpp">
+    <ClCompile Include="..\..\src\FlatWorld\ComponentSystem\GameObject.cpp">
     </ClCompile>
     <ClCompile Include="..\..\src\FlatWorld\ComponentSystem\GOTemplate.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Utilities\ColourUtilities.cpp">
-    </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Utilities\Timer.cpp">
-    </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Controls\SFMLMouseHandler.cpp">
+    <ClCompile Include="..\..\src\FlatWorld\ComponentSystem\GOTManager.cpp">
     </ClCompile>
     <ClCompile Include="..\..\src\FlatWorld\Controls\SFMLKeyboardHandler.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Maths\Vector2f.cpp">
-    </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Graphics\Shader.cpp">
-    </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Graphics\SFMLGameWindow.cpp">
+    <ClCompile Include="..\..\src\FlatWorld\Controls\SFMLMouseHandler.cpp">
     </ClCompile>
     <ClCompile Include="..\..\src\FlatWorld\Graphics\Colour.cpp">
     </ClCompile>
@@ -163,14 +155,18 @@
     </ClCompile>
     <ClCompile Include="..\..\src\FlatWorld\Graphics\ParticleEmitter.cpp">
     </ClCompile>
+    <ClCompile Include="..\..\src\FlatWorld\Graphics\SFMLGameWindow.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\src\FlatWorld\Graphics\Shader.cpp">
+    </ClCompile>
+    <ClCompile Include="..\..\src\FlatWorld\Maths\Vector2f.cpp">
+    </ClCompile>
     <ClCompile Include="..\..\src\FlatWorld\ScreenSystem\ScreenManager.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Audio\SFMLSound.cpp">
+    <ClCompile Include="..\..\src\FlatWorld\Utilities\ColourUtilities.cpp">
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\src\FlatWorld\FlatWorld.vcxproj" />
-    <None Include="..\..\src\FlatWorld\FlatWorld.vcxproj.filters" />
+    <ClCompile Include="..\..\src\FlatWorld\Utilities\Timer.cpp">
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

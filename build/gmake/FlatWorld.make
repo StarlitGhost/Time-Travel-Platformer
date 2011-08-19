@@ -65,21 +65,21 @@ endif
 
 OBJECTS := \
 	$(OBJDIR)/Engine.o \
+	$(OBJDIR)/SFMLSound.o \
 	$(OBJDIR)/GameObject.o \
-	$(OBJDIR)/GOTManager.o \
 	$(OBJDIR)/GOTemplate.o \
-	$(OBJDIR)/ColourUtilities.o \
-	$(OBJDIR)/Timer.o \
-	$(OBJDIR)/SFMLMouseHandler.o \
+	$(OBJDIR)/GOTManager.o \
 	$(OBJDIR)/SFMLKeyboardHandler.o \
-	$(OBJDIR)/Vector2f.o \
-	$(OBJDIR)/Shader.o \
-	$(OBJDIR)/SFMLGameWindow.o \
+	$(OBJDIR)/SFMLMouseHandler.o \
 	$(OBJDIR)/Colour.o \
 	$(OBJDIR)/Particle.o \
 	$(OBJDIR)/ParticleEmitter.o \
+	$(OBJDIR)/SFMLGameWindow.o \
+	$(OBJDIR)/Shader.o \
+	$(OBJDIR)/Vector2f.o \
 	$(OBJDIR)/ScreenManager.o \
-	$(OBJDIR)/SFMLSound.o \
+	$(OBJDIR)/ColourUtilities.o \
+	$(OBJDIR)/Timer.o \
 
 RESOURCES := \
 
@@ -143,34 +143,22 @@ endif
 $(OBJDIR)/Engine.o: ../../src/FlatWorld/Engine.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/GameObject.o: ../../src/FlatWorld/ComponentSystem/GameObject.cpp
+$(OBJDIR)/SFMLSound.o: ../../src/FlatWorld/Audio/SFMLSound.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/GOTManager.o: ../../src/FlatWorld/ComponentSystem/GOTManager.cpp
+$(OBJDIR)/GameObject.o: ../../src/FlatWorld/ComponentSystem/GameObject.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/GOTemplate.o: ../../src/FlatWorld/ComponentSystem/GOTemplate.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/ColourUtilities.o: ../../src/FlatWorld/Utilities/ColourUtilities.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/Timer.o: ../../src/FlatWorld/Utilities/Timer.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/SFMLMouseHandler.o: ../../src/FlatWorld/Controls/SFMLMouseHandler.cpp
+$(OBJDIR)/GOTManager.o: ../../src/FlatWorld/ComponentSystem/GOTManager.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/SFMLKeyboardHandler.o: ../../src/FlatWorld/Controls/SFMLKeyboardHandler.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/Vector2f.o: ../../src/FlatWorld/Maths/Vector2f.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/Shader.o: ../../src/FlatWorld/Graphics/Shader.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/SFMLGameWindow.o: ../../src/FlatWorld/Graphics/SFMLGameWindow.cpp
+$(OBJDIR)/SFMLMouseHandler.o: ../../src/FlatWorld/Controls/SFMLMouseHandler.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/Colour.o: ../../src/FlatWorld/Graphics/Colour.cpp
@@ -182,10 +170,22 @@ $(OBJDIR)/Particle.o: ../../src/FlatWorld/Graphics/Particle.cpp
 $(OBJDIR)/ParticleEmitter.o: ../../src/FlatWorld/Graphics/ParticleEmitter.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/SFMLGameWindow.o: ../../src/FlatWorld/Graphics/SFMLGameWindow.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/Shader.o: ../../src/FlatWorld/Graphics/Shader.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/Vector2f.o: ../../src/FlatWorld/Maths/Vector2f.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/ScreenManager.o: ../../src/FlatWorld/ScreenSystem/ScreenManager.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/SFMLSound.o: ../../src/FlatWorld/Audio/SFMLSound.cpp
+$(OBJDIR)/ColourUtilities.o: ../../src/FlatWorld/Utilities/ColourUtilities.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/Timer.o: ../../src/FlatWorld/Utilities/Timer.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 

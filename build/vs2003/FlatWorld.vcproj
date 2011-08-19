@@ -242,14 +242,6 @@
 					RelativePath="..\..\src\FlatWorld\FlatWorld.h"
 					>
 				</File>
-				<File
-					RelativePath="..\..\src\FlatWorld\FlatWorld.vcxproj"
-					>
-				</File>
-				<File
-					RelativePath="..\..\src\FlatWorld\FlatWorld.vcxproj.filters"
-					>
-				</File>
 				<Filter
 					Name="Graphics"
 					Filter=""

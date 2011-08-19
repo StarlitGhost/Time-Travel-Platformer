@@ -38,11 +38,22 @@ solution "Platformer"
 		files { "../src/Platformer/**.*" }
 		kind "ConsoleApp"
 		
-		links { "gwen_static", "GWEN-Renderer-SFML", "freetype", "ftgl", "GLU", "FlatWorld" }
-		
-		configuration "Release"
-			links { "sfml-audio", "sfml-graphics", "sfml-network", "sfml-system", "sfml-window" }
-		
-		configuration "Debug"
-			links { "sfml-audio", "sfml-graphics", "sfml-network", "sfml-system", "sfml-window" }
+		links { "gwen_static", "GWEN-Renderer-SFML", "FlatWorld" }
+		if _ACTION == "vs2010" then
+			links { "freetype2312", "ftgl_static", "glu32" }
+			
+			configuration "Release"
+				links { "sfml-audio-s", "sfml-graphics-s", "sfml-network-s", "sfml-system-s", "sfml-window-s" }
+			
+			configuration "Debug"
+				links { "sfml-audio-s-d", "sfml-graphics-s-d", "sfml-network-s-d", "sfml-system-s-d", "sfml-window-s-d" }
+		else
+			links { "freetype", "ftgl", "GLU" }
+			
+			configuration "Release"
+				links { "sfml-audio", "sfml-graphics", "sfml-network", "sfml-system", "sfml-window" }
+			
+			configuration "Debug"
+				links { "sfml-audio", "sfml-graphics", "sfml-network", "sfml-system", "sfml-window" }
+		end
 

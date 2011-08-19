@@ -44,89 +44,85 @@
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Engine.h">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/FlatWorld.vcxproj">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/FlatWorld.vcxproj.filters">
-		</Unit>
 		<Unit filename="../../src/FlatWorld/FlatWorld.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Audio/ISound.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Audio/SFMLSound.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Audio/SFMLSound.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/ComponentSystem/GameObject.cpp">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/ComponentSystem/GameObject.h">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/ComponentSystem/typedefs.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/ComponentSystem/GOTManager.cpp">
-		</Unit>
 		<Unit filename="../../src/FlatWorld/ComponentSystem/GOComponent.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/ComponentSystem/GOCTemplate.h">
 		</Unit>
+		<Unit filename="../../src/FlatWorld/ComponentSystem/GOTemplate.cpp">
+		</Unit>
 		<Unit filename="../../src/FlatWorld/ComponentSystem/GOTemplate.h">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/ComponentSystem/GOTemplate.cpp">
+		<Unit filename="../../src/FlatWorld/ComponentSystem/GOTManager.cpp">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/ComponentSystem/GOTManager.h">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Utilities/Timer.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Utilities/ColourUtilities.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Utilities/StringUtilites.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Utilities/MathsUtilities.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Utilities/ColourUtilities.cpp">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Utilities/Timer.cpp">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Controls/SFMLKeyboardHandler.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Controls/SFMLMouseHandler.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Controls/SFMLMouseHandler.cpp">
+		<Unit filename="../../src/FlatWorld/ComponentSystem/typedefs.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Controls/SFMLKeyboardHandler.cpp">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Maths/Vector2f.cpp">
+		<Unit filename="../../src/FlatWorld/Controls/SFMLKeyboardHandler.h">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Maths/Transform.h">
+		<Unit filename="../../src/FlatWorld/Controls/SFMLMouseHandler.cpp">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Maths/Vector2f.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/ParticleEmitter.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/Particle.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/Shader.cpp">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/SFMLGameWindow.cpp">
+		<Unit filename="../../src/FlatWorld/Controls/SFMLMouseHandler.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/Colour.cpp">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/Particle.cpp">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/Shader.h">
+		<Unit filename="../../src/FlatWorld/Graphics/Colour.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/IGameWindow.h">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/SFMLGameWindow.h">
+		<Unit filename="../../src/FlatWorld/Graphics/Particle.cpp">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/Colour.h">
+		<Unit filename="../../src/FlatWorld/Graphics/Particle.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/ParticleEmitter.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/ParticleEmitter.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/SFMLGameWindow.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/SFMLGameWindow.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/Shader.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/Shader.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Maths/Transform.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Maths/Vector2f.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Maths/Vector2f.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/ScreenSystem/Screen.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/ScreenSystem/ScreenManager.cpp">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/ScreenSystem/ScreenManager.h">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/ScreenSystem/Screen.h">
+		<Unit filename="../../src/FlatWorld/Utilities/ColourUtilities.cpp">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Audio/SFMLSound.h">
+		<Unit filename="../../src/FlatWorld/Utilities/ColourUtilities.h">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Audio/SFMLSound.cpp">
+		<Unit filename="../../src/FlatWorld/Utilities/MathsUtilities.h">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Audio/ISound.h">
+		<Unit filename="../../src/FlatWorld/Utilities/StringUtilites.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Utilities/Timer.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Utilities/Timer.h">
 		</Unit>
 		<Extensions />
 	</Project>

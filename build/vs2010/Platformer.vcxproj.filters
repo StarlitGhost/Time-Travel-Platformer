@@ -2,43 +2,35 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="src">
-      <UniqueIdentifier>{2B6987D5-32FF-4DF3-03C9-9C8A597A6237}</UniqueIdentifier>
+      <UniqueIdentifier>{B0176491-88C9-E94A-A0E0-E34685502219}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Platformer">
-      <UniqueIdentifier>{2EE97713-EBB6-7E4B-122F-E4C4DA81AFC4}</UniqueIdentifier>
+      <UniqueIdentifier>{59BAE5BC-38B1-FC40-B34F-1C75B6DF7CDF}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Platformer\Components">
-      <UniqueIdentifier>{567C1BD1-480B-6CFA-C6FC-239BF3C2C5F5}</UniqueIdentifier>
+      <UniqueIdentifier>{8CDD964D-9C24-D442-B1F9-18A593184673}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Platformer\Screens">
-      <UniqueIdentifier>{9C6ED98C-E85C-206F-CEDC-5E6738B7AA34}</UniqueIdentifier>
+      <UniqueIdentifier>{B1EF8183-96A3-2848-AA85-F0E940522CE0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\src\Platformer\Platformer.vcxproj.filters">
-      <Filter>src\Platformer</Filter>
-    </None>
-    <None Include="..\..\src\Platformer\Platformer.vcxproj">
-      <Filter>src\Platformer</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\src\Platformer\Components\gocVisualRectangle.h">
-      <Filter>src\Platformer\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\Platformer\Components\gocInputPlayer.h">
-      <Filter>src\Platformer\Components</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\Platformer\Components\gctHealth.h">
       <Filter>src\Platformer\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Platformer\Components\gocVisual.h">
+    <ClInclude Include="..\..\src\Platformer\Components\gocHealth.h">
       <Filter>src\Platformer\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Platformer\Components\gocInput.h">
       <Filter>src\Platformer\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Platformer\Components\gocHealth.h">
+    <ClInclude Include="..\..\src\Platformer\Components\gocInputPlayer.h">
+      <Filter>src\Platformer\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Platformer\Components\gocVisual.h">
+      <Filter>src\Platformer\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Platformer\Components\gocVisualRectangle.h">
       <Filter>src\Platformer\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Platformer\Screens\TestScreen.h">
@@ -49,16 +41,16 @@
     <ClCompile Include="..\..\src\Platformer\main.cpp">
       <Filter>src\Platformer</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Platformer\Components\gocHealth.cpp">
+    <ClCompile Include="..\..\src\Platformer\Components\gctHealth.cpp">
       <Filter>src\Platformer\Components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Platformer\Components\gocVisualRectangle.cpp">
+    <ClCompile Include="..\..\src\Platformer\Components\gocHealth.cpp">
       <Filter>src\Platformer\Components</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\Platformer\Components\gocInputPlayer.cpp">
       <Filter>src\Platformer\Components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Platformer\Components\gctHealth.cpp">
+    <ClCompile Include="..\..\src\Platformer\Components\gocVisualRectangle.cpp">
       <Filter>src\Platformer\Components</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\Platformer\Screens\TestScreen.cpp">

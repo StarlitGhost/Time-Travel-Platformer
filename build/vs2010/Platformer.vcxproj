@@ -68,7 +68,7 @@
       <AdditionalIncludeDirectories>..\..\include;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>gwen_static.lib;GWEN-Renderer-SFML.lib;freetype.lib;ftgl.lib;GLU.lib;..\..\debug\FlatWorld.lib;sfml-audio.lib;sfml-graphics.lib;sfml-network.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gwen_static.lib;GWEN-Renderer-SFML.lib;..\..\debug\FlatWorld.lib;freetype2312.lib;ftgl_static.lib;glu32.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)Platformer.exe</OutputFile>
       <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
@@ -98,7 +98,7 @@
       <AdditionalIncludeDirectories>..\..\include;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>gwen_static.lib;GWEN-Renderer-SFML.lib;freetype.lib;ftgl.lib;GLU.lib;..\..\bin\FlatWorld.lib;sfml-audio.lib;sfml-graphics.lib;sfml-network.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gwen_static.lib;GWEN-Renderer-SFML.lib;..\..\bin\FlatWorld.lib;freetype2312.lib;ftgl_static.lib;glu32.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)Platformer.exe</OutputFile>
       <AdditionalLibraryDirectories>..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
@@ -111,31 +111,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\Platformer\Components\gocVisualRectangle.h" />
-    <ClInclude Include="..\..\src\Platformer\Components\gocInputPlayer.h" />
     <ClInclude Include="..\..\src\Platformer\Components\gctHealth.h" />
-    <ClInclude Include="..\..\src\Platformer\Components\gocVisual.h" />
-    <ClInclude Include="..\..\src\Platformer\Components\gocInput.h" />
     <ClInclude Include="..\..\src\Platformer\Components\gocHealth.h" />
+    <ClInclude Include="..\..\src\Platformer\Components\gocInput.h" />
+    <ClInclude Include="..\..\src\Platformer\Components\gocInputPlayer.h" />
+    <ClInclude Include="..\..\src\Platformer\Components\gocVisual.h" />
+    <ClInclude Include="..\..\src\Platformer\Components\gocVisualRectangle.h" />
     <ClInclude Include="..\..\src\Platformer\Screens\TestScreen.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Platformer\main.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\Platformer\Components\gocHealth.cpp">
+    <ClCompile Include="..\..\src\Platformer\Components\gctHealth.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\Platformer\Components\gocVisualRectangle.cpp">
+    <ClCompile Include="..\..\src\Platformer\Components\gocHealth.cpp">
     </ClCompile>
     <ClCompile Include="..\..\src\Platformer\Components\gocInputPlayer.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\Platformer\Components\gctHealth.cpp">
+    <ClCompile Include="..\..\src\Platformer\Components\gocVisualRectangle.cpp">
     </ClCompile>
     <ClCompile Include="..\..\src\Platformer\Screens\TestScreen.cpp">
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\src\Platformer\Platformer.vcxproj.filters" />
-    <None Include="..\..\src\Platformer\Platformer.vcxproj" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

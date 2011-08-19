@@ -27,8 +27,6 @@
       <File Name="../../src/FlatWorld/Engine.cpp"/>
       <File Name="../../src/FlatWorld/Engine.h"/>
       <File Name="../../src/FlatWorld/FlatWorld.h"/>
-      <File Name="../../src/FlatWorld/FlatWorld.vcxproj"/>
-      <File Name="../../src/FlatWorld/FlatWorld.vcxproj.filters"/>
       <VirtualDirectory Name="Graphics">
         <File Name="../../src/FlatWorld/Graphics/Colour.cpp"/>
         <File Name="../../src/FlatWorld/Graphics/Colour.h"/>
