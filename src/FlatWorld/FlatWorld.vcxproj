@@ -49,8 +49,8 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\include;..\..\src\FlatWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SFML_STATIC;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <SmallerTypeCheck>true</SmallerTypeCheck>
@@ -62,8 +62,8 @@
       <ProgramDataBaseFileName>$(OutDir)FlatWorld.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\include;..\..\src\FlatWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SFML_STATIC;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   <Lib>
     <OutputFile>$(OutDir)FlatWorld.lib</OutputFile>
@@ -79,8 +79,8 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>..\..\include;..\..\src\FlatWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SFML_STATIC;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -91,8 +91,8 @@
       <ProgramDataBaseFileName>$(OutDir)FlatWorld.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\include;..\..\src\FlatWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SFML_STATIC;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
   <Lib>
     <OutputFile>$(OutDir)FlatWorld.lib</OutputFile>
@@ -107,65 +107,92 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\FlatWorld\Engine.h" />
-    <ClInclude Include="..\..\src\FlatWorld\FlatWorld.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Audio\ISound.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Audio\SFMLSound.h" />
-    <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\GameObject.h" />
-    <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\GOComponent.h" />
-    <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\GOCTemplate.h" />
-    <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\GOTemplate.h" />
-    <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\GOTManager.h" />
-    <ClInclude Include="..\..\src\FlatWorld\ComponentSystem\typedefs.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Controls\SFMLKeyboardHandler.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Controls\SFMLMouseHandler.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\Colour.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\IGameWindow.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\Particle.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\ParticleEmitter.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\SFMLGameWindow.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Graphics\Shader.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Maths\Transform.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Maths\Vector2f.h" />
-    <ClInclude Include="..\..\src\FlatWorld\ScreenSystem\Screen.h" />
-    <ClInclude Include="..\..\src\FlatWorld\ScreenSystem\ScreenManager.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Utilities\ColourUtilities.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Utilities\MathsUtilities.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Utilities\StringUtilites.h" />
-    <ClInclude Include="..\..\src\FlatWorld\Utilities\Timer.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="FlatWorld.h" />
+    <ClInclude Include="Audio\ISound.h" />
+    <ClInclude Include="Audio\SFMLSound.h" />
+    <ClInclude Include="ComponentSystem\GameObject.h" />
+    <ClInclude Include="ComponentSystem\GOComponent.h" />
+    <ClInclude Include="ComponentSystem\GOCTemplate.h" />
+    <ClInclude Include="ComponentSystem\GOTemplate.h" />
+    <ClInclude Include="ComponentSystem\GOTManager.h" />
+    <ClInclude Include="ComponentSystem\typedefs.h" />
+    <ClInclude Include="Controls\SFMLKeyboardHandler.h" />
+    <ClInclude Include="Controls\SFMLMouseHandler.h" />
+    <ClInclude Include="Graphics\Colour.h" />
+    <ClInclude Include="Graphics\Font.h" />
+    <ClInclude Include="Graphics\IGameWindow.h" />
+    <ClInclude Include="Graphics\IRenderer.h" />
+    <ClInclude Include="Graphics\Particle.h" />
+    <ClInclude Include="Graphics\ParticleEmitter.h" />
+    <ClInclude Include="Graphics\RendererGL.h" />
+    <ClInclude Include="Graphics\RenderManager.h" />
+    <ClInclude Include="Graphics\SFMLGameWindow.h" />
+    <ClInclude Include="Graphics\Shader.h" />
+    <ClInclude Include="Graphics\TextureManager.h" />
+    <ClInclude Include="Maths\Rectangle.h" />
+    <ClInclude Include="Maths\Transform.h" />
+    <ClInclude Include="Maths\Vector2f.h" />
+    <ClInclude Include="MessagingSystem\IMessagingSystem.h" />
+    <ClInclude Include="MessagingSystem\Message.h" />
+    <ClInclude Include="MessagingSystem\MessagingSystem.h" />
+    <ClInclude Include="ScreenSystem\Screen.h" />
+    <ClInclude Include="ScreenSystem\ScreenManager.h" />
+    <ClInclude Include="Utilities\ColourUtilities.h" />
+    <ClInclude Include="Utilities\MathsUtilities.h" />
+    <ClInclude Include="Utilities\StringUtilites.h" />
+    <ClInclude Include="Utilities\Timer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\FlatWorld\Engine.cpp">
+    <ClCompile Include="Engine.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Audio\SFMLSound.cpp">
+    <ClCompile Include="Audio\SFMLSound.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\ComponentSystem\GameObject.cpp">
+    <ClCompile Include="ComponentSystem\GameObject.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\ComponentSystem\GOTemplate.cpp">
+    <ClCompile Include="ComponentSystem\GOTemplate.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\ComponentSystem\GOTManager.cpp">
+    <ClCompile Include="ComponentSystem\GOTManager.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Controls\SFMLKeyboardHandler.cpp">
+    <ClCompile Include="Controls\SFMLKeyboardHandler.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Controls\SFMLMouseHandler.cpp">
+    <ClCompile Include="Controls\SFMLMouseHandler.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Graphics\Colour.cpp">
+    <ClCompile Include="Graphics\Colour.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Graphics\Particle.cpp">
+    <ClCompile Include="Graphics\Font.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Graphics\ParticleEmitter.cpp">
+    <ClCompile Include="Graphics\Particle.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Graphics\SFMLGameWindow.cpp">
+    <ClCompile Include="Graphics\ParticleEmitter.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Graphics\Shader.cpp">
+    <ClCompile Include="Graphics\RendererGL.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Maths\Vector2f.cpp">
+    <ClCompile Include="Graphics\RenderManager.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\ScreenSystem\ScreenManager.cpp">
+    <ClCompile Include="Graphics\SFMLGameWindow.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Utilities\ColourUtilities.cpp">
+    <ClCompile Include="Graphics\Shader.cpp">
     </ClCompile>
-    <ClCompile Include="..\..\src\FlatWorld\Utilities\Timer.cpp">
+    <ClCompile Include="Graphics\TextureManager.cpp">
+    </ClCompile>
+    <ClCompile Include="Maths\Rectangle.cpp">
+    </ClCompile>
+    <ClCompile Include="Maths\Transform.cpp">
+    </ClCompile>
+    <ClCompile Include="Maths\Vector2f.cpp">
+    </ClCompile>
+    <ClCompile Include="MessagingSystem\IMessagingSystem.cpp">
+    </ClCompile>
+    <ClCompile Include="MessagingSystem\Message.cpp">
+    </ClCompile>
+    <ClCompile Include="MessagingSystem\MessagingSystem.cpp">
+    </ClCompile>
+    <ClCompile Include="ScreenSystem\ScreenManager.cpp">
+    </ClCompile>
+    <ClCompile Include="Utilities\ColourUtilities.cpp">
+    </ClCompile>
+    <ClCompile Include="Utilities\Timer.cpp">
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -2,7 +2,7 @@
 #include "FlatWorld/Graphics/IGameWindow.h"
 #include "FlatWorld/Graphics/SFMLGameWindow.h"
 
-#include "Platformer/Screens/TestScreen.h"
+#include "Platformer/Screens/screenTest.h"
 
 #include <SFML/OpenGL.hpp>
 

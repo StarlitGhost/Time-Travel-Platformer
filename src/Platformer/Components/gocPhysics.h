@@ -1,0 +1,15 @@
+#pragma once
+
+#include "FlatWorld/ComponentSystem/GOComponent.h"
+
+class gocPhysics : public FlatWorld::GOComponent
+{
+	// GOComponent Interface
+public:
+	virtual const FlatWorld::GOCIdType FamilyId() const { return FlatWorld::GOCIdType("gocPhysics"); }
+
+	// gocPhysics Interface
+public:
+	virtual void Update(float dt) = 0;
+
+};

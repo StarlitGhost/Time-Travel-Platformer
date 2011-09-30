@@ -7,140 +7,169 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D93586C71F712C125151937 /* gctHealth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79776914071B419F02BA2227 /* gctHealth.cpp */; };
-		6C9F58DB498E7C6F255034D0 /* gocHealth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38067F9B178F34465E5B15A4 /* gocHealth.cpp */; };
-		64C00068609455DA671908D4 /* gocInputPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07447EC20CFB4EE6234F77C5 /* gocInputPlayer.cpp */; };
-		4BEE5F0615C91A8B65953B35 /* gocVisualRectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 274948E639700C5E77E052A4 /* gocVisualRectangle.cpp */; };
-		6C6B2366349E61B16EB62798 /* TestScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 156A6F8C4BE6354801C136A9 /* TestScreen.cpp */; };
-		51CF4BBA2CC835E10BB71501 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F3B799F62BA0EC763F86A0B /* main.cpp */; };
-		0473221D0F0C4DAA3BFD032F /* libFlatWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F4717A23762D8C571D4B1D /* libFlatWorld.a */; };
+		7F8138D16CA763CA70A234C4 /* gctHealth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6201394D14DD094254870049 /* gctHealth.cpp */; };
+		246E7258484834E15B873B30 /* gctTriggerRadius.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B2B239F7A9B278E522D2858 /* gctTriggerRadius.cpp */; };
+		1E155D1873041D536B5F26C2 /* gocHealth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 404B6D1012F5331B19D35A1E /* gocHealth.cpp */; };
+		37273AE12A3323AA7C2E1258 /* gocInputPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D01630714471EFE3A2632B5 /* gocInputPlayer.cpp */; };
+		33FC2FA365AC1188093D40B2 /* gocPhysicsSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BE554552DE872F41F34163C /* gocPhysicsSimple.cpp */; };
+		0076533A4B562CB51AB30CDB /* gocTriggerRadius.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C9509A76F55440C3F50013E /* gocTriggerRadius.cpp */; };
+		3239503A18FE034D2FBA7CD3 /* gocVisualRectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 740F7B7B288D75C975705258 /* gocVisualRectangle.cpp */; };
+		742F21666BD315414203370D /* screenGoL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34390BA73D913FA370AD7BBE /* screenGoL.cpp */; };
+		23580ED309E9028533C604B5 /* screenMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B46326741B8359B449F26FD /* screenMenu.cpp */; };
+		5DDE57633FFB48AC615E5068 /* screenTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3688669B62F2F115C69FB /* screenTest.cpp */; };
+		663C4C8F16C67DFE7E6D03CD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33A85D5E0FBA4D222EA53757 /* main.cpp */; };
+		4F024F886BD623396657769A /* libFlatWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 312C23D458361574103B0350 /* libFlatWorld.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		57C95DF731C87AF62A792FFC /* PBXContainerItemProxy */ = {
+		6D355276407D2AF7640B4CBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5F4F5E1A5CA22A8175F10024 /* FlatWorld.xcodeproj */;
+			containerPortal = 18D258395B9E019360716E13 /* FlatWorld.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 18646BE8067538341CB34831;
+			remoteGlobalIDString = 47541E000A6218FE43120F8E;
 			remoteInfo = "libFlatWorld.a";
 		};
-		03BC3A5524F10E161B29101C /* PBXContainerItemProxy */ = {
+		1E8B6E6034537294362E243E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5F4F5E1A5CA22A8175F10024 /* FlatWorld.xcodeproj */;
+			containerPortal = 18D258395B9E019360716E13 /* FlatWorld.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 283158732FD926566D4577F1;
+			remoteGlobalIDString = 24A425B011D22F0B642F4948;
 			remoteInfo = "libFlatWorld.a";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		79776914071B419F02BA2227 /* gctHealth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gctHealth.cpp"; path = "gctHealth.cpp"; sourceTree = "<group>"; };
-		5FE5754A40B823C931F50B06 /* gctHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gctHealth.h"; path = "gctHealth.h"; sourceTree = "<group>"; };
-		38067F9B178F34465E5B15A4 /* gocHealth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocHealth.cpp"; path = "gocHealth.cpp"; sourceTree = "<group>"; };
-		3BD34A7027175D5964E06298 /* gocHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocHealth.h"; path = "gocHealth.h"; sourceTree = "<group>"; };
-		32F412063E4F6F2744F52E3C /* gocInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocInput.h"; path = "gocInput.h"; sourceTree = "<group>"; };
-		07447EC20CFB4EE6234F77C5 /* gocInputPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocInputPlayer.cpp"; path = "gocInputPlayer.cpp"; sourceTree = "<group>"; };
-		692965CB0C79226163BF7394 /* gocInputPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocInputPlayer.h"; path = "gocInputPlayer.h"; sourceTree = "<group>"; };
-		70B73A1907851EBD261106D1 /* gocVisual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocVisual.h"; path = "gocVisual.h"; sourceTree = "<group>"; };
-		274948E639700C5E77E052A4 /* gocVisualRectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocVisualRectangle.cpp"; path = "gocVisualRectangle.cpp"; sourceTree = "<group>"; };
-		0E0D728C656945716E697F82 /* gocVisualRectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocVisualRectangle.h"; path = "gocVisualRectangle.h"; sourceTree = "<group>"; };
-		156A6F8C4BE6354801C136A9 /* TestScreen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "TestScreen.cpp"; path = "TestScreen.cpp"; sourceTree = "<group>"; };
-		470F0C8A09EA3C062BEC7ABB /* TestScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TestScreen.h"; path = "TestScreen.h"; sourceTree = "<group>"; };
-		5F3B799F62BA0EC763F86A0B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "main.cpp"; path = "main.cpp"; sourceTree = "<group>"; };
-		5D7470862FF07D7D5066482E /* Platformer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Platformer"; path = "Platformer"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F4F5E1A5CA22A8175F10024 /* FlatWorld.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "FlatWorld.xcodeproj"; path = "FlatWorld.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		6201394D14DD094254870049 /* gctHealth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gctHealth.cpp"; path = "gctHealth.cpp"; sourceTree = "<group>"; };
+		240D7016177E33304D0F1081 /* gctHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gctHealth.h"; path = "gctHealth.h"; sourceTree = "<group>"; };
+		4B2B239F7A9B278E522D2858 /* gctTriggerRadius.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gctTriggerRadius.cpp"; path = "gctTriggerRadius.cpp"; sourceTree = "<group>"; };
+		169375C322DC1F8831CE658D /* gctTriggerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gctTriggerRadius.h"; path = "gctTriggerRadius.h"; sourceTree = "<group>"; };
+		404B6D1012F5331B19D35A1E /* gocHealth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocHealth.cpp"; path = "gocHealth.cpp"; sourceTree = "<group>"; };
+		1EB4287C267B49ED78F40AB6 /* gocHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocHealth.h"; path = "gocHealth.h"; sourceTree = "<group>"; };
+		781F0A4B3D433DD62DDF0DEA /* gocInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocInput.h"; path = "gocInput.h"; sourceTree = "<group>"; };
+		0D01630714471EFE3A2632B5 /* gocInputPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocInputPlayer.cpp"; path = "gocInputPlayer.cpp"; sourceTree = "<group>"; };
+		65690D774BBA5F1826394A16 /* gocInputPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocInputPlayer.h"; path = "gocInputPlayer.h"; sourceTree = "<group>"; };
+		3BEF32897CFD1ACD720721C9 /* gocPhysics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocPhysics.h"; path = "gocPhysics.h"; sourceTree = "<group>"; };
+		5BE554552DE872F41F34163C /* gocPhysicsSimple.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocPhysicsSimple.cpp"; path = "gocPhysicsSimple.cpp"; sourceTree = "<group>"; };
+		4D46229D358F774768274261 /* gocPhysicsSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocPhysicsSimple.h"; path = "gocPhysicsSimple.h"; sourceTree = "<group>"; };
+		0053270F7DD0129D5B3935CB /* gocTrigger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocTrigger.h"; path = "gocTrigger.h"; sourceTree = "<group>"; };
+		6C9509A76F55440C3F50013E /* gocTriggerRadius.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocTriggerRadius.cpp"; path = "gocTriggerRadius.cpp"; sourceTree = "<group>"; };
+		6AAA3A543E460F12267123FB /* gocTriggerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocTriggerRadius.h"; path = "gocTriggerRadius.h"; sourceTree = "<group>"; };
+		7D9E626665A6730841AF7CC5 /* gocVisual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocVisual.h"; path = "gocVisual.h"; sourceTree = "<group>"; };
+		740F7B7B288D75C975705258 /* gocVisualRectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocVisualRectangle.cpp"; path = "gocVisualRectangle.cpp"; sourceTree = "<group>"; };
+		2116499528707A49132F501C /* gocVisualRectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocVisualRectangle.h"; path = "gocVisualRectangle.h"; sourceTree = "<group>"; };
+		34390BA73D913FA370AD7BBE /* screenGoL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "screenGoL.cpp"; path = "screenGoL.cpp"; sourceTree = "<group>"; };
+		42B109703A62116B225D7251 /* screenGoL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "screenGoL.h"; path = "screenGoL.h"; sourceTree = "<group>"; };
+		6B46326741B8359B449F26FD /* screenMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "screenMenu.cpp"; path = "screenMenu.cpp"; sourceTree = "<group>"; };
+		02031F3817EA4DD5593F47F0 /* screenMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "screenMenu.h"; path = "screenMenu.h"; sourceTree = "<group>"; };
+		3FC3688669B62F2F115C69FB /* screenTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "screenTest.cpp"; path = "screenTest.cpp"; sourceTree = "<group>"; };
+		239B25FB54206E4F249C5B18 /* screenTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "screenTest.h"; path = "screenTest.h"; sourceTree = "<group>"; };
+		33A85D5E0FBA4D222EA53757 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "main.cpp"; path = "main.cpp"; sourceTree = "<group>"; };
+		4B9C32376E52002B76535632 /* Platformer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Platformer"; path = "Platformer"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D258395B9E019360716E13 /* FlatWorld.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "FlatWorld.xcodeproj"; path = "FlatWorld.xcodeproj"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7B0C0A48402B14EF0FCC5E64 /* Frameworks */ = {
+		4A60233C32CF4D9618EF3B48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0473221D0F0C4DAA3BFD032F /* libFlatWorld.a in Frameworks */,
+				4F024F886BD623396657769A /* libFlatWorld.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		43ED19AB27F31FC21CCC52F9 /* Platformer */ = {
+		137B69B265B85F132E6C4317 /* Platformer */ = {
 			isa = PBXGroup;
 			children = (
-				58807FF110FE79651878719D /* src */,
-				7E34031B03D7207E466517C7 /* Products */,
-				76504EDC642F14FF07265E20 /* Projects */,
+				1E231E4914A50D15116F7AD6 /* src */,
+				24CF1ED50850392942EC642A /* Products */,
+				4A9067F1514577532BB674D5 /* Projects */,
 			);
 			name = "Platformer";
 			sourceTree = "<group>";
 		};
-		58807FF110FE79651878719D /* src */ = {
+		1E231E4914A50D15116F7AD6 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				4584647C4D7E3EEB2ABC16AF /* Platformer */,
+				5CF2169658ED5694184F48FB /* Platformer */,
 			);
 			name = "src";
 			path = "../../src";
 			sourceTree = "<group>";
 		};
-		4584647C4D7E3EEB2ABC16AF /* Platformer */ = {
+		5CF2169658ED5694184F48FB /* Platformer */ = {
 			isa = PBXGroup;
 			children = (
-				358F1DF40E2A180726E5011B /* Components */,
-				32A9069020AF370713537829 /* Screens */,
-				5F3B799F62BA0EC763F86A0B /* main.cpp */,
+				238F237F345850BB4BFA7177 /* Components */,
+				29A63689240E3CE434661541 /* Screens */,
+				33A85D5E0FBA4D222EA53757 /* main.cpp */,
 			);
 			name = "Platformer";
 			path = "Platformer";
 			sourceTree = "<group>";
 		};
-		358F1DF40E2A180726E5011B /* Components */ = {
+		238F237F345850BB4BFA7177 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				79776914071B419F02BA2227 /* gctHealth.cpp */,
-				5FE5754A40B823C931F50B06 /* gctHealth.h */,
-				38067F9B178F34465E5B15A4 /* gocHealth.cpp */,
-				3BD34A7027175D5964E06298 /* gocHealth.h */,
-				32F412063E4F6F2744F52E3C /* gocInput.h */,
-				07447EC20CFB4EE6234F77C5 /* gocInputPlayer.cpp */,
-				692965CB0C79226163BF7394 /* gocInputPlayer.h */,
-				70B73A1907851EBD261106D1 /* gocVisual.h */,
-				274948E639700C5E77E052A4 /* gocVisualRectangle.cpp */,
-				0E0D728C656945716E697F82 /* gocVisualRectangle.h */,
+				6201394D14DD094254870049 /* gctHealth.cpp */,
+				240D7016177E33304D0F1081 /* gctHealth.h */,
+				4B2B239F7A9B278E522D2858 /* gctTriggerRadius.cpp */,
+				169375C322DC1F8831CE658D /* gctTriggerRadius.h */,
+				404B6D1012F5331B19D35A1E /* gocHealth.cpp */,
+				1EB4287C267B49ED78F40AB6 /* gocHealth.h */,
+				781F0A4B3D433DD62DDF0DEA /* gocInput.h */,
+				0D01630714471EFE3A2632B5 /* gocInputPlayer.cpp */,
+				65690D774BBA5F1826394A16 /* gocInputPlayer.h */,
+				3BEF32897CFD1ACD720721C9 /* gocPhysics.h */,
+				5BE554552DE872F41F34163C /* gocPhysicsSimple.cpp */,
+				4D46229D358F774768274261 /* gocPhysicsSimple.h */,
+				0053270F7DD0129D5B3935CB /* gocTrigger.h */,
+				6C9509A76F55440C3F50013E /* gocTriggerRadius.cpp */,
+				6AAA3A543E460F12267123FB /* gocTriggerRadius.h */,
+				7D9E626665A6730841AF7CC5 /* gocVisual.h */,
+				740F7B7B288D75C975705258 /* gocVisualRectangle.cpp */,
+				2116499528707A49132F501C /* gocVisualRectangle.h */,
 			);
 			name = "Components";
 			path = "Components";
 			sourceTree = "<group>";
 		};
-		32A9069020AF370713537829 /* Screens */ = {
+		29A63689240E3CE434661541 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				156A6F8C4BE6354801C136A9 /* TestScreen.cpp */,
-				470F0C8A09EA3C062BEC7ABB /* TestScreen.h */,
+				34390BA73D913FA370AD7BBE /* screenGoL.cpp */,
+				42B109703A62116B225D7251 /* screenGoL.h */,
+				6B46326741B8359B449F26FD /* screenMenu.cpp */,
+				02031F3817EA4DD5593F47F0 /* screenMenu.h */,
+				3FC3688669B62F2F115C69FB /* screenTest.cpp */,
+				239B25FB54206E4F249C5B18 /* screenTest.h */,
 			);
 			name = "Screens";
 			path = "Screens";
 			sourceTree = "<group>";
 		};
-		7E34031B03D7207E466517C7 /* Products */ = {
+		24CF1ED50850392942EC642A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D7470862FF07D7D5066482E /* Platformer */,
+				4B9C32376E52002B76535632 /* Platformer */,
 			);
 			name = "Products";
 			sourceTree = "<group>";
 		};
-		76504EDC642F14FF07265E20 /* Projects */ = {
+		4A9067F1514577532BB674D5 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				5F4F5E1A5CA22A8175F10024 /* FlatWorld.xcodeproj */,
+				18D258395B9E019360716E13 /* FlatWorld.xcodeproj */,
 			);
 			name = "Projects";
 			sourceTree = "<group>";
 		};
-		39D5039B39A264B7266F590F /* Products */ = {
+		660E2C6F2E9E0F8A40125786 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38F4717A23762D8C571D4B1D /* libFlatWorld.a */,
+				312C23D458361574103B0350 /* libFlatWorld.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,23 +177,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		65BF3B053B365CC96B0B1B08 /* Platformer */ = {
+		5F3D3B152FD3313F64B95EFF /* Platformer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05070F603E24101F684D7A93 /* Build configuration list for PBXNativeTarget "Platformer" */;
+			buildConfigurationList = 38AB5AD7386A1BDA63BC4170 /* Build configuration list for PBXNativeTarget "Platformer" */;
 			buildPhases = (
-				23BD36FC04FA27FF6B656183 /* Resources */,
-				2D2A335C4BC20E4E3D613E33 /* Sources */,
-				7B0C0A48402B14EF0FCC5E64 /* Frameworks */,
+				247A725E2158116A35616B66 /* Resources */,
+				284A46B3566967E42D507C61 /* Sources */,
+				4A60233C32CF4D9618EF3B48 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3BB23CD1043B0A586CE308CB /* PBXTargetDependency */,
+				53AB2BF934FF530E40AA06F0 /* PBXTargetDependency */,
 			);
 			name = "Platformer";
 			productInstallPath = "$(HOME)/bin";
 			productName = "Platformer";
-			productReference = 5D7470862FF07D7D5066482E /* Platformer */;
+			productReference = 4B9C32376E52002B76535632 /* Platformer */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -175,33 +204,33 @@
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Platformer" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
-			mainGroup = 43ED19AB27F31FC21CCC52F9 /* Platformer */;
+			mainGroup = 137B69B265B85F132E6C4317 /* Platformer */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 39D5039B39A264B7266F590F /* Products */;
-					ProjectRef = 5F4F5E1A5CA22A8175F10024 /* FlatWorld.xcodeproj */;
+					ProductGroup = 660E2C6F2E9E0F8A40125786 /* Products */;
+					ProjectRef = 18D258395B9E019360716E13 /* FlatWorld.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				65BF3B053B365CC96B0B1B08 /* Platformer */,
+				5F3D3B152FD3313F64B95EFF /* Platformer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		38F4717A23762D8C571D4B1D /* libFlatWorld.a */ = {
+		312C23D458361574103B0350 /* libFlatWorld.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "../../debug/libFlatWorld.a";
-			remoteRef = 57C95DF731C87AF62A792FFC /* PBXContainerItemProxy */;
+			remoteRef = 6D355276407D2AF7640B4CBD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		23BD36FC04FA27FF6B656183 /* Resources */ = {
+		247A725E2158116A35616B66 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,16 +240,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2D2A335C4BC20E4E3D613E33 /* Sources */ = {
+		284A46B3566967E42D507C61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D93586C71F712C125151937 /* gctHealth.cpp in Sources */,
-				6C9F58DB498E7C6F255034D0 /* gocHealth.cpp in Sources */,
-				64C00068609455DA671908D4 /* gocInputPlayer.cpp in Sources */,
-				4BEE5F0615C91A8B65953B35 /* gocVisualRectangle.cpp in Sources */,
-				6C6B2366349E61B16EB62798 /* TestScreen.cpp in Sources */,
-				51CF4BBA2CC835E10BB71501 /* main.cpp in Sources */,
+				7F8138D16CA763CA70A234C4 /* gctHealth.cpp in Sources */,
+				246E7258484834E15B873B30 /* gctTriggerRadius.cpp in Sources */,
+				1E155D1873041D536B5F26C2 /* gocHealth.cpp in Sources */,
+				37273AE12A3323AA7C2E1258 /* gocInputPlayer.cpp in Sources */,
+				33FC2FA365AC1188093D40B2 /* gocPhysicsSimple.cpp in Sources */,
+				0076533A4B562CB51AB30CDB /* gocTriggerRadius.cpp in Sources */,
+				3239503A18FE034D2FBA7CD3 /* gocVisualRectangle.cpp in Sources */,
+				742F21666BD315414203370D /* screenGoL.cpp in Sources */,
+				23580ED309E9028533C604B5 /* screenMenu.cpp in Sources */,
+				5DDE57633FFB48AC615E5068 /* screenTest.cpp in Sources */,
+				663C4C8F16C67DFE7E6D03CD /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,15 +264,15 @@
 /* End PBXVariantGroup section */
 
 /* Begin PBXTargetDependency section */
-		3BB23CD1043B0A586CE308CB /* PBXTargetDependency */ = {
+		53AB2BF934FF530E40AA06F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "libFlatWorld.a";
-			targetProxy = 03BC3A5524F10E161B29101C /* PBXContainerItemProxy */;
+			targetProxy = 1E8B6E6034537294362E243E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		60BC48C63F064E5E127E5652 /* Debug */ = {
+		2890558332141792453872D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -250,7 +284,7 @@
 			};
 			name = "Debug";
 		};
-		46EE7C3317787E9B1FCE7413 /* Release */ = {
+		53CC6F16194734F227E87F0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -262,7 +296,7 @@
 			};
 			name = "Release";
 		};
-		663040B87E235C87445D6F09 /* Debug */ = {
+		13770D9241F95891659147A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -272,6 +306,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SFML_STATIC",
 					"_DEBUG",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -306,7 +341,7 @@
 			};
 			name = "Debug";
 		};
-		5C980C3C3627708C30DF1995 /* Release */ = {
+		23B048FD2B392B0D21276288 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -316,6 +351,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SFML_STATIC",
 					"NDEBUG",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -353,11 +389,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05070F603E24101F684D7A93 /* Build configuration list for PBXNativeTarget "Platformer" */ = {
+		38AB5AD7386A1BDA63BC4170 /* Build configuration list for PBXNativeTarget "Platformer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				60BC48C63F064E5E127E5652 /* Debug */,
-				46EE7C3317787E9B1FCE7413 /* Release */,
+				2890558332141792453872D6 /* Debug */,
+				53CC6F16194734F227E87F0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Debug";
@@ -365,8 +401,8 @@
 		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Platformer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				663040B87E235C87445D6F09 /* Debug */,
-				5C980C3C3627708C30DF1995 /* Release */,
+				13770D9241F95891659147A8 /* Debug */,
+				23B048FD2B392B0D21276288 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Debug";

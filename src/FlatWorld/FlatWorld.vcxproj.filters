@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{66D3395D-2F74-EE42-97C6-20F81060B31D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComponentSystem">
+      <UniqueIdentifier>{6EF1554B-B887-884A-81BC-2FFBF0404500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{2CD62006-E88D-5342-A4E0-BB159778C231}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{F037EA1A-EDA9-C446-859F-63AE3F33CFBD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maths">
+      <UniqueIdentifier>{CD5E1F2E-F406-D14E-B146-72766FC0A809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MessagingSystem">
+      <UniqueIdentifier>{70220519-0C94-6E4C-9A2F-044D9F8DABC6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScreenSystem">
+      <UniqueIdentifier>{464F60F3-7DFA-F449-9F32-B9AE08E2D25B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{8BA26F9C-85F6-B84D-93E3-C736A8710153}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="FlatWorld.h" />
+    <ClInclude Include="Audio\ISound.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\SFMLSound.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentSystem\GameObject.h">
+      <Filter>ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentSystem\GOComponent.h">
+      <Filter>ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentSystem\GOCTemplate.h">
+      <Filter>ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentSystem\GOTemplate.h">
+      <Filter>ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentSystem\GOTManager.h">
+      <Filter>ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentSystem\typedefs.h">
+      <Filter>ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\SFMLKeyboardHandler.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\SFMLMouseHandler.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Colour.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Font.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\IGameWindow.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\IRenderer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Particle.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\ParticleEmitter.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\RendererGL.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\RenderManager.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\SFMLGameWindow.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Shader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\TextureManager.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\Rectangle.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\Transform.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths\Vector2f.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="MessagingSystem\IMessagingSystem.h">
+      <Filter>MessagingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="MessagingSystem\Message.h">
+      <Filter>MessagingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="MessagingSystem\MessagingSystem.h">
+      <Filter>MessagingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSystem\Screen.h">
+      <Filter>ScreenSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenSystem\ScreenManager.h">
+      <Filter>ScreenSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\ColourUtilities.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\MathsUtilities.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\StringUtilites.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Timer.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Audio\SFMLSound.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentSystem\GameObject.cpp">
+      <Filter>ComponentSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentSystem\GOTemplate.cpp">
+      <Filter>ComponentSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentSystem\GOTManager.cpp">
+      <Filter>ComponentSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\SFMLKeyboardHandler.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\SFMLMouseHandler.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Colour.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Font.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Particle.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\ParticleEmitter.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\RendererGL.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\RenderManager.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\SFMLGameWindow.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Shader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\TextureManager.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\Rectangle.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\Transform.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Maths\Vector2f.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="MessagingSystem\IMessagingSystem.cpp">
+      <Filter>MessagingSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="MessagingSystem\Message.cpp">
+      <Filter>MessagingSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="MessagingSystem\MessagingSystem.cpp">
+      <Filter>MessagingSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSystem\ScreenManager.cpp">
+      <Filter>ScreenSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\ColourUtilities.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Timer.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

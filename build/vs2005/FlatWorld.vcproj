@@ -41,7 +41,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\..\include;..\..\src\FlatWorld"
-				PreprocessorDefinitions="_DEBUG"
+				PreprocessorDefinitions="SFML_STATIC;_DEBUG"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -57,7 +57,7 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
+				PreprocessorDefinitions="SFML_STATIC;_DEBUG"
 				AdditionalIncludeDirectories="..\..\include;..\..\src\FlatWorld"
 			/>
 			<Tool
@@ -119,7 +119,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="3"
 				AdditionalIncludeDirectories="..\..\include;..\..\src\FlatWorld"
-				PreprocessorDefinitions="NDEBUG"
+				PreprocessorDefinitions="SFML_STATIC;NDEBUG"
 				StringPooling="true"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -134,7 +134,7 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="NDEBUG"
+				PreprocessorDefinitions="SFML_STATIC;NDEBUG"
 				AdditionalIncludeDirectories="..\..\include;..\..\src\FlatWorld"
 			/>
 			<Tool
@@ -286,7 +286,19 @@
 						>
 					</File>
 					<File
+						RelativePath="..\..\src\FlatWorld\Graphics\Font.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\Graphics\Font.h"
+						>
+					</File>
+					<File
 						RelativePath="..\..\src\FlatWorld\Graphics\IGameWindow.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\Graphics\IRenderer.h"
 						>
 					</File>
 					<File
@@ -306,6 +318,22 @@
 						>
 					</File>
 					<File
+						RelativePath="..\..\src\FlatWorld\Graphics\RenderManager.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\Graphics\RenderManager.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\Graphics\RendererGL.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\Graphics\RendererGL.h"
+						>
+					</File>
+					<File
 						RelativePath="..\..\src\FlatWorld\Graphics\SFMLGameWindow.cpp"
 						>
 					</File>
@@ -321,11 +349,31 @@
 						RelativePath="..\..\src\FlatWorld\Graphics\Shader.h"
 						>
 					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\Graphics\TextureManager.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\Graphics\TextureManager.h"
+						>
+					</File>
 				</Filter>
 				<Filter
 					Name="Maths"
 					Filter=""
 					>
+					<File
+						RelativePath="..\..\src\FlatWorld\Maths\Rectangle.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\Maths\Rectangle.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\Maths\Transform.cpp"
+						>
+					</File>
 					<File
 						RelativePath="..\..\src\FlatWorld\Maths\Transform.h"
 						>
@@ -336,6 +384,35 @@
 					</File>
 					<File
 						RelativePath="..\..\src\FlatWorld\Maths\Vector2f.h"
+						>
+					</File>
+				</Filter>
+				<Filter
+					Name="MessagingSystem"
+					Filter=""
+					>
+					<File
+						RelativePath="..\..\src\FlatWorld\MessagingSystem\IMessagingSystem.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\MessagingSystem\IMessagingSystem.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\MessagingSystem\Message.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\MessagingSystem\Message.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\MessagingSystem\MessagingSystem.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\FlatWorld\MessagingSystem\MessagingSystem.h"
 						>
 					</File>
 				</Filter>

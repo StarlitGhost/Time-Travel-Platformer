@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Components">
+      <UniqueIdentifier>{05600DE1-014D-0247-9D77-130908D853AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Screens">
+      <UniqueIdentifier>{AE45ABB9-C2EB-5B44-9CDA-9CD4DA2829CA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Components\gctHealth.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\gctTriggerRadius.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\gocHealth.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\gocInput.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\gocInputPlayer.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\gocPhysics.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\gocPhysicsSimple.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\gocTrigger.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\gocTriggerRadius.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\gocVisual.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\gocVisualRectangle.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\screenGoL.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\screenMenu.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\screenTest.h">
+      <Filter>Screens</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Components\gctHealth.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\gctTriggerRadius.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\gocHealth.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\gocInputPlayer.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\gocPhysicsSimple.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\gocTriggerRadius.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\gocVisualRectangle.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\screenGoL.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\screenMenu.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\screenTest.cpp">
+      <Filter>Screens</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

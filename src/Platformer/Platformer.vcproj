@@ -41,8 +41,8 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/MP"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
-				PreprocessorDefinitions="_DEBUG"
+				AdditionalIncludeDirectories="..\..\include;.;..;..\FlatWorld"
+				PreprocessorDefinitions="SFML_STATIC;_DEBUG"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -57,8 +57,8 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
-				AdditionalIncludeDirectories="..\..\include;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
+				PreprocessorDefinitions="SFML_STATIC;_DEBUG"
+				AdditionalIncludeDirectories="..\..\include;.;..;..\FlatWorld"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -66,7 +66,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/nodefaultlib:libcmt"
-				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib ..\..\debug\FlatWorld.lib freetype.lib ftgl.lib GLU.lib sfml-audio.lib sfml-graphics.lib sfml-network.lib sfml-system.lib sfml-window.lib"
+				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib ..\..\debug\FlatWorld.lib freetype2312.lib glu32.lib ftgl_static_d.lib sfml-audio-s-d.lib sfml-graphics-s-d.lib sfml-network-s-d.lib sfml-system-s-d.lib sfml-window-s-d.lib"
 				OutputFile="$(OutDir)\Platformer.exe"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="..\..\lib"
@@ -127,8 +127,8 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/MP"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
-				PreprocessorDefinitions="NDEBUG"
+				AdditionalIncludeDirectories="..\..\include;.;..;..\FlatWorld"
+				PreprocessorDefinitions="SFML_STATIC;NDEBUG"
 				StringPooling="true"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -142,8 +142,8 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="NDEBUG"
-				AdditionalIncludeDirectories="..\..\include;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
+				PreprocessorDefinitions="SFML_STATIC;NDEBUG"
+				AdditionalIncludeDirectories="..\..\include;.;..;..\FlatWorld"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -151,7 +151,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/nodefaultlib:libcmt"
-				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib ..\..\bin\FlatWorld.lib freetype.lib ftgl.lib GLU.lib sfml-audio.lib sfml-graphics.lib sfml-network.lib sfml-system.lib sfml-window.lib"
+				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib ..\..\bin\FlatWorld.lib freetype2312.lib glu32.lib ftgl_static.lib sfml-audio-s.lib sfml-graphics-s.lib sfml-network-s.lib sfml-system-s.lib sfml-window-s.lib"
 				OutputFile="$(OutDir)\Platformer.exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="..\..\lib"
@@ -193,77 +193,115 @@
 	</References>
 	<Files>
 		<Filter
-			Name="src"
+			Name="Components"
 			Filter=""
 			>
-			<Filter
-				Name="Platformer"
-				Filter=""
+			<File
+				RelativePath="Components\gctHealth.cpp"
 				>
-				<Filter
-					Name="Components"
-					Filter=""
-					>
-					<File
-						RelativePath="..\..\src\Platformer\Components\gctHealth.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Components\gctHealth.h"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Components\gocHealth.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Components\gocHealth.h"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Components\gocInput.h"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Components\gocInputPlayer.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Components\gocInputPlayer.h"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Components\gocVisual.h"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Components\gocVisualRectangle.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Components\gocVisualRectangle.h"
-						>
-					</File>
-				</Filter>
-				<Filter
-					Name="Screens"
-					Filter=""
-					>
-					<File
-						RelativePath="..\..\src\Platformer\Screens\TestScreen.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Screens\TestScreen.h"
-						>
-					</File>
-				</Filter>
-				<File
-					RelativePath="..\..\src\Platformer\main.cpp"
-					>
-				</File>
-			</Filter>
+			</File>
+			<File
+				RelativePath="Components\gctHealth.h"
+				>
+			</File>
+			<File
+				RelativePath="Components\gctTriggerRadius.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Components\gctTriggerRadius.h"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocHealth.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocHealth.h"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocInput.h"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocInputPlayer.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocInputPlayer.h"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocPhysics.h"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocPhysicsSimple.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocPhysicsSimple.h"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocTrigger.h"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocTriggerRadius.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocTriggerRadius.h"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocVisual.h"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocVisualRectangle.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Components\gocVisualRectangle.h"
+				>
+			</File>
 		</Filter>
+		<Filter
+			Name="Screens"
+			Filter=""
+			>
+			<File
+				RelativePath="Screens\screenGoL.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Screens\screenGoL.h"
+				>
+			</File>
+			<File
+				RelativePath="Screens\screenMenu.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Screens\screenMenu.h"
+				>
+			</File>
+			<File
+				RelativePath="Screens\screenTest.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Screens\screenTest.h"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath="main.cpp"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>

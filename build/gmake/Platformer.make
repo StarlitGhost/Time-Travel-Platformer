@@ -23,7 +23,7 @@ ifeq ($(config),debug)
   OBJDIR     = ../../obj/Debug/Platformer
   TARGETDIR  = ../../debug
   TARGET     = $(TARGETDIR)/Platformer.exe
-  DEFINES   += -D_DEBUG
+  DEFINES   += -DSFML_STATIC -D_DEBUG
   INCLUDES  += -I../../include -I../../src/Platformer -I../../src -I../../src/FlatWorld
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -Wall
@@ -45,7 +45,7 @@ ifeq ($(config),release)
   OBJDIR     = ../../obj/Release/Platformer
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/Platformer.exe
-  DEFINES   += -DNDEBUG
+  DEFINES   += -DSFML_STATIC -DNDEBUG
   INCLUDES  += -I../../include -I../../src/Platformer -I../../src -I../../src/FlatWorld
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -Wall -O2
@@ -66,10 +66,15 @@ endif
 OBJECTS := \
 	$(OBJDIR)/main.o \
 	$(OBJDIR)/gctHealth.o \
+	$(OBJDIR)/gctTriggerRadius.o \
 	$(OBJDIR)/gocHealth.o \
 	$(OBJDIR)/gocInputPlayer.o \
+	$(OBJDIR)/gocPhysicsSimple.o \
+	$(OBJDIR)/gocTriggerRadius.o \
 	$(OBJDIR)/gocVisualRectangle.o \
-	$(OBJDIR)/TestScreen.o \
+	$(OBJDIR)/screenGoL.o \
+	$(OBJDIR)/screenMenu.o \
+	$(OBJDIR)/screenTest.o \
 
 RESOURCES := \
 
@@ -136,16 +141,31 @@ $(OBJDIR)/main.o: ../../src/Platformer/main.cpp
 $(OBJDIR)/gctHealth.o: ../../src/Platformer/Components/gctHealth.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/gctTriggerRadius.o: ../../src/Platformer/Components/gctTriggerRadius.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/gocHealth.o: ../../src/Platformer/Components/gocHealth.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/gocInputPlayer.o: ../../src/Platformer/Components/gocInputPlayer.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/gocPhysicsSimple.o: ../../src/Platformer/Components/gocPhysicsSimple.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/gocTriggerRadius.o: ../../src/Platformer/Components/gocTriggerRadius.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/gocVisualRectangle.o: ../../src/Platformer/Components/gocVisualRectangle.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/TestScreen.o: ../../src/Platformer/Screens/TestScreen.cpp
+$(OBJDIR)/screenGoL.o: ../../src/Platformer/Screens/screenGoL.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/screenMenu.o: ../../src/Platformer/Screens/screenMenu.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/screenTest.o: ../../src/Platformer/Screens/screenTest.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 

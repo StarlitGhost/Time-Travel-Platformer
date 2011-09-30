@@ -7,18 +7,15 @@
 
 using namespace FlatWorld;
 
-void gocInputPlayer::Update(float dt)
+void gocInputPlayer::Update(float /*dt*/)
 {
-	if (SFMLKeyboardHandler::Held(sf::Key::A))
-	{
-		Transform transform = GetOwner()->GetTransform();
-		transform.Position.x -= 50.f * dt;
-		GetOwner()->SetTransform(transform);
-	}
-	else if (SFMLKeyboardHandler::Held(sf::Key::D))
-	{
-		Transform transform = GetOwner()->GetTransform();
-		transform.Position.x += 50.f * dt;
-		GetOwner()->SetTransform(transform);
-	}
+	if (SFMLKeyboardHandler::Held(sf::Keyboard::A))
+		GetOwner()->SendMessage(this, "turn", 0.5f);
+	if (SFMLKeyboardHandler::Held(sf::Keyboard::D))
+		GetOwner()->SendMessage(this, "turn", -0.5f);
+
+	if (SFMLKeyboardHandler::Held(sf::Keyboard::W))
+		GetOwner()->SendMessage(this, "accelerate", 0.5f);
+	if (SFMLKeyboardHandler::Held(sf::Keyboard::S))
+		GetOwner()->SendMessage(this, "accelerate", -0.5f);
 }

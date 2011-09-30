@@ -30,20 +30,40 @@
       <VirtualDirectory Name="Graphics">
         <File Name="../../src/FlatWorld/Graphics/Colour.cpp"/>
         <File Name="../../src/FlatWorld/Graphics/Colour.h"/>
+        <File Name="../../src/FlatWorld/Graphics/Font.cpp"/>
+        <File Name="../../src/FlatWorld/Graphics/Font.h"/>
         <File Name="../../src/FlatWorld/Graphics/IGameWindow.h"/>
+        <File Name="../../src/FlatWorld/Graphics/IRenderer.h"/>
         <File Name="../../src/FlatWorld/Graphics/Particle.cpp"/>
         <File Name="../../src/FlatWorld/Graphics/Particle.h"/>
         <File Name="../../src/FlatWorld/Graphics/ParticleEmitter.cpp"/>
         <File Name="../../src/FlatWorld/Graphics/ParticleEmitter.h"/>
+        <File Name="../../src/FlatWorld/Graphics/RenderManager.cpp"/>
+        <File Name="../../src/FlatWorld/Graphics/RenderManager.h"/>
+        <File Name="../../src/FlatWorld/Graphics/RendererGL.cpp"/>
+        <File Name="../../src/FlatWorld/Graphics/RendererGL.h"/>
         <File Name="../../src/FlatWorld/Graphics/SFMLGameWindow.cpp"/>
         <File Name="../../src/FlatWorld/Graphics/SFMLGameWindow.h"/>
         <File Name="../../src/FlatWorld/Graphics/Shader.cpp"/>
         <File Name="../../src/FlatWorld/Graphics/Shader.h"/>
+        <File Name="../../src/FlatWorld/Graphics/TextureManager.cpp"/>
+        <File Name="../../src/FlatWorld/Graphics/TextureManager.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="Maths">
+        <File Name="../../src/FlatWorld/Maths/Rectangle.cpp"/>
+        <File Name="../../src/FlatWorld/Maths/Rectangle.h"/>
+        <File Name="../../src/FlatWorld/Maths/Transform.cpp"/>
         <File Name="../../src/FlatWorld/Maths/Transform.h"/>
         <File Name="../../src/FlatWorld/Maths/Vector2f.cpp"/>
         <File Name="../../src/FlatWorld/Maths/Vector2f.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="MessagingSystem">
+        <File Name="../../src/FlatWorld/MessagingSystem/IMessagingSystem.cpp"/>
+        <File Name="../../src/FlatWorld/MessagingSystem/IMessagingSystem.h"/>
+        <File Name="../../src/FlatWorld/MessagingSystem/Message.cpp"/>
+        <File Name="../../src/FlatWorld/MessagingSystem/Message.h"/>
+        <File Name="../../src/FlatWorld/MessagingSystem/MessagingSystem.cpp"/>
+        <File Name="../../src/FlatWorld/MessagingSystem/MessagingSystem.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="ScreenSystem">
         <File Name="../../src/FlatWorld/ScreenSystem/Screen.h"/>
@@ -66,6 +86,7 @@
       <Compiler Required="yes" Options="-g;-Wall">
         <IncludePath Value="../../include"/>
         <IncludePath Value="../../src/FlatWorld"/>
+        <Preprocessor Value="SFML_STATIC"/>
         <Preprocessor Value="_DEBUG"/>
       </Compiler>
       <Linker Required="yes" Options="">
@@ -90,6 +111,7 @@
       <Compiler Required="yes" Options="-g;-Wall;-O2">
         <IncludePath Value="../../include"/>
         <IncludePath Value="../../src/FlatWorld"/>
+        <Preprocessor Value="SFML_STATIC"/>
         <Preprocessor Value="NDEBUG"/>
       </Compiler>
       <Linker Required="yes" Options="">

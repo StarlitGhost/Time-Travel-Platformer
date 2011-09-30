@@ -23,7 +23,7 @@ ifeq ($(config),debug)
   OBJDIR     = ../../obj/Debug/FlatWorld
   TARGETDIR  = ../../debug
   TARGET     = $(TARGETDIR)/libFlatWorld.a
-  DEFINES   += -D_DEBUG
+  DEFINES   += -DSFML_STATIC -D_DEBUG
   INCLUDES  += -I../../include -I../../src/FlatWorld
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -Wall
@@ -45,7 +45,7 @@ ifeq ($(config),release)
   OBJDIR     = ../../obj/Release/FlatWorld
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libFlatWorld.a
-  DEFINES   += -DNDEBUG
+  DEFINES   += -DSFML_STATIC -DNDEBUG
   INCLUDES  += -I../../include -I../../src/FlatWorld
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -Wall -O2
@@ -72,11 +72,20 @@ OBJECTS := \
 	$(OBJDIR)/SFMLKeyboardHandler.o \
 	$(OBJDIR)/SFMLMouseHandler.o \
 	$(OBJDIR)/Colour.o \
+	$(OBJDIR)/Font.o \
 	$(OBJDIR)/Particle.o \
 	$(OBJDIR)/ParticleEmitter.o \
+	$(OBJDIR)/RendererGL.o \
+	$(OBJDIR)/RenderManager.o \
 	$(OBJDIR)/SFMLGameWindow.o \
 	$(OBJDIR)/Shader.o \
+	$(OBJDIR)/TextureManager.o \
+	$(OBJDIR)/Rectangle.o \
+	$(OBJDIR)/Transform.o \
 	$(OBJDIR)/Vector2f.o \
+	$(OBJDIR)/IMessagingSystem.o \
+	$(OBJDIR)/Message.o \
+	$(OBJDIR)/MessagingSystem.o \
 	$(OBJDIR)/ScreenManager.o \
 	$(OBJDIR)/ColourUtilities.o \
 	$(OBJDIR)/Timer.o \
@@ -164,10 +173,19 @@ $(OBJDIR)/SFMLMouseHandler.o: ../../src/FlatWorld/Controls/SFMLMouseHandler.cpp
 $(OBJDIR)/Colour.o: ../../src/FlatWorld/Graphics/Colour.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/Font.o: ../../src/FlatWorld/Graphics/Font.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/Particle.o: ../../src/FlatWorld/Graphics/Particle.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/ParticleEmitter.o: ../../src/FlatWorld/Graphics/ParticleEmitter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/RendererGL.o: ../../src/FlatWorld/Graphics/RendererGL.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/RenderManager.o: ../../src/FlatWorld/Graphics/RenderManager.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/SFMLGameWindow.o: ../../src/FlatWorld/Graphics/SFMLGameWindow.cpp
@@ -176,7 +194,25 @@ $(OBJDIR)/SFMLGameWindow.o: ../../src/FlatWorld/Graphics/SFMLGameWindow.cpp
 $(OBJDIR)/Shader.o: ../../src/FlatWorld/Graphics/Shader.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/TextureManager.o: ../../src/FlatWorld/Graphics/TextureManager.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/Rectangle.o: ../../src/FlatWorld/Maths/Rectangle.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/Transform.o: ../../src/FlatWorld/Maths/Transform.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/Vector2f.o: ../../src/FlatWorld/Maths/Vector2f.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/IMessagingSystem.o: ../../src/FlatWorld/MessagingSystem/IMessagingSystem.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/Message.o: ../../src/FlatWorld/MessagingSystem/Message.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/MessagingSystem.o: ../../src/FlatWorld/MessagingSystem/MessagingSystem.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/ScreenManager.o: ../../src/FlatWorld/ScreenSystem/ScreenManager.cpp

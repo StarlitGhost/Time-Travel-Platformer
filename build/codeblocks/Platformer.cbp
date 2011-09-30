@@ -14,6 +14,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-Wall" />
+					<Add option="-DSFML_STATIC" />
 					<Add option="-D_DEBUG" />
 					<Add directory="../../include" />
 					<Add directory="../../src/Platformer" />
@@ -45,6 +46,7 @@
 					<Add option="-g" />
 					<Add option="-Wall" />
 					<Add option="-O2" />
+					<Add option="-DSFML_STATIC" />
 					<Add option="-DNDEBUG" />
 					<Add directory="../../include" />
 					<Add directory="../../src/Platformer" />
@@ -68,31 +70,55 @@
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="../../src/Platformer/main.cpp">
-		</Unit>
-		<Unit filename="../../src/Platformer/Components/gctHealth.cpp">
-		</Unit>
 		<Unit filename="../../src/Platformer/Components/gctHealth.h">
 		</Unit>
-		<Unit filename="../../src/Platformer/Components/gocHealth.cpp">
+		<Unit filename="../../src/Platformer/Components/gctTriggerRadius.h">
 		</Unit>
 		<Unit filename="../../src/Platformer/Components/gocHealth.h">
 		</Unit>
 		<Unit filename="../../src/Platformer/Components/gocInput.h">
 		</Unit>
-		<Unit filename="../../src/Platformer/Components/gocInputPlayer.cpp">
-		</Unit>
 		<Unit filename="../../src/Platformer/Components/gocInputPlayer.h">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gocPhysics.h">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gocPhysicsSimple.h">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gocTrigger.h">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gocTriggerRadius.h">
 		</Unit>
 		<Unit filename="../../src/Platformer/Components/gocVisual.h">
 		</Unit>
-		<Unit filename="../../src/Platformer/Components/gocVisualRectangle.cpp">
-		</Unit>
 		<Unit filename="../../src/Platformer/Components/gocVisualRectangle.h">
 		</Unit>
-		<Unit filename="../../src/Platformer/Screens/TestScreen.cpp">
+		<Unit filename="../../src/Platformer/Screens/screenGoL.h">
 		</Unit>
-		<Unit filename="../../src/Platformer/Screens/TestScreen.h">
+		<Unit filename="../../src/Platformer/Screens/screenMenu.h">
+		</Unit>
+		<Unit filename="../../src/Platformer/Screens/screenTest.h">
+		</Unit>
+		<Unit filename="../../src/Platformer/main.cpp">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gctHealth.cpp">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gctTriggerRadius.cpp">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gocHealth.cpp">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gocInputPlayer.cpp">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gocPhysicsSimple.cpp">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gocTriggerRadius.cpp">
+		</Unit>
+		<Unit filename="../../src/Platformer/Components/gocVisualRectangle.cpp">
+		</Unit>
+		<Unit filename="../../src/Platformer/Screens/screenGoL.cpp">
+		</Unit>
+		<Unit filename="../../src/Platformer/Screens/screenMenu.cpp">
+		</Unit>
+		<Unit filename="../../src/Platformer/Screens/screenTest.cpp">
 		</Unit>
 		<Extensions />
 	</Project>

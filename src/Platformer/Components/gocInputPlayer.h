@@ -10,7 +10,7 @@ public:
 
 	// gocInput Interface
 public:
-	virtual void Update(float dt);
+	virtual void Update(float /*dt*/);
 
 	// gocInputPlayer Interface
 public:

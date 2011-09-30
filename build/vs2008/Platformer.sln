@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlatWorld", "FlatWorld.vcproj", "{937EEF0F-E3EE-460B-9311-544B11ECD2B8}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlatWorld", "..\..\src\FlatWorld\FlatWorld.vcproj", "{937EEF0F-E3EE-460B-9311-544B11ECD2B8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platformer", "Platformer.vcproj", "{198F1F4A-B045-4D92-BB83-42D11E49EDA3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platformer", "..\..\src\Platformer\Platformer.vcproj", "{198F1F4A-B045-4D92-BB83-42D11E49EDA3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{937EEF0F-E3EE-460B-9311-544B11ECD2B8} = {937EEF0F-E3EE-460B-9311-544B11ECD2B8}
 	EndProjectSection

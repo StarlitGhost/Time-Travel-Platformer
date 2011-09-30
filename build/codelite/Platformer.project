@@ -5,18 +5,30 @@
       <VirtualDirectory Name="Components">
         <File Name="../../src/Platformer/Components/gctHealth.cpp"/>
         <File Name="../../src/Platformer/Components/gctHealth.h"/>
+        <File Name="../../src/Platformer/Components/gctTriggerRadius.cpp"/>
+        <File Name="../../src/Platformer/Components/gctTriggerRadius.h"/>
         <File Name="../../src/Platformer/Components/gocHealth.cpp"/>
         <File Name="../../src/Platformer/Components/gocHealth.h"/>
         <File Name="../../src/Platformer/Components/gocInput.h"/>
         <File Name="../../src/Platformer/Components/gocInputPlayer.cpp"/>
         <File Name="../../src/Platformer/Components/gocInputPlayer.h"/>
+        <File Name="../../src/Platformer/Components/gocPhysics.h"/>
+        <File Name="../../src/Platformer/Components/gocPhysicsSimple.cpp"/>
+        <File Name="../../src/Platformer/Components/gocPhysicsSimple.h"/>
+        <File Name="../../src/Platformer/Components/gocTrigger.h"/>
+        <File Name="../../src/Platformer/Components/gocTriggerRadius.cpp"/>
+        <File Name="../../src/Platformer/Components/gocTriggerRadius.h"/>
         <File Name="../../src/Platformer/Components/gocVisual.h"/>
         <File Name="../../src/Platformer/Components/gocVisualRectangle.cpp"/>
         <File Name="../../src/Platformer/Components/gocVisualRectangle.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="Screens">
-        <File Name="../../src/Platformer/Screens/TestScreen.cpp"/>
-        <File Name="../../src/Platformer/Screens/TestScreen.h"/>
+        <File Name="../../src/Platformer/Screens/screenGoL.cpp"/>
+        <File Name="../../src/Platformer/Screens/screenGoL.h"/>
+        <File Name="../../src/Platformer/Screens/screenMenu.cpp"/>
+        <File Name="../../src/Platformer/Screens/screenMenu.h"/>
+        <File Name="../../src/Platformer/Screens/screenTest.cpp"/>
+        <File Name="../../src/Platformer/Screens/screenTest.h"/>
       </VirtualDirectory>
       <File Name="../../src/Platformer/main.cpp"/>
     </VirtualDirectory>
@@ -29,6 +41,7 @@
         <IncludePath Value="../../src/Platformer"/>
         <IncludePath Value="../../src"/>
         <IncludePath Value="../../src/FlatWorld"/>
+        <Preprocessor Value="SFML_STATIC"/>
         <Preprocessor Value="_DEBUG"/>
       </Compiler>
       <Linker Required="yes" Options="">
@@ -67,6 +80,7 @@
         <IncludePath Value="../../src/Platformer"/>
         <IncludePath Value="../../src"/>
         <IncludePath Value="../../src/FlatWorld"/>
+        <Preprocessor Value="SFML_STATIC"/>
         <Preprocessor Value="NDEBUG"/>
       </Compiler>
       <Linker Required="yes" Options="">
