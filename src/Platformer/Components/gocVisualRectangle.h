@@ -14,6 +14,10 @@ public:
 
 	// gocVisualRectangle Interface
 public:
+	void SetTexture(std::string fileName);
+	unsigned int GetTexture();
+
+private:
+	unsigned int _textureHandle;
 
 };
-
