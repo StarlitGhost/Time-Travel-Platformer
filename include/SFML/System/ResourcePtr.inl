@@ -24,8 +24,6 @@
 
 
 ////////////////////////////////////////////////////////////
-/// Default constructor
-////////////////////////////////////////////////////////////
 template <typename T>
 ResourcePtr<T>::ResourcePtr() :
 myResource(NULL)
@@ -35,11 +33,9 @@ myResource(NULL)
 
 
 ////////////////////////////////////////////////////////////
-/// Construct from a raw resource
-////////////////////////////////////////////////////////////
 template <typename T>
-ResourcePtr<T>::ResourcePtr(const T* Resource) :
-myResource(Resource)
+ResourcePtr<T>::ResourcePtr(const T* resource) :
+myResource(resource)
 {
     if (myResource)
         myResource->Connect(*this);
@@ -47,19 +43,15 @@ myResource(Resource)
 
 
 ////////////////////////////////////////////////////////////
-/// Copy constructor
-////////////////////////////////////////////////////////////
 template <typename T>
-ResourcePtr<T>::ResourcePtr(const ResourcePtr<T>& Copy) :
-myResource(Copy.myResource)
+ResourcePtr<T>::ResourcePtr(const ResourcePtr<T>& copy) :
+myResource(copy.myResource)
 {
     if (myResource)
         myResource->Connect(*this);
 }
 
 
-////////////////////////////////////////////////////////////
-/// Destructor
 ////////////////////////////////////////////////////////////
 template <typename T>
 ResourcePtr<T>::~ResourcePtr()
@@ -70,15 +62,13 @@ ResourcePtr<T>::~ResourcePtr()
 
 
 ////////////////////////////////////////////////////////////
-/// Assignment operator from another ResourcePtr
-////////////////////////////////////////////////////////////
 template <typename T>
-ResourcePtr<T>& ResourcePtr<T>::operator =(const ResourcePtr<T>& Other)
+ResourcePtr<T>& ResourcePtr<T>::operator =(const ResourcePtr<T>& right)
 {
     if (myResource)
         myResource->Disconnect(*this);
 
-    myResource = Other.myResource;
+    myResource = right.myResource;
 
     if (myResource)
         myResource->Connect(*this);
@@ -88,15 +78,13 @@ ResourcePtr<T>& ResourcePtr<T>::operator =(const ResourcePtr<T>& Other)
 
 
 ////////////////////////////////////////////////////////////
-/// Assignment operator from a raw resource
-////////////////////////////////////////////////////////////
 template <typename T>
-ResourcePtr<T>& ResourcePtr<T>::operator =(const T* Resource)
+ResourcePtr<T>& ResourcePtr<T>::operator =(const T* resource)
 {
     if (myResource)
         myResource->Disconnect(*this);
 
-    myResource = Resource;
+    myResource = resource;
 
     if (myResource)
         myResource->Connect(*this);
@@ -105,11 +93,6 @@ ResourcePtr<T>& ResourcePtr<T>::operator =(const T* Resource)
 }
 
 
-////////////////////////////////////////////////////////////
-/// Cast operator to implicitely convert the resource pointer to
-/// its raw pointer type.
-/// This might be dangerous in the general case, but in this context
-/// it is safe enough to define this operator
 ////////////////////////////////////////////////////////////
 template <typename T>
 ResourcePtr<T>::operator const T*() const
@@ -119,8 +102,6 @@ ResourcePtr<T>::operator const T*() const
 
 
 ////////////////////////////////////////////////////////////
-/// Operator * overload to return a reference to the actual resource
-////////////////////////////////////////////////////////////
 template <typename T>
 const T& ResourcePtr<T>::operator *() const
 {
@@ -129,8 +110,6 @@ const T& ResourcePtr<T>::operator *() const
 
 
 ////////////////////////////////////////////////////////////
-/// Operator -> overload to return a pointer to the actual resource
-////////////////////////////////////////////////////////////
 template <typename T>
 const T* ResourcePtr<T>::operator ->() const
 {
@@ -138,9 +117,6 @@ const T* ResourcePtr<T>::operator ->() const
 }
 
 
-////////////////////////////////////////////////////////////
-/// Function called when the observed resource is about to be
-/// destroyed
 ////////////////////////////////////////////////////////////
 template <typename T>
 void ResourcePtr<T>::OnResourceDestroyed()

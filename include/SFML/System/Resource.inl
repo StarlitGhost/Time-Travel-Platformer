@@ -24,8 +24,6 @@
 
 
 ////////////////////////////////////////////////////////////
-/// Default constructor
-////////////////////////////////////////////////////////////
 template <typename T>
 Resource<T>::Resource()
 {
@@ -34,8 +32,6 @@ Resource<T>::Resource()
 
 
 ////////////////////////////////////////////////////////////
-/// Copy constructor
-////////////////////////////////////////////////////////////
 template <typename T>
 Resource<T>::Resource(const Resource<T>&)
 {
@@ -43,8 +39,6 @@ Resource<T>::Resource(const Resource<T>&)
 }
 
 
-////////////////////////////////////////////////////////////
-/// Destructor
 ////////////////////////////////////////////////////////////
 template <typename T>
 Resource<T>::~Resource()
@@ -58,8 +52,6 @@ Resource<T>::~Resource()
 
 
 ////////////////////////////////////////////////////////////
-/// Assignment operator
-////////////////////////////////////////////////////////////
 template <typename T>
 Resource<T>& Resource<T>::operator =(const Resource<T>&)
 {
@@ -69,20 +61,18 @@ Resource<T>& Resource<T>::operator =(const Resource<T>&)
 
 
 ////////////////////////////////////////////////////////////
-/// Connect a ResourcePtr to this resource
-////////////////////////////////////////////////////////////
 template <typename T>
-void Resource<T>::Connect(ResourcePtr<T>& Observer) const
+void Resource<T>::Connect(ResourcePtr<T>& observer) const
 {
-    myObservers.insert(&Observer);
+    sf::Lock lock(myMutex);
+    myObservers.insert(&observer);
 }
 
 
 ////////////////////////////////////////////////////////////
-/// Disconnect a ResourcePtr from this resource
-////////////////////////////////////////////////////////////
 template <typename T>
-void Resource<T>::Disconnect(ResourcePtr<T>& Observer) const
+void Resource<T>::Disconnect(ResourcePtr<T>& observer) const
 {
-    myObservers.erase(&Observer);
+    sf::Lock lock(myMutex);
+    myObservers.erase(&observer);
 }

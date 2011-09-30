@@ -35,56 +35,75 @@
 namespace sf
 {
 ////////////////////////////////////////////////////////////
-/// SoundRecorder is an interface for capturing sound data,
-/// it is meant to be used as a base class
+/// \brief Abstract base class for capturing sound data
+///
 ////////////////////////////////////////////////////////////
-class SFML_API SoundRecorder : private Thread
+class SFML_API SoundRecorder
 {
 public :
 
     ////////////////////////////////////////////////////////////
-    /// Virtual destructor
+    /// \brief destructor
     ///
     ////////////////////////////////////////////////////////////
     virtual ~SoundRecorder();
 
     ////////////////////////////////////////////////////////////
-    /// Start the capture.
-    /// Warning : only one capture can happen at the same time
+    /// \brief Start the capture
     ///
-    /// \param SampleRate : Sound frequency (the more samples, the higher the quality)
-    ///                    (44100 by default = CD quality)
+    /// The \a sampleRate parameter defines the number of audio samples
+    /// captured per second. The higher, the better the quality
+    /// (for example, 44100 samples/sec is CD quality).
+    /// This function uses its own thread so that it doesn't block
+    /// the rest of the program while the capture runs.
+    /// Please note that only one capture can happen at the same time.
+    ///
+    /// \param sampleRate Desired capture rate, in number of samples per second
+    ///
+    /// \see Stop
     ///
     ////////////////////////////////////////////////////////////
-    void Start(unsigned int SampleRate = 44100);
+    void Start(unsigned int sampleRate = 44100);
 
     ////////////////////////////////////////////////////////////
-    /// Stop the capture
+    /// \brief Stop the capture
+    ///
+    /// \see Start
     ///
     ////////////////////////////////////////////////////////////
     void Stop();
 
     ////////////////////////////////////////////////////////////
-    /// Get the sample rate
+    /// \brief Get the sample rate
     ///
-    /// \return Frequency, in samples per second
+    /// The sample rate defines the number of audio samples
+    /// captured per second. The higher, the better the quality
+    /// (for example, 44100 samples/sec is CD quality).
+    ///
+    /// \return Sample rate, in samples per second
     ///
     ////////////////////////////////////////////////////////////
     unsigned int GetSampleRate() const;
 
     ////////////////////////////////////////////////////////////
-    /// Tell if the system supports sound capture.
-    /// If not, this class won't be usable
+    /// \brief Check if the system supports audio capture
     ///
-    /// \return True if audio capture is supported
+    /// This function should always be called before using
+    /// the audio capture features. If it returns false, then
+    /// any attempt to use sf::SoundRecorder or one of its derived
+    /// classes will fail.
+    ///
+    /// \return True if audio capture is supported, false otherwise
     ///
     ////////////////////////////////////////////////////////////
-    static bool CanCapture();
+    static bool IsAvailable();
 
 protected :
 
     ////////////////////////////////////////////////////////////
-    /// Default constructor
+    /// \brief Default constructor
+    ///
+    /// This constructor is only meant to be called by derived classes.
     ///
     ////////////////////////////////////////////////////////////
     SoundRecorder();
@@ -92,44 +111,68 @@ protected :
 private :
 
     ////////////////////////////////////////////////////////////
-    /// Start recording audio data
+    /// \brief Start capturing audio data
     ///
-    /// \return False to abort recording audio data, true to start
+    /// This virtual function may be overriden by a derived class
+    /// if something has to be done every time a new capture
+    /// starts. If not, this function can be ignored; the default
+    /// implementation does nothing.
+    ///
+    /// \return True to start the capture, or false to abort it
     ///
     ////////////////////////////////////////////////////////////
     virtual bool OnStart();
 
     ////////////////////////////////////////////////////////////
-    /// Process a new chunk of recorded samples
+    /// \brief Process a new chunk of recorded samples
     ///
-    /// \param Samples :      Pointer to the new chunk of recorded samples
-    /// \param SamplesCount : Number of samples pointed by Samples
+    /// This virtual function is called every time a new chunk of
+    /// recorded data is available. The derived class can then do
+    /// whatever it wants with it (storing it, playing it, sending
+    /// it over the network, etc.).
     ///
-    /// \return False to stop recording audio data, true to continue
+    /// \param samples      Pointer to the new chunk of recorded samples
+    /// \param samplesCount Number of samples pointed by \a samples
+    ///
+    /// \return True to continue the capture, or false to stop it
     ///
     ////////////////////////////////////////////////////////////
-    virtual bool OnProcessSamples(const Int16* Samples, std::size_t SamplesCount) = 0;
+    virtual bool OnProcessSamples(const Int16* samples, std::size_t samplesCount) = 0;
 
     ////////////////////////////////////////////////////////////
-    /// Stop recording audio data
+    /// \brief Stop capturing audio data
+    ///
+    /// This virtual function may be overriden by a derived class
+    /// if something has to be done every time the capture
+    /// ends. If not, this function can be ignored; the default
+    /// implementation does nothing.
     ///
     ////////////////////////////////////////////////////////////
     virtual void OnStop();
 
     ////////////////////////////////////////////////////////////
-    /// /see Thread::Run
+    /// \brief Function called as the entry point of the thread
+    ///
+    /// This function starts the recording loop, and returns
+    /// only when the capture is stopped.
     ///
     ////////////////////////////////////////////////////////////
-    virtual void Run();
+    void Record();
 
     ////////////////////////////////////////////////////////////
-    /// Get the available captured samples and process them
+    /// \brief Get the new available audio samples and process them
+    ///
+    /// This function is called continuously during the
+    /// capture loop. It retrieves the captured samples and
+    /// forwards them to the derived class.
     ///
     ////////////////////////////////////////////////////////////
     void ProcessCapturedSamples();
 
     ////////////////////////////////////////////////////////////
-    /// Clean up the recorder internal resources
+    /// \brief Clean up the recorder's internal resources
+    ///
+    /// This function is called when the capture stops.
     ///
     ////////////////////////////////////////////////////////////
     void CleanUp();
@@ -137,6 +180,7 @@ private :
     ////////////////////////////////////////////////////////////
     // Member data
     ////////////////////////////////////////////////////////////
+    Thread             myThread;      ///< Thread running the background recording task
     std::vector<Int16> mySamples;     ///< Buffer to store captured samples
     unsigned int       mySampleRate;  ///< Sample rate
     bool               myIsCapturing; ///< Capturing state
@@ -146,3 +190,80 @@ private :
 
 
 #endif // SFML_SOUNDRECORDER_HPP
+
+
+////////////////////////////////////////////////////////////
+/// \class sf::SoundRecorder
+/// \ingroup audio
+///
+/// sf::SoundBuffer provides a simple interface to access
+/// the audio recording capabilities of the computer
+/// (the microphone). As an abstract base class, it only cares
+/// about capturing sound samples, the task of making something
+/// useful with them is left to the derived class. Note that
+/// SFML provides a built-in specialization for saving the
+/// captured data to a sound buffer (see sf::SoundBufferRecorder).
+///
+/// A derived class has only one virtual function to override:
+/// \li OnProcessSamples provides the new chunks of audio samples while the capture happens
+///
+/// Moreover, two additionnal virtual functions can be overriden
+/// as well if necessary:
+/// \li OnStart is called before the capture happens, to perform custom initializations
+/// \li OnStop is called after the capture ends, to perform custom cleanup
+///
+/// The audio capture feature may not be supported or activated
+/// on every platform, thus it is recommended to check its
+/// availability with the IsAvailable() function. If it returns
+/// false, then any attempt to use an audio recorder will fail.
+///
+/// It is important to note that the audio capture happens in a
+/// separate thread, so that it doesn't block the rest of the
+/// program. In particular, the OnProcessSamples and OnStop
+/// virtual functions (but not OnStart) will be called
+/// from this separate thread. It is important to keep this in
+/// mind, because you may have to take care of synchronization
+/// issues if you share data between threads. 
+///
+/// Usage example:
+/// \code
+/// class CustomRecorder : public sf::SoundRecorder
+/// {
+///     virtual bool OnStart() // optional
+///     {
+///         // Initialize whatever has to be done before the capture starts
+///         ...
+///
+///         // Return true to start playing
+///         return true;
+///     }
+///
+///     virtual bool OnProcessSamples(const Int16* samples, std::size_t samplesCount)
+///     {
+///         // Do something with the new chunk of samples (store them, send them, ...)
+///         ...
+///
+///         // Return true to continue playing
+///         return true;
+///     }
+///
+///     virtual void OnStop() // optional
+///     {
+///         // Clean up whatever has to be done after the capture ends
+///         ...
+///     }
+/// }
+///
+/// // Usage
+/// if (CustomRecorder::IsAvailable())
+/// {
+///     CustomRecorder recorder;
+///     recorder.Start();
+///     ...
+///     recorder.Stop();
+/// }
+/// \endcode
+///
+/// \see sf::SoundBufferRecorder
+///
+////////////////////////////////////////////////////////////

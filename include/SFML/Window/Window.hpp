@@ -28,16 +28,14 @@
 ////////////////////////////////////////////////////////////
 // Headers
 ////////////////////////////////////////////////////////////
-#include <SFML/Window/Event.hpp>
-#include <SFML/Window/Input.hpp>
+#include <SFML/Window/ContextSettings.hpp>
 #include <SFML/Window/VideoMode.hpp>
 #include <SFML/Window/WindowHandle.hpp>
-#include <SFML/Window/WindowListener.hpp>
-#include <SFML/Window/WindowSettings.hpp>
 #include <SFML/Window/WindowStyle.hpp>
+#include <SFML/Window/GlResource.hpp>
 #include <SFML/System/Clock.hpp>
+#include <SFML/System/Vector2.hpp>
 #include <SFML/System/NonCopyable.hpp>
-#include <queue>
 #include <string>
 
 
@@ -45,91 +43,134 @@ namespace sf
 {
 namespace priv
 {
+    class GlContext;
     class WindowImpl;
 }
 
+class Event;
+
 ////////////////////////////////////////////////////////////
-/// Window is a rendering window ; it can create a new window
-/// or connect to an existing one
+/// \brief Window that serves as a target for OpenGL rendering
+///
 ////////////////////////////////////////////////////////////
-class SFML_API Window : public WindowListener, NonCopyable
+class SFML_API Window : GlResource, NonCopyable
 {
 public :
 
     ////////////////////////////////////////////////////////////
-    /// Default constructor
+    /// \brief Default constructor
+    ///
+    /// This constructor doesn't actually create the window,
+    /// use the other constructors or call Create to do so.
     ///
     ////////////////////////////////////////////////////////////
     Window();
 
     ////////////////////////////////////////////////////////////
-    /// Construct a new window
+    /// \brief Construct a new window
     ///
-    /// \param Mode :        Video mode to use
-    /// \param Title :       Title of the window
-    /// \param WindowStyle : Window style, see sf::Style (Resize | Close by default)
-    /// \param Params :      Creation parameters (see default constructor for default values)
+    /// This constructor creates the window with the size and pixel
+    /// depth defined in \a mode. An optional style can be passed to
+    /// customize the look and behaviour of the window (borders,
+    /// title bar, resizable, closable, ...). If \a style contains
+    /// Style::Fullscreen, then \a mode must be a valid video mode.
+    ///
+    /// The fourth parameter is an optional structure specifying
+    /// advanced OpenGL context settings such as antialiasing,
+    /// depth-buffer bits, etc.
+    ///
+    /// \param mode     Video mode to use (defines the width, height and depth of the rendering area of the window)
+    /// \param title    Title of the window
+    /// \param style    Window style
+    /// \param settings Additional settings for the underlying OpenGL context
     ///
     ////////////////////////////////////////////////////////////
-    Window(VideoMode Mode, const std::string& Title, unsigned long WindowStyle = Style::Resize | Style::Close, const WindowSettings& Params = WindowSettings());
+    Window(VideoMode mode, const std::string& title, unsigned long style = Style::Default, const ContextSettings& settings = ContextSettings());
 
     ////////////////////////////////////////////////////////////
-    /// Construct the window from an existing control
+    /// \brief Construct the window from an existing control
     ///
-    /// \param Handle : Platform-specific handle of the control
-    /// \param Params : Creation parameters (see default constructor for default values)
+    /// Use this constructor if you want to create an OpenGL
+    /// rendering area into an already existing control.
+    ///
+    /// The second parameter is an optional structure specifying
+    /// advanced OpenGL context settings such as antialiasing,
+    /// depth-buffer bits, etc.
+    ///
+    /// \param handle   Platform-specific handle of the control
+    /// \param settings Additional settings for the underlying OpenGL context
     ///
     ////////////////////////////////////////////////////////////
-    Window(WindowHandle Handle, const WindowSettings& Params = WindowSettings());
+    explicit Window(WindowHandle handle, const ContextSettings& settings = ContextSettings());
 
     ////////////////////////////////////////////////////////////
-    /// Destructor
+    /// \brief Destructor
+    ///
+    /// Closes the window and free all the resources attached to it.
     ///
     ////////////////////////////////////////////////////////////
     virtual ~Window();
 
     ////////////////////////////////////////////////////////////
-    /// Create (or recreate) the window
+    /// \brief Create (or recreate) the window
     ///
-    /// \param Mode :        Video mode to use
-    /// \param Title :       Title of the window
-    /// \param WindowStyle : Window style, see sf::Style (Resize | Close by default)
-    /// \param Params :      Creation parameters (see default constructor for default values)
+    /// If the window was already created, it closes it first.
+    /// If \a style contains Style::Fullscreen, then \a mode
+    /// must be a valid video mode.
+    ///
+    /// \param mode     Video mode to use (defines the width, height and depth of the rendering area of the window)
+    /// \param title    Title of the window
+    /// \param style    Window style
+    /// \param settings Additional settings for the underlying OpenGL context
     ///
     ////////////////////////////////////////////////////////////
-    void Create(VideoMode Mode, const std::string& Title, unsigned long WindowStyle = Style::Resize | Style::Close, const WindowSettings& Params = WindowSettings());
+    void Create(VideoMode mode, const std::string& title, unsigned long style = Style::Default, const ContextSettings& settings = ContextSettings());
 
     ////////////////////////////////////////////////////////////
-    /// Create (or recreate) the window from an existing control
+    /// \brief Create (or recreate) the window from an existing control
     ///
-    /// \param Handle : Platform-specific handle of the control
-    /// \param Params : Creation parameters (see default constructor for default values)
+    /// Use this function if you want to create an OpenGL
+    /// rendering area into an already existing control.
+    /// If the window was already created, it closes it first.
+    ///
+    /// \param handle   Platform-specific handle of the control
+    /// \param settings Additional settings for the underlying OpenGL context
     ///
     ////////////////////////////////////////////////////////////
-    void Create(WindowHandle Handle, const WindowSettings& Params = WindowSettings());
+    void Create(WindowHandle handle, const ContextSettings& settings = ContextSettings());
 
     ////////////////////////////////////////////////////////////
-    /// Close (destroy) the window.
-    /// The sf::Window instance remains valid and you can call
-    /// Create to recreate the window
+    /// \brief Close the window and destroy all the attached resources
+    ///
+    /// After calling this function, the sf::Window instance remains
+    /// valid and you can call Create() to recreate the window.
+    /// All other functions such as PollEvent() or Display() will
+    /// still work (i.e. you don't have to test IsOpened() every time),
+    /// and will have no effect on closed windows.
     ///
     ////////////////////////////////////////////////////////////
     void Close();
 
     ////////////////////////////////////////////////////////////
-    /// Tell whether or not the window is opened (ie. has been created).
-    /// Note that a hidden window (Show(false))
-    /// will still return true
+    /// \brief Tell whether or not the window is opened
     ///
-    /// \return True if the window is opened
+    /// This function returns whether or not the window exists.
+    /// Note that a hidden window (Show(false)) will return true.
+    ///
+    /// \return True if the window is opened, false if it has been closed
     ///
     ////////////////////////////////////////////////////////////
     bool IsOpened() const;
 
     ////////////////////////////////////////////////////////////
-    /// Get the width of the rendering region of the window
+    /// \brief Get the width of the rendering region of the window
+    ///
+    /// The width doesn't include the titlebar and borders
+    /// of the window.
     ///
     /// \return Width in pixels
+    ///
+    /// \see GetHeight
     ///
     ////////////////////////////////////////////////////////////
     unsigned int GetWidth() const;
@@ -137,190 +178,366 @@ public :
     ////////////////////////////////////////////////////////////
     /// Get the height of the rendering region of the window
     ///
+    /// The height doesn't include the titlebar and borders
+    /// of the window.
+    ///
     /// \return Height in pixels
+    ///
+    /// \see GetWidth
     ///
     ////////////////////////////////////////////////////////////
     unsigned int GetHeight() const;
 
     ////////////////////////////////////////////////////////////
-    /// Get the creation settings of the window
+    /// \brief Get the settings of the OpenGL context of the window
     ///
-    /// \return Structure containing the creation settings
+    /// Note that these settings may be different from what was
+    /// passed to the constructor or the Create() function,
+    /// if one or more settings were not supported. In this case,
+    /// SFML chose the closest match.
+    ///
+    /// \return Structure containing the OpenGL context settings
     ///
     ////////////////////////////////////////////////////////////
-    const WindowSettings& GetSettings() const;
+    const ContextSettings& GetSettings() const;
 
     ////////////////////////////////////////////////////////////
-    /// Get the event on top of events stack, if any, and pop it
+    /// \brief Pop the event on top of events stack, if any, and return it
     ///
-    /// \param EventReceived : Event to fill, if any
+    /// This function is not blocking: if there's no pending event then
+    /// it will return false and leave \a event unmodified.
+    /// Note that more than one event may be present in the events stack,
+    /// thus you should always call this function in a loop
+    /// to make sure that you process every pending event.
+    /// \code
+    /// sf::Event event;
+    /// while (window.PollEvent(event))
+    /// {
+    ///    // process event...
+    /// }
+    /// \endcode
     ///
-    /// \return True if an event was returned, false if events stack was empty
+    /// \param event Event to be returned
+    ///
+    /// \return True if an event was returned, or false if the events stack was empty
+    ///
+    /// \see WaitEvent
     ///
     ////////////////////////////////////////////////////////////
-    bool GetEvent(Event& EventReceived);
+    bool PollEvent(Event& event);
 
     ////////////////////////////////////////////////////////////
-    /// Enable / disable vertical synchronization
+    /// \brief Wait for an event and return it
     ///
-    /// \param Enabled : True to enable v-sync, false to deactivate
+    /// This function is blocking: if there's no pending event then
+    /// it will wait until an event is received.
+    /// After this function returns (and no error occured),
+    /// the \a event object is always valid and filled properly.
+    /// This function is typically used when you have a thread that
+    /// is dedicated to events handling: you want to make this thread
+    /// sleep as long as no new event is received.
+    /// \code
+    /// sf::Event event;
+    /// if (window.WaitEvent(event))
+    /// {
+    ///    // process event...
+    /// }
+    /// \endcode
+    ///
+    /// \param event Event to be returned
+    ///
+    /// \return False if any error occured
+    ///
+    /// \see PollEvent
     ///
     ////////////////////////////////////////////////////////////
-    void UseVerticalSync(bool Enabled);
+    bool WaitEvent(Event& event);
 
     ////////////////////////////////////////////////////////////
-    /// Show or hide the mouse cursor
+    /// \brief Enable or disable vertical synchronization
     ///
-    /// \param Show : True to show, false to hide
+    /// Activating vertical synchronization will limit the number
+    /// of frames displayed to the refresh rate of the monitor.
+    /// This can avoid some visual artifacts, and limit the framerate
+    /// to a good value (but not constant across different computers).
+    ///
+    /// Vertical synchronization is disabled by default.
+    ///
+    /// \param enabled True to enable v-sync, false to deactivate
     ///
     ////////////////////////////////////////////////////////////
-    void ShowMouseCursor(bool Show);
+    void EnableVerticalSync(bool enabled);
 
     ////////////////////////////////////////////////////////////
-    /// Change the position of the mouse cursor
+    /// \brief Show or hide the mouse cursor
     ///
-    /// \param Left : Left coordinate of the cursor, relative to the window
-    /// \param Top :  Top coordinate of the cursor, relative to the window
+    /// The mouse cursor is shown by default.
+    ///
+    /// \param show True to show, false to hide
     ///
     ////////////////////////////////////////////////////////////
-    void SetCursorPosition(unsigned int Left, unsigned int Top);
+    void ShowMouseCursor(bool show);
 
     ////////////////////////////////////////////////////////////
-    /// Change the position of the window on screen.
-    /// Only works for top-level windows
+    /// \brief Change the position of the window on screen
     ///
-    /// \param Left : Left position
-    /// \param Top :  Top position
+    /// This function only works for top-level windows
+    /// (i.e. it will be ignored for windows created from
+    /// the handle of a child window/control).
+    ///
+    /// \param x Left position
+    /// \param y Top position
     ///
     ////////////////////////////////////////////////////////////
-    void SetPosition(int Left, int Top);
+    void SetPosition(int x, int y);
 
     ////////////////////////////////////////////////////////////
-    /// Change the size of the rendering region of the window
+    /// \brief Change the size of the rendering region of the window
     ///
-    /// \param Width :  New width
-    /// \param Height : New height
+    /// \param width  New width, in pixels
+    /// \param height New height, in pixels
     ///
     ////////////////////////////////////////////////////////////
-    void SetSize(unsigned int Width, unsigned int Height);
+    void SetSize(unsigned int width, unsigned int height);
 
     ////////////////////////////////////////////////////////////
-    /// Show or hide the window
+    /// \brief Change the title of the window
     ///
-    /// \param State : True to show, false to hide
+    /// \param title New title
     ///
     ////////////////////////////////////////////////////////////
-    void Show(bool State);
+    void SetTitle(const std::string& title);
 
     ////////////////////////////////////////////////////////////
-    /// Enable or disable automatic key-repeat.
-    /// Automatic key-repeat is enabled by default
+    /// \brief Show or hide the window
     ///
-    /// \param Enabled : True to enable, false to disable
+    /// The window is shown by default.
+    ///
+    /// \param show True to show, false to hide
     ///
     ////////////////////////////////////////////////////////////
-    void EnableKeyRepeat(bool Enabled);
+    void Show(bool show);
 
     ////////////////////////////////////////////////////////////
-    /// Change the window's icon
+    /// \brief Enable or disable automatic key-repeat
     ///
-    /// \param Width :  Icon's width, in pixels
-    /// \param Height : Icon's height, in pixels
-    /// \param Pixels : Pointer to the pixels in memory, format must be RGBA 32 bits
+    /// If key repeat is enabled, you will receive repeated
+    /// KeyPress events while keeping a key pressed. If it is disabled,
+    /// you will only get a single event when the key is pressed.
+    ///
+    /// Key repeat is enabled by default.
+    ///
+    /// \param enabled True to enable, false to disable
     ///
     ////////////////////////////////////////////////////////////
-    void SetIcon(unsigned int Width, unsigned int Height, const Uint8* Pixels);
+    void EnableKeyRepeat(bool enabled);
 
     ////////////////////////////////////////////////////////////
-    /// Activate of deactivate the window as the current target
-    /// for rendering
+    /// \brief Change the window's icon
     ///
-    /// \param Active : True to activate, false to deactivate (true by default)
+    /// \a pixels must be an array of \a width x \a height pixels
+    /// in 32-bits RGBA format.
+    ///
+    /// The OS default icon is used by default.
+    ///
+    /// \param width  Icon's width, in pixels
+    /// \param height Icon's height, in pixels
+    /// \param pixels Pointer to the array of pixels in memory
+    ///
+    ////////////////////////////////////////////////////////////
+    void SetIcon(unsigned int width, unsigned int height, const Uint8* pixels);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Activate or deactivate the window as the current target
+    ///        for OpenGL rendering
+    ///
+    /// A window is active only on the current thread, if you want to
+    /// make it active on another thread you have to deactivate it
+    /// on the previous thread first if it was active.
+    /// Only one window can be active on a thread at a time, thus
+    /// the window previously active (if any) automatically gets deactivated.
+    ///
+    /// \param active True to activate, false to deactivate
     ///
     /// \return True if operation was successful, false otherwise
     ///
     ////////////////////////////////////////////////////////////
-    bool SetActive(bool Active = true) const;
+    bool SetActive(bool active = true) const;
 
     ////////////////////////////////////////////////////////////
-    /// Display the window on screen
+    /// \brief Display on screen what has been rendered to the
+    ///        window so far
+    ///
+    /// This function is typically called after all OpenGL rendering
+    /// has been done for the current frame, in order to show
+    /// it on screen.
     ///
     ////////////////////////////////////////////////////////////
     void Display();
 
     ////////////////////////////////////////////////////////////
-    /// Get the input manager of the window
+    /// \brief Limit the framerate to a maximum fixed frequency
     ///
-    /// \return Reference to the input
+    /// If a limit is set, the window will use a small delay after
+    /// each call to Display() to ensure that the current frame
+    /// lasted long enough to match the framerate limit.
+    ///
+    /// \param limit Framerate limit, in frames per seconds (use 0 to disable limit)
     ///
     ////////////////////////////////////////////////////////////
-    const Input& GetInput() const;
+    void SetFramerateLimit(unsigned int limit);
 
     ////////////////////////////////////////////////////////////
-    /// Limit the framerate to a maximum fixed frequency
+    /// \brief Get the duration of the last frame
     ///
-    /// \param Limit : Framerate limit, in frames per seconds (use 0 to disable limit)
+    /// This function returns the time elapsed between the last
+    /// two calls to Display().
+    /// This can be useful for calculating the framerate, or for
+    /// updating the application's objects.
+    ///
+    /// \return Time elapsed in last frame, in milliseconds
     ///
     ////////////////////////////////////////////////////////////
-    void SetFramerateLimit(unsigned int Limit);
+    Uint32 GetFrameTime() const;
 
     ////////////////////////////////////////////////////////////
-    /// Get time elapsed since last frame
+    /// \brief Change the joystick threshold
     ///
-    /// \return Time elapsed, in seconds
+    /// The joystick threshold is the value below which
+    /// no JoyMoved event will be generated.
+    ///
+    /// The threshold value is 0.1 by default.
+    ///
+    /// \param threshold New threshold, in the range [0, 100]
     ///
     ////////////////////////////////////////////////////////////
-    float GetFrameTime() const;
+    void SetJoystickThreshold(float threshold);
 
     ////////////////////////////////////////////////////////////
-    /// Change the joystick threshold, ie. the value below which
-    /// no move event will be generated
+    /// \brief Get the OS-specific handle of the window
     ///
-    /// \param Threshold : New threshold, in range [0, 100]
+    /// The type of the returned handle is sf::WindowHandle,
+    /// which is a typedef to the handle type defined by the OS.
+    /// You shouldn't need to use this function, unless you have
+    /// very specific stuff to implement that SFML doesn't support,
+    /// or implement a temporary workaround until a bug is fixed.
+    ///
+    /// \return System handle of the window
     ///
     ////////////////////////////////////////////////////////////
-    void SetJoystickThreshold(float Threshold);
+    WindowHandle GetSystemHandle() const;
 
 private :
 
     ////////////////////////////////////////////////////////////
-    /// Called after the window has been created
+    /// \brief Function called after the window has been created
+    ///
+    /// This function is called so that derived classes can
+    /// perform their own specific initialization as soon as
+    /// the window is created.
     ///
     ////////////////////////////////////////////////////////////
     virtual void OnCreate();
 
     ////////////////////////////////////////////////////////////
-    /// /see WindowListener::OnEvent
+    /// \brief Function called after the window has been resized
     ///
-    /// \param EventReceived : Event received
+    /// This function is called so that derived classes can
+    /// perform custom actions when the size of the window changes.
     ///
     ////////////////////////////////////////////////////////////
-    virtual void OnEvent(const Event& EventReceived);
+    virtual void OnResize();
 
     ////////////////////////////////////////////////////////////
-    /// Initialize internal window
+    /// \brief Processes an event before it is sent to the user
     ///
-    /// \param Impl : New internal window implementation
+    /// This function is called every time an event is received
+    /// from the internal window (through PollEvent or WaitEvent).
+    /// It filters out unwanted events, and performs whatever internal
+    /// stuff the window needs before the event is returned to the
+    /// user.
+    ///
+    /// \param event Event to filter
     ///
     ////////////////////////////////////////////////////////////
-    void Initialize(priv::WindowImpl* Impl);
+    bool FilterEvent(const Event& event);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Perform some common internal initializations
+    ///
+    ////////////////////////////////////////////////////////////
+    void Initialize();
 
     ////////////////////////////////////////////////////////////
     // Member data
     ////////////////////////////////////////////////////////////
-    priv::WindowImpl* myWindow;         ///< Platform-specific implementation of window
-    std::queue<Event> myEvents;         ///< Queue of received events
-    Input             myInput;          ///< Input manager connected to window
+    priv::WindowImpl* myWindow;         ///< Platform-specific implementation of the window
+    priv::GlContext*  myContext;        ///< Platform-specific implementation of the OpenGL context
     Clock             myClock;          ///< Clock for measuring the elapsed time between frames
-    WindowSettings    mySettings;       ///< Creation settings of the window
-    float             myLastFrameTime;  ///< Time elapsed since last frame
-    bool              myIsExternal;     ///< Tell whether the window is internal or external (created by SFML or not)
+    Uint32            myLastFrameTime;  ///< Time elapsed since last frame
     unsigned int      myFramerateLimit; ///< Current framerate limit
-    int               mySetCursorPosX;  ///< X coordinate passed to the last call to SetCursorPosition
-    int               mySetCursorPosY;  ///< Y coordinate passed to the last call to SetCursorPosition
 };
 
 } // namespace sf
 
 
 #endif // SFML_WINDOW_HPP
+
+
+////////////////////////////////////////////////////////////
+/// \class sf::Window
+/// \ingroup window
+///
+/// sf::Window is the main class of the Window module. It defines
+/// an OS window that is able to receive an OpenGL rendering.
+///
+/// A sf::Window can create its own new window, or be embedded into
+/// an already existing control using the Create(handle) function.
+/// This can be useful for embedding an OpenGL rendering area into
+/// a view which is part of a bigger GUI with existing windows,
+/// controls, etc. It can also serve as embedding an OpenGL rendering
+/// area into a window created by another (probably richer) GUI library
+/// like Qt or wxWidgets.
+///
+/// The sf::Window class provides a simple interface for manipulating
+/// the window: move, resize, show/hide, control mouse cursor, etc.
+/// It also provides event handling through its PollEvent() and WaitEvent()
+/// functions.
+///
+/// Note that OpenGL experts can pass their own parameters (antialiasing
+/// level, bits for the depth and stencil buffers, etc.) to the
+/// OpenGL context attached to the window, with the sf::ContextSettings
+/// structure which is passed as an optional argument when creating the
+/// window.
+///
+/// Usage example:
+/// \code
+/// // Declare and create a new window
+/// sf::Window window(sf::VideoMode(800, 600), "SFML window");
+///
+/// // Limit the framerate to 60 frames per second (this step is optional)
+/// window.SetFramerateLimit(60);
+///
+/// // The main loop - ends as soon as the window is closed
+/// while (window.IsOpened())
+/// {
+///    // Event processing
+///    sf::Event event;
+///    while (window.PollEvent(event))
+///    {
+///        // Request for closing the window
+///        if (event.Type == sf::Event::Closed)
+///            window.Close();
+///    }
+///
+///    // Activate the window for OpenGL rendering
+///    window.SetActive();
+///
+///    // OpenGL drawing commands go here...
+///
+///    // End the current frame and display its contents on screen
+///    window.Display();
+/// }
+/// \endcode
+///
+////////////////////////////////////////////////////////////

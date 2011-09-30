@@ -35,14 +35,15 @@
 namespace sf
 {
 ////////////////////////////////////////////////////////////
-/// Structure describing a glyph (a visual character)
+/// \brief Structure describing a glyph
+///
 ////////////////////////////////////////////////////////////
 class SFML_API Glyph
 {
 public :
 
     ////////////////////////////////////////////////////////////
-    /// Default constructor
+    /// \brief Default constructor
     ///
     ////////////////////////////////////////////////////////////
     Glyph() : Advance(0) {}
@@ -50,12 +51,29 @@ public :
     ////////////////////////////////////////////////////////////
     // Member data
     ////////////////////////////////////////////////////////////
-    int       Advance;   ///< Offset to move horizontically to the next character
-    IntRect   Rectangle; ///< Bounding rectangle of the glyph, in relative coordinates
-    FloatRect TexCoords; ///< Texture coordinates of the glyph inside the bitmap font
+    int     Advance; ///< Offset to move horizontically to the next character
+    IntRect Bounds;  ///< Bounding rectangle of the glyph, in coordinates relative to the baseline
+    IntRect SubRect; ///< Texture coordinates of the glyph inside the font's image
 };
 
 } // namespace sf
 
 
 #endif // SFML_GLYPH_HPP
+
+
+////////////////////////////////////////////////////////////
+/// \class sf::Glyph
+/// \ingroup graphics
+///
+/// A glyph is the visual representation of a character.
+///
+/// The sf::Glyph structure provides the information needed
+/// to handle the glyph:
+/// \li its coordinates in the font's image
+/// \li its bounding rect
+/// \li the offset to apply to get the starting position of the next glyph
+///
+/// \see sf::Font
+///
+////////////////////////////////////////////////////////////

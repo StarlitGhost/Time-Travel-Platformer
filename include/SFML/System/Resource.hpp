@@ -28,7 +28,10 @@
 ////////////////////////////////////////////////////////////
 // Headers
 ////////////////////////////////////////////////////////////
+#include <SFML/System/Lock.hpp>
+#include <SFML/System/Mutex.hpp>
 #include <set>
+#include <cstddef>
 
 
 namespace sf
@@ -43,8 +46,9 @@ namespace sf
 template <typename> class ResourcePtr;
 
 ////////////////////////////////////////////////////////////
-/// Base class for every resource that needs to notify
-/// dependent classes about its destruction
+/// \brief Base class for resources that need to notify
+///        dependent classes about their destruction
+///
 ////////////////////////////////////////////////////////////
 template <typename T>
 class Resource
@@ -52,65 +56,72 @@ class Resource
 protected :
 
     ////////////////////////////////////////////////////////////
-    /// Default constructor
+    /// \brief Default constructor
     ///
     ////////////////////////////////////////////////////////////
     Resource();
 
     ////////////////////////////////////////////////////////////
-    /// Copy constructor
+    /// \brief Copy constructor
     ///
-    /// \param Copy : Resource to copy
+    /// \param copy Instance to copy
     ///
     ////////////////////////////////////////////////////////////
-    Resource(const Resource<T>& Copy);
+    Resource(const Resource<T>& copy);
 
     ////////////////////////////////////////////////////////////
-    /// Destructor
+    /// \brief Destructor
     ///
     ////////////////////////////////////////////////////////////
     ~Resource();
 
     ////////////////////////////////////////////////////////////
-    /// Assignment operator
+    /// \brief Assignment operator
     ///
-    /// \param Other : Resource to copy
+    /// \param right Instance to assign
     ///
-    /// \return Reference to this
+    /// \return Reference to self
     ///
     ////////////////////////////////////////////////////////////
-    Resource<T>& operator =(const Resource<T>& Other);
+    Resource<T>& operator =(const Resource<T>& right);
 
 private :
 
     friend class ResourcePtr<T>;
 
     ////////////////////////////////////////////////////////////
-    /// Connect a ResourcePtr to this resource
+    /// \brief Connect a ResourcePtr to this resource
     ///
-    /// \param Observer : Observer to add
+    /// A connected ResourcePtr will be notified of the
+    /// destruction of this instance.
+    ///
+    /// \param observer ResourcePtr to connect
     ///
     ////////////////////////////////////////////////////////////
-    void Connect(ResourcePtr<T>& Observer) const;
+    void Connect(ResourcePtr<T>& observer) const;
 
     ////////////////////////////////////////////////////////////
-    /// Disconnect a ResourcePtr from this resource
+    /// \brief Disconnect a ResourcePtr from this resource
     ///
-    /// \param Observer : Observer to remove
+    /// The disconnected ResourcePtr will no longer be notified
+    /// if this instance is destroyed.
+    ///
+    /// \param observer ResourcePtr to disconnect
     ///
     ////////////////////////////////////////////////////////////
-    void Disconnect(ResourcePtr<T>& Observer) const;
+    void Disconnect(ResourcePtr<T>& observer) const;
 
     ////////////////////////////////////////////////////////////
     // Member data
     ////////////////////////////////////////////////////////////
-    mutable std::set<ResourcePtr<T>*> myObservers;
+    mutable std::set<ResourcePtr<T>*> myObservers; ///< List of pointers to this resource
+    mutable Mutex                     myMutex;     ///< Mutex for preventing concurrent access to the pointer list
 };
 
 
 ////////////////////////////////////////////////////////////
-/// Safe pointer to a T resource (inheriting from sf::Resource<T>),
-/// its pointer is automatically reseted when the resource is destroyed
+/// \brief Safe pointer to a sf::Resource<T>
+///
 ////////////////////////////////////////////////////////////
 template <typename T>
 class ResourcePtr
@@ -118,83 +129,98 @@ class ResourcePtr
 public :
 
     ////////////////////////////////////////////////////////////
-    /// Default constructor
+    /// \brief Default constructor
+    ///
+    /// A default constructed ResourcePtr is empty (null).
     ///
     ////////////////////////////////////////////////////////////
     ResourcePtr();
 
     ////////////////////////////////////////////////////////////
-    /// Construct from a raw resource
+    /// \brief Construct from a raw pointer
     ///
-    /// \param Resource : Internal resource
+    /// \param resource Raw pointer to the resource to wrap
     ///
     ////////////////////////////////////////////////////////////
-    ResourcePtr(const T* Resource);
+    ResourcePtr(const T* resource);
 
     ////////////////////////////////////////////////////////////
-    /// Copy constructor
+    /// \brief Copy constructor
     ///
-    /// \param Copy : Instance to copy
+    /// The new ResourcePtr will share the same resource as \a copy.
+    ///
+    /// \param copy Instance to copy
     ///
     ////////////////////////////////////////////////////////////
-    ResourcePtr(const ResourcePtr<T>& Copy);
+    ResourcePtr(const ResourcePtr<T>& copy);
 
     ////////////////////////////////////////////////////////////
-    /// Destructor
+    /// \brief Destructor
     ///
     ////////////////////////////////////////////////////////////
     ~ResourcePtr();
 
     ////////////////////////////////////////////////////////////
-    /// Assignment operator from another ResourcePtr
+    /// \brief Assignment operator for a ResourcePtr parameter
     ///
-    /// \param Other : Resource pointer to assign
+    /// \param right Instance to assign
     ///
-    /// \return Reference to this
+    /// \return Reference to self
     ///
     ////////////////////////////////////////////////////////////
-    ResourcePtr<T>& operator =(const ResourcePtr<T>& Other);
+    ResourcePtr<T>& operator =(const ResourcePtr<T>& right);
 
     ////////////////////////////////////////////////////////////
-    /// Assignment operator from a raw resource
+    /// \brief Assignment operator for a raw pointer parameter
     ///
-    /// \param Resource : Resource to assign
+    /// \param resource Resource to assign
     ///
-    /// \return Reference to this
+    /// \return Reference to self
     ///
     ////////////////////////////////////////////////////////////
-    ResourcePtr<T>& operator =(const T* Resource);
+    ResourcePtr<T>& operator =(const T* resource);
 
     ////////////////////////////////////////////////////////////
-    /// Cast operator to implicitely convert the resource pointer to
-    /// its raw pointer type.
+    /// \brief Cast operator to implicitely convert the resource
+    ///        pointer to its raw pointer type (T*)
+    ///
     /// This might be dangerous in the general case, but in this context
-    /// it is safe enough to define this operator
+    /// it is safe enough to define this operator.
     ///
-    /// \return Pointer to the actual resource
+    /// \return Read-only pointer to the actual resource
     ///
     ////////////////////////////////////////////////////////////
     operator const T*() const;
 
     ////////////////////////////////////////////////////////////
-    /// Operator * overload to return a reference to the actual resource
+    /// \brief Overload of unary operator *
     ///
-    /// \return Reference to the internal resource
+    /// Like raw pointers, applying the * operator returns a
+    /// reference to the pointed object.
+    ///
+    /// \return Reference to the pointed resource
     ///
     ////////////////////////////////////////////////////////////
     const T& operator *() const;
 
     ////////////////////////////////////////////////////////////
-    /// Operator -> overload to return a pointer to the actual resource
+    /// \brief Overload of operator ->
     ///
-    /// \return Pointer to the internal resource
+    /// Like raw pointers, applying the -> operator returns the
+    /// pointed object.
+    ///
+    /// \return Pointed resource
     ///
     ////////////////////////////////////////////////////////////
     const T* operator ->() const;
 
     ////////////////////////////////////////////////////////////
-    /// Function called when the observed resource is about to be
-    /// destroyed
+    /// \brief Function called when the observed resource
+    ///        is about to be destroyed
+    ///
+    /// This functions is called by the destructor of the pointed
+    /// resource. It allows this instance to reset its internal pointer
+    /// when the resource is destroyed, and avoid dangling pointers.
     ///
     ////////////////////////////////////////////////////////////
     void OnResourceDestroyed();
@@ -214,3 +240,49 @@ private :
 
 
 #endif // SFML_RESOURCE_HPP
+
+
+////////////////////////////////////////////////////////////
+/// \class sf::Resource
+/// \ingroup system
+///
+/// sf::Resource is a base for classes that want to be
+/// compatible with the sf::ResourcePtr safe pointer.
+///
+/// See sf::ResourcePtr for a complete explanation.
+///
+/// \see sf::ResourcePtr
+///
+////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////
+/// \class sf::ResourcePtr
+/// \ingroup system
+///
+/// sf::ResourcePtr is a special kind of smart pointer for
+/// resources. Its main feature is to automatically
+/// reset its internal pointer to 0 when the resource
+/// gets destroyed, so that pointers to a resource never
+/// become invalid when the resource is destroyed. Instead,
+/// it properly returns 0 when the resource no longer exists.
+///
+/// Its usage is completely transparent, so that it is similar
+/// to manipulating the raw resource directly (like any smart pointer).
+///
+/// For sf::ResourcePtr<T> to work, T must inherit from
+/// the sf::Resource class.
+///
+/// These two classes are heavily used internally in SFML
+/// to safely handle resources and the classes that use them:
+/// \li sf::Image / sf::Sprite
+/// \li sf::Font / sf::String
+/// \li sf::SoundBuffer / sf::Sound
+///
+/// sf::Resource and sf::ResourcePtr are designed for internal use,
+/// but if you feel like they would fit well in your implementation
+/// there's no problem to use them.
+///
+/// \see sf::Resource
+///
+////////////////////////////////////////////////////////////

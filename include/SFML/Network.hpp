@@ -32,11 +32,17 @@
 #include <SFML/System.hpp>
 #include <SFML/Network/Ftp.hpp>
 #include <SFML/Network/Http.hpp>
-#include <SFML/Network/IPAddress.hpp>
+#include <SFML/Network/IpAddress.hpp>
 #include <SFML/Network/Packet.hpp>
-#include <SFML/Network/Selector.hpp>
-#include <SFML/Network/SocketTCP.hpp>
-#include <SFML/Network/SocketUDP.hpp>
+#include <SFML/Network/SocketSelector.hpp>
+#include <SFML/Network/TcpListener.hpp>
+#include <SFML/Network/TcpSocket.hpp>
+#include <SFML/Network/UdpSocket.hpp>
 
 
 #endif // SFML_NETWORK_HPP
+
+////////////////////////////////////////////////////////////
+/// \defgroup network Network module
+/// 
+////////////////////////////////////////////////////////////

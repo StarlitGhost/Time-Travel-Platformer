@@ -29,6 +29,7 @@
 // Headers
 ////////////////////////////////////////////////////////////
 #include <SFML/Audio/SoundStream.hpp>
+#include <SFML/System/Mutex.hpp>
 #include <string>
 #include <vector>
 
@@ -40,81 +41,178 @@ namespace priv
     class SoundFile;
 }
 
+class InputStream;
+
 ////////////////////////////////////////////////////////////
-/// Music defines a big sound played using streaming,
-/// so usually what we call a music :)
+/// \brief Streamed music played from an audio file
+///
 ////////////////////////////////////////////////////////////
 class SFML_API Music : public SoundStream
 {
 public :
 
     ////////////////////////////////////////////////////////////
-    /// Construct the music with a buffer size
-    ///
-    /// \param BufferSize : Size of the internal buffer, expressed in number of samples
-    ///                     (ie. size taken by the music in memory) (44100 by default)
+    /// \brief Default constructor
     ///
     ////////////////////////////////////////////////////////////
-    explicit Music(std::size_t BufferSize = 44100);
+    Music();
 
     ////////////////////////////////////////////////////////////
-    /// Destructor
+    /// \brief Destructor
     ///
     ////////////////////////////////////////////////////////////
     ~Music();
 
     ////////////////////////////////////////////////////////////
-    /// Open a music file (doesn't play it -- call Play() for that)
+    /// \brief Open a music from an audio file
     ///
-    /// \param Filename : Path of the music file to open
+    /// This function doesn't start playing the music (call Play()
+    /// to do so).
+    /// Here is a complete list of all the supported audio formats:
+    /// ogg, wav, flac, aiff, au, raw, paf, svx, nist, voc, ircam,
+    /// w64, mat4, mat5 pvf, htk, sds, avr, sd2, caf, wve, mpc2k, rf64.
     ///
-    /// \return True if loading has been successful
+    /// \param filename Path of the music file to open
+    ///
+    /// \return True if loading succeeded, false if it failed
+    ///
+    /// \see OpenFromMemory, OpenFromStream
     ///
     ////////////////////////////////////////////////////////////
-    bool OpenFromFile(const std::string& Filename);
+    bool OpenFromFile(const std::string& filename);
 
     ////////////////////////////////////////////////////////////
-    /// Open a music file from memory (doesn't play it -- call Play() for that)
+    /// \brief Open a music from an audio file in memory
     ///
-    /// \param Data :        Pointer to the file data in memory
-    /// \param SizeInBytes : Size of the data to load, in bytes
+    /// This function doesn't start playing the music (call Play()
+    /// to do so).
+    /// Here is a complete list of all the supported audio formats:
+    /// ogg, wav, flac, aiff, au, raw, paf, svx, nist, voc, ircam,
+    /// w64, mat4, mat5 pvf, htk, sds, avr, sd2, caf, wve, mpc2k, rf64.
     ///
-    /// \return True if loading has been successful
+    /// \param data        Pointer to the file data in memory
+    /// \param sizeInBytes Size of the data to load, in bytes
+    ///
+    /// \return True if loading succeeded, false if it failed
+    ///
+    /// \see OpenFromFile, OpenFromStream
     ///
     ////////////////////////////////////////////////////////////
-    bool OpenFromMemory(const char* Data, std::size_t SizeInBytes);
+    bool OpenFromMemory(const void* data, std::size_t sizeInBytes);
 
     ////////////////////////////////////////////////////////////
-    /// Get the music duration
+    /// \brief Open a music from an audio file in a custom stream
     ///
-    /// \return Music duration, in seconds
+    /// This function doesn't start playing the music (call Play()
+    /// to do so).
+    /// Here is a complete list of all the supported audio formats:
+    /// ogg, wav, flac, aiff, au, raw, paf, svx, nist, voc, ircam,
+    /// w64, mat4, mat5 pvf, htk, sds, avr, sd2, caf, wve, mpc2k, rf64.
+    ///
+    /// \param stream Source stream to read from
+    ///
+    /// \return True if loading succeeded, false if it failed
+    ///
+    /// \see OpenFromFile, OpenFromMemory
     ///
     ////////////////////////////////////////////////////////////
-    float GetDuration() const;
+    bool OpenFromStream(InputStream& stream);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Get the total duration of the music
+    ///
+    /// \return Music duration, in milliseconds
+    ///
+    ////////////////////////////////////////////////////////////
+    Uint32 GetDuration() const;
+
+protected :
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Request a new chunk of audio samples from the stream source
+    ///
+    /// This function fills the chunk from the next samples
+    /// to read from the audio file.
+    ///
+    /// \param data Chunk of data to fill
+    ///
+    /// \return True to continue playback, false to stop
+    ///
+    ////////////////////////////////////////////////////////////
+    virtual bool OnGetData(Chunk& data);
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Change the current playing position in the stream source
+    ///
+    /// \param timeOffset New playing position, in milliseconds
+    ///
+    ////////////////////////////////////////////////////////////
+    virtual void OnSeek(Uint32 timeOffset);
 
 private :
 
     ////////////////////////////////////////////////////////////
-    /// /see SoundStream::OnStart
+    /// \brief Initialize the internal state after loading a new music
     ///
     ////////////////////////////////////////////////////////////
-    virtual bool OnStart();
-
-    ////////////////////////////////////////////////////////////
-    /// /see SoundStream::OnGetData
-    ///
-    ////////////////////////////////////////////////////////////
-    virtual bool OnGetData(Chunk& Data);
+    void Initialize();
 
     ////////////////////////////////////////////////////////////
     // Member data
     ////////////////////////////////////////////////////////////
     priv::SoundFile*   myFile;     ///< Sound file
-    float              myDuration; ///< Music duration, in seconds
+    Uint32             myDuration; ///< Music duration, in milliseconds
     std::vector<Int16> mySamples;  ///< Temporary buffer of samples
+    Mutex              myMutex;    ///< Mutex protecting the data
 };
 
 } // namespace sf
 
 
 #endif // SFML_MUSIC_HPP
+
+
+////////////////////////////////////////////////////////////
+/// \class sf::Music
+/// \ingroup audio
+///
+/// Musics are sounds that are streamed rather than completely
+/// loaded in memory. This is especially useful for compressed
+/// musics that usually take hundreds of MB when they are
+/// uncompressed: by streaming it instead of loading it entirely,
+/// you avoid saturating the memory and have almost no loading delay.
+///
+/// Apart from that, a sf::Music has almost the same features as
+/// the sf::SoundBuffer / sf::Sound pair: you can play/pause/stop
+/// it, request its parameters (channels, sample rate), change
+/// the way it is played (pitch, volume, 3D position, ...), etc.
+///
+/// As a sound stream, a music is played in its own thread in order
+/// not to block the rest of the program. This means that you can
+/// leave the music alone after calling Play(), it will manage itself
+/// very well.
+///
+/// Usage example:
+/// \code
+/// // Declare a new music
+/// sf::Music music;
+///
+/// // Open it from an audio file
+/// if (!music.OpenFromFile("music.ogg"))
+/// {
+///     // error...
+/// }
+///
+/// // Change some parameters
+/// music.SetPosition(0, 1, 10); // change its 3D position
+/// music.SetPitch(2);           // increase the pitch
+/// music.SetVolume(50);         // reduce the volume
+/// music.SetLoop(true);         // make it loop
+///
+/// // Play it
+/// music.Play();
+/// \endcode
+///
+/// \see sf::Sound, sf::SoundStream
+///
+////////////////////////////////////////////////////////////

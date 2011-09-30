@@ -34,28 +34,37 @@
 namespace sf
 {
 ////////////////////////////////////////////////////////////
-/// Clock is an utility class for manipulating time
+/// \brief Utility class for manipulating time
+///
 ////////////////////////////////////////////////////////////
 class SFML_API Clock
 {
 public :
 
     ////////////////////////////////////////////////////////////
-    /// Default constructor
+    /// \brief Default constructor
+    ///
+    /// The clock starts automatically after being constructed.
     ///
     ////////////////////////////////////////////////////////////
     Clock();
 
     ////////////////////////////////////////////////////////////
-    /// Get the time elapsed since last reset
+    /// \brief Get the time elapsed
     ///
-    /// \return Time elapsed, in seconds
+    /// This function returns the time elapsed since the last call
+    /// to Reset() (or the construction of the instance if Reset()
+    /// has not been called).
+    ///
+    /// \return Time elapsed, in milliseconds
     ///
     ////////////////////////////////////////////////////////////
-    float GetElapsedTime() const;
+    Uint32 GetElapsedTime() const;
 
     ////////////////////////////////////////////////////////////
-    /// Restart the timer
+    /// \brief Restart the timer
+    ///
+    /// This function puts the time counter back to zero.
     ///
     ////////////////////////////////////////////////////////////
     void Reset();
@@ -65,10 +74,31 @@ private :
     ////////////////////////////////////////////////////////////
     // Member data
     ////////////////////////////////////////////////////////////
-    double myStartTime; ///< Time of last reset
+    Uint64 myStartTime; ///< Time of last reset
 };
 
 } // namespace sf
 
 
 #endif // SFML_CLOCK_HPP
+
+
+////////////////////////////////////////////////////////////
+/// \class sf::Clock
+/// \ingroup system
+///
+/// sf::Clock is a lightweight class for measuring time.
+/// Its resolution depends on the underlying OS, but you can generally
+/// expect a 1 ms resolution.
+///
+/// Usage example:
+/// \code
+/// sf::Clock clock;
+/// ...
+/// Uint32 time1 = clock.GetElapsedTime();
+/// clock.Reset();
+/// ...
+/// Uint32 time2 = clock.GetElapsedTime();
+/// \endcode
+///
+////////////////////////////////////////////////////////////

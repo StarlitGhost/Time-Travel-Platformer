@@ -36,257 +36,408 @@
 namespace sf
 {
 ////////////////////////////////////////////////////////////
-/// Shape defines a drawable convex shape ; it also defines
-/// helper functions to draw simple shapes like
-/// lines, rectangles, circles, etc.
+/// \brief A convex, colored polygon with an optional outline
+///
 ////////////////////////////////////////////////////////////
-class SFML_API Shape : public sf::Drawable
+class SFML_API Shape : public Drawable
 {
 public :
 
     ////////////////////////////////////////////////////////////
-    /// Default constructor
+    /// \brief Default constructor
+    ///
+    /// Creates an empty shape (no point).
     ///
     ////////////////////////////////////////////////////////////
     Shape();
 
     ////////////////////////////////////////////////////////////
-    /// Add a point to the shape
+    /// \brief Add a new point to the shape
     ///
-    /// \param X, Y :       Position of the point
-    /// \param Col :        Color of the point (white by default)
-    /// \param OutlineCol : Outline color of the point (black by default)
+    /// The new point is inserted at the end of the shape.
+    ///
+    /// \param x            X position of the point
+    /// \param y            Y position of the point
+    /// \param color        Color of the point
+    /// \param outlineColor Outline color of the point
     ///
     ////////////////////////////////////////////////////////////
-    void AddPoint(float X, float Y, const Color& Col = Color(255, 255, 255), const Color& OutlineCol = Color(0, 0, 0));
+    void AddPoint(float x, float y, const Color& color = Color(255, 255, 255), const Color& outlineColor = Color(0, 0, 0));
 
     ////////////////////////////////////////////////////////////
-    /// Add a point to the shape
+    /// \brief Add a new point to the shape
     ///
-    /// \param Position :   Position of the point
-    /// \param Col :        Color of the point (white by default)
-    /// \param OutlineCol : Outline color of the point (black by default)
+    /// The new point is inserted at the end of the shape.
+    ///
+    /// \param position     Position of the point
+    /// \param color        Color of the point
+    /// \param outlineColor Outline color of the point
     ///
     ////////////////////////////////////////////////////////////
-    void AddPoint(const Vector2f& Position, const Color& Col = Color(255, 255, 255), const Color& OutlineCol = Color(0, 0, 0));
+    void AddPoint(const Vector2f& position, const Color& color = Color(255, 255, 255), const Color& outlineColor = Color(0, 0, 0));
 
     ////////////////////////////////////////////////////////////
-    /// Get the number of points composing the shape
+    /// \brief Get the number of points composing the shape
     ///
-    /// \param Total number of points
+    /// \return Total number of points
     ///
     ////////////////////////////////////////////////////////////
-    unsigned int GetNbPoints() const;
+    unsigned int GetPointsCount() const;
 
     ////////////////////////////////////////////////////////////
-    /// Enable or disable filling the shape.
-    /// Fill is enabled by default
+    /// \brief Enable or disable the shape's filling
     ///
-    /// \param Enable : True to enable, false to disable
+    /// This option is enabled by default.
+    ///
+    /// \param enable True to enable, false to disable
+    ///
+    /// \see EnableOutline
     ///
     ////////////////////////////////////////////////////////////
-    void EnableFill(bool Enable);
+    void EnableFill(bool enable);
 
     ////////////////////////////////////////////////////////////
-    /// Enable or disable drawing the shape outline.
-    /// Outline is enabled by default
+    /// \brief Enable or disable the shape's outline
     ///
-    /// \param Enable : True to enable, false to disable
+    /// This option is enabled by default.
+    ///
+    /// \param enable True to enable, false to disable
+    ///
+    /// \see EnableFill
     ///
     ////////////////////////////////////////////////////////////
-    void EnableOutline(bool Enable);
+    void EnableOutline(bool enable);
 
     ////////////////////////////////////////////////////////////
-    /// Set the position of a point
+    /// \brief Change the position of a point
     ///
-    /// \param Index :    Index of the point, in range [0, GetNbPoints() - 1]
-    /// \param Position : New position of the Index-th point
+    /// Warning: this function doesn't check the validity of
+    /// \a index, if it is out of bounds (ie. in the range
+    /// [0, GetPointscount() - 1]) the behaviour is undefined.
+    ///
+    /// \param index    Index of the point
+    /// \param position New position of the point
+    ///
+    /// \see GetPointPosition, SetPointColor, SetPointOutlineColor
     ///
     ////////////////////////////////////////////////////////////
-    void SetPointPosition(unsigned int Index, const Vector2f& Position);
+    void SetPointPosition(unsigned int index, const Vector2f& position);
 
     ////////////////////////////////////////////////////////////
-    /// Set the position of a point
+    /// \brief Change the position of a point
     ///
-    /// \param Index : Index of the point, in range [0, GetNbPoints() - 1]
-    /// \param X :     New X coordinate of the Index-th point
-    /// \param Y :     New Y coordinate of the Index-th point
+    /// Warning: this function doesn't check the validity of
+    /// \a index, if it is out of bounds (ie. in the range
+    /// [0, GetPointscount() - 1]) the behaviour is undefined.
+    ///
+    /// \param index Index of the point
+    /// \param x     New X coordinate of the point
+    /// \param y     New Y coordinate of the point
+    ///
+    /// \see GetPointPosition, SetPointColor, SetPointOutlineColor
     ///
     ////////////////////////////////////////////////////////////
-    void SetPointPosition(unsigned int Index, float X, float Y);
+    void SetPointPosition(unsigned int index, float x, float y);
 
     ////////////////////////////////////////////////////////////
-    /// Set the color of a point
+    /// \brief Change the color of a point
     ///
-    /// \param Index : Index of the point, in range [0, GetNbPoints() - 1]
-    /// \param Col :   New color of the Index-th point
+    /// Warning: this function doesn't check the validity of
+    /// \a index, if it is out of bounds (ie. in the range
+    /// [0, GetPointscount() - 1]) the behaviour is undefined.
+    ///
+    /// \param index Index of the point
+    /// \param color New color of the point
+    ///
+    /// \see GetPointColor, SetPointPosition, SetPointOutlineColor
     ///
     ////////////////////////////////////////////////////////////
-    void SetPointColor(unsigned int Index, const Color& Col);
+    void SetPointColor(unsigned int index, const Color& color);
 
     ////////////////////////////////////////////////////////////
-    /// Set the outline color of a point
+    /// \brief Change the outline color of a point
     ///
-    /// \param Index :      Index of the point, in range [0, GetNbPoints() - 1]
-    /// \param OutlineCol : New outline color of the Index-th point
+    /// Warning: this function doesn't check the validity of
+    /// \a index, if it is out of bounds (ie. in the range
+    /// [0, GetPointscount() - 1]) the behaviour is undefined.
+    ///
+    /// \param index Index of the point
+    /// \param color New outline color of the point
+    ///
+    /// \see GetPointOutlineColor, SetPointPosition, SetPointColor
     ///
     ////////////////////////////////////////////////////////////
-    void SetPointOutlineColor(unsigned int Index, const Color& OutlineCol);
+    void SetPointOutlineColor(unsigned int index, const Color& color);
 
     ////////////////////////////////////////////////////////////
-    /// Change the width of the shape outline
+    /// \brief Change the thickness of the shape outline
     ///
-    /// \param Width : New width
+    /// \param thickness New thickness of the outline
+    ///
+    /// \see GetOutlineThickness, EnableOutline
     ///
     ////////////////////////////////////////////////////////////
-    void SetOutlineWidth(float Width);
+    void SetOutlineThickness(float thickness);
 
     ////////////////////////////////////////////////////////////
-    /// Get the position of a point
+    /// \brief Get the position of a point
     ///
-    /// \param Index : Index of the point, in range [0, GetNbPoints() - 1]
+    /// Warning: this function doesn't check the validity of
+    /// \a index, if it is out of bounds (ie. in the range
+    /// [0, GetPointscount() - 1]) the behaviour is undefined.
     ///
-    /// \return Position of the Index-th point
+    /// \param index Index of the point
+    ///
+    /// \return Position of the index-th point
+    ///
+    /// \see SetPointPosition, GetPointColor, GetPointOutlineColor
     ///
     ////////////////////////////////////////////////////////////
-    const Vector2f& GetPointPosition(unsigned int Index) const;
+    const Vector2f& GetPointPosition(unsigned int index) const;
 
     ////////////////////////////////////////////////////////////
-    /// Get the color of a point
+    /// \brief Get the color of a point
     ///
-    /// \param Index : Index of the point, in range [0, GetNbPoints() - 1]
+    /// Warning: this function doesn't check the validity of
+    /// \a index, if it is out of bounds (ie. in the range
+    /// [0, GetPointscount() - 1]) the behaviour is undefined.
     ///
-    /// \return Color of the Index-th point
+    /// \param index Index of the point
+    ///
+    /// \return Color of the index-th point
+    ///
+    /// \see SetPointColor, GetPointPosition, GetPointOutlineColor
     ///
     ////////////////////////////////////////////////////////////
-    const Color& GetPointColor(unsigned int Index) const;
+    const Color& GetPointColor(unsigned int index) const;
 
     ////////////////////////////////////////////////////////////
-    /// Get the outline color of a point
+    /// \brief Get the outline color of a point
     ///
-    /// \param Index : Index of the point, in range [0, GetNbPoints() - 1]
+    /// Warning: this function doesn't check the validity of
+    /// \a index, if it is out of bounds (ie. in the range
+    /// [0, GetPointscount() - 1]) the behaviour is undefined.
     ///
-    /// \return Outline color of the Index-th point
+    /// \param index Index of the point
+    ///
+    /// \return Outline color of the index-th point
+    ///
+    /// \see SetPointOutlineColor, GetPointPosition, GetPointColor
     ///
     ////////////////////////////////////////////////////////////
-    const Color& GetPointOutlineColor(unsigned int Index) const;
+    const Color& GetPointOutlineColor(unsigned int index) const;
 
     ////////////////////////////////////////////////////////////
-    /// Get the width of the shape outline
+    /// \brief Get the thickness of the shape outline
     ///
-    /// \return Current outline width
+    /// \return Current outline thickness
+    ///
+    /// \see SetOutlineThickness
     ///
     ////////////////////////////////////////////////////////////
-    float GetOutlineWidth() const;
+    float GetOutlineThickness() const;
 
     ////////////////////////////////////////////////////////////
-    /// Create a shape made of a single line (use floats)
+    /// \brief Create a new line
     ///
-    /// \param P1X, P1Y :   Position of the first point
-    /// \param P2X, P2Y :   Position second point
-    /// \param Thickness :  Line thickness
-    /// \param Col :        Color used to draw the line
-    /// \param Outline :    Outline width (0 by default)
-    /// \param OutlineCol : Color used to draw the outline (black by default)
+    /// This is a static function that returns a new object,
+    /// don't try to call it on an existing object to modify it.
+    /// \code
+    /// sf::Shape line = sf::Shape::Line(0, 0, 10, 20, 2.5f, sf::Color::Green);
+    /// \endcode
+    /// Warning: the position and color that you pass to this function
+    /// are used to compute the position and color of each point,
+    /// they have nothing to do with the global position and color
+    /// of the shape, inherited from sf::Drawable.
+    /// See the class description for more information about this.
+    ///
+    /// \param p1x          X coordinate of the start point
+    /// \param p1y          Y coordinate of the start point
+    /// \param p2x          X coordinate of the end point
+    /// \param p2y          Y coordinate of the end point
+    /// \param thickness    Thickness of the line
+    /// \param color        Color of the shape's points
+    /// \param outline      Outline thickness
+    /// \param outlineColor Outline color of the shape's points
+    ///
+    /// \see Rectangle, Circle
     ///
     ////////////////////////////////////////////////////////////
-    static Shape Line(float P1X, float P1Y, float P2X, float P2Y, float Thickness, const Color& Col, float Outline = 0.f, const Color& OutlineCol = sf::Color(0, 0, 0));
+    static Shape Line(float p1x, float p1y, float p2x, float p2y, float thickness, const Color& color, float outline = 0.f, const Color& outlineColor = Color(0, 0, 0));
 
     ////////////////////////////////////////////////////////////
-    /// Create a shape made of a single line (use vectors)
+    /// \brief Create a new line
     ///
-    /// \param P1X, P1Y :   Position of the first point
-    /// \param P2X, P2Y :   Position second point
-    /// \param Thickness :  Line thickness
-    /// \param Col :        Color used to draw the line
-    /// \param Outline :    Outline width (0 by default)
-    /// \param OutlineCol : Color used to draw the outline (black by default)
+    /// This is a static function that returns a new object,
+    /// don't try to call it on an existing object to modify it.
+    /// \code
+    /// sf::Vector2f start(0, 0);
+    /// sf::Vector2f end(10, 20);
+    /// sf::Shape line = sf::Shape::Line(start, end, 2.5f, sf::Color::Green);
+    /// \endcode
+    /// Warning: the position and color that you pass to this function
+    /// are used to compute the position and color of each point,
+    /// they have nothing to do with the global position and color
+    /// of the shape, inherited from sf::Drawable.
+    /// See the class description for more information about this.
+    ///
+    /// \param start        Start point
+    /// \param end          End point
+    /// \param thickness    Thickness of the line
+    /// \param color        Color of the shape's points
+    /// \param outline      Outline thickness
+    /// \param outlineColor Outline color of the shape's points
+    ///
+    /// \see Rectangle, Circle
     ///
     ////////////////////////////////////////////////////////////
-    static Shape Line(const Vector2f& P1, const Vector2f& P2, float Thickness, const Color& Col, float Outline = 0.f, const Color& OutlineCol = sf::Color(0, 0, 0));
+    static Shape Line(const Vector2f& start, const Vector2f& end, float thickness, const Color& color, float outline = 0.f, const Color& outlineColor = Color(0, 0, 0));
 
     ////////////////////////////////////////////////////////////
-    /// Create a shape made of a single rectangle (use floats)
+    /// \brief Create a new rectangular shape
     ///
-    /// \param P1X, P1Y :   Position of the first point
-    /// \param P2X, P2Y :   Position second point
-    /// \param Col :        Color used to fill the rectangle
-    /// \param Outline :    Outline width (0 by default)
-    /// \param OutlineCol : Color used to draw the outline (black by default)
+    /// This is a static function that returns a new object,
+    /// don't try to call it on an existing object to modify it.
+    /// \code
+    /// sf::Shape rect = sf::Shape::Rectangle(10, 20, 50, 100, sf::Color::Red);
+    /// \endcode
+    /// Warning: the position and color that you pass to this function
+    /// are used to compute the position and color of each point,
+    /// they have nothing to do with the global position and color
+    /// of the shape, inherited from sf::Drawable.
+    /// See the class description for more information about this.
+    ///
+    /// \param left         Left coordinate of the rectangle
+    /// \param top          Top coordinate of the rectangle
+    /// \param width        Width of the rectangle
+    /// \param height       Height of the rectangle
+    /// \param color        Color of the shape's points
+    /// \param outline      Outline thickness
+    /// \param outlineColor Outline color of the shape's points
+    ///
+    /// \see Line, Circle
     ///
     ////////////////////////////////////////////////////////////
-    static Shape Rectangle(float P1X, float P1Y, float P2X, float P2Y, const Color& Col, float Outline = 0.f, const Color& OutlineCol = sf::Color(0, 0, 0));
+    static Shape Rectangle(float left, float top, float width, float height, const Color& color, float outline = 0.f, const Color& outlineColor = Color(0, 0, 0));
 
     ////////////////////////////////////////////////////////////
-    /// Create a shape made of a single rectangle (use vectors)
+    /// \brief Create a new rectangular shape
     ///
-    /// \param P1 :         Position of the first point
-    /// \param P2 :         Position second point
-    /// \param Col :        Color used to fill the rectangle
-    /// \param Outline :    Outline width (0 by default)
-    /// \param OutlineCol : Color used to draw the outline (black by default)
+    /// This is a static function that returns a new object,
+    /// don't try to call it on an existing object to modify it.
+    /// \code
+    /// sf::FloatRect source(10, 20, 50, 100);
+    /// sf::Shape rect = sf::Shape::Rectangle(source, sf::Color::Red);
+    /// \endcode
+    /// Warning: the position and color that you pass to this function
+    /// are used to compute the position and color of each point,
+    /// they have nothing to do with the global position and color
+    /// of the shape, inherited from sf::Drawable.
+    /// See the class description for more information about this.
+    ///
+    /// \param rectangle    Rectangle defining the shape
+    /// \param color        Color of the shape's points
+    /// \param outline      Outline thickness
+    /// \param outlineColor Outline color of the shape's points
+    ///
+    /// \see Line, Circle
     ///
     ////////////////////////////////////////////////////////////
-    static Shape Rectangle(const Vector2f& P1, const Vector2f& P2, const Color& Col, float Outline = 0.f, const Color& OutlineCol = sf::Color(0, 0, 0));
+    static Shape Rectangle(const FloatRect& rectangle, const Color& color, float outline = 0.f, const Color& outlineColor = Color(0, 0, 0));
 
     ////////////////////////////////////////////////////////////
-    /// Create a shape made of a single circle (use floats)
+    /// \brief Create a new circular shape
     ///
-    /// \param X, Y :       Position of the center
-    /// \param Radius :     Radius
-    /// \param Col :        Color used to fill the circle
-    /// \param Outline :    Outline width (0 by default)
-    /// \param OutlineCol : Color used to draw the outline (black by default)
+    /// This is a static function that returns a new object,
+    /// don't try to call it on an existing object to modify it.
+    /// \code
+    /// sf::Shape circle = sf::Shape::Circle(0, 0, 7, sf::Color::Blue);
+    /// \endcode
+    /// Warning: the position and color that you pass to this function
+    /// are used to compute the position and color of each point,
+    /// they have nothing to do with the global position and color
+    /// of the shape, inherited from sf::Drawable.
+    /// See the class description for more information about this.
+    ///
+    /// \param x            X coordinate of the center
+    /// \param y            Y coordinate of the center
+    /// \param radius       Radius of the circle
+    /// \param color        Color of the shape's points
+    /// \param outline      Outline thickness
+    /// \param outlineColor Outline color of the shape's points
+    ///
+    /// \see Line, Rectangle
     ///
     ////////////////////////////////////////////////////////////
-    static Shape Circle(float X, float Y, float Radius, const Color& Col, float Outline = 0.f, const Color& OutlineCol = sf::Color(0, 0, 0));
+    static Shape Circle(float x, float y, float radius, const Color& color, float outline = 0.f, const Color& outlineColor = Color(0, 0, 0));
 
     ////////////////////////////////////////////////////////////
-    /// Create a shape made of a single circle (use vectors)
+    /// \brief Create a new circular shape
     ///
-    /// \param Center :     Position of the center
-    /// \param Radius :     Radius
-    /// \param Col :        Color used to fill the circle
-    /// \param Outline :    Outline width (0 by default)
-    /// \param OutlineCol : Color used to draw the outline (black by default)
+    /// This is a static function that returns a new object,
+    /// don't try to call it on an existing object to modify it.
+    /// \code
+    /// sf::Vector2f center(0, 0);
+    /// sf::Shape circle = sf::Shape::Circle(center, 7, sf::Color::Blue);
+    /// \endcode
+    /// Warning: the position and color that you pass to this function
+    /// are used to compute the position and color of each point,
+    /// they have nothing to do with the global position and color
+    /// of the shape, inherited from sf::Drawable.
+    /// See the class description for more information about this.
+    ///
+    /// \param center       Center of the circle
+    /// \param radius       Radius of the circle
+    /// \param color        Color of the shape's points
+    /// \param outline      Outline thickness
+    /// \param outlineColor Outline color of the shape's points
+    ///
+    /// \see Line, Rectangle
     ///
     ////////////////////////////////////////////////////////////
-    static Shape Circle(const Vector2f& Center, float Radius, const Color& Col, float Outline = 0.f, const Color& OutlineCol = sf::Color(0, 0, 0));
+    static Shape Circle(const Vector2f& center, float radius, const Color& color, float outline = 0.f, const Color& outlineColor = Color(0, 0, 0));
 
 protected :
 
     ////////////////////////////////////////////////////////////
-    /// /see Drawable::Render
+    /// \brief Draw the object to a render target
+    ///
+    /// \param target   Render target
+    /// \param renderer Renderer providing low-level rendering commands
     ///
     ////////////////////////////////////////////////////////////
-    virtual void Render(RenderTarget& Target) const;
+    virtual void Render(RenderTarget& target, Renderer& renderer) const;
 
 private :
 
     ////////////////////////////////////////////////////////////
-    /// Compile the shape : compute its center and its outline
+    /// \brief Compile the shape
+    ///
+    /// This function precomputes all the internal parameters
+    /// needed to properly render the shape (center, outline points).
     ///
     ////////////////////////////////////////////////////////////
     void Compile();
 
     ////////////////////////////////////////////////////////////
-    /// Compute the normal of a given 2D segment
+    /// \brief Compute the normal of a given 2D segment
     ///
-    /// \param P1 :     First point of the segment
-    /// \param P2 :     Second point of the segment
-    /// \param Normal : Calculated normal
+    /// \param p1     First point of the segment
+    /// \param p2     Second point of the segment
+    /// \param normal Variable to fill with the calculated normal
     ///
     /// \return False if the normal couldn't be calculated (segment is null)
     ///
     ////////////////////////////////////////////////////////////
-    static bool ComputeNormal(const Vector2f& P1, const Vector2f& P2, Vector2f& Normal);
+    static bool ComputeNormal(const Vector2f& p1, const Vector2f& p2, Vector2f& normal);
 
     ////////////////////////////////////////////////////////////
-    /// Defines a simple 2D point
+    /// \brief Define a simple 2D point with position, normal and colors
+    ///
     ////////////////////////////////////////////////////////////
     struct Point
     {
-        Point(const Vector2f& Pos = Vector2f(0, 0), const Color& C = Color(255, 255, 255), const Color& OutlineC = Color(255, 255, 255));
+        Point(const Vector2f& position = Vector2f(0, 0), const Color& color = Color(255, 255, 255), const Color& outlineColor = Color(255, 255, 255));
 
         Vector2f Position;   ///< Position
         Vector2f Normal;     ///< Extruded normal
@@ -298,7 +449,7 @@ private :
     // Member data
     ////////////////////////////////////////////////////////////
     std::vector<Point> myPoints;           ///< Points composing the shape
-    float              myOutline;          ///< Outline width
+    float              myOutline;          ///< Outline thickness
     bool               myIsFillEnabled;    ///< Should we draw the inside if the shape ?
     bool               myIsOutlineEnabled; ///< Should we draw the outline if the shape ?
     bool               myIsCompiled;       ///< Compiled state of the shape
@@ -308,3 +459,81 @@ private :
 
 
 #endif // SFML_SHAPE_HPP
+
+
+////////////////////////////////////////////////////////////
+/// \class sf::Shape
+/// \ingroup graphics
+///
+/// sf::Shape is a drawable class that allows to define and
+/// display a custom convex shape on a render target.
+///
+/// It is important to keep in mind that shapes must always be
+/// convex, otherwise they may not be drawn correctly. Moreover,
+/// the points must be added in the right order; using a random
+/// order would also result in an incorrect shape.
+///
+/// A shape is made of points that have their own individual
+/// attributes:
+/// \li position (relative to the origin of the shape)
+/// \li color
+/// \li outline color
+///
+/// Shapes have an outline that can be enabled or not. You can
+/// control the thickness of the outline with the SetOutlineThickness
+/// function.
+///
+/// They also inherits all the functions from sf::Drawable:
+/// position, rotation, scale, origin, global color and blend
+/// mode.
+///
+/// Some static functions are provided to directly create common
+/// shapes such as lines, rectangles and circles:
+/// \code
+/// sf::Shape line = sf::Shape::Line(start, end, thickness, color);
+/// sf::Shape rectangle = sf::Shape::Rectangle(rect, thickness);
+/// sf::Shape circle = sf::Shape::Circle(center, radius, color);
+/// \endcode
+///
+/// A common mistake is to mix the individual points
+/// positions / colors and the global position / color of the shape.
+/// They are completely separate attributes that are combined
+/// when the shape is drawn (positions are added, colors are multiplied).
+/// \code
+/// sf::Shape line = sf::Shape::Line(sf::Vector2f(100, 100), sf::Vector2f(200, 200), 10, sf::Color::Red);
+///
+/// // --> line.GetPosition() is (0, 0), *not* (100, 100)
+/// // --> line.GetColor() is white, *not* red
+/// \endcode
+/// So if you plan to change the position / color of your shape
+/// after it is created, you'd better create the points around
+/// the origin and with white color, and use only the global
+/// position / color (SetPosition, SetColor).
+///
+/// Usage example:
+/// \code
+/// // Create a shape
+/// sf::Shape shape;
+///
+/// // Define its points
+/// shape.AddPoint(10, 10, sf::Color::White, sf::Color::Red);
+/// shape.AddPoint(50, 10, sf::Color::White, sf::Color::Green);
+/// shape.AddPoint(10, 50, sf::Color::White, sf::Color::Blue);
+///
+/// // Enable outline only
+/// shape.EnableFill(false);
+/// shape.EnableOutline(true);
+/// shape.SetOutlineThickness(10);
+///
+/// // Display it
+/// window.Draw(shape); // window is a sf::RenderWindow
+///
+/// // Display static shapes
+/// window.Draw(sf::Shape::Line(0, 0, 10, 20, sf::Color::Red));
+/// window.Draw(sf::Shape::Rectangle(100, 1000, 50, 20, sf::Color::Green));
+/// window.Draw(sf::Shape::Circle(500, 500, 20, sf::Color::Blue, 5, sf::Color::Black));
+/// \endcode
+///
+/// \see sf::Image
+///
+////////////////////////////////////////////////////////////

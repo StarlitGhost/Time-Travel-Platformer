@@ -25,6 +25,14 @@
 #ifndef SFML_CONFIG_HPP
 #define SFML_CONFIG_HPP
 
+
+////////////////////////////////////////////////////////////
+// Define the SFML version
+////////////////////////////////////////////////////////////
+#define SFML_VERSION_MAJOR 2
+#define SFML_VERSION_MINOR 0
+
+
 ////////////////////////////////////////////////////////////
 // Identify the operating system
 ////////////////////////////////////////////////////////////
@@ -63,6 +71,23 @@
 
 
 ////////////////////////////////////////////////////////////
+// Identify the endianess
+////////////////////////////////////////////////////////////
+#if defined(__m68k__) || defined(mc68000) || defined(_M_M68K) || (defined(__MIPS__) && defined(__MISPEB__)) || \
+    defined(__ppc__) || defined(__POWERPC__) || defined(_M_PPC) || defined(__sparc__) || defined(__hppa__)
+
+    // Big endian
+    #define SFML_ENDIAN_BIG
+
+#else
+
+    // Little endian
+    #define SFML_ENDIAN_LITTLE
+
+#endif
+
+
+////////////////////////////////////////////////////////////
 // Define a portable debug macro
 ////////////////////////////////////////////////////////////
 #if !defined(NDEBUG)
@@ -75,42 +100,32 @@
 ////////////////////////////////////////////////////////////
 // Define portable import / export macros
 ////////////////////////////////////////////////////////////
-#if defined(SFML_SYSTEM_WINDOWS)
+#if defined(SFML_SYSTEM_WINDOWS) && !defined(SFML_STATIC)
 
-    #ifdef SFML_DYNAMIC
+    #ifdef SFML_EXPORTS
 
-        // Windows platforms
-        #ifdef SFML_EXPORTS
-
-            // From DLL side, we must export
-            #define SFML_API __declspec(dllexport)
-
-        #else
-
-            // From client application side, we must import
-            #define SFML_API __declspec(dllimport)
-
-        #endif
-
-        // For Visual C++ compilers, we also need to turn off this annoying C4251 warning.
-        // You can read lots ot different things about it, but the point is the code will
-        // just work fine, and so the simplest way to get rid of this warning is to disable it
-        #ifdef _MSC_VER
-
-            #pragma warning(disable : 4251)
-
-        #endif
+        // From DLL side, we must export
+        #define SFML_API __declspec(dllexport)
 
     #else
 
-        // No specific directive needed for static build
-        #define SFML_API
+        // From client application side, we must import
+        #define SFML_API __declspec(dllimport)
+
+    #endif
+
+    // For Visual C++ compilers, we also need to turn off this annoying C4251 warning.
+    // You can read lots ot different things about it, but the point is the code will
+    // just work fine, and so the simplest way to get rid of this warning is to disable it
+    #ifdef _MSC_VER
+
+        #pragma warning(disable : 4251)
 
     #endif
 
 #else
 
-    // Other platforms don't need to define anything
+    // Other platforms and static build don't need these export macros
     #define SFML_API
 
 #endif
@@ -119,44 +134,31 @@
 ////////////////////////////////////////////////////////////
 // Define portable fixed-size types
 ////////////////////////////////////////////////////////////
-#include <climits>
-
 namespace sf
 {
+    // All "common" platforms use the same size for char, short and int
+    // (basically there are 3 types for 3 sizes, so no other match is possible),
+    // we can use them without doing any kind of check
+
     // 8 bits integer types
-    #if UCHAR_MAX == 0xFF
-        typedef signed   char Int8;
-        typedef unsigned char Uint8;
-    #else
-        #error No 8 bits integer type for this platform
-    #endif
+    typedef signed   char Int8;
+    typedef unsigned char Uint8;
 
     // 16 bits integer types
-    #if USHRT_MAX == 0xFFFF
-        typedef signed   short Int16;
-        typedef unsigned short Uint16;
-    #elif UINT_MAX == 0xFFFF
-        typedef signed   int Int16;
-        typedef unsigned int Uint16;
-    #elif ULONG_MAX == 0xFFFF
-        typedef signed   long Int16;
-        typedef unsigned long Uint16;
-    #else
-        #error No 16 bits integer type for this platform
-    #endif
+    typedef signed   short Int16;
+    typedef unsigned short Uint16;
 
     // 32 bits integer types
-    #if USHRT_MAX == 0xFFFFFFFF
-        typedef signed   short Int32;
-        typedef unsigned short Uint32;
-    #elif UINT_MAX == 0xFFFFFFFF
-        typedef signed   int Int32;
-        typedef unsigned int Uint32;
-    #elif ULONG_MAX == 0xFFFFFFFF
-        typedef signed   long Int32;
-        typedef unsigned long Uint32;
+    typedef signed   int Int32;
+    typedef unsigned int Uint32;
+
+    // 64 bits integer types
+    #if defined(_MSC_VER)
+        typedef signed   __int64 Int64;
+        typedef unsigned __int64 Uint64;
     #else
-        #error No 32 bits integer type for this platform
+        typedef signed   long long Int64;
+        typedef unsigned long long Uint64;
     #endif
 
 } // namespace sf

@@ -24,99 +24,97 @@
 
 
 ////////////////////////////////////////////////////////////
-/// Default constructor
-////////////////////////////////////////////////////////////
 template <typename T>
 Rect<T>::Rect() :
 Left  (0),
 Top   (0),
-Right (0),
-Bottom(0)
+Width (0),
+Height(0)
 {
 
 }
 
 
 ////////////////////////////////////////////////////////////
-/// Construct the color from its coordinates
-////////////////////////////////////////////////////////////
 template <typename T>
-Rect<T>::Rect(T LeftCoord, T TopCoord, T RightCoord, T BottomCoord) :
-Left  (LeftCoord),
-Top   (TopCoord),
-Right (RightCoord),
-Bottom(BottomCoord)
+Rect<T>::Rect(T left, T top, T width, T height) :
+Left  (left),
+Top   (top),
+Width (width),
+Height(height)
 {
 
 }
 
 
 ////////////////////////////////////////////////////////////
-/// Get the width of the rectangle
-////////////////////////////////////////////////////////////
 template <typename T>
-T Rect<T>::GetWidth() const
+Rect<T>::Rect(const Vector2<T>& position, const Vector2<T>& size) :
+Left  (position.x),
+Top   (position.y),
+Width (size.x),
+Height(size.y)
 {
-    return Right - Left;
+
 }
 
 
 ////////////////////////////////////////////////////////////
-/// Get the height of the rectangle
-////////////////////////////////////////////////////////////
 template <typename T>
-T Rect<T>::GetHeight() const
+template <typename U>
+Rect<T>::Rect(const Rect<U>& rectangle) :
+Left  (static_cast<T>(rectangle.Left)),
+Top   (static_cast<T>(rectangle.Top)),
+Width (static_cast<T>(rectangle.Width)),
+Height(static_cast<T>(rectangle.Height))
 {
-    return Bottom - Top;
 }
 
 
 ////////////////////////////////////////////////////////////
-/// Move the whole rectangle by the given offset
-////////////////////////////////////////////////////////////
 template <typename T>
-void Rect<T>::Offset(T OffsetX, T OffsetY)
+bool Rect<T>::Contains(T x, T y) const
 {
-    Left   += OffsetX;
-    Right  += OffsetX;
-    Top    += OffsetY;
-    Bottom += OffsetY;
+    return (x >= Left) && (x < Left + Width) && (y >= Top) && (y < Top + Height);
 }
 
 
 ////////////////////////////////////////////////////////////
-/// Check if a point is inside the rectangle's area
-////////////////////////////////////////////////////////////
 template <typename T>
-bool Rect<T>::Contains(T X, T Y) const
+bool Rect<T>::Contains(const Vector2<T>& point) const
 {
-    return (X >= Left) && (X <= Right) && (Y >= Top) && (Y <= Bottom);
+    return Contains(point.x, point.y);
 }
 
 
 ////////////////////////////////////////////////////////////
-/// Check intersection between two rectangles
+template <typename T>
+bool Rect<T>::Intersects(const Rect<T>& rectangle) const
+{
+    Rect<T> intersection;
+    return Intersects(rectangle, intersection);
+}
+
+
 ////////////////////////////////////////////////////////////
 template <typename T>
-bool Rect<T>::Intersects(const Rect<T>& Rectangle, Rect<T>* OverlappingRect) const
+bool Rect<T>::Intersects(const Rect<T>& rectangle, Rect<T>& intersection) const
 {
-    // Compute overlapping rect
-    Rect Overlapping(std::max(Left,   Rectangle.Left),
-                     std::max(Top,    Rectangle.Top),
-                     std::min(Right,  Rectangle.Right),
-                     std::min(Bottom, Rectangle.Bottom));
+    // Compute the intersection boundaries
+    T left   = std::max(Left,         rectangle.Left);
+    T top    = std::max(Top,          rectangle.Top);
+    T right  = std::min(Left + Width, rectangle.Left + rectangle.Width);
+    T bottom = std::min(Top + Height, rectangle.Top + rectangle.Height);
 
-    // If overlapping rect is valid, then there is intersection
-    if ((Overlapping.Left < Overlapping.Right) && (Overlapping.Top < Overlapping.Bottom))
+    // If the intersection is valid (positive non zero area), then there is an intersection
+    if ((left < right) && (top < bottom))
     {
-        if (OverlappingRect)
-            *OverlappingRect = Overlapping;
+        intersection = Rect<T>(left, top, right - left, bottom - top);
         return true;
     }
     else
     {
-        if (OverlappingRect)
-            *OverlappingRect = Rect(0, 0, 0, 0);
+        intersection = Rect<T>(0, 0, 0, 0);
         return false;
     }
 }
