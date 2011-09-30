@@ -3,6 +3,7 @@
 #include "FlatWorld/Graphics/SFMLGameWindow.h"
 
 #include "Platformer/Screens/screenTest.h"
+#include "Platformer/Screens/screenGoL.h"
 
 #include <SFML/OpenGL.hpp>
 
@@ -22,7 +23,7 @@ void Init(IGameWindow* GameWindow)
 	glEnable(GL_TEXTURE_2D);
 
 	engine = CEngine::GetInstance();
-	engine->Init(GameWindow, new TestScreen());
+	engine->Init(GameWindow, new screenGoL());
 }
 
 void Update()
