@@ -2,6 +2,9 @@
 
 #include "Controls/SFMLKeyboardHandler.h"
 #include "Controls/SFMLMouseHandler.h"
+#include "Graphics/RenderManager.h"
+#include "Graphics/RendererGL.h"
+#include "Maths/Rectangle.h"
 
 #include <SFML/OpenGL.hpp>
 
@@ -11,6 +14,8 @@ SFMLGameWindow::SFMLGameWindow(int width, int height, std::string title)
 {
 	_window = new sf::RenderWindow(sf::VideoMode(width, height, 32), title);
 	_window->EnableKeyRepeat(false);
+
+	RenderManager::SetRenderer(new RendererGL());
 
 //	_gwenRenderer = new Gwen::Renderer::SFML(*_window);
 //
@@ -39,10 +44,9 @@ SFMLGameWindow::~SFMLGameWindow()
 
 void SFMLGameWindow::StartDisplay()
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // Basic Transparency
-	glLoadIdentity();
+	RenderManager::Clear();
+	RenderManager::SetBlendMode(IRenderer::BLEND_Transparency);
+	RenderManager::SetToIdentityMatrix();
 
 	//glScalef(1.f,-1.f,1.f);
 	//glTranslatef(0.f, -Height(), 0.f);
@@ -57,11 +61,10 @@ void SFMLGameWindow::EndDisplay()
 
 void SFMLGameWindow::Resize(int width, int height)
 {
-	glViewport(0, 0, width, height);
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluOrtho2D(0, width, 0, height);
-	glMatrixMode(GL_MODELVIEW);
+	RenderManager::SetViewport(FlatWorld::Rectangle(
+		Vector2f(0.f, (float)height),
+		Vector2f((float)width, 0.f)
+		));
 
 //	_gwenCanvas->SetSize(width, height);
 }

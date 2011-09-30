@@ -4,6 +4,8 @@
 
 #include <SFML/OpenGL.hpp>
 
+#include "Graphics/RenderManager.h"
+
 using namespace FlatWorld;
 
 Colour::Colour(void)
@@ -35,7 +37,7 @@ void Colour::RBGA(const float& r, const float& g, const float& b, const float& a
 
 void Colour::Apply() const
 {
-	glColor4fv(&_colour[0]);
+	RenderManager::SetColour(*this);
 }
 
 Colour Colour::Black()

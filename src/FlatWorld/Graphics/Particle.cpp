@@ -5,6 +5,7 @@
 
 // Engine Headers
 #include "Graphics/Colour.h"
+#include "Graphics/RenderManager.h"
 #include "Maths/Transform.h"
 #include "Maths/Vector2f.h"
 #include "Utilities/ColourUtilities.h"
@@ -59,13 +60,14 @@ void Particle::Draw(void) const
 {
 	if (active)
 	{
-		glBegin(GL_QUADS);
-			colour.Apply();
-			glVertex2f(position.x, position.y + 1.f);
-			glVertex2f(position.x - 1.f, position.y);
-			glVertex2f(position.x, position.y - 1.f);
-			glVertex2f(position.x + 1.f, position.y);
-		glEnd();
+		RenderManager::PushMatrix();
+		{
+			RenderManager::ApplyTexture(0);
+			RenderManager::SetColour(colour);
+			RenderManager::Transform(xform);
+			RenderManager::DrawQuad();
+		}
+		RenderManager::PopMatrix();
 	}
 }
 
