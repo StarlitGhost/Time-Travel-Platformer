@@ -22,9 +22,15 @@ void GameObject::Update(float dt)
 	{
 		if (component->second)
 			component->second->Update(dt);
-		else
-			component->second->GetOwner();
 	}
+}
+
+void FlatWorld::GameObject::ReceiveMessage(std::string msg, void* data, unsigned int size)
+{
+	ComponentMap::iterator component = _components.begin();
+	for (; component != _components.end(); ++component)
+		if (component->second)
+			component->second->ReceiveMessage(msg, data, size);
 }
 
 GOComponent* GameObject::AddComponent(GOComponent* component)

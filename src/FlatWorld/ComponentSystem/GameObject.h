@@ -9,16 +9,19 @@
 #include "ComponentSystem/GOComponent.h"
 #include "ComponentSystem/typedefs.h"
 #include "Maths/Transform.h"
+#include "MessagingSystem/IMessagingSystem.h"
 
 namespace FlatWorld
 {
-	class GameObject
+	class GameObject : public IMessagingSystem
 	{
 	public:
 		GameObject(const GOIdType& id);
 		~GameObject(void);
 
 		void Update(float dt);
+
+		virtual void ReceiveMessage(std::string msg, void* data, unsigned int size);
 
 		const Transform& GetTransform() const { return _transform; }
 		void SetTransform(const Transform& transform) { _transform = transform; }
