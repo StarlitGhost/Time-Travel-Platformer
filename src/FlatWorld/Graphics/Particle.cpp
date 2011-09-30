@@ -1,10 +1,11 @@
 #include "Particle.h"
 
 // 3rd Party Headers
-#include <SFML/Window/OpenGL.hpp>
+#include <SFML/OpenGL.hpp>
 
 // Engine Headers
 #include "Graphics/Colour.h"
+#include "Maths/Transform.h"
 #include "Maths/Vector2f.h"
 #include "Utilities/ColourUtilities.h"
 
@@ -28,7 +29,7 @@ void Particle::Init(float fadeRate, Vector2f position, Vector2f velocity, Colour
 	active = true;
 	life = 1.f;
 	this->fadeRate = fadeRate;
-	this->position = position;
+	this->xform.Position = position;
 	this->velocity = velocity;
 	this->colourStart = colourStart;
 	colour = this->colourStart;
@@ -48,7 +49,7 @@ void Particle::Update(const float& dt)
 		}
 		else
 		{
-			position += velocity * dt;
+			xform.Position += velocity * dt;
 			colour = ColourUtilities::HSVLerp(colourStart, colourEnd, 1.f - life);
 		}
 	}
@@ -73,7 +74,7 @@ void Particle::ReInit(float fadeRate, Vector2f position, Vector2f velocity)
 	active = true;
 	life = 1.f;
 	this->fadeRate = fadeRate;
-	this->position = position;
+	this->xform.Position = position;
 	this->velocity = velocity;
 	colour = colourStart;
 }

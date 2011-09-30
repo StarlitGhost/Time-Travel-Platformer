@@ -1,6 +1,6 @@
 #pragma once
 
-#include <SFML/Window.hpp>
+#include <SFML/Window/Event.hpp>
 
 // Forward Declarations
 //namespace sf

@@ -3,7 +3,7 @@
 #include "Controls/SFMLKeyboardHandler.h"
 #include "Controls/SFMLMouseHandler.h"
 
-#include <SFML/Window/OpenGL.hpp>
+#include <SFML/OpenGL.hpp>
 
 using namespace FlatWorld;
 
@@ -69,7 +69,7 @@ void SFMLGameWindow::Resize(int width, int height)
 void SFMLGameWindow::HandleEvents()
 {
 	sf::Event Event;
-	while (_window->GetEvent(Event))
+	while (_window->PollEvent(Event))
 	{
 		if ((Event.Type == sf::Event::Closed))
 		{

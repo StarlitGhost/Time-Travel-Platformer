@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Graphics/Colour.h"
+#include "Maths/Transform.h"
 #include "Maths/Vector2f.h"
 
 namespace FlatWorld
@@ -25,7 +26,7 @@ namespace FlatWorld
 		bool active;
 		float life;
 		float fadeRate;
-		Vector2f position;
+		Transform xform;
 		Vector2f velocity;
 		Colour colourStart, colourEnd, colour;
 

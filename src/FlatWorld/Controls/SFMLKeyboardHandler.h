@@ -1,6 +1,6 @@
 #pragma once
 
-#include <SFML/Window.hpp>
+#include <SFML/Window/Event.hpp>
 
 // Forward Declarations
 //namespace sf
@@ -17,9 +17,9 @@ namespace FlatWorld
 		static void Update();
 		static void HandleEvents(const sf::Event& Event);
 
-		static bool Held(const sf::Key::Code& keyCode);
-		static bool Pressed(const sf::Key::Code& keyCode);
-		static bool Released(const sf::Key::Code& keyCode);
+		static bool Held(const sf::Keyboard::Key& keyCode);
+		static bool Pressed(const sf::Keyboard::Key& keyCode);
+		static bool Released(const sf::Keyboard::Key& keyCode);
 
 	private:
 		static bool keys[];

@@ -4,7 +4,7 @@
 
 #include "Platformer/Screens/TestScreen.h"
 
-#include <SFML/Window/OpenGL.hpp>
+#include <SFML/OpenGL.hpp>
 
 using namespace FlatWorld;
 
@@ -12,7 +12,7 @@ CEngine* engine;
 
 void Init(IGameWindow* GameWindow)
 {
-    std::cout << "Init Start" << std::endl;
+	std::cout << "Init Start" << std::endl;
 
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClearDepth(1.0f);
@@ -35,9 +35,9 @@ void Display()
 	engine->Display();
 }
 
-int main(int argc, char **argv)
+int main(int /*argc*/, char** /*argv*/)
 {
-    std::cout << "Main Start" << std::endl;
+	std::cout << "Main Start" << std::endl;
 
 	IGameWindow* GameWindow = new SFMLGameWindow(800, 600, "Game Name Here");
 

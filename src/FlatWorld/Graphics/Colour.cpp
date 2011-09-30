@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include <SFML/Window/OpenGL.hpp>
+#include <SFML/OpenGL.hpp>
 
 using namespace FlatWorld;
 

@@ -7,7 +7,7 @@ class gocVisual : public FlatWorld::GOComponent
 {
 	// GOComponent Interface
 public:
-	virtual const FlatWorld::GOCIdType FamilyId() const { return FlatWorld::GOCIdType("VisualComponent"); };
+	virtual const FlatWorld::GOCIdType FamilyId() const { return FlatWorld::GOCIdType("gocVisual"); }
 
 	// gocVisual Interface
 public:

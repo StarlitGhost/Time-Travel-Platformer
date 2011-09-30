@@ -1,7 +1,5 @@
 #include "gocInputPlayer.h"
 
-#include <SFML/Window.hpp>
-
 #include "FlatWorld/ComponentSystem/GameObject.h"
 
 #include "FlatWorld/Controls/SFMLKeyboardHandler.h"

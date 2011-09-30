@@ -6,7 +6,7 @@ class gocVisualRectangle : public gocVisual
 {
 	// GOComponent Interface
 public:
-	virtual const FlatWorld::GOCIdType ComponentId() const { return FlatWorld::GOCIdType("gocVisualRectangle"); };
+	virtual const FlatWorld::GOCIdType ComponentId() const { return FlatWorld::GOCIdType("gocVisualRectangle"); }
 
 	// gocVisual Interface
 public:
