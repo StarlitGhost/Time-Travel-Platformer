@@ -92,11 +92,11 @@
 		</Unit>
 		<Unit filename="../../src/Platformer/Components/gocVisualRectangle.h">
 		</Unit>
+		<Unit filename="../../src/Platformer/Screens/screenArenaShooter.h">
+		</Unit>
 		<Unit filename="../../src/Platformer/Screens/screenGoL.h">
 		</Unit>
 		<Unit filename="../../src/Platformer/Screens/screenMenu.h">
-		</Unit>
-		<Unit filename="../../src/Platformer/Screens/screenTest.h">
 		</Unit>
 		<Unit filename="../../src/Platformer/main.cpp">
 		</Unit>
@@ -114,11 +114,11 @@
 		</Unit>
 		<Unit filename="../../src/Platformer/Components/gocVisualRectangle.cpp">
 		</Unit>
+		<Unit filename="../../src/Platformer/Screens/screenArenaShooter.cpp">
+		</Unit>
 		<Unit filename="../../src/Platformer/Screens/screenGoL.cpp">
 		</Unit>
 		<Unit filename="../../src/Platformer/Screens/screenMenu.cpp">
-		</Unit>
-		<Unit filename="../../src/Platformer/Screens/screenTest.cpp">
 		</Unit>
 		<Extensions />
 	</Project>

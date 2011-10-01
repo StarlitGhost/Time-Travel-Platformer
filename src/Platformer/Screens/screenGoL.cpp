@@ -10,6 +10,8 @@
 
 using namespace FlatWorld;
 
+const float scale = 5.f;
+const float spacing = 1.f;
 const float iterationGap = 50.f;
 const int trailLength = 5;
 const float alphaStep = 0.5f / (float)trailLength;
@@ -95,9 +97,6 @@ void screenGoL::Update(float dt)
 
 void screenGoL::Draw()
 {
-	const float scale = 5.f;
-	const float spacing = 1.f;
-
 	RenderManager::PushMatrix();
 	{
 		RenderManager::Translate( Vector2f( spacing, (h - 1) * (scale + spacing) ) );

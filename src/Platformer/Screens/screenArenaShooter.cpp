@@ -1,4 +1,4 @@
-#include "screenTest.h"
+#include "screenArenaShooter.h"
 
 /*
  * NOT a good example of a screen as we'd actually use one,
@@ -39,7 +39,7 @@
 
 using namespace FlatWorld;
 
-void screenTest::Update(float dt)
+void screenArenaShooter::Update(float dt)
 {
 	Timer* timer = engine->GetTimer();
 
@@ -64,7 +64,7 @@ void screenTest::Update(float dt)
 		" | Frame Time: " + ToString(dt * 1000.f);
 }
 
-void screenTest::Draw()
+void screenArenaShooter::Draw()
 {
 	RenderManager::SetColour(Colour::White());
 	RenderManager::PushMatrix();
@@ -82,7 +82,7 @@ void screenTest::Draw()
 		vc->Draw();
 }
 
-void screenTest::Load()
+void screenArenaShooter::Load()
 {
 	engine = CEngine::GetInstance();
 
@@ -95,22 +95,22 @@ void screenTest::Load()
 	gameObject = new GameObject(GOIdType("Object"));
 	Transform xform;
 	xform.Position = Vector2f(128, 128);
-	xform.Angle = 32;
-	xform.Scale = Vector2f(128, 64);
+	xform.Angle = 0;
+	xform.Scale = Vector2f(32, 32);
 	gameObject->SetTransform(xform);
 	gocVisualRectangle* vc = new gocVisualRectangle();
-	vc->SetTexture("hoverboard.png");
+	vc->SetTexture("playerShip.png");
 	gameObject->AddComponent(vc);
 	GOComponent* ic = new gocInputPlayer();
 	gameObject->AddComponent(ic);
-	GOCTemplate* trigTemplate = new gctTriggerRadius();
-	GOComponent* trc = trigTemplate->MakeComponent();
-	gameObject->AddComponent(trc);
-	GOComponent* pc = new gocPhysicsSimple();
-	gameObject->AddComponent(pc);
+	//GOCTemplate* trigTemplate = new gctTriggerRadius();
+	//GOComponent* trc = trigTemplate->MakeComponent();
+	//gameObject->AddComponent(trc);
+	//GOComponent* pc = new gocPhysicsSimple();
+	//gameObject->AddComponent(pc);
 }
 
-void screenTest::Unload()
+void screenArenaShooter::Unload()
 {
 	if (gameObject)
 		delete gameObject;

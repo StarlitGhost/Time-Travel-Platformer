@@ -2,28 +2,28 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Audio">
-      <UniqueIdentifier>{66D3395D-2F74-EE42-97C6-20F81060B31D}</UniqueIdentifier>
+      <UniqueIdentifier>{DEB6DBA0-1A82-DE45-BCFE-A13AC17CA9E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="ComponentSystem">
-      <UniqueIdentifier>{6EF1554B-B887-884A-81BC-2FFBF0404500}</UniqueIdentifier>
+      <UniqueIdentifier>{62A4882A-89E1-7941-AA13-00958D3F5C51}</UniqueIdentifier>
     </Filter>
     <Filter Include="Controls">
-      <UniqueIdentifier>{2CD62006-E88D-5342-A4E0-BB159778C231}</UniqueIdentifier>
+      <UniqueIdentifier>{BC12D169-A151-A341-A8EE-AE656DD104B2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Graphics">
-      <UniqueIdentifier>{F037EA1A-EDA9-C446-859F-63AE3F33CFBD}</UniqueIdentifier>
+      <UniqueIdentifier>{D859E8AB-28E7-B34E-BC52-A793AB926296}</UniqueIdentifier>
     </Filter>
     <Filter Include="Maths">
-      <UniqueIdentifier>{CD5E1F2E-F406-D14E-B146-72766FC0A809}</UniqueIdentifier>
+      <UniqueIdentifier>{A8B8226C-F1F1-3F45-9B79-F52EA85060DD}</UniqueIdentifier>
     </Filter>
     <Filter Include="MessagingSystem">
-      <UniqueIdentifier>{70220519-0C94-6E4C-9A2F-044D9F8DABC6}</UniqueIdentifier>
+      <UniqueIdentifier>{3DDC6A7F-D71A-FA44-852E-FCB914E0D464}</UniqueIdentifier>
     </Filter>
     <Filter Include="ScreenSystem">
-      <UniqueIdentifier>{464F60F3-7DFA-F449-9F32-B9AE08E2D25B}</UniqueIdentifier>
+      <UniqueIdentifier>{8B82D646-71B0-7A42-B5EC-AC73ED8CE128}</UniqueIdentifier>
     </Filter>
     <Filter Include="Utilities">
-      <UniqueIdentifier>{8BA26F9C-85F6-B84D-93E3-C736A8710153}</UniqueIdentifier>
+      <UniqueIdentifier>{53D1F230-C0A9-EF4E-9441-BD29D6626F59}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

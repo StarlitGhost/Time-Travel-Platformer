@@ -30,13 +30,13 @@ void Timer::Init(float readyPerSecond)
 
 void Timer::Update()
 {
-    _dt = _clock.GetElapsedTime() * _timeScale;
+    _dt = ((float)_clock.GetElapsedTime() * 0.001f) * _timeScale;
     _clock.Reset();
 }
 
 bool Timer::Ready()
 {
-    if (_clock.GetElapsedTime() > _interval)
+    if ((_clock.GetElapsedTime() * 0.001f) > _interval)
     {
         return true;
     }

@@ -249,6 +249,14 @@
 					Filter=""
 					>
 					<File
+						RelativePath="..\..\src\Platformer\Screens\screenArenaShooter.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\src\Platformer\Screens\screenArenaShooter.h"
+						>
+					</File>
+					<File
 						RelativePath="..\..\src\Platformer\Screens\screenGoL.cpp"
 						>
 					</File>
@@ -262,14 +270,6 @@
 					</File>
 					<File
 						RelativePath="..\..\src\Platformer\Screens\screenMenu.h"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Screens\screenTest.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\Platformer\Screens\screenTest.h"
 						>
 					</File>
 				</Filter>

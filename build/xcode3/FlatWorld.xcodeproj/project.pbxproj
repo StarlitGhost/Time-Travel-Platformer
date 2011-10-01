@@ -7,99 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36DA78B125F40D0475BD6287 /* SFMLSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E4575FA5CA321FC3DE25E8F /* SFMLSound.cpp */; };
-		15C5551D676F7D9B59201C28 /* GOTManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557A6F0821AE7D7B79C954EE /* GOTManager.cpp */; };
-		5C1F064A5BD04AD92BDF479D /* GOTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E1436633DC411EA450D1194 /* GOTemplate.cpp */; };
-		77FD5164200708C760FA2FB6 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 709577315D032F4F1B132600 /* GameObject.cpp */; };
-		7EE725145D12553A6D4740C1 /* SFMLKeyboardHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D85603F72A25AF435FF5186 /* SFMLKeyboardHandler.cpp */; };
-		283C53C02AB0529B691B7D87 /* SFMLMouseHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38EE3C3A76A75F1C707A665B /* SFMLMouseHandler.cpp */; };
-		1C401ECE02D5125F74D10E7B /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F42002B65B4227C31664C93 /* Engine.cpp */; };
-		12010055723B7314055706D6 /* Colour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A579D4B5363A4764249E3 /* Colour.cpp */; };
-		44F878321F005BCF79A72B83 /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 286B61294848591225B40E7F /* Font.cpp */; };
-		68EA68533F1D1CDC79BA6B80 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 302B209E313126662BEE1E0F /* Particle.cpp */; };
-		0C5712F25F2C4111539A0F82 /* ParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A005EB653C15948302E74B8 /* ParticleEmitter.cpp */; };
-		5A577EC435DF1B9B20AB2862 /* RenderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39C95BAF5C7A625644F859A4 /* RenderManager.cpp */; };
-		2CA801F93E6949A345441DA4 /* RendererGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BCF7B293F0852D8198E1DA5 /* RendererGL.cpp */; };
-		1CC9434D12E819D4264655FD /* SFMLGameWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21D06CB326610502760E2C50 /* SFMLGameWindow.cpp */; };
-		278A11DA1D6F4FD05B3E2B72 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75A15A681569349701ED06FD /* Shader.cpp */; };
-		32574BB800AD14B65D505D10 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 635335013335088F5B93607B /* TextureManager.cpp */; };
-		1ADA1C11777768566BF50012 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04683CE61BA00A82719B6245 /* Rectangle.cpp */; };
-		292320EA0A7038FC12F21F74 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493F56572905204C14F96E1C /* Transform.cpp */; };
-		431355BC61B159342AFB2D64 /* Vector2f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D151712597FB100427CF6 /* Vector2f.cpp */; };
-		09BF44CE18BD3ED013647BEC /* IMessagingSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54A34F285DBA545473810F3B /* IMessagingSystem.cpp */; };
-		601670484971576C7D0809BC /* Message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 489E46264F900B7E74A33213 /* Message.cpp */; };
-		0784742A4AEC38B900877F2A /* MessagingSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4701676B6B1C3CED4DC27198 /* MessagingSystem.cpp */; };
-		417603960C3F2FD34C5B612C /* ScreenManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42D04AEC422E1FD5260B3992 /* ScreenManager.cpp */; };
-		410F1BBE086A50EA7DCF0E21 /* ColourUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F4A31983F58644B36463B8B /* ColourUtilities.cpp */; };
-		7F2B49800F4032F47F6F6FE9 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE7DE92A1007052FDD0A5F /* Timer.cpp */; };
+		71C3435C0AF9295A2F3E786C /* SFMLSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 785769892F5729AC4F9D766E /* SFMLSound.cpp */; };
+		7D195ED73950703C68201B6C /* GOTManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B17563D659A6008365D64F5 /* GOTManager.cpp */; };
+		00E0294A1AB8435D5BCD7FD3 /* GOTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64707D3666BD3D0E361B78E7 /* GOTemplate.cpp */; };
+		5A1A58025A842EC16D6F5328 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25D90A866A514F6A48E77F85 /* GameObject.cpp */; };
+		04EC53C51E6E39C952E76E6D /* SFMLKeyboardHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29B960D020966496374E28EE /* SFMLKeyboardHandler.cpp */; };
+		3C9A233D3F9D4E0E3AB924B2 /* SFMLMouseHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 170168D0712E30A032D44C0C /* SFMLMouseHandler.cpp */; };
+		731D54E21F43750109572F0F /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08771E2A750676043A04520A /* Engine.cpp */; };
+		55C4460C6B4D71A832EF0E06 /* Colour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28716451663635E824DE634B /* Colour.cpp */; };
+		0508307B6F6C16AE3CD95DF0 /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7FC64ECD0E6E5ADC5F543195 /* Font.cpp */; };
+		3AC67CE1343B719839F21F87 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5571673476E812C3507D4CDD /* Particle.cpp */; };
+		783E10437AD56F2952431428 /* ParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D140C050667570F65623A77 /* ParticleEmitter.cpp */; };
+		67CB3EA625B4451B62E06898 /* RenderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10EE5DF96A2638A34D4D4359 /* RenderManager.cpp */; };
+		22DB317E5F2F683B79EA54D5 /* RendererGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F10696F414E352A05DF72D6 /* RendererGL.cpp */; };
+		4AD84AE3760F35122F257186 /* SFMLGameWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E666B46485F25D31F6B6C34 /* SFMLGameWindow.cpp */; };
+		687A400D6483578177941DA3 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60D836F6215B775D63760BB9 /* Shader.cpp */; };
+		75E5178000293B3352B27B4D /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE545B68E81F2657F03576 /* TextureManager.cpp */; };
+		5359377C66B4659724F84DA8 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D194E4128EB237D154A57C6 /* Rectangle.cpp */; };
+		6EB128D836903FD0180651F4 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A7604C374BE109E003613AF /* Transform.cpp */; };
+		0AF052B2445B5F0120DD43CD /* Vector2f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B662B69108E69865D967BF1 /* Vector2f.cpp */; };
+		7FB1212E6A297357261F72BF /* IMessagingSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F5435B252F813F348D13C37 /* IMessagingSystem.cpp */; };
+		46CD4ADE343173936F8508D7 /* Message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71E543B139067E494E6D0F23 /* Message.cpp */; };
+		577228EF771C6C1C3838357E /* MessagingSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2653339F43AE489B43BA791A /* MessagingSystem.cpp */; };
+		6E413A3A4BF135DE5B1041FD /* ScreenManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 419B667F09CF135B5FF03376 /* ScreenManager.cpp */; };
+		0D377E7D7F3E713028EC5A71 /* ColourUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 180904E31918379C4855184B /* ColourUtilities.cpp */; };
+		1F7920F333060FB57DA231DD /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74AB5CC719EB26070B4D021C /* Timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F5B554F74F87BA078324C8B /* ISound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ISound.h"; path = "ISound.h"; sourceTree = "<group>"; };
-		3E4575FA5CA321FC3DE25E8F /* SFMLSound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLSound.cpp"; path = "SFMLSound.cpp"; sourceTree = "<group>"; };
-		6534083B4B72349E79951E6C /* SFMLSound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLSound.h"; path = "SFMLSound.h"; sourceTree = "<group>"; };
-		603C29783F7B24FD47C9479C /* GOCTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOCTemplate.h"; path = "GOCTemplate.h"; sourceTree = "<group>"; };
-		28EB56533F0F4334082B5FC2 /* GOComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOComponent.h"; path = "GOComponent.h"; sourceTree = "<group>"; };
-		557A6F0821AE7D7B79C954EE /* GOTManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "GOTManager.cpp"; path = "GOTManager.cpp"; sourceTree = "<group>"; };
-		03396AB8169102B46B327739 /* GOTManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOTManager.h"; path = "GOTManager.h"; sourceTree = "<group>"; };
-		5E1436633DC411EA450D1194 /* GOTemplate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "GOTemplate.cpp"; path = "GOTemplate.cpp"; sourceTree = "<group>"; };
-		1C6638AC1BE8723D368F7D5D /* GOTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOTemplate.h"; path = "GOTemplate.h"; sourceTree = "<group>"; };
-		709577315D032F4F1B132600 /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "GameObject.cpp"; path = "GameObject.cpp"; sourceTree = "<group>"; };
-		5177468A0BBE74885FE77FC8 /* GameObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GameObject.h"; path = "GameObject.h"; sourceTree = "<group>"; };
-		4099097C06C259524BE81906 /* typedefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "typedefs.h"; path = "typedefs.h"; sourceTree = "<group>"; };
-		5D85603F72A25AF435FF5186 /* SFMLKeyboardHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLKeyboardHandler.cpp"; path = "SFMLKeyboardHandler.cpp"; sourceTree = "<group>"; };
-		5BE450774CBF06135B027721 /* SFMLKeyboardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLKeyboardHandler.h"; path = "SFMLKeyboardHandler.h"; sourceTree = "<group>"; };
-		38EE3C3A76A75F1C707A665B /* SFMLMouseHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLMouseHandler.cpp"; path = "SFMLMouseHandler.cpp"; sourceTree = "<group>"; };
-		706A1F79729832097C362B60 /* SFMLMouseHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLMouseHandler.h"; path = "SFMLMouseHandler.h"; sourceTree = "<group>"; };
-		3F42002B65B4227C31664C93 /* Engine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Engine.cpp"; path = "Engine.cpp"; sourceTree = "<group>"; };
-		61E71C164F21546A5FC048DE /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Engine.h"; path = "Engine.h"; sourceTree = "<group>"; };
-		160F570D13D231F01F41717F /* FlatWorld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FlatWorld.h"; path = "FlatWorld.h"; sourceTree = "<group>"; };
-		1D9A579D4B5363A4764249E3 /* Colour.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Colour.cpp"; path = "Colour.cpp"; sourceTree = "<group>"; };
-		35773C6B2A76654F3CC8197D /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Colour.h"; path = "Colour.h"; sourceTree = "<group>"; };
-		286B61294848591225B40E7F /* Font.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Font.cpp"; path = "Font.cpp"; sourceTree = "<group>"; };
-		1B3705F67B1612D260BA085B /* Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Font.h"; path = "Font.h"; sourceTree = "<group>"; };
-		2B594AEF0FEC5D6A488051BE /* IGameWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IGameWindow.h"; path = "IGameWindow.h"; sourceTree = "<group>"; };
-		46F123444E77708B32B678B4 /* IRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IRenderer.h"; path = "IRenderer.h"; sourceTree = "<group>"; };
-		302B209E313126662BEE1E0F /* Particle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Particle.cpp"; path = "Particle.cpp"; sourceTree = "<group>"; };
-		7D0054392AD253E84CF15427 /* Particle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Particle.h"; path = "Particle.h"; sourceTree = "<group>"; };
-		3A005EB653C15948302E74B8 /* ParticleEmitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ParticleEmitter.cpp"; path = "ParticleEmitter.cpp"; sourceTree = "<group>"; };
-		6CAF202E6B9242F30E997AFB /* ParticleEmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ParticleEmitter.h"; path = "ParticleEmitter.h"; sourceTree = "<group>"; };
-		39C95BAF5C7A625644F859A4 /* RenderManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "RenderManager.cpp"; path = "RenderManager.cpp"; sourceTree = "<group>"; };
-		5F7556C545AC3B1F12412C97 /* RenderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RenderManager.h"; path = "RenderManager.h"; sourceTree = "<group>"; };
-		6BCF7B293F0852D8198E1DA5 /* RendererGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "RendererGL.cpp"; path = "RendererGL.cpp"; sourceTree = "<group>"; };
-		092B25513EA14B97736E436E /* RendererGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RendererGL.h"; path = "RendererGL.h"; sourceTree = "<group>"; };
-		21D06CB326610502760E2C50 /* SFMLGameWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLGameWindow.cpp"; path = "SFMLGameWindow.cpp"; sourceTree = "<group>"; };
-		5DA300842FD849A475DA719A /* SFMLGameWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLGameWindow.h"; path = "SFMLGameWindow.h"; sourceTree = "<group>"; };
-		75A15A681569349701ED06FD /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Shader.cpp"; path = "Shader.cpp"; sourceTree = "<group>"; };
-		14CD768534EF5831776051A4 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Shader.h"; path = "Shader.h"; sourceTree = "<group>"; };
-		635335013335088F5B93607B /* TextureManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "TextureManager.cpp"; path = "TextureManager.cpp"; sourceTree = "<group>"; };
-		5A17135D26ED7CC31DA51805 /* TextureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TextureManager.h"; path = "TextureManager.h"; sourceTree = "<group>"; };
-		04683CE61BA00A82719B6245 /* Rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Rectangle.cpp"; path = "Rectangle.cpp"; sourceTree = "<group>"; };
-		41BE31E374661CB81A282CD6 /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Rectangle.h"; path = "Rectangle.h"; sourceTree = "<group>"; };
-		493F56572905204C14F96E1C /* Transform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Transform.cpp"; path = "Transform.cpp"; sourceTree = "<group>"; };
-		092F42EA02E6459B56EE324D /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Transform.h"; path = "Transform.h"; sourceTree = "<group>"; };
-		5F1D151712597FB100427CF6 /* Vector2f.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Vector2f.cpp"; path = "Vector2f.cpp"; sourceTree = "<group>"; };
-		1CDB108B3CAE7A6033EC448C /* Vector2f.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Vector2f.h"; path = "Vector2f.h"; sourceTree = "<group>"; };
-		54A34F285DBA545473810F3B /* IMessagingSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "IMessagingSystem.cpp"; path = "IMessagingSystem.cpp"; sourceTree = "<group>"; };
-		1F7B2D8A289659776BB36595 /* IMessagingSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IMessagingSystem.h"; path = "IMessagingSystem.h"; sourceTree = "<group>"; };
-		489E46264F900B7E74A33213 /* Message.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Message.cpp"; path = "Message.cpp"; sourceTree = "<group>"; };
-		6679156B1009450046187788 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Message.h"; path = "Message.h"; sourceTree = "<group>"; };
-		4701676B6B1C3CED4DC27198 /* MessagingSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "MessagingSystem.cpp"; path = "MessagingSystem.cpp"; sourceTree = "<group>"; };
-		240D2A2E73D813654D0D6D57 /* MessagingSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MessagingSystem.h"; path = "MessagingSystem.h"; sourceTree = "<group>"; };
-		30FF66F805632ED1136A3625 /* Screen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Screen.h"; path = "Screen.h"; sourceTree = "<group>"; };
-		42D04AEC422E1FD5260B3992 /* ScreenManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ScreenManager.cpp"; path = "ScreenManager.cpp"; sourceTree = "<group>"; };
-		22ED5EBD63083E280730258A /* ScreenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScreenManager.h"; path = "ScreenManager.h"; sourceTree = "<group>"; };
-		5F4A31983F58644B36463B8B /* ColourUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ColourUtilities.cpp"; path = "ColourUtilities.cpp"; sourceTree = "<group>"; };
-		59977DA54B1F0EF373205A4F /* ColourUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ColourUtilities.h"; path = "ColourUtilities.h"; sourceTree = "<group>"; };
-		41916D8B5BD0341714EA7CAB /* MathsUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MathsUtilities.h"; path = "MathsUtilities.h"; sourceTree = "<group>"; };
-		112F70FB3782385866010438 /* StringUtilites.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "StringUtilites.h"; path = "StringUtilites.h"; sourceTree = "<group>"; };
-		4CEE7DE92A1007052FDD0A5F /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Timer.cpp"; path = "Timer.cpp"; sourceTree = "<group>"; };
-		66AE0BF718C5700E560671D6 /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Timer.h"; path = "Timer.h"; sourceTree = "<group>"; };
-		47517403449A3AFF1AC70037 /* libFlatWorld.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libFlatWorld.a"; path = "libFlatWorld.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4B11603B532A55526F07B4 /* ISound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ISound.h"; path = "ISound.h"; sourceTree = "<group>"; };
+		785769892F5729AC4F9D766E /* SFMLSound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLSound.cpp"; path = "SFMLSound.cpp"; sourceTree = "<group>"; };
+		527E10E2679906C1749569A0 /* SFMLSound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLSound.h"; path = "SFMLSound.h"; sourceTree = "<group>"; };
+		51F276895E5E300141E1515A /* GOCTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOCTemplate.h"; path = "GOCTemplate.h"; sourceTree = "<group>"; };
+		07555D26459A1AF449736243 /* GOComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOComponent.h"; path = "GOComponent.h"; sourceTree = "<group>"; };
+		5B17563D659A6008365D64F5 /* GOTManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "GOTManager.cpp"; path = "GOTManager.cpp"; sourceTree = "<group>"; };
+		1DCB3A54507806C305F03DA9 /* GOTManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOTManager.h"; path = "GOTManager.h"; sourceTree = "<group>"; };
+		64707D3666BD3D0E361B78E7 /* GOTemplate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "GOTemplate.cpp"; path = "GOTemplate.cpp"; sourceTree = "<group>"; };
+		1E726A72770D06D9604A7C6C /* GOTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GOTemplate.h"; path = "GOTemplate.h"; sourceTree = "<group>"; };
+		25D90A866A514F6A48E77F85 /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "GameObject.cpp"; path = "GameObject.cpp"; sourceTree = "<group>"; };
+		00E34E6F474347511AB52C4E /* GameObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GameObject.h"; path = "GameObject.h"; sourceTree = "<group>"; };
+		00E820D979F94D2D5B826DA2 /* typedefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "typedefs.h"; path = "typedefs.h"; sourceTree = "<group>"; };
+		29B960D020966496374E28EE /* SFMLKeyboardHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLKeyboardHandler.cpp"; path = "SFMLKeyboardHandler.cpp"; sourceTree = "<group>"; };
+		2DE5254F19CE778E0A497510 /* SFMLKeyboardHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLKeyboardHandler.h"; path = "SFMLKeyboardHandler.h"; sourceTree = "<group>"; };
+		170168D0712E30A032D44C0C /* SFMLMouseHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLMouseHandler.cpp"; path = "SFMLMouseHandler.cpp"; sourceTree = "<group>"; };
+		2F0C6E9A2DD1697B31BB71AC /* SFMLMouseHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLMouseHandler.h"; path = "SFMLMouseHandler.h"; sourceTree = "<group>"; };
+		08771E2A750676043A04520A /* Engine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Engine.cpp"; path = "Engine.cpp"; sourceTree = "<group>"; };
+		6B6C6CBB48CA4B1C1D560504 /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Engine.h"; path = "Engine.h"; sourceTree = "<group>"; };
+		351828EE54E83F76658B6E7B /* FlatWorld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FlatWorld.h"; path = "FlatWorld.h"; sourceTree = "<group>"; };
+		28716451663635E824DE634B /* Colour.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Colour.cpp"; path = "Colour.cpp"; sourceTree = "<group>"; };
+		0C295EF94C93289961375FBB /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Colour.h"; path = "Colour.h"; sourceTree = "<group>"; };
+		7FC64ECD0E6E5ADC5F543195 /* Font.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Font.cpp"; path = "Font.cpp"; sourceTree = "<group>"; };
+		49983CCA17E0230C3CF24AEE /* Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Font.h"; path = "Font.h"; sourceTree = "<group>"; };
+		241C0CA13E964F192FA00845 /* IGameWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IGameWindow.h"; path = "IGameWindow.h"; sourceTree = "<group>"; };
+		3E53102662EA655433A636F3 /* IRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IRenderer.h"; path = "IRenderer.h"; sourceTree = "<group>"; };
+		5571673476E812C3507D4CDD /* Particle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Particle.cpp"; path = "Particle.cpp"; sourceTree = "<group>"; };
+		33116B066D1823FD572F4865 /* Particle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Particle.h"; path = "Particle.h"; sourceTree = "<group>"; };
+		5D140C050667570F65623A77 /* ParticleEmitter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ParticleEmitter.cpp"; path = "ParticleEmitter.cpp"; sourceTree = "<group>"; };
+		4A8C3A115E9F560F452329AE /* ParticleEmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ParticleEmitter.h"; path = "ParticleEmitter.h"; sourceTree = "<group>"; };
+		10EE5DF96A2638A34D4D4359 /* RenderManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "RenderManager.cpp"; path = "RenderManager.cpp"; sourceTree = "<group>"; };
+		018722E47B027BF563671B9C /* RenderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RenderManager.h"; path = "RenderManager.h"; sourceTree = "<group>"; };
+		5F10696F414E352A05DF72D6 /* RendererGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "RendererGL.cpp"; path = "RendererGL.cpp"; sourceTree = "<group>"; };
+		10DE405569686138145C1024 /* RendererGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RendererGL.h"; path = "RendererGL.h"; sourceTree = "<group>"; };
+		6E666B46485F25D31F6B6C34 /* SFMLGameWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "SFMLGameWindow.cpp"; path = "SFMLGameWindow.cpp"; sourceTree = "<group>"; };
+		56C52750648851494AF95680 /* SFMLGameWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SFMLGameWindow.h"; path = "SFMLGameWindow.h"; sourceTree = "<group>"; };
+		60D836F6215B775D63760BB9 /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Shader.cpp"; path = "Shader.cpp"; sourceTree = "<group>"; };
+		045042A979AC62E80F165AD8 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Shader.h"; path = "Shader.h"; sourceTree = "<group>"; };
+		2EDE545B68E81F2657F03576 /* TextureManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "TextureManager.cpp"; path = "TextureManager.cpp"; sourceTree = "<group>"; };
+		196607CF71282B511E6A13CE /* TextureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TextureManager.h"; path = "TextureManager.h"; sourceTree = "<group>"; };
+		5D194E4128EB237D154A57C6 /* Rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Rectangle.cpp"; path = "Rectangle.cpp"; sourceTree = "<group>"; };
+		0E510E992FAB6CAA033A0C4E /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Rectangle.h"; path = "Rectangle.h"; sourceTree = "<group>"; };
+		2A7604C374BE109E003613AF /* Transform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Transform.cpp"; path = "Transform.cpp"; sourceTree = "<group>"; };
+		41282E883FA1221B151319E7 /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Transform.h"; path = "Transform.h"; sourceTree = "<group>"; };
+		2B662B69108E69865D967BF1 /* Vector2f.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Vector2f.cpp"; path = "Vector2f.cpp"; sourceTree = "<group>"; };
+		07A143A810BD1EF269286C76 /* Vector2f.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Vector2f.h"; path = "Vector2f.h"; sourceTree = "<group>"; };
+		2F5435B252F813F348D13C37 /* IMessagingSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "IMessagingSystem.cpp"; path = "IMessagingSystem.cpp"; sourceTree = "<group>"; };
+		2E2B676F4AB83E8C69357938 /* IMessagingSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "IMessagingSystem.h"; path = "IMessagingSystem.h"; sourceTree = "<group>"; };
+		71E543B139067E494E6D0F23 /* Message.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Message.cpp"; path = "Message.cpp"; sourceTree = "<group>"; };
+		231B3896468500047E514502 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Message.h"; path = "Message.h"; sourceTree = "<group>"; };
+		2653339F43AE489B43BA791A /* MessagingSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "MessagingSystem.cpp"; path = "MessagingSystem.cpp"; sourceTree = "<group>"; };
+		300963C62F29671E470F4D3A /* MessagingSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MessagingSystem.h"; path = "MessagingSystem.h"; sourceTree = "<group>"; };
+		5D635BDD6E2E3CEE72C4116F /* Screen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Screen.h"; path = "Screen.h"; sourceTree = "<group>"; };
+		419B667F09CF135B5FF03376 /* ScreenManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ScreenManager.cpp"; path = "ScreenManager.cpp"; sourceTree = "<group>"; };
+		4B596FD00FFC593149137CDC /* ScreenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ScreenManager.h"; path = "ScreenManager.h"; sourceTree = "<group>"; };
+		180904E31918379C4855184B /* ColourUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ColourUtilities.cpp"; path = "ColourUtilities.cpp"; sourceTree = "<group>"; };
+		7761190763E8683D0F021753 /* ColourUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ColourUtilities.h"; path = "ColourUtilities.h"; sourceTree = "<group>"; };
+		00B0151C200139C944384803 /* MathsUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MathsUtilities.h"; path = "MathsUtilities.h"; sourceTree = "<group>"; };
+		140927B24BB43029090B4492 /* StringUtilites.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "StringUtilites.h"; path = "StringUtilites.h"; sourceTree = "<group>"; };
+		74AB5CC719EB26070B4D021C /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Timer.cpp"; path = "Timer.cpp"; sourceTree = "<group>"; };
+		3D537BEB50E8449562D568AD /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Timer.h"; path = "Timer.h"; sourceTree = "<group>"; };
+		5F712F2D64B1116E310F7791 /* libFlatWorld.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libFlatWorld.a"; path = "libFlatWorld.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		446672513D9176FD6A9F1BB5 /* Frameworks */ = {
+		672F495004AC5ED0576C156A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -109,168 +109,168 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20484BF14F59322A020C2B17 /* FlatWorld */ = {
+		3CB75AE465F6136460DB721F /* FlatWorld */ = {
 			isa = PBXGroup;
 			children = (
-				20CF7C4A46645B27699A2638 /* src */,
-				41AC03061C56287D6B395F22 /* Products */,
+				2086412D2458116314CA4070 /* src */,
+				100F1F1712A40580761973B2 /* Products */,
 			);
 			name = "FlatWorld";
 			sourceTree = "<group>";
 		};
-		20CF7C4A46645B27699A2638 /* src */ = {
+		2086412D2458116314CA4070 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				0DEB3DDE79D31FBA2921424E /* FlatWorld */,
+				1B9B30B77ABA491C3F664423 /* FlatWorld */,
 			);
 			name = "src";
 			path = "../../src";
 			sourceTree = "<group>";
 		};
-		0DEB3DDE79D31FBA2921424E /* FlatWorld */ = {
+		1B9B30B77ABA491C3F664423 /* FlatWorld */ = {
 			isa = PBXGroup;
 			children = (
-				22905A9D536B43D56908414B /* Audio */,
-				35210009562843772FFB02CA /* ComponentSystem */,
-				57FC295D46DE44206AF67AD5 /* Controls */,
-				3F42002B65B4227C31664C93 /* Engine.cpp */,
-				61E71C164F21546A5FC048DE /* Engine.h */,
-				160F570D13D231F01F41717F /* FlatWorld.h */,
-				18A3444A2E0D7AD045D122A3 /* Graphics */,
-				05420E2210AC44BD7BEE08E0 /* Maths */,
-				5B4D7BDC6FAC47EF47800571 /* MessagingSystem */,
-				22290A5826CA57A662EE1632 /* ScreenSystem */,
-				041B09BD6A453417154F72CE /* Utilities */,
+				1B5151097BC85ECC772C6836 /* Audio */,
+				2D971C59744D433447EA4477 /* ComponentSystem */,
+				411625AF25BC7BFF1627504B /* Controls */,
+				08771E2A750676043A04520A /* Engine.cpp */,
+				6B6C6CBB48CA4B1C1D560504 /* Engine.h */,
+				351828EE54E83F76658B6E7B /* FlatWorld.h */,
+				1CD146553C6511CE7C7806B7 /* Graphics */,
+				6D4902D22F76283F2E7943FA /* Maths */,
+				3B6C07D86AD74C831D3348F9 /* MessagingSystem */,
+				50702E9E21D40F5E5FED16AA /* ScreenSystem */,
+				6567358227AC6AAB5266517E /* Utilities */,
 			);
 			name = "FlatWorld";
 			path = "FlatWorld";
 			sourceTree = "<group>";
 		};
-		22905A9D536B43D56908414B /* Audio */ = {
+		1B5151097BC85ECC772C6836 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				1F5B554F74F87BA078324C8B /* ISound.h */,
-				3E4575FA5CA321FC3DE25E8F /* SFMLSound.cpp */,
-				6534083B4B72349E79951E6C /* SFMLSound.h */,
+				2B4B11603B532A55526F07B4 /* ISound.h */,
+				785769892F5729AC4F9D766E /* SFMLSound.cpp */,
+				527E10E2679906C1749569A0 /* SFMLSound.h */,
 			);
 			name = "Audio";
 			path = "Audio";
 			sourceTree = "<group>";
 		};
-		35210009562843772FFB02CA /* ComponentSystem */ = {
+		2D971C59744D433447EA4477 /* ComponentSystem */ = {
 			isa = PBXGroup;
 			children = (
-				603C29783F7B24FD47C9479C /* GOCTemplate.h */,
-				28EB56533F0F4334082B5FC2 /* GOComponent.h */,
-				557A6F0821AE7D7B79C954EE /* GOTManager.cpp */,
-				03396AB8169102B46B327739 /* GOTManager.h */,
-				5E1436633DC411EA450D1194 /* GOTemplate.cpp */,
-				1C6638AC1BE8723D368F7D5D /* GOTemplate.h */,
-				709577315D032F4F1B132600 /* GameObject.cpp */,
-				5177468A0BBE74885FE77FC8 /* GameObject.h */,
-				4099097C06C259524BE81906 /* typedefs.h */,
+				51F276895E5E300141E1515A /* GOCTemplate.h */,
+				07555D26459A1AF449736243 /* GOComponent.h */,
+				5B17563D659A6008365D64F5 /* GOTManager.cpp */,
+				1DCB3A54507806C305F03DA9 /* GOTManager.h */,
+				64707D3666BD3D0E361B78E7 /* GOTemplate.cpp */,
+				1E726A72770D06D9604A7C6C /* GOTemplate.h */,
+				25D90A866A514F6A48E77F85 /* GameObject.cpp */,
+				00E34E6F474347511AB52C4E /* GameObject.h */,
+				00E820D979F94D2D5B826DA2 /* typedefs.h */,
 			);
 			name = "ComponentSystem";
 			path = "ComponentSystem";
 			sourceTree = "<group>";
 		};
-		57FC295D46DE44206AF67AD5 /* Controls */ = {
+		411625AF25BC7BFF1627504B /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				5D85603F72A25AF435FF5186 /* SFMLKeyboardHandler.cpp */,
-				5BE450774CBF06135B027721 /* SFMLKeyboardHandler.h */,
-				38EE3C3A76A75F1C707A665B /* SFMLMouseHandler.cpp */,
-				706A1F79729832097C362B60 /* SFMLMouseHandler.h */,
+				29B960D020966496374E28EE /* SFMLKeyboardHandler.cpp */,
+				2DE5254F19CE778E0A497510 /* SFMLKeyboardHandler.h */,
+				170168D0712E30A032D44C0C /* SFMLMouseHandler.cpp */,
+				2F0C6E9A2DD1697B31BB71AC /* SFMLMouseHandler.h */,
 			);
 			name = "Controls";
 			path = "Controls";
 			sourceTree = "<group>";
 		};
-		18A3444A2E0D7AD045D122A3 /* Graphics */ = {
+		1CD146553C6511CE7C7806B7 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				1D9A579D4B5363A4764249E3 /* Colour.cpp */,
-				35773C6B2A76654F3CC8197D /* Colour.h */,
-				286B61294848591225B40E7F /* Font.cpp */,
-				1B3705F67B1612D260BA085B /* Font.h */,
-				2B594AEF0FEC5D6A488051BE /* IGameWindow.h */,
-				46F123444E77708B32B678B4 /* IRenderer.h */,
-				302B209E313126662BEE1E0F /* Particle.cpp */,
-				7D0054392AD253E84CF15427 /* Particle.h */,
-				3A005EB653C15948302E74B8 /* ParticleEmitter.cpp */,
-				6CAF202E6B9242F30E997AFB /* ParticleEmitter.h */,
-				39C95BAF5C7A625644F859A4 /* RenderManager.cpp */,
-				5F7556C545AC3B1F12412C97 /* RenderManager.h */,
-				6BCF7B293F0852D8198E1DA5 /* RendererGL.cpp */,
-				092B25513EA14B97736E436E /* RendererGL.h */,
-				21D06CB326610502760E2C50 /* SFMLGameWindow.cpp */,
-				5DA300842FD849A475DA719A /* SFMLGameWindow.h */,
-				75A15A681569349701ED06FD /* Shader.cpp */,
-				14CD768534EF5831776051A4 /* Shader.h */,
-				635335013335088F5B93607B /* TextureManager.cpp */,
-				5A17135D26ED7CC31DA51805 /* TextureManager.h */,
+				28716451663635E824DE634B /* Colour.cpp */,
+				0C295EF94C93289961375FBB /* Colour.h */,
+				7FC64ECD0E6E5ADC5F543195 /* Font.cpp */,
+				49983CCA17E0230C3CF24AEE /* Font.h */,
+				241C0CA13E964F192FA00845 /* IGameWindow.h */,
+				3E53102662EA655433A636F3 /* IRenderer.h */,
+				5571673476E812C3507D4CDD /* Particle.cpp */,
+				33116B066D1823FD572F4865 /* Particle.h */,
+				5D140C050667570F65623A77 /* ParticleEmitter.cpp */,
+				4A8C3A115E9F560F452329AE /* ParticleEmitter.h */,
+				10EE5DF96A2638A34D4D4359 /* RenderManager.cpp */,
+				018722E47B027BF563671B9C /* RenderManager.h */,
+				5F10696F414E352A05DF72D6 /* RendererGL.cpp */,
+				10DE405569686138145C1024 /* RendererGL.h */,
+				6E666B46485F25D31F6B6C34 /* SFMLGameWindow.cpp */,
+				56C52750648851494AF95680 /* SFMLGameWindow.h */,
+				60D836F6215B775D63760BB9 /* Shader.cpp */,
+				045042A979AC62E80F165AD8 /* Shader.h */,
+				2EDE545B68E81F2657F03576 /* TextureManager.cpp */,
+				196607CF71282B511E6A13CE /* TextureManager.h */,
 			);
 			name = "Graphics";
 			path = "Graphics";
 			sourceTree = "<group>";
 		};
-		05420E2210AC44BD7BEE08E0 /* Maths */ = {
+		6D4902D22F76283F2E7943FA /* Maths */ = {
 			isa = PBXGroup;
 			children = (
-				04683CE61BA00A82719B6245 /* Rectangle.cpp */,
-				41BE31E374661CB81A282CD6 /* Rectangle.h */,
-				493F56572905204C14F96E1C /* Transform.cpp */,
-				092F42EA02E6459B56EE324D /* Transform.h */,
-				5F1D151712597FB100427CF6 /* Vector2f.cpp */,
-				1CDB108B3CAE7A6033EC448C /* Vector2f.h */,
+				5D194E4128EB237D154A57C6 /* Rectangle.cpp */,
+				0E510E992FAB6CAA033A0C4E /* Rectangle.h */,
+				2A7604C374BE109E003613AF /* Transform.cpp */,
+				41282E883FA1221B151319E7 /* Transform.h */,
+				2B662B69108E69865D967BF1 /* Vector2f.cpp */,
+				07A143A810BD1EF269286C76 /* Vector2f.h */,
 			);
 			name = "Maths";
 			path = "Maths";
 			sourceTree = "<group>";
 		};
-		5B4D7BDC6FAC47EF47800571 /* MessagingSystem */ = {
+		3B6C07D86AD74C831D3348F9 /* MessagingSystem */ = {
 			isa = PBXGroup;
 			children = (
-				54A34F285DBA545473810F3B /* IMessagingSystem.cpp */,
-				1F7B2D8A289659776BB36595 /* IMessagingSystem.h */,
-				489E46264F900B7E74A33213 /* Message.cpp */,
-				6679156B1009450046187788 /* Message.h */,
-				4701676B6B1C3CED4DC27198 /* MessagingSystem.cpp */,
-				240D2A2E73D813654D0D6D57 /* MessagingSystem.h */,
+				2F5435B252F813F348D13C37 /* IMessagingSystem.cpp */,
+				2E2B676F4AB83E8C69357938 /* IMessagingSystem.h */,
+				71E543B139067E494E6D0F23 /* Message.cpp */,
+				231B3896468500047E514502 /* Message.h */,
+				2653339F43AE489B43BA791A /* MessagingSystem.cpp */,
+				300963C62F29671E470F4D3A /* MessagingSystem.h */,
 			);
 			name = "MessagingSystem";
 			path = "MessagingSystem";
 			sourceTree = "<group>";
 		};
-		22290A5826CA57A662EE1632 /* ScreenSystem */ = {
+		50702E9E21D40F5E5FED16AA /* ScreenSystem */ = {
 			isa = PBXGroup;
 			children = (
-				30FF66F805632ED1136A3625 /* Screen.h */,
-				42D04AEC422E1FD5260B3992 /* ScreenManager.cpp */,
-				22ED5EBD63083E280730258A /* ScreenManager.h */,
+				5D635BDD6E2E3CEE72C4116F /* Screen.h */,
+				419B667F09CF135B5FF03376 /* ScreenManager.cpp */,
+				4B596FD00FFC593149137CDC /* ScreenManager.h */,
 			);
 			name = "ScreenSystem";
 			path = "ScreenSystem";
 			sourceTree = "<group>";
 		};
-		041B09BD6A453417154F72CE /* Utilities */ = {
+		6567358227AC6AAB5266517E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				5F4A31983F58644B36463B8B /* ColourUtilities.cpp */,
-				59977DA54B1F0EF373205A4F /* ColourUtilities.h */,
-				41916D8B5BD0341714EA7CAB /* MathsUtilities.h */,
-				112F70FB3782385866010438 /* StringUtilites.h */,
-				4CEE7DE92A1007052FDD0A5F /* Timer.cpp */,
-				66AE0BF718C5700E560671D6 /* Timer.h */,
+				180904E31918379C4855184B /* ColourUtilities.cpp */,
+				7761190763E8683D0F021753 /* ColourUtilities.h */,
+				00B0151C200139C944384803 /* MathsUtilities.h */,
+				140927B24BB43029090B4492 /* StringUtilites.h */,
+				74AB5CC719EB26070B4D021C /* Timer.cpp */,
+				3D537BEB50E8449562D568AD /* Timer.h */,
 			);
 			name = "Utilities";
 			path = "Utilities";
 			sourceTree = "<group>";
 		};
-		41AC03061C56287D6B395F22 /* Products */ = {
+		100F1F1712A40580761973B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				47517403449A3AFF1AC70037 /* libFlatWorld.a */,
+				5F712F2D64B1116E310F7791 /* libFlatWorld.a */,
 			);
 			name = "Products";
 			sourceTree = "<group>";
@@ -278,13 +278,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		187C311F5153470F64C3491C /* FlatWorld */ = {
+		2F0C36076D8023CD64EC46ED /* FlatWorld */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 39FB04DE545B4E217E0A54D1 /* Build configuration list for PBXNativeTarget "FlatWorld" */;
+			buildConfigurationList = 4BE552C348755E6A359F2A38 /* Build configuration list for PBXNativeTarget "FlatWorld" */;
 			buildPhases = (
-				226473A302EF791F62C557E1 /* Resources */,
-				5E5465D95A190A9A08457CEF /* Sources */,
-				446672513D9176FD6A9F1BB5 /* Frameworks */,
+				4D74519A68CA30C006FC35DE /* Resources */,
+				20A915660580412F455A419F /* Sources */,
+				672F495004AC5ED0576C156A /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,7 +292,7 @@
 			);
 			name = "FlatWorld";
 			productName = "FlatWorld";
-			productReference = 47517403449A3AFF1AC70037 /* libFlatWorld.a */;
+			productReference = 5F712F2D64B1116E310F7791 /* libFlatWorld.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -303,17 +303,17 @@
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "FlatWorld" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
-			mainGroup = 20484BF14F59322A020C2B17 /* FlatWorld */;
+			mainGroup = 3CB75AE465F6136460DB721F /* FlatWorld */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				187C311F5153470F64C3491C /* libFlatWorld.a */,
+				2F0C36076D8023CD64EC46ED /* libFlatWorld.a */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		226473A302EF791F62C557E1 /* Resources */ = {
+		4D74519A68CA30C006FC35DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -323,35 +323,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5E5465D95A190A9A08457CEF /* Sources */ = {
+		20A915660580412F455A419F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36DA78B125F40D0475BD6287 /* SFMLSound.cpp in Sources */,
-				15C5551D676F7D9B59201C28 /* GOTManager.cpp in Sources */,
-				5C1F064A5BD04AD92BDF479D /* GOTemplate.cpp in Sources */,
-				77FD5164200708C760FA2FB6 /* GameObject.cpp in Sources */,
-				7EE725145D12553A6D4740C1 /* SFMLKeyboardHandler.cpp in Sources */,
-				283C53C02AB0529B691B7D87 /* SFMLMouseHandler.cpp in Sources */,
-				1C401ECE02D5125F74D10E7B /* Engine.cpp in Sources */,
-				12010055723B7314055706D6 /* Colour.cpp in Sources */,
-				44F878321F005BCF79A72B83 /* Font.cpp in Sources */,
-				68EA68533F1D1CDC79BA6B80 /* Particle.cpp in Sources */,
-				0C5712F25F2C4111539A0F82 /* ParticleEmitter.cpp in Sources */,
-				5A577EC435DF1B9B20AB2862 /* RenderManager.cpp in Sources */,
-				2CA801F93E6949A345441DA4 /* RendererGL.cpp in Sources */,
-				1CC9434D12E819D4264655FD /* SFMLGameWindow.cpp in Sources */,
-				278A11DA1D6F4FD05B3E2B72 /* Shader.cpp in Sources */,
-				32574BB800AD14B65D505D10 /* TextureManager.cpp in Sources */,
-				1ADA1C11777768566BF50012 /* Rectangle.cpp in Sources */,
-				292320EA0A7038FC12F21F74 /* Transform.cpp in Sources */,
-				431355BC61B159342AFB2D64 /* Vector2f.cpp in Sources */,
-				09BF44CE18BD3ED013647BEC /* IMessagingSystem.cpp in Sources */,
-				601670484971576C7D0809BC /* Message.cpp in Sources */,
-				0784742A4AEC38B900877F2A /* MessagingSystem.cpp in Sources */,
-				417603960C3F2FD34C5B612C /* ScreenManager.cpp in Sources */,
-				410F1BBE086A50EA7DCF0E21 /* ColourUtilities.cpp in Sources */,
-				7F2B49800F4032F47F6F6FE9 /* Timer.cpp in Sources */,
+				71C3435C0AF9295A2F3E786C /* SFMLSound.cpp in Sources */,
+				7D195ED73950703C68201B6C /* GOTManager.cpp in Sources */,
+				00E0294A1AB8435D5BCD7FD3 /* GOTemplate.cpp in Sources */,
+				5A1A58025A842EC16D6F5328 /* GameObject.cpp in Sources */,
+				04EC53C51E6E39C952E76E6D /* SFMLKeyboardHandler.cpp in Sources */,
+				3C9A233D3F9D4E0E3AB924B2 /* SFMLMouseHandler.cpp in Sources */,
+				731D54E21F43750109572F0F /* Engine.cpp in Sources */,
+				55C4460C6B4D71A832EF0E06 /* Colour.cpp in Sources */,
+				0508307B6F6C16AE3CD95DF0 /* Font.cpp in Sources */,
+				3AC67CE1343B719839F21F87 /* Particle.cpp in Sources */,
+				783E10437AD56F2952431428 /* ParticleEmitter.cpp in Sources */,
+				67CB3EA625B4451B62E06898 /* RenderManager.cpp in Sources */,
+				22DB317E5F2F683B79EA54D5 /* RendererGL.cpp in Sources */,
+				4AD84AE3760F35122F257186 /* SFMLGameWindow.cpp in Sources */,
+				687A400D6483578177941DA3 /* Shader.cpp in Sources */,
+				75E5178000293B3352B27B4D /* TextureManager.cpp in Sources */,
+				5359377C66B4659724F84DA8 /* Rectangle.cpp in Sources */,
+				6EB128D836903FD0180651F4 /* Transform.cpp in Sources */,
+				0AF052B2445B5F0120DD43CD /* Vector2f.cpp in Sources */,
+				7FB1212E6A297357261F72BF /* IMessagingSystem.cpp in Sources */,
+				46CD4ADE343173936F8508D7 /* Message.cpp in Sources */,
+				577228EF771C6C1C3838357E /* MessagingSystem.cpp in Sources */,
+				6E413A3A4BF135DE5B1041FD /* ScreenManager.cpp in Sources */,
+				0D377E7D7F3E713028EC5A71 /* ColourUtilities.cpp in Sources */,
+				1F7920F333060FB57DA231DD /* Timer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +361,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		053126941DD93BEB53837F00 /* Debug */ = {
+		640072F2048C51DD6B3F4407 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -373,7 +373,7 @@
 			};
 			name = "Debug";
 		};
-		0E5C079C0DE0183B08261823 /* Release */ = {
+		2E2121EC3542558D32793C3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -385,7 +385,7 @@
 			};
 			name = "Release";
 		};
-		0EAB2E7A1309481934A37002 /* Debug */ = {
+		10111941247C02564E554D1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -416,7 +416,7 @@
 			};
 			name = "Debug";
 		};
-		62E304AD029C62996A387DC6 /* Release */ = {
+		6F8F0D33511F23C131D9120A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -450,11 +450,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		39FB04DE545B4E217E0A54D1 /* Build configuration list for PBXNativeTarget "libFlatWorld.a" */ = {
+		4BE552C348755E6A359F2A38 /* Build configuration list for PBXNativeTarget "libFlatWorld.a" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				053126941DD93BEB53837F00 /* Debug */,
-				0E5C079C0DE0183B08261823 /* Release */,
+				640072F2048C51DD6B3F4407 /* Debug */,
+				2E2121EC3542558D32793C3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Debug";
@@ -462,8 +462,8 @@
 		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "FlatWorld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0EAB2E7A1309481934A37002 /* Debug */,
-				62E304AD029C62996A387DC6 /* Release */,
+				10111941247C02564E554D1F /* Debug */,
+				6F8F0D33511F23C131D9120A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Debug";

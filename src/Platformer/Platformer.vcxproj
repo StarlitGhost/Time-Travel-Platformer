@@ -122,9 +122,9 @@
     <ClInclude Include="Components\gocTriggerRadius.h" />
     <ClInclude Include="Components\gocVisual.h" />
     <ClInclude Include="Components\gocVisualRectangle.h" />
+    <ClInclude Include="Screens\screenArenaShooter.h" />
     <ClInclude Include="Screens\screenGoL.h" />
     <ClInclude Include="Screens\screenMenu.h" />
-    <ClInclude Include="Screens\screenTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -143,11 +143,11 @@
     </ClCompile>
     <ClCompile Include="Components\gocVisualRectangle.cpp">
     </ClCompile>
+    <ClCompile Include="Screens\screenArenaShooter.cpp">
+    </ClCompile>
     <ClCompile Include="Screens\screenGoL.cpp">
     </ClCompile>
     <ClCompile Include="Screens\screenMenu.cpp">
-    </ClCompile>
-    <ClCompile Include="Screens\screenTest.cpp">
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

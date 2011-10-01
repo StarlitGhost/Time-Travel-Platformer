@@ -11,7 +11,7 @@ namespace FlatWorld
 	class GameObject;
 }
 
-class screenTest : public FlatWorld::CScreen
+class screenArenaShooter : public FlatWorld::CScreen
 {
 public:
 	void Update(float dt);

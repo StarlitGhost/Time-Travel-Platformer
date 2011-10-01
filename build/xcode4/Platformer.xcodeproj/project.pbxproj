@@ -7,169 +7,169 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F8138D16CA763CA70A234C4 /* gctHealth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6201394D14DD094254870049 /* gctHealth.cpp */; };
-		246E7258484834E15B873B30 /* gctTriggerRadius.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B2B239F7A9B278E522D2858 /* gctTriggerRadius.cpp */; };
-		1E155D1873041D536B5F26C2 /* gocHealth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 404B6D1012F5331B19D35A1E /* gocHealth.cpp */; };
-		37273AE12A3323AA7C2E1258 /* gocInputPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D01630714471EFE3A2632B5 /* gocInputPlayer.cpp */; };
-		33FC2FA365AC1188093D40B2 /* gocPhysicsSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BE554552DE872F41F34163C /* gocPhysicsSimple.cpp */; };
-		0076533A4B562CB51AB30CDB /* gocTriggerRadius.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C9509A76F55440C3F50013E /* gocTriggerRadius.cpp */; };
-		3239503A18FE034D2FBA7CD3 /* gocVisualRectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 740F7B7B288D75C975705258 /* gocVisualRectangle.cpp */; };
-		742F21666BD315414203370D /* screenGoL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34390BA73D913FA370AD7BBE /* screenGoL.cpp */; };
-		23580ED309E9028533C604B5 /* screenMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B46326741B8359B449F26FD /* screenMenu.cpp */; };
-		5DDE57633FFB48AC615E5068 /* screenTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FC3688669B62F2F115C69FB /* screenTest.cpp */; };
-		663C4C8F16C67DFE7E6D03CD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33A85D5E0FBA4D222EA53757 /* main.cpp */; };
-		4F024F886BD623396657769A /* libFlatWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 312C23D458361574103B0350 /* libFlatWorld.a */; };
+		01FA2C4E6DD7681D7B5A3F63 /* gctHealth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F7FEA6E8759A419A02320 /* gctHealth.cpp */; };
+		626A2D4860311CDD76D54865 /* gctTriggerRadius.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE4C1530EE625441FF4C59 /* gctTriggerRadius.cpp */; };
+		33386FD55EC61F0A04A63786 /* gocHealth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 36916D1B1B9B6AAE3AF06A28 /* gocHealth.cpp */; };
+		0AA457823D6723A770CE7298 /* gocInputPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3242079B4EDC462650551C13 /* gocInputPlayer.cpp */; };
+		42B42DE82DF328474B9D6596 /* gocPhysicsSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B8570AC109F577E2FEC7BEF /* gocPhysicsSimple.cpp */; };
+		299D77E5534F2FBE4A2038DE /* gocTriggerRadius.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FD24B644522097852F2717E /* gocTriggerRadius.cpp */; };
+		39BB45EC7DA3450F58C67E9F /* gocVisualRectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B655E8B358A28285EAC7078 /* gocVisualRectangle.cpp */; };
+		1909358125DC08F472E32C5F /* screenArenaShooter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C0321F375F6A7607DF4E09 /* screenArenaShooter.cpp */; };
+		78277CD2640C4B9E0658664E /* screenGoL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8E2D9A4D5F51C60E205E53 /* screenGoL.cpp */; };
+		076F274057162A2817E52DC1 /* screenMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C896A1260DB5C4840D96C0C /* screenMenu.cpp */; };
+		2C9E1F3274DF0B91607A362C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 246769D974860CE57E470F8E /* main.cpp */; };
+		2E917D950FE36F5910852649 /* libFlatWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 377D7BF749E71FF4686650B3 /* libFlatWorld.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6D355276407D2AF7640B4CBD /* PBXContainerItemProxy */ = {
+		19D77ECC49227AF27DBA0CAC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 18D258395B9E019360716E13 /* FlatWorld.xcodeproj */;
+			containerPortal = 5225188C10245467242A462B /* FlatWorld.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 47541E000A6218FE43120F8E;
+			remoteGlobalIDString = 5F712F2D64B1116E310F7791;
 			remoteInfo = "libFlatWorld.a";
 		};
-		1E8B6E6034537294362E243E /* PBXContainerItemProxy */ = {
+		3A2502385A3A1C7426304A2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 18D258395B9E019360716E13 /* FlatWorld.xcodeproj */;
+			containerPortal = 5225188C10245467242A462B /* FlatWorld.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 24A425B011D22F0B642F4948;
+			remoteGlobalIDString = 2F0C36076D8023CD64EC46ED;
 			remoteInfo = "libFlatWorld.a";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6201394D14DD094254870049 /* gctHealth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gctHealth.cpp"; path = "gctHealth.cpp"; sourceTree = "<group>"; };
-		240D7016177E33304D0F1081 /* gctHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gctHealth.h"; path = "gctHealth.h"; sourceTree = "<group>"; };
-		4B2B239F7A9B278E522D2858 /* gctTriggerRadius.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gctTriggerRadius.cpp"; path = "gctTriggerRadius.cpp"; sourceTree = "<group>"; };
-		169375C322DC1F8831CE658D /* gctTriggerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gctTriggerRadius.h"; path = "gctTriggerRadius.h"; sourceTree = "<group>"; };
-		404B6D1012F5331B19D35A1E /* gocHealth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocHealth.cpp"; path = "gocHealth.cpp"; sourceTree = "<group>"; };
-		1EB4287C267B49ED78F40AB6 /* gocHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocHealth.h"; path = "gocHealth.h"; sourceTree = "<group>"; };
-		781F0A4B3D433DD62DDF0DEA /* gocInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocInput.h"; path = "gocInput.h"; sourceTree = "<group>"; };
-		0D01630714471EFE3A2632B5 /* gocInputPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocInputPlayer.cpp"; path = "gocInputPlayer.cpp"; sourceTree = "<group>"; };
-		65690D774BBA5F1826394A16 /* gocInputPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocInputPlayer.h"; path = "gocInputPlayer.h"; sourceTree = "<group>"; };
-		3BEF32897CFD1ACD720721C9 /* gocPhysics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocPhysics.h"; path = "gocPhysics.h"; sourceTree = "<group>"; };
-		5BE554552DE872F41F34163C /* gocPhysicsSimple.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocPhysicsSimple.cpp"; path = "gocPhysicsSimple.cpp"; sourceTree = "<group>"; };
-		4D46229D358F774768274261 /* gocPhysicsSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocPhysicsSimple.h"; path = "gocPhysicsSimple.h"; sourceTree = "<group>"; };
-		0053270F7DD0129D5B3935CB /* gocTrigger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocTrigger.h"; path = "gocTrigger.h"; sourceTree = "<group>"; };
-		6C9509A76F55440C3F50013E /* gocTriggerRadius.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocTriggerRadius.cpp"; path = "gocTriggerRadius.cpp"; sourceTree = "<group>"; };
-		6AAA3A543E460F12267123FB /* gocTriggerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocTriggerRadius.h"; path = "gocTriggerRadius.h"; sourceTree = "<group>"; };
-		7D9E626665A6730841AF7CC5 /* gocVisual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocVisual.h"; path = "gocVisual.h"; sourceTree = "<group>"; };
-		740F7B7B288D75C975705258 /* gocVisualRectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocVisualRectangle.cpp"; path = "gocVisualRectangle.cpp"; sourceTree = "<group>"; };
-		2116499528707A49132F501C /* gocVisualRectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocVisualRectangle.h"; path = "gocVisualRectangle.h"; sourceTree = "<group>"; };
-		34390BA73D913FA370AD7BBE /* screenGoL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "screenGoL.cpp"; path = "screenGoL.cpp"; sourceTree = "<group>"; };
-		42B109703A62116B225D7251 /* screenGoL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "screenGoL.h"; path = "screenGoL.h"; sourceTree = "<group>"; };
-		6B46326741B8359B449F26FD /* screenMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "screenMenu.cpp"; path = "screenMenu.cpp"; sourceTree = "<group>"; };
-		02031F3817EA4DD5593F47F0 /* screenMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "screenMenu.h"; path = "screenMenu.h"; sourceTree = "<group>"; };
-		3FC3688669B62F2F115C69FB /* screenTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "screenTest.cpp"; path = "screenTest.cpp"; sourceTree = "<group>"; };
-		239B25FB54206E4F249C5B18 /* screenTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "screenTest.h"; path = "screenTest.h"; sourceTree = "<group>"; };
-		33A85D5E0FBA4D222EA53757 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "main.cpp"; path = "main.cpp"; sourceTree = "<group>"; };
-		4B9C32376E52002B76535632 /* Platformer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Platformer"; path = "Platformer"; sourceTree = BUILT_PRODUCTS_DIR; };
-		18D258395B9E019360716E13 /* FlatWorld.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "FlatWorld.xcodeproj"; path = "FlatWorld.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		4B1F7FEA6E8759A419A02320 /* gctHealth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gctHealth.cpp"; path = "gctHealth.cpp"; sourceTree = "<group>"; };
+		2E3B544B5FFF022B4F0204DD /* gctHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gctHealth.h"; path = "gctHealth.h"; sourceTree = "<group>"; };
+		2ADE4C1530EE625441FF4C59 /* gctTriggerRadius.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gctTriggerRadius.cpp"; path = "gctTriggerRadius.cpp"; sourceTree = "<group>"; };
+		46FC7C56681E63B44CD773AF /* gctTriggerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gctTriggerRadius.h"; path = "gctTriggerRadius.h"; sourceTree = "<group>"; };
+		36916D1B1B9B6AAE3AF06A28 /* gocHealth.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocHealth.cpp"; path = "gocHealth.cpp"; sourceTree = "<group>"; };
+		2EF826E0391F166B7C9D6137 /* gocHealth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocHealth.h"; path = "gocHealth.h"; sourceTree = "<group>"; };
+		798C7B15000F58CD4A3D2AE3 /* gocInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocInput.h"; path = "gocInput.h"; sourceTree = "<group>"; };
+		3242079B4EDC462650551C13 /* gocInputPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocInputPlayer.cpp"; path = "gocInputPlayer.cpp"; sourceTree = "<group>"; };
+		36AC3E8A594C25E10DC040BA /* gocInputPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocInputPlayer.h"; path = "gocInputPlayer.h"; sourceTree = "<group>"; };
+		2DBA43DD5D3B643E6292476E /* gocPhysics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocPhysics.h"; path = "gocPhysics.h"; sourceTree = "<group>"; };
+		6B8570AC109F577E2FEC7BEF /* gocPhysicsSimple.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocPhysicsSimple.cpp"; path = "gocPhysicsSimple.cpp"; sourceTree = "<group>"; };
+		1AED0391385673E701CB6BC9 /* gocPhysicsSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocPhysicsSimple.h"; path = "gocPhysicsSimple.h"; sourceTree = "<group>"; };
+		327B515359331CCD67001551 /* gocTrigger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocTrigger.h"; path = "gocTrigger.h"; sourceTree = "<group>"; };
+		3FD24B644522097852F2717E /* gocTriggerRadius.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocTriggerRadius.cpp"; path = "gocTriggerRadius.cpp"; sourceTree = "<group>"; };
+		0C26683574FE43B430907671 /* gocTriggerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocTriggerRadius.h"; path = "gocTriggerRadius.h"; sourceTree = "<group>"; };
+		792646EE230E28B64A550BA3 /* gocVisual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocVisual.h"; path = "gocVisual.h"; sourceTree = "<group>"; };
+		5B655E8B358A28285EAC7078 /* gocVisualRectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gocVisualRectangle.cpp"; path = "gocVisualRectangle.cpp"; sourceTree = "<group>"; };
+		4D46372974AA149A0DA23172 /* gocVisualRectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "gocVisualRectangle.h"; path = "gocVisualRectangle.h"; sourceTree = "<group>"; };
+		04C0321F375F6A7607DF4E09 /* screenArenaShooter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "screenArenaShooter.cpp"; path = "screenArenaShooter.cpp"; sourceTree = "<group>"; };
+		473F591412E4137953DC27C3 /* screenArenaShooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "screenArenaShooter.h"; path = "screenArenaShooter.h"; sourceTree = "<group>"; };
+		1A8E2D9A4D5F51C60E205E53 /* screenGoL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "screenGoL.cpp"; path = "screenGoL.cpp"; sourceTree = "<group>"; };
+		28AB42C1792B0F5B0A306475 /* screenGoL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "screenGoL.h"; path = "screenGoL.h"; sourceTree = "<group>"; };
+		2C896A1260DB5C4840D96C0C /* screenMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "screenMenu.cpp"; path = "screenMenu.cpp"; sourceTree = "<group>"; };
+		53246188606234B0186411DD /* screenMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "screenMenu.h"; path = "screenMenu.h"; sourceTree = "<group>"; };
+		246769D974860CE57E470F8E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "main.cpp"; path = "main.cpp"; sourceTree = "<group>"; };
+		7C7E260373FB6EF042296422 /* Platformer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Platformer"; path = "Platformer"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5225188C10245467242A462B /* FlatWorld.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "FlatWorld.xcodeproj"; path = "FlatWorld.xcodeproj"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4A60233C32CF4D9618EF3B48 /* Frameworks */ = {
+		03CE285177D4489B75073D6B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F024F886BD623396657769A /* libFlatWorld.a in Frameworks */,
+				2E917D950FE36F5910852649 /* libFlatWorld.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		137B69B265B85F132E6C4317 /* Platformer */ = {
+		1B3834E31C4C34C47B784275 /* Platformer */ = {
 			isa = PBXGroup;
 			children = (
-				1E231E4914A50D15116F7AD6 /* src */,
-				24CF1ED50850392942EC642A /* Products */,
-				4A9067F1514577532BB674D5 /* Projects */,
+				79DB558308307DAB196523A4 /* src */,
+				19815D353833275942313EBF /* Products */,
+				10037CDC3414761216566B3C /* Projects */,
 			);
 			name = "Platformer";
 			sourceTree = "<group>";
 		};
-		1E231E4914A50D15116F7AD6 /* src */ = {
+		79DB558308307DAB196523A4 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				5CF2169658ED5694184F48FB /* Platformer */,
+				36D148FD4B10080400D35BD7 /* Platformer */,
 			);
 			name = "src";
 			path = "../../src";
 			sourceTree = "<group>";
 		};
-		5CF2169658ED5694184F48FB /* Platformer */ = {
+		36D148FD4B10080400D35BD7 /* Platformer */ = {
 			isa = PBXGroup;
 			children = (
-				238F237F345850BB4BFA7177 /* Components */,
-				29A63689240E3CE434661541 /* Screens */,
-				33A85D5E0FBA4D222EA53757 /* main.cpp */,
+				3D283A0D3903129C1C132FDD /* Components */,
+				0CF70A7B72E8232870835E0F /* Screens */,
+				246769D974860CE57E470F8E /* main.cpp */,
 			);
 			name = "Platformer";
 			path = "Platformer";
 			sourceTree = "<group>";
 		};
-		238F237F345850BB4BFA7177 /* Components */ = {
+		3D283A0D3903129C1C132FDD /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6201394D14DD094254870049 /* gctHealth.cpp */,
-				240D7016177E33304D0F1081 /* gctHealth.h */,
-				4B2B239F7A9B278E522D2858 /* gctTriggerRadius.cpp */,
-				169375C322DC1F8831CE658D /* gctTriggerRadius.h */,
-				404B6D1012F5331B19D35A1E /* gocHealth.cpp */,
-				1EB4287C267B49ED78F40AB6 /* gocHealth.h */,
-				781F0A4B3D433DD62DDF0DEA /* gocInput.h */,
-				0D01630714471EFE3A2632B5 /* gocInputPlayer.cpp */,
-				65690D774BBA5F1826394A16 /* gocInputPlayer.h */,
-				3BEF32897CFD1ACD720721C9 /* gocPhysics.h */,
-				5BE554552DE872F41F34163C /* gocPhysicsSimple.cpp */,
-				4D46229D358F774768274261 /* gocPhysicsSimple.h */,
-				0053270F7DD0129D5B3935CB /* gocTrigger.h */,
-				6C9509A76F55440C3F50013E /* gocTriggerRadius.cpp */,
-				6AAA3A543E460F12267123FB /* gocTriggerRadius.h */,
-				7D9E626665A6730841AF7CC5 /* gocVisual.h */,
-				740F7B7B288D75C975705258 /* gocVisualRectangle.cpp */,
-				2116499528707A49132F501C /* gocVisualRectangle.h */,
+				4B1F7FEA6E8759A419A02320 /* gctHealth.cpp */,
+				2E3B544B5FFF022B4F0204DD /* gctHealth.h */,
+				2ADE4C1530EE625441FF4C59 /* gctTriggerRadius.cpp */,
+				46FC7C56681E63B44CD773AF /* gctTriggerRadius.h */,
+				36916D1B1B9B6AAE3AF06A28 /* gocHealth.cpp */,
+				2EF826E0391F166B7C9D6137 /* gocHealth.h */,
+				798C7B15000F58CD4A3D2AE3 /* gocInput.h */,
+				3242079B4EDC462650551C13 /* gocInputPlayer.cpp */,
+				36AC3E8A594C25E10DC040BA /* gocInputPlayer.h */,
+				2DBA43DD5D3B643E6292476E /* gocPhysics.h */,
+				6B8570AC109F577E2FEC7BEF /* gocPhysicsSimple.cpp */,
+				1AED0391385673E701CB6BC9 /* gocPhysicsSimple.h */,
+				327B515359331CCD67001551 /* gocTrigger.h */,
+				3FD24B644522097852F2717E /* gocTriggerRadius.cpp */,
+				0C26683574FE43B430907671 /* gocTriggerRadius.h */,
+				792646EE230E28B64A550BA3 /* gocVisual.h */,
+				5B655E8B358A28285EAC7078 /* gocVisualRectangle.cpp */,
+				4D46372974AA149A0DA23172 /* gocVisualRectangle.h */,
 			);
 			name = "Components";
 			path = "Components";
 			sourceTree = "<group>";
 		};
-		29A63689240E3CE434661541 /* Screens */ = {
+		0CF70A7B72E8232870835E0F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				34390BA73D913FA370AD7BBE /* screenGoL.cpp */,
-				42B109703A62116B225D7251 /* screenGoL.h */,
-				6B46326741B8359B449F26FD /* screenMenu.cpp */,
-				02031F3817EA4DD5593F47F0 /* screenMenu.h */,
-				3FC3688669B62F2F115C69FB /* screenTest.cpp */,
-				239B25FB54206E4F249C5B18 /* screenTest.h */,
+				04C0321F375F6A7607DF4E09 /* screenArenaShooter.cpp */,
+				473F591412E4137953DC27C3 /* screenArenaShooter.h */,
+				1A8E2D9A4D5F51C60E205E53 /* screenGoL.cpp */,
+				28AB42C1792B0F5B0A306475 /* screenGoL.h */,
+				2C896A1260DB5C4840D96C0C /* screenMenu.cpp */,
+				53246188606234B0186411DD /* screenMenu.h */,
 			);
 			name = "Screens";
 			path = "Screens";
 			sourceTree = "<group>";
 		};
-		24CF1ED50850392942EC642A /* Products */ = {
+		19815D353833275942313EBF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B9C32376E52002B76535632 /* Platformer */,
+				7C7E260373FB6EF042296422 /* Platformer */,
 			);
 			name = "Products";
 			sourceTree = "<group>";
 		};
-		4A9067F1514577532BB674D5 /* Projects */ = {
+		10037CDC3414761216566B3C /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				18D258395B9E019360716E13 /* FlatWorld.xcodeproj */,
+				5225188C10245467242A462B /* FlatWorld.xcodeproj */,
 			);
 			name = "Projects";
 			sourceTree = "<group>";
 		};
-		660E2C6F2E9E0F8A40125786 /* Products */ = {
+		695B44C44A4E2C50409E5E29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				312C23D458361574103B0350 /* libFlatWorld.a */,
+				377D7BF749E71FF4686650B3 /* libFlatWorld.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,23 +177,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5F3D3B152FD3313F64B95EFF /* Platformer */ = {
+		337A4D1832FC4C0B37DB49E6 /* Platformer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38AB5AD7386A1BDA63BC4170 /* Build configuration list for PBXNativeTarget "Platformer" */;
+			buildConfigurationList = 1155429B313A10FC16066467 /* Build configuration list for PBXNativeTarget "Platformer" */;
 			buildPhases = (
-				247A725E2158116A35616B66 /* Resources */,
-				284A46B3566967E42D507C61 /* Sources */,
-				4A60233C32CF4D9618EF3B48 /* Frameworks */,
+				41746FB07B03246B5DBB0A1F /* Resources */,
+				512A57D92F0C2BA123835667 /* Sources */,
+				03CE285177D4489B75073D6B /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				53AB2BF934FF530E40AA06F0 /* PBXTargetDependency */,
+				434C6E9B16ED14AB17033E30 /* PBXTargetDependency */,
 			);
 			name = "Platformer";
 			productInstallPath = "$(HOME)/bin";
 			productName = "Platformer";
-			productReference = 4B9C32376E52002B76535632 /* Platformer */;
+			productReference = 7C7E260373FB6EF042296422 /* Platformer */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -204,33 +204,33 @@
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Platformer" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
-			mainGroup = 137B69B265B85F132E6C4317 /* Platformer */;
+			mainGroup = 1B3834E31C4C34C47B784275 /* Platformer */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 660E2C6F2E9E0F8A40125786 /* Products */;
-					ProjectRef = 18D258395B9E019360716E13 /* FlatWorld.xcodeproj */;
+					ProductGroup = 695B44C44A4E2C50409E5E29 /* Products */;
+					ProjectRef = 5225188C10245467242A462B /* FlatWorld.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				5F3D3B152FD3313F64B95EFF /* Platformer */,
+				337A4D1832FC4C0B37DB49E6 /* Platformer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		312C23D458361574103B0350 /* libFlatWorld.a */ = {
+		377D7BF749E71FF4686650B3 /* libFlatWorld.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "../../debug/libFlatWorld.a";
-			remoteRef = 6D355276407D2AF7640B4CBD /* PBXContainerItemProxy */;
+			remoteRef = 19D77ECC49227AF27DBA0CAC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		247A725E2158116A35616B66 /* Resources */ = {
+		41746FB07B03246B5DBB0A1F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -240,21 +240,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		284A46B3566967E42D507C61 /* Sources */ = {
+		512A57D92F0C2BA123835667 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F8138D16CA763CA70A234C4 /* gctHealth.cpp in Sources */,
-				246E7258484834E15B873B30 /* gctTriggerRadius.cpp in Sources */,
-				1E155D1873041D536B5F26C2 /* gocHealth.cpp in Sources */,
-				37273AE12A3323AA7C2E1258 /* gocInputPlayer.cpp in Sources */,
-				33FC2FA365AC1188093D40B2 /* gocPhysicsSimple.cpp in Sources */,
-				0076533A4B562CB51AB30CDB /* gocTriggerRadius.cpp in Sources */,
-				3239503A18FE034D2FBA7CD3 /* gocVisualRectangle.cpp in Sources */,
-				742F21666BD315414203370D /* screenGoL.cpp in Sources */,
-				23580ED309E9028533C604B5 /* screenMenu.cpp in Sources */,
-				5DDE57633FFB48AC615E5068 /* screenTest.cpp in Sources */,
-				663C4C8F16C67DFE7E6D03CD /* main.cpp in Sources */,
+				01FA2C4E6DD7681D7B5A3F63 /* gctHealth.cpp in Sources */,
+				626A2D4860311CDD76D54865 /* gctTriggerRadius.cpp in Sources */,
+				33386FD55EC61F0A04A63786 /* gocHealth.cpp in Sources */,
+				0AA457823D6723A770CE7298 /* gocInputPlayer.cpp in Sources */,
+				42B42DE82DF328474B9D6596 /* gocPhysicsSimple.cpp in Sources */,
+				299D77E5534F2FBE4A2038DE /* gocTriggerRadius.cpp in Sources */,
+				39BB45EC7DA3450F58C67E9F /* gocVisualRectangle.cpp in Sources */,
+				1909358125DC08F472E32C5F /* screenArenaShooter.cpp in Sources */,
+				78277CD2640C4B9E0658664E /* screenGoL.cpp in Sources */,
+				076F274057162A2817E52DC1 /* screenMenu.cpp in Sources */,
+				2C9E1F3274DF0B91607A362C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,15 +264,15 @@
 /* End PBXVariantGroup section */
 
 /* Begin PBXTargetDependency section */
-		53AB2BF934FF530E40AA06F0 /* PBXTargetDependency */ = {
+		434C6E9B16ED14AB17033E30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "libFlatWorld.a";
-			targetProxy = 1E8B6E6034537294362E243E /* PBXContainerItemProxy */;
+			targetProxy = 3A2502385A3A1C7426304A2F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2890558332141792453872D6 /* Debug */ = {
+		6D305511227F72F33F932731 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,7 +284,7 @@
 			};
 			name = "Debug";
 		};
-		53CC6F16194734F227E87F0F /* Release */ = {
+		62CF04B671CE3B0C52EC00F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -296,7 +296,7 @@
 			};
 			name = "Release";
 		};
-		13770D9241F95891659147A8 /* Debug */ = {
+		318A11D36A2A4FFA02BE6BCA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -341,7 +341,7 @@
 			};
 			name = "Debug";
 		};
-		23B048FD2B392B0D21276288 /* Release */ = {
+		64A4442F49D53F8130547747 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
@@ -389,11 +389,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38AB5AD7386A1BDA63BC4170 /* Build configuration list for PBXNativeTarget "Platformer" */ = {
+		1155429B313A10FC16066467 /* Build configuration list for PBXNativeTarget "Platformer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2890558332141792453872D6 /* Debug */,
-				53CC6F16194734F227E87F0F /* Release */,
+				6D305511227F72F33F932731 /* Debug */,
+				62CF04B671CE3B0C52EC00F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Debug";
@@ -401,8 +401,8 @@
 		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "Platformer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13770D9241F95891659147A8 /* Debug */,
-				23B048FD2B392B0D21276288 /* Release */,
+				318A11D36A2A4FFA02BE6BCA /* Debug */,
+				64A4442F49D53F8130547747 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Debug";

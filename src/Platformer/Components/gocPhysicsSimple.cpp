@@ -12,11 +12,8 @@ FlatWorld::Vector2f Direction(float angle)
 
 void gocPhysicsSimple::ReceiveMessage(std::string msg, void* data, unsigned int length)
 {
-	if (msg == "accelerate")
-		_acceleration += Direction(GetOwner()->GetTransform().Angle) * (*(float*)data);
-
-	if (msg == "turn")
-		_angularAcceleration += *((float*)data);
+	if (msg == "force")
+		_acceleration += (*(FlatWorld::Vector2f*)data);
 }
 
 void gocPhysicsSimple::Update(float dt)
@@ -38,9 +35,9 @@ void gocPhysicsSimple::Update(float dt)
 
 gocPhysicsSimple::gocPhysicsSimple()
 {
-	_velocityDamping = 0.5f;
+	_velocityDamping = 1.f;
 
 	_angularAcceleration = 0.f;
 	_angularVelocity = 0.f;
-	_angularDamping = 0.5f;
+	_angularDamping = 1.f;
 }

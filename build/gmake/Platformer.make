@@ -72,9 +72,9 @@ OBJECTS := \
 	$(OBJDIR)/gocPhysicsSimple.o \
 	$(OBJDIR)/gocTriggerRadius.o \
 	$(OBJDIR)/gocVisualRectangle.o \
+	$(OBJDIR)/screenArenaShooter.o \
 	$(OBJDIR)/screenGoL.o \
 	$(OBJDIR)/screenMenu.o \
-	$(OBJDIR)/screenTest.o \
 
 RESOURCES := \
 
@@ -159,13 +159,13 @@ $(OBJDIR)/gocTriggerRadius.o: ../../src/Platformer/Components/gocTriggerRadius.c
 $(OBJDIR)/gocVisualRectangle.o: ../../src/Platformer/Components/gocVisualRectangle.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/screenArenaShooter.o: ../../src/Platformer/Screens/screenArenaShooter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/screenGoL.o: ../../src/Platformer/Screens/screenGoL.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/screenMenu.o: ../../src/Platformer/Screens/screenMenu.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/screenTest.o: ../../src/Platformer/Screens/screenTest.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 

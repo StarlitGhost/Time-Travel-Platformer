@@ -2,7 +2,8 @@
 #include "FlatWorld/Graphics/IGameWindow.h"
 #include "FlatWorld/Graphics/SFMLGameWindow.h"
 
-#include "Platformer/Screens/screenTest.h"
+#include "Platformer/Screens/screenMenu.h"
+#include "Platformer/Screens/screenArenaShooter.h"
 #include "Platformer/Screens/screenGoL.h"
 
 #include <SFML/OpenGL.hpp>
@@ -23,7 +24,7 @@ void Init(IGameWindow* GameWindow)
 	glEnable(GL_TEXTURE_2D);
 
 	engine = CEngine::GetInstance();
-	engine->Init(GameWindow, new screenGoL());
+	engine->Init(GameWindow, new screenArenaShooter());
 }
 
 void Update()

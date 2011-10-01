@@ -274,6 +274,14 @@
 			Filter=""
 			>
 			<File
+				RelativePath="Screens\screenArenaShooter.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Screens\screenArenaShooter.h"
+				>
+			</File>
+			<File
 				RelativePath="Screens\screenGoL.cpp"
 				>
 			</File>
@@ -287,14 +295,6 @@
 			</File>
 			<File
 				RelativePath="Screens\screenMenu.h"
-				>
-			</File>
-			<File
-				RelativePath="Screens\screenTest.cpp"
-				>
-			</File>
-			<File
-				RelativePath="Screens\screenTest.h"
 				>
 			</File>
 		</Filter>

@@ -23,12 +23,12 @@
         <File Name="../../src/Platformer/Components/gocVisualRectangle.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="Screens">
+        <File Name="../../src/Platformer/Screens/screenArenaShooter.cpp"/>
+        <File Name="../../src/Platformer/Screens/screenArenaShooter.h"/>
         <File Name="../../src/Platformer/Screens/screenGoL.cpp"/>
         <File Name="../../src/Platformer/Screens/screenGoL.h"/>
         <File Name="../../src/Platformer/Screens/screenMenu.cpp"/>
         <File Name="../../src/Platformer/Screens/screenMenu.h"/>
-        <File Name="../../src/Platformer/Screens/screenTest.cpp"/>
-        <File Name="../../src/Platformer/Screens/screenTest.h"/>
       </VirtualDirectory>
       <File Name="../../src/Platformer/main.cpp"/>
     </VirtualDirectory>

@@ -4,18 +4,30 @@
 
 #include "FlatWorld/Controls/SFMLKeyboardHandler.h"
 #include "FlatWorld/Controls/SFMLMouseHandler.h"
+#include "FlatWorld/Utilities/MathsUtilities.h"
 
 using namespace FlatWorld;
 
-void gocInputPlayer::Update(float /*dt*/)
+void gocInputPlayer::Update(float dt)
 {
-	if (SFMLKeyboardHandler::Held(sf::Keyboard::A))
-		GetOwner()->SendMessage(this, "turn", 0.5f);
-	if (SFMLKeyboardHandler::Held(sf::Keyboard::D))
-		GetOwner()->SendMessage(this, "turn", -0.5f);
-
+	const float moveSpeed = 200.f;
+	Vector2f movement;
 	if (SFMLKeyboardHandler::Held(sf::Keyboard::W))
-		GetOwner()->SendMessage(this, "accelerate", 0.5f);
+		movement += Vector2f(0.f, moveSpeed);
+		//GetOwner()->SendMessage(this, "force", Vector2f(0.f, 5.f));
+	if (SFMLKeyboardHandler::Held(sf::Keyboard::D))
+		movement += Vector2f(moveSpeed, 0.f);
+		//GetOwner()->SendMessage(this, "force", Vector2f(5.f, 0.f));
 	if (SFMLKeyboardHandler::Held(sf::Keyboard::S))
-		GetOwner()->SendMessage(this, "accelerate", -0.5f);
+		movement += Vector2f(0.f, -moveSpeed);
+		//GetOwner()->SendMessage(this, "force", Vector2f(0.f, -5.f));
+	if (SFMLKeyboardHandler::Held(sf::Keyboard::A))
+		movement += Vector2f(-moveSpeed, 0.f);
+		//GetOwner()->SendMessage(this, "force", Vector2f(-5.f, 0.f));
+
+	Transform xform = GetOwner()->GetTransform();
+	Vector2f vecToMouse = SFMLMouseHandler::Position() - xform.Position;
+	xform.Position += movement * dt;
+	xform.Angle = MathsUtilities::radToDeg(atan2(vecToMouse.y, vecToMouse.x));
+	GetOwner()->SetTransform(xform);
 }
