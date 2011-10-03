@@ -2,28 +2,40 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Audio">
-      <UniqueIdentifier>{DEB6DBA0-1A82-DE45-BCFE-A13AC17CA9E1}</UniqueIdentifier>
+      <UniqueIdentifier>{352D66D4-CC31-2C45-AAAE-7C68D00BD707}</UniqueIdentifier>
     </Filter>
     <Filter Include="ComponentSystem">
-      <UniqueIdentifier>{62A4882A-89E1-7941-AA13-00958D3F5C51}</UniqueIdentifier>
+      <UniqueIdentifier>{368F72CB-6EED-4143-8BC2-1B778E5C9C4C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Controls">
-      <UniqueIdentifier>{BC12D169-A151-A341-A8EE-AE656DD104B2}</UniqueIdentifier>
+      <UniqueIdentifier>{251C2C29-C6BE-CD4B-9B18-D22B6AEE746F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Graphics">
-      <UniqueIdentifier>{D859E8AB-28E7-B34E-BC52-A793AB926296}</UniqueIdentifier>
+      <UniqueIdentifier>{654E554A-7DE7-0042-A8F2-A99BE5F77425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\GameWindows">
+      <UniqueIdentifier>{87BF146B-20FC-5243-BDBB-27447C4F6BEF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\ParticleSystem">
+      <UniqueIdentifier>{E4296A90-D5C8-2148-BB9C-1295E12860B0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Renderers">
+      <UniqueIdentifier>{308AC793-AA24-6746-AC52-6645987F4687}</UniqueIdentifier>
     </Filter>
     <Filter Include="Maths">
-      <UniqueIdentifier>{A8B8226C-F1F1-3F45-9B79-F52EA85060DD}</UniqueIdentifier>
+      <UniqueIdentifier>{F7158DE6-BED2-0E45-B834-46A88038EA07}</UniqueIdentifier>
     </Filter>
     <Filter Include="MessagingSystem">
-      <UniqueIdentifier>{3DDC6A7F-D71A-FA44-852E-FCB914E0D464}</UniqueIdentifier>
+      <UniqueIdentifier>{35054214-85B3-AD4E-AE4A-83BFE0E14C83}</UniqueIdentifier>
     </Filter>
     <Filter Include="ScreenSystem">
-      <UniqueIdentifier>{8B82D646-71B0-7A42-B5EC-AC73ED8CE128}</UniqueIdentifier>
+      <UniqueIdentifier>{7146E33C-69FF-A944-B2A0-28CB55A5F06A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripting">
+      <UniqueIdentifier>{53A0BED7-2CCA-1A4A-A8F6-DDF700090157}</UniqueIdentifier>
     </Filter>
     <Filter Include="Utilities">
-      <UniqueIdentifier>{53D1F230-C0A9-EF4E-9441-BD29D6626F59}</UniqueIdentifier>
+      <UniqueIdentifier>{E856D3D7-E165-6641-A36D-00682A9D23DF}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -71,19 +83,7 @@
     <ClInclude Include="Graphics\IRenderer.h">
       <Filter>Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics\Particle.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Graphics\ParticleEmitter.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Graphics\RendererGL.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="Graphics\RenderManager.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Graphics\SFMLGameWindow.h">
       <Filter>Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Graphics\Shader.h">
@@ -91,6 +91,21 @@
     </ClInclude>
     <ClInclude Include="Graphics\TextureManager.h">
       <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\GameWindows\SFMLGameWindow.h">
+      <Filter>Graphics\GameWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\ParticleSystem\Particle.h">
+      <Filter>Graphics\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\ParticleSystem\ParticleEmitter.h">
+      <Filter>Graphics\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Renderers\RendererGL.h">
+      <Filter>Graphics\Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Renderers\RendererGL3.h">
+      <Filter>Graphics\Renderers</Filter>
     </ClInclude>
     <ClInclude Include="Maths\Rectangle.h">
       <Filter>Maths</Filter>
@@ -115,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="ScreenSystem\ScreenManager.h">
       <Filter>ScreenSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\Python.h">
+      <Filter>Scripting</Filter>
     </ClInclude>
     <ClInclude Include="Utilities\ColourUtilities.h">
       <Filter>Utilities</Filter>
@@ -155,19 +173,7 @@
     <ClCompile Include="Graphics\Font.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Graphics\Particle.cpp">
-      <Filter>Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics\ParticleEmitter.cpp">
-      <Filter>Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics\RendererGL.cpp">
-      <Filter>Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="Graphics\RenderManager.cpp">
-      <Filter>Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics\SFMLGameWindow.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Graphics\Shader.cpp">
@@ -175,6 +181,21 @@
     </ClCompile>
     <ClCompile Include="Graphics\TextureManager.cpp">
       <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GameWindows\SFMLGameWindow.cpp">
+      <Filter>Graphics\GameWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\ParticleSystem\Particle.cpp">
+      <Filter>Graphics\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\ParticleSystem\ParticleEmitter.cpp">
+      <Filter>Graphics\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Renderers\RendererGL.cpp">
+      <Filter>Graphics\Renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Renderers\RendererGL3.cpp">
+      <Filter>Graphics\Renderers</Filter>
     </ClCompile>
     <ClCompile Include="Maths\Rectangle.cpp">
       <Filter>Maths</Filter>
@@ -196,6 +217,9 @@
     </ClCompile>
     <ClCompile Include="ScreenSystem\ScreenManager.cpp">
       <Filter>ScreenSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\Python.cpp">
+      <Filter>Scripting</Filter>
     </ClCompile>
     <ClCompile Include="Utilities\ColourUtilities.cpp">
       <Filter>Utilities</Filter>

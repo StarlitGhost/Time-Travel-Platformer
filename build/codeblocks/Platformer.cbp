@@ -17,6 +17,7 @@
 					<Add option="-DSFML_STATIC" />
 					<Add option="-D_DEBUG" />
 					<Add directory="../../include" />
+					<Add directory="../../include/Python" />
 					<Add directory="../../src/Platformer" />
 					<Add directory="../../src" />
 					<Add directory="../../src/FlatWorld" />
@@ -49,6 +50,7 @@
 					<Add option="-DSFML_STATIC" />
 					<Add option="-DNDEBUG" />
 					<Add directory="../../include" />
+					<Add directory="../../include/Python" />
 					<Add directory="../../src/Platformer" />
 					<Add directory="../../src" />
 					<Add directory="../../src/FlatWorld" />

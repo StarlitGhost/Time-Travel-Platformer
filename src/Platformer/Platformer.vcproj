@@ -41,7 +41,7 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/MP"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;.;..;..\FlatWorld"
+				AdditionalIncludeDirectories="..\..\include;..\..\include\Python;.;..;..\FlatWorld"
 				PreprocessorDefinitions="SFML_STATIC;_DEBUG"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -58,7 +58,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="SFML_STATIC;_DEBUG"
-				AdditionalIncludeDirectories="..\..\include;.;..;..\FlatWorld"
+				AdditionalIncludeDirectories="..\..\include;..\..\include\Python;.;..;..\FlatWorld"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -66,7 +66,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/nodefaultlib:libcmt"
-				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib ..\..\debug\FlatWorld.lib freetype2312.lib glu32.lib ftgl_static_d.lib sfml-audio-s-d.lib sfml-graphics-s-d.lib sfml-network-s-d.lib sfml-system-s-d.lib sfml-window-s-d.lib"
+				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib ..\..\debug\FlatWorld.lib freetype2312.lib glu32.lib python27.lib ftgl_static_d.lib libboost_python-vc100-mt-sgd-1_46_1.lib sfml-audio-s-d.lib sfml-graphics-s-d.lib sfml-network-s-d.lib sfml-system-s-d.lib sfml-window-s-d.lib"
 				OutputFile="$(OutDir)\Platformer.exe"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="..\..\lib"
@@ -127,7 +127,7 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/MP"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;.;..;..\FlatWorld"
+				AdditionalIncludeDirectories="..\..\include;..\..\include\Python;.;..;..\FlatWorld"
 				PreprocessorDefinitions="SFML_STATIC;NDEBUG"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -143,7 +143,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="SFML_STATIC;NDEBUG"
-				AdditionalIncludeDirectories="..\..\include;.;..;..\FlatWorld"
+				AdditionalIncludeDirectories="..\..\include;..\..\include\Python;.;..;..\FlatWorld"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -151,7 +151,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/nodefaultlib:libcmt"
-				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib ..\..\bin\FlatWorld.lib freetype2312.lib glu32.lib ftgl_static.lib sfml-audio-s.lib sfml-graphics-s.lib sfml-network-s.lib sfml-system-s.lib sfml-window-s.lib"
+				AdditionalDependencies="gwen_static.lib GWEN-Renderer-SFML.lib ..\..\bin\FlatWorld.lib freetype2312.lib glu32.lib python27.lib ftgl_static.lib libboost_python-vc100-mt-s-1_46_1.lib sfml-audio-s.lib sfml-graphics-s.lib sfml-network-s.lib sfml-system-s.lib sfml-window-s.lib"
 				OutputFile="$(OutDir)\Platformer.exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="..\..\lib"

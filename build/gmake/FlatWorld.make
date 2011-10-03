@@ -24,7 +24,7 @@ ifeq ($(config),debug)
   TARGETDIR  = ../../debug
   TARGET     = $(TARGETDIR)/libFlatWorld.a
   DEFINES   += -DSFML_STATIC -D_DEBUG
-  INCLUDES  += -I../../include -I../../src/FlatWorld
+  INCLUDES  += -I../../include -I../../include/Python -I../../src/FlatWorld
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -Wall
   CXXFLAGS  += $(CFLAGS) 
@@ -46,7 +46,7 @@ ifeq ($(config),release)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/libFlatWorld.a
   DEFINES   += -DSFML_STATIC -DNDEBUG
-  INCLUDES  += -I../../include -I../../src/FlatWorld
+  INCLUDES  += -I../../include -I../../include/Python -I../../src/FlatWorld
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -Wall -O2
   CXXFLAGS  += $(CFLAGS) 
@@ -73,13 +73,14 @@ OBJECTS := \
 	$(OBJDIR)/SFMLMouseHandler.o \
 	$(OBJDIR)/Colour.o \
 	$(OBJDIR)/Font.o \
+	$(OBJDIR)/RenderManager.o \
+	$(OBJDIR)/Shader.o \
+	$(OBJDIR)/TextureManager.o \
+	$(OBJDIR)/SFMLGameWindow.o \
 	$(OBJDIR)/Particle.o \
 	$(OBJDIR)/ParticleEmitter.o \
 	$(OBJDIR)/RendererGL.o \
-	$(OBJDIR)/RenderManager.o \
-	$(OBJDIR)/SFMLGameWindow.o \
-	$(OBJDIR)/Shader.o \
-	$(OBJDIR)/TextureManager.o \
+	$(OBJDIR)/RendererGL3.o \
 	$(OBJDIR)/Rectangle.o \
 	$(OBJDIR)/Transform.o \
 	$(OBJDIR)/Vector2f.o \
@@ -87,6 +88,7 @@ OBJECTS := \
 	$(OBJDIR)/Message.o \
 	$(OBJDIR)/MessagingSystem.o \
 	$(OBJDIR)/ScreenManager.o \
+	$(OBJDIR)/Python.o \
 	$(OBJDIR)/ColourUtilities.o \
 	$(OBJDIR)/Timer.o \
 
@@ -176,25 +178,28 @@ $(OBJDIR)/Colour.o: ../../src/FlatWorld/Graphics/Colour.cpp
 $(OBJDIR)/Font.o: ../../src/FlatWorld/Graphics/Font.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/Particle.o: ../../src/FlatWorld/Graphics/Particle.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/ParticleEmitter.o: ../../src/FlatWorld/Graphics/ParticleEmitter.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/RendererGL.o: ../../src/FlatWorld/Graphics/RendererGL.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/RenderManager.o: ../../src/FlatWorld/Graphics/RenderManager.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
-$(OBJDIR)/SFMLGameWindow.o: ../../src/FlatWorld/Graphics/SFMLGameWindow.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/Shader.o: ../../src/FlatWorld/Graphics/Shader.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/TextureManager.o: ../../src/FlatWorld/Graphics/TextureManager.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/SFMLGameWindow.o: ../../src/FlatWorld/Graphics/GameWindows/SFMLGameWindow.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/Particle.o: ../../src/FlatWorld/Graphics/ParticleSystem/Particle.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/ParticleEmitter.o: ../../src/FlatWorld/Graphics/ParticleSystem/ParticleEmitter.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/RendererGL.o: ../../src/FlatWorld/Graphics/Renderers/RendererGL.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/RendererGL3.o: ../../src/FlatWorld/Graphics/Renderers/RendererGL3.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/Rectangle.o: ../../src/FlatWorld/Maths/Rectangle.cpp
@@ -216,6 +221,9 @@ $(OBJDIR)/MessagingSystem.o: ../../src/FlatWorld/MessagingSystem/MessagingSystem
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/ScreenManager.o: ../../src/FlatWorld/ScreenSystem/ScreenManager.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
+$(OBJDIR)/Python.o: ../../src/FlatWorld/Scripting/Python.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 $(OBJDIR)/ColourUtilities.o: ../../src/FlatWorld/Utilities/ColourUtilities.cpp

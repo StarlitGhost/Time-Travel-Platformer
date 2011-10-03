@@ -38,6 +38,7 @@
       <General OutputFile="../../debug/Platformer.exe" IntermediateDirectory="../../obj/Debug/Platformer" Command="./Platformer.exe" CommandArguments="" WorkingDirectory="../../debug" PauseExecWhenProcTerminates="yes"/>
       <Compiler Required="yes" Options="-g;-Wall">
         <IncludePath Value="../../include"/>
+        <IncludePath Value="../../include/Python"/>
         <IncludePath Value="../../src/Platformer"/>
         <IncludePath Value="../../src"/>
         <IncludePath Value="../../src/FlatWorld"/>
@@ -77,6 +78,7 @@
       <General OutputFile="../../bin/Platformer.exe" IntermediateDirectory="../../obj/Release/Platformer" Command="./Platformer.exe" CommandArguments="" WorkingDirectory="../../bin" PauseExecWhenProcTerminates="yes"/>
       <Compiler Required="yes" Options="-g;-Wall;-O2">
         <IncludePath Value="../../include"/>
+        <IncludePath Value="../../include/Python"/>
         <IncludePath Value="../../src/Platformer"/>
         <IncludePath Value="../../src"/>
         <IncludePath Value="../../src/FlatWorld"/>

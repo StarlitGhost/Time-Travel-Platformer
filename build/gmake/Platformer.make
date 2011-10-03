@@ -24,7 +24,7 @@ ifeq ($(config),debug)
   TARGETDIR  = ../../debug
   TARGET     = $(TARGETDIR)/Platformer.exe
   DEFINES   += -DSFML_STATIC -D_DEBUG
-  INCLUDES  += -I../../include -I../../src/Platformer -I../../src -I../../src/FlatWorld
+  INCLUDES  += -I../../include -I../../include/Python -I../../src/Platformer -I../../src -I../../src/FlatWorld
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -Wall
   CXXFLAGS  += $(CFLAGS) 
@@ -46,7 +46,7 @@ ifeq ($(config),release)
   TARGETDIR  = ../../bin
   TARGET     = $(TARGETDIR)/Platformer.exe
   DEFINES   += -DSFML_STATIC -DNDEBUG
-  INCLUDES  += -I../../include -I../../src/Platformer -I../../src -I../../src/FlatWorld
+  INCLUDES  += -I../../include -I../../include/Python -I../../src/Platformer -I../../src -I../../src/FlatWorld
   CPPFLAGS  += -MMD -MP $(DEFINES) $(INCLUDES)
   CFLAGS    += $(CPPFLAGS) $(ARCH) -g -Wall -O2
   CXXFLAGS  += $(CFLAGS) 

@@ -17,6 +17,7 @@
 					<Add option="-DSFML_STATIC" />
 					<Add option="-D_DEBUG" />
 					<Add directory="../../include" />
+					<Add directory="../../include/Python" />
 					<Add directory="../../src/FlatWorld" />
 				</Compiler>
 				<Linker>
@@ -35,6 +36,7 @@
 					<Add option="-DSFML_STATIC" />
 					<Add option="-DNDEBUG" />
 					<Add directory="../../include" />
+					<Add directory="../../include/Python" />
 					<Add directory="../../src/FlatWorld" />
 				</Compiler>
 				<Linker>
@@ -74,19 +76,21 @@
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/IRenderer.h">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/Particle.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/ParticleEmitter.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/RendererGL.h">
-		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/RenderManager.h">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/SFMLGameWindow.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/Shader.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/TextureManager.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/GameWindows/SFMLGameWindow.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/ParticleSystem/Particle.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/ParticleSystem/ParticleEmitter.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/Renderers/RendererGL.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/Renderers/RendererGL3.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Maths/Rectangle.h">
 		</Unit>
@@ -103,6 +107,8 @@
 		<Unit filename="../../src/FlatWorld/ScreenSystem/Screen.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/ScreenSystem/ScreenManager.h">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Scripting/Python.h">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Utilities/ColourUtilities.h">
 		</Unit>
@@ -130,19 +136,21 @@
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/Font.cpp">
 		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/Particle.cpp">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/ParticleEmitter.cpp">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/RendererGL.cpp">
-		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/RenderManager.cpp">
-		</Unit>
-		<Unit filename="../../src/FlatWorld/Graphics/SFMLGameWindow.cpp">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/Shader.cpp">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Graphics/TextureManager.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/GameWindows/SFMLGameWindow.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/ParticleSystem/Particle.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/ParticleSystem/ParticleEmitter.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/Renderers/RendererGL.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Graphics/Renderers/RendererGL3.cpp">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Maths/Rectangle.cpp">
 		</Unit>
@@ -157,6 +165,8 @@
 		<Unit filename="../../src/FlatWorld/MessagingSystem/MessagingSystem.cpp">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/ScreenSystem/ScreenManager.cpp">
+		</Unit>
+		<Unit filename="../../src/FlatWorld/Scripting/Python.cpp">
 		</Unit>
 		<Unit filename="../../src/FlatWorld/Utilities/ColourUtilities.cpp">
 		</Unit>

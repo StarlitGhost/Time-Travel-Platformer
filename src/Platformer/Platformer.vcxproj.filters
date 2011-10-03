@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Components">
-      <UniqueIdentifier>{6217D48A-2053-264A-ADD8-7D21E0498F03}</UniqueIdentifier>
+      <UniqueIdentifier>{8312311F-3F1C-0E4B-9A8C-B2A94D3C6160}</UniqueIdentifier>
     </Filter>
     <Filter Include="Screens">
-      <UniqueIdentifier>{CC9F0DD4-04CC-4442-A3FF-0ADF3EF94CE1}</UniqueIdentifier>
+      <UniqueIdentifier>{C1240E1A-EB8E-9B43-AE11-C3254F601881}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

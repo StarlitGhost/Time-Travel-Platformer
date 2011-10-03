@@ -28,6 +28,8 @@
 
 #include "FlatWorld/Maths/Vector2f.h"
 
+#include "FlatWorld/Scripting/Python.h"
+
 #include "FlatWorld/Utilities/StringUtilites.h"
 
 // Game Headers
@@ -69,6 +71,8 @@ void screenArenaShooter::Draw()
 void screenArenaShooter::Load()
 {
 	engine = CEngine::GetInstance();
+
+	FlatWorld::Python py = FlatWorld::Python();
 
 	font = new FlatWorld::Font();
 	font->Size(12);

@@ -32,18 +32,26 @@
         <File Name="../../src/FlatWorld/Graphics/Colour.h"/>
         <File Name="../../src/FlatWorld/Graphics/Font.cpp"/>
         <File Name="../../src/FlatWorld/Graphics/Font.h"/>
+        <VirtualDirectory Name="GameWindows">
+          <File Name="../../src/FlatWorld/Graphics/GameWindows/SFMLGameWindow.cpp"/>
+          <File Name="../../src/FlatWorld/Graphics/GameWindows/SFMLGameWindow.h"/>
+        </VirtualDirectory>
         <File Name="../../src/FlatWorld/Graphics/IGameWindow.h"/>
         <File Name="../../src/FlatWorld/Graphics/IRenderer.h"/>
-        <File Name="../../src/FlatWorld/Graphics/Particle.cpp"/>
-        <File Name="../../src/FlatWorld/Graphics/Particle.h"/>
-        <File Name="../../src/FlatWorld/Graphics/ParticleEmitter.cpp"/>
-        <File Name="../../src/FlatWorld/Graphics/ParticleEmitter.h"/>
+        <VirtualDirectory Name="ParticleSystem">
+          <File Name="../../src/FlatWorld/Graphics/ParticleSystem/Particle.cpp"/>
+          <File Name="../../src/FlatWorld/Graphics/ParticleSystem/Particle.h"/>
+          <File Name="../../src/FlatWorld/Graphics/ParticleSystem/ParticleEmitter.cpp"/>
+          <File Name="../../src/FlatWorld/Graphics/ParticleSystem/ParticleEmitter.h"/>
+        </VirtualDirectory>
         <File Name="../../src/FlatWorld/Graphics/RenderManager.cpp"/>
         <File Name="../../src/FlatWorld/Graphics/RenderManager.h"/>
-        <File Name="../../src/FlatWorld/Graphics/RendererGL.cpp"/>
-        <File Name="../../src/FlatWorld/Graphics/RendererGL.h"/>
-        <File Name="../../src/FlatWorld/Graphics/SFMLGameWindow.cpp"/>
-        <File Name="../../src/FlatWorld/Graphics/SFMLGameWindow.h"/>
+        <VirtualDirectory Name="Renderers">
+          <File Name="../../src/FlatWorld/Graphics/Renderers/RendererGL.cpp"/>
+          <File Name="../../src/FlatWorld/Graphics/Renderers/RendererGL.h"/>
+          <File Name="../../src/FlatWorld/Graphics/Renderers/RendererGL3.cpp"/>
+          <File Name="../../src/FlatWorld/Graphics/Renderers/RendererGL3.h"/>
+        </VirtualDirectory>
         <File Name="../../src/FlatWorld/Graphics/Shader.cpp"/>
         <File Name="../../src/FlatWorld/Graphics/Shader.h"/>
         <File Name="../../src/FlatWorld/Graphics/TextureManager.cpp"/>
@@ -70,6 +78,10 @@
         <File Name="../../src/FlatWorld/ScreenSystem/ScreenManager.cpp"/>
         <File Name="../../src/FlatWorld/ScreenSystem/ScreenManager.h"/>
       </VirtualDirectory>
+      <VirtualDirectory Name="Scripting">
+        <File Name="../../src/FlatWorld/Scripting/Python.cpp"/>
+        <File Name="../../src/FlatWorld/Scripting/Python.h"/>
+      </VirtualDirectory>
       <VirtualDirectory Name="Utilities">
         <File Name="../../src/FlatWorld/Utilities/ColourUtilities.cpp"/>
         <File Name="../../src/FlatWorld/Utilities/ColourUtilities.h"/>
@@ -85,6 +97,7 @@
       <General OutputFile="../../debug/libFlatWorld.a" IntermediateDirectory="../../obj/Debug/FlatWorld" Command="./libFlatWorld.a" CommandArguments="" WorkingDirectory="../../debug" PauseExecWhenProcTerminates="yes"/>
       <Compiler Required="yes" Options="-g;-Wall">
         <IncludePath Value="../../include"/>
+        <IncludePath Value="../../include/Python"/>
         <IncludePath Value="../../src/FlatWorld"/>
         <Preprocessor Value="SFML_STATIC"/>
         <Preprocessor Value="_DEBUG"/>
@@ -110,6 +123,7 @@
       <General OutputFile="../../bin/libFlatWorld.a" IntermediateDirectory="../../obj/Release/FlatWorld" Command="./libFlatWorld.a" CommandArguments="" WorkingDirectory="../../bin" PauseExecWhenProcTerminates="yes"/>
       <Compiler Required="yes" Options="-g;-Wall;-O2">
         <IncludePath Value="../../include"/>
+        <IncludePath Value="../../include/Python"/>
         <IncludePath Value="../../src/FlatWorld"/>
         <Preprocessor Value="SFML_STATIC"/>
         <Preprocessor Value="NDEBUG"/>

@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
+				AdditionalIncludeDirectories="..\..\include;..\..\include\Python;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
 				PreprocessorDefinitions="SFML_STATIC;_DEBUG"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -58,7 +58,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="SFML_STATIC;_DEBUG"
-				AdditionalIncludeDirectories="..\..\include;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
+				AdditionalIncludeDirectories="..\..\include;..\..\include\Python;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -125,7 +125,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="..\..\include;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
+				AdditionalIncludeDirectories="..\..\include;..\..\include\Python;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
 				PreprocessorDefinitions="SFML_STATIC;NDEBUG"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -142,7 +142,7 @@
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="SFML_STATIC;NDEBUG"
-				AdditionalIncludeDirectories="..\..\include;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
+				AdditionalIncludeDirectories="..\..\include;..\..\include\Python;..\..\src\Platformer;..\..\src;..\..\src\FlatWorld"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"

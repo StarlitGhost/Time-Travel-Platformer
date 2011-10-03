@@ -7,7 +7,7 @@ solution "Platformer"
 	
 	configurations { "Debug", "Release" }
 	
-	includedirs { "../include" }
+	includedirs { "../include", "../include/Python" }
 	libdirs { "../lib" }
 	
 	-- Multithreaded compiling
@@ -48,14 +48,14 @@ solution "Platformer"
 		
 		links { "gwen_static", "GWEN-Renderer-SFML", "FlatWorld" }
 		if vs then
-			links { "freetype2312", "glu32" }
+			links { "freetype2312", "glu32", "python27" }
 			
 			configuration "Release"
-				links { "ftgl_static" }
+				links { "ftgl_static", "libboost_python-vc100-mt-s-1_46_1" }
 				links { "sfml-audio-s", "sfml-graphics-s", "sfml-network-s", "sfml-system-s", "sfml-window-s" }
 			
 			configuration "Debug"
-				links { "ftgl_static_d" }
+				links { "ftgl_static_d", "libboost_python-vc100-mt-sgd-1_46_1" }
 				links { "sfml-audio-s-d", "sfml-graphics-s-d", "sfml-network-s-d", "sfml-system-s-d", "sfml-window-s-d" }
 		else
 			links { "freetype", "ftgl", "GLU" }
