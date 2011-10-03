@@ -24,6 +24,7 @@ int SFMLSound::LoadSound(std::string soundName)
 {
 	if (_bufferMap.find(soundName) == _bufferMap.end())
 	{
+		_bufferMap[soundName] = new sf::SoundBuffer();
 		if (_bufferMap[soundName]->LoadFromFile(soundName))
 		{
 			// Sound loaded successfully

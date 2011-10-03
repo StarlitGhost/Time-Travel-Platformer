@@ -13,6 +13,8 @@
 // Engine Headers
 #include "FlatWorld/Engine.h"
 
+#include "FlatWorld/Audio/SFMLSound.h"
+
 #include "FlatWorld/ComponentSystem/GameObject.h"
 #include "FlatWorld/ComponentSystem/GOComponent.h"
 
@@ -27,41 +29,25 @@
 #include "FlatWorld/Maths/Vector2f.h"
 
 #include "FlatWorld/Utilities/StringUtilites.h"
-#include "FlatWorld/Utilities/Timer.h"
 
 // Game Headers
 #include "Components/gocVisualRectangle.h"
 #include "Components/gocInputPlayer.h"
 #include "Components/gocHealth.h"
-#include "Components/gocTriggerRadius.h"
-#include "Components/gocPhysicsSimple.h"
-#include "Components/gctTriggerRadius.h"
 
 using namespace FlatWorld;
 
 void screenArenaShooter::Update(float dt)
 {
-	Timer* timer = engine->GetTimer();
-
 	if (SFMLKeyboardHandler::Pressed(sf::Keyboard::Escape))
 		exit(0);
 
-	if (SFMLKeyboardHandler::Pressed(sf::Keyboard::Q) || SFMLMouseHandler::WheelDown())
-		timer->TimeScale(timer->TimeScale() - .1f);
-
-	if (SFMLKeyboardHandler::Pressed(sf::Keyboard::E) || SFMLMouseHandler::WheelUp())
-		timer->TimeScale(timer->TimeScale() + .1f);
-
-	if (SFMLKeyboardHandler::Pressed(sf::Keyboard::Z))
-		gameObject->RemoveComponent(GOCIdType("gocVisual"));
-
-	if (SFMLKeyboardHandler::Pressed(sf::Keyboard::X))
-		gameObject->AddComponent(new gocVisualRectangle());
+	if (SFMLMouseHandler::Pressed(sf::Mouse::Left))
+		sound->Play();
 
 	gameObject->Update(dt);
 
-	testData = "TS: " + ToString(timer->TimeScale()) +
-		" | Frame Time: " + ToString(dt * 1000.f);
+	testData = "Frame Time: " + ToString(dt * 1000.f);
 }
 
 void screenArenaShooter::Draw()
@@ -71,8 +57,6 @@ void screenArenaShooter::Draw()
 	{
 		RenderManager::Translate(Vector2f(10.f, (float)engine->GetGameWindow()->Height() - 10.f));
 		font->Render(testData);
-		RenderManager::Translate(Vector2f(0.f, -15.f));
-		font->Render(testInfo);
 	}
 	RenderManager::PopMatrix();
 
@@ -89,8 +73,10 @@ void screenArenaShooter::Load()
 	font = new FlatWorld::Font();
 	font->Size(12);
 
-	testInfo = "q / wheel down = lower timescale, e / wheel up = raise timescale";
 	testData = "";
+
+	sound = new FlatWorld::SFMLSound();
+	sound->Init("bullet.wav");
 
 	gameObject = new GameObject(GOIdType("Object"));
 	Transform xform;
@@ -103,11 +89,6 @@ void screenArenaShooter::Load()
 	gameObject->AddComponent(vc);
 	GOComponent* ic = new gocInputPlayer();
 	gameObject->AddComponent(ic);
-	//GOCTemplate* trigTemplate = new gctTriggerRadius();
-	//GOComponent* trc = trigTemplate->MakeComponent();
-	//gameObject->AddComponent(trc);
-	//GOComponent* pc = new gocPhysicsSimple();
-	//gameObject->AddComponent(pc);
 }
 
 void screenArenaShooter::Unload()
@@ -116,4 +97,6 @@ void screenArenaShooter::Unload()
 		delete gameObject;
 	if (font)
 		delete font;
+	if (sound)
+		delete sound;
 }

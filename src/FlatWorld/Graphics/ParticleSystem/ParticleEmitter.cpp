@@ -4,7 +4,7 @@
 
 // Engine Headers
 #include "Graphics/Colour.h"
-#include "Graphics/Particle.h"
+#include "Graphics/ParticleSystem/Particle.h"
 #include "Maths/Vector2f.h"
 
 using namespace FlatWorld;

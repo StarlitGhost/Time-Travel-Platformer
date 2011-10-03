@@ -8,6 +8,7 @@ namespace FlatWorld
 {
 	class CEngine;
 	class Font;
+	class ISound;
 	class GameObject;
 }
 
@@ -23,7 +24,8 @@ private:
 	FlatWorld::CEngine* engine;
 
 	FlatWorld::Font* font;
-	std::string testInfo, testData;
+	FlatWorld::ISound* sound;
+	std::string testData;
 
 	FlatWorld::GameObject* gameObject;
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IGameWindow.h"
+#include "Graphics/IGameWindow.h"
 
 #include <SFML/Graphics/RenderWindow.hpp>
 

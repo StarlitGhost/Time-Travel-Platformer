@@ -3,7 +3,7 @@
 #include "Controls/SFMLKeyboardHandler.h"
 #include "Controls/SFMLMouseHandler.h"
 #include "Graphics/RenderManager.h"
-#include "Graphics/RendererGL.h"
+#include "Graphics/Renderers/RendererGL.h"
 #include "Maths/Rectangle.h"
 
 #include <SFML/OpenGL.hpp>

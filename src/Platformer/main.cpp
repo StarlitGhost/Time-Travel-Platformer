@@ -1,6 +1,6 @@
 #include "FlatWorld/Engine.h"
 #include "FlatWorld/Graphics/IGameWindow.h"
-#include "FlatWorld/Graphics/SFMLGameWindow.h"
+#include "FlatWorld/Graphics/GameWindows/SFMLGameWindow.h"
 
 #include "Platformer/Screens/screenMenu.h"
 #include "Platformer/Screens/screenArenaShooter.h"
