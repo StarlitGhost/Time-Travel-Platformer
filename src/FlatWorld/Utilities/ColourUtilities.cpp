@@ -158,6 +158,7 @@ Colour ColourUtilities::HSV2RGB(const float& H, const float& S, const float& V, 
 }
 
 // Possible implementations here: http://www.geekymonkey.com/Programming/CSharp/RGB2HSL_HSL2RGB.htm
+// Better looking ones here: http://www.easyrgb.com/index.php?X=MATH
 //void ColourUtilities::RGB2HSL(const Colour& colour, float& outH, float& outS, float& outL)
 //{
 //	
